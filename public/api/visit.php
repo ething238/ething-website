@@ -59,6 +59,14 @@ function clean_text(mixed $value, string $fallback = 'unknown', int $maxLength =
   return substr($trimmed, 0, $maxLength);
 }
 
+function known_text(mixed $value, int $maxLength = 80): ?string {
+  if (!is_string($value)) {
+    return null;
+  }
+  $cleaned = clean_text($value, 'unknown', $maxLength);
+  return $cleaned === 'unknown' ? null : $cleaned;
+}
+
 function uuid_v4(): string {
   $data = random_bytes(16);
   $data[6] = chr((ord($data[6]) & 0x0f) | 0x40);
@@ -156,14 +164,107 @@ function lookup_geo(string $ip): array {
   }
 
   $data = fetch_json('https://ipapi.co/' . rawurlencode($ip) . '/json/', 2);
-  if ($data === null) {
+  if ($data !== null) {
+    $geo = [
+      'country' => known_text($data['country_name'] ?? null, 80),
+      'region' => known_text($data['region'] ?? null, 80),
+      'city' => known_text($data['city'] ?? null, 80),
+    ];
+
+    if ($geo['country'] || $geo['region'] || $geo['city']) {
+      return array_filter($geo, static fn($value) => $value !== null);
+    }
+  }
+
+  $fallback = fetch_json('https://ipwho.is/' . rawurlencode($ip), 2);
+  if (($fallback['success'] ?? false) !== true) {
     return [];
   }
 
+  return array_filter([
+    'country' => known_text($fallback['country'] ?? null, 80),
+    'region' => known_text($fallback['region'] ?? null, 80),
+    'city' => known_text($fallback['city'] ?? null, 80),
+  ], static fn($value) => $value !== null);
+}
+
+function first_known(mixed ...$values): string {
+  foreach ($values as $value) {
+    $known = known_text($value, 80);
+    if ($known !== null) {
+      return $known;
+    }
+  }
+  return 'unknown';
+}
+
+function server_header(array $names): ?string {
+  foreach ($names as $name) {
+    $value = $_SERVER[$name] ?? null;
+    if (is_string($value) && trim($value) !== '') {
+      return $value;
+    }
+  }
+  return null;
+}
+
+function decode_header_location(?string $value): ?string {
+  if (!is_string($value) || trim($value) === '') {
+    return null;
+  }
+  return urldecode($value);
+}
+
+function browser_source(string $userAgent, mixed $platform): string {
+  $browser = 'Unknown browser';
+  if (str_contains($userAgent, 'Edg/')) {
+    $browser = 'Microsoft Edge';
+  } elseif (str_contains($userAgent, 'OPR/') || str_contains($userAgent, 'Opera/')) {
+    $browser = 'Opera';
+  } elseif (str_contains($userAgent, 'Firefox/')) {
+    $browser = 'Firefox';
+  } elseif (str_contains($userAgent, 'Chrome/') && str_contains($userAgent, 'Safari/')) {
+    $browser = 'Chrome';
+  } elseif (str_contains($userAgent, 'Safari/') && !str_contains($userAgent, 'Chrome/')) {
+    $browser = 'Safari';
+  } elseif (str_contains($userAgent, 'SamsungBrowser/')) {
+    $browser = 'Samsung Internet';
+  }
+
+  $cleanPlatform = clean_text($platform, 'web', 80);
+  return substr($browser . ' / ' . $cleanPlatform, 0, 80);
+}
+
+function client_hint_platform(): string {
+  return clean_text(
+    $_SERVER['HTTP_SEC_CH_UA_PLATFORM'] ?? null,
+    'web',
+    80
+  );
+}
+
+function header_geo(): array {
   return [
-    'country' => clean_text($data['country_name'] ?? null, 'unknown', 80),
-    'region' => clean_text($data['region'] ?? null, 'unknown', 80),
-    'city' => clean_text($data['city'] ?? null, 'unknown', 80),
+    'country' => decode_header_location(server_header([
+      'HTTP_CF_IPCOUNTRY',
+      'HTTP_X_VERCEL_IP_COUNTRY',
+      'HTTP_X_COUNTRY',
+      'HTTP_X_COUNTRY_CODE',
+      'HTTP_GEOIP_COUNTRY_NAME',
+    ])),
+    'region' => decode_header_location(server_header([
+      'HTTP_X_VERCEL_IP_COUNTRY_REGION',
+      'HTTP_X_REGION',
+      'HTTP_X_REGION_NAME',
+      'HTTP_GEOIP_REGION_NAME',
+      'HTTP_X_HOSTINGER_IP_REGION',
+    ])),
+    'city' => decode_header_location(server_header([
+      'HTTP_X_VERCEL_IP_CITY',
+      'HTTP_X_CITY',
+      'HTTP_GEOIP_CITY',
+      'HTTP_X_HOSTINGER_IP_CITY',
+    ])),
   ];
 }
 
@@ -237,10 +338,8 @@ if (!is_array($payload)) {
 $existingVisitorId = isset($_COOKIE['visitor_id']) ? clean_text($_COOKIE['visitor_id'], '', 80) : '';
 $visitorId = $existingVisitorId !== '' ? $existingVisitorId : uuid_v4();
 $ip = client_ip();
-
-$headerCountry = clean_text($_SERVER['HTTP_CF_IPCOUNTRY'] ?? null, 'unknown', 80);
-$headerRegion = clean_text($_SERVER['HTTP_X_HOSTINGER_IP_REGION'] ?? null, 'unknown', 80);
-$headerCity = clean_text($_SERVER['HTTP_X_HOSTINGER_IP_CITY'] ?? null, 'unknown', 80);
+$userAgent = clean_text($_SERVER['HTTP_USER_AGENT'] ?? null, 'unknown', 500);
+$headerGeo = header_geo();
 $geo = lookup_geo($ip);
 
 $visit = [
@@ -249,15 +348,15 @@ $visit = [
   'visited_at' => gmdate('c'),
   'path' => clean_text($payload['path'] ?? null, '/', 200),
   'ip' => $ip,
-  'user_agent' => clean_text($_SERVER['HTTP_USER_AGENT'] ?? null, 'unknown', 500),
+  'user_agent' => $userAgent,
   'referrer' => clean_text($payload['referrer'] ?? null, 'direct', 400),
   'language' => clean_text($payload['language'] ?? ($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? null), 'unknown', 80),
   'timezone' => clean_text($payload['timezone'] ?? null, 'unknown', 80),
   'screen' => clean_text($payload['screen'] ?? null, 'unknown', 40),
-  'country' => $geo['country'] ?? $headerCountry,
-  'region' => $geo['region'] ?? $headerRegion,
-  'city' => $geo['city'] ?? $headerCity,
-  'source' => clean_text($_SERVER['HTTP_SEC_CH_UA_PLATFORM'] ?? 'web', 'web', 80),
+  'country' => first_known($geo['country'] ?? null, $headerGeo['country'] ?? null),
+  'region' => first_known($geo['region'] ?? null, $headerGeo['region'] ?? null),
+  'city' => first_known($geo['city'] ?? null, $headerGeo['city'] ?? null),
+  'source' => browser_source($userAgent, client_hint_platform()),
 ];
 
 try {

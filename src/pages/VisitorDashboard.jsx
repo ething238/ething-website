@@ -17,6 +17,26 @@ function sourceLabel(visit) {
   return bits.length ? bits.join(', ') : 'Unknown location'
 }
 
+function browserLabel(userAgent = '') {
+  if (!userAgent || userAgent === 'unknown') return 'Unknown browser'
+  if (/Edg\//.test(userAgent)) return 'Microsoft Edge'
+  if (/OPR\//.test(userAgent) || /Opera\//.test(userAgent)) return 'Opera'
+  if (/Firefox\//.test(userAgent)) return 'Firefox'
+  if (/Chrome\//.test(userAgent) && /Safari\//.test(userAgent)) return 'Chrome'
+  if (/Safari\//.test(userAgent) && !/Chrome\//.test(userAgent)) return 'Safari'
+  if (/SamsungBrowser\//.test(userAgent)) return 'Samsung Internet'
+  return 'Unknown browser'
+}
+
+function osLabel(userAgent = '') {
+  if (/Windows NT/.test(userAgent)) return 'Windows'
+  if (/Android/.test(userAgent)) return 'Android'
+  if (/iPhone|iPad|iPod/.test(userAgent)) return 'iOS'
+  if (/Mac OS X|Macintosh/.test(userAgent)) return 'macOS'
+  if (/Linux/.test(userAgent)) return 'Linux'
+  return 'Unknown OS'
+}
+
 export default function VisitorDashboard() {
   const [key, setKey] = useState('')
   const [visits, setVisits] = useState([])
@@ -157,8 +177,11 @@ export default function VisitorDashboard() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-zinc-600">
-                      <div>{visit.screen}</div>
-                      <div className="mt-1 text-xs text-zinc-400">{visit.language}</div>
+                      <div className="font-medium text-zinc-800">{browserLabel(visit.userAgent)}</div>
+                      <div className="mt-1 text-xs text-zinc-500">{osLabel(visit.userAgent)}</div>
+                      <div className="mt-1 text-xs text-zinc-400">
+                        {visit.screen} | {visit.language}
+                      </div>
                     </td>
                     <td className="max-w-sm px-4 py-3 text-zinc-600">
                       <span className="break-words">{visit.referrer}</span>

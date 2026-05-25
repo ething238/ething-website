@@ -24,6 +24,11 @@ function cleanText(value, fallback = 'unknown', maxLength = 256) {
   return trimmed.slice(0, maxLength)
 }
 
+function knownText(value, maxLength = 80) {
+  const cleaned = cleanText(value, 'unknown', maxLength)
+  return cleaned === 'unknown' ? undefined : cleaned
+}
+
 function parseCookies(header = '') {
   return Object.fromEntries(
     header
@@ -84,14 +89,46 @@ async function lookupGeo(ip) {
 
     if (!response.ok) return {}
     const data = await response.json()
+    const geo = {
+      country: knownText(data.country_name, 80),
+      region: knownText(data.region, 80),
+      city: knownText(data.city, 80),
+    }
+    if (geo.country || geo.region || geo.city) return geo
+  } catch {
+  }
+
+  try {
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 1500)
+    const response = await fetch(`https://ipwho.is/${encodeURIComponent(ip)}`, {
+      signal: controller.signal,
+    })
+    clearTimeout(timeout)
+
+    if (!response.ok) return {}
+    const data = await response.json()
+    if (data.success !== true) return {}
     return {
-      country: cleanText(data.country_name, 'unknown', 80),
-      region: cleanText(data.region, 'unknown', 80),
-      city: cleanText(data.city, 'unknown', 80),
+      country: knownText(data.country, 80),
+      region: knownText(data.region, 80),
+      city: knownText(data.city, 80),
     }
   } catch {
     return {}
   }
+}
+
+function browserSource(userAgent, platform) {
+  let browser = 'Unknown browser'
+  if (userAgent.includes('Edg/')) browser = 'Microsoft Edge'
+  else if (userAgent.includes('OPR/') || userAgent.includes('Opera/')) browser = 'Opera'
+  else if (userAgent.includes('Firefox/')) browser = 'Firefox'
+  else if (userAgent.includes('Chrome/') && userAgent.includes('Safari/')) browser = 'Chrome'
+  else if (userAgent.includes('Safari/') && !userAgent.includes('Chrome/')) browser = 'Safari'
+  else if (userAgent.includes('SamsungBrowser/')) browser = 'Samsung Internet'
+
+  return `${browser} / ${cleanText(platform, 'web', 80)}`.slice(0, 80)
 }
 
 async function supabaseRequest(env, endpoint, options = {}) {
@@ -142,6 +179,7 @@ function visitorAnalyticsDevPlugin() {
     const existingVisitorId = cookies.visitor_id
     const visitorId = existingVisitorId || randomUUID()
     const ip = getClientIp(req)
+    const userAgent = cleanText(req.headers['user-agent'], 'unknown', 500)
     const geo = await lookupGeo(ip)
 
     const visit = {
@@ -150,7 +188,7 @@ function visitorAnalyticsDevPlugin() {
       visited_at: new Date().toISOString(),
       path: cleanText(payload.path, '/', 200),
       ip,
-      user_agent: cleanText(req.headers['user-agent'], 'unknown', 500),
+      user_agent: userAgent,
       referrer: cleanText(payload.referrer, 'direct', 400),
       language: cleanText(payload.language || req.headers['accept-language'], 'unknown', 80),
       timezone: cleanText(payload.timezone, 'unknown', 80),
@@ -158,7 +196,7 @@ function visitorAnalyticsDevPlugin() {
       country: geo.country || 'unknown',
       region: geo.region || 'unknown',
       city: geo.city || 'unknown',
-      source: cleanText(req.headers['sec-ch-ua-platform'] || 'web', 'web', 80),
+      source: browserSource(userAgent, req.headers['sec-ch-ua-platform'] || 'web'),
     }
 
     await supabaseRequest(env, 'visitor_visits', {
