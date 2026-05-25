@@ -19,12 +19,12 @@ function sourceLabel(visit) {
 
 function browserLabel(userAgent = '') {
   if (!userAgent || userAgent === 'unknown') return 'Unknown browser'
+  if (/SamsungBrowser\//.test(userAgent)) return 'Samsung Internet'
   if (/Edg\//.test(userAgent)) return 'Microsoft Edge'
   if (/OPR\//.test(userAgent) || /Opera\//.test(userAgent)) return 'Opera'
   if (/Firefox\//.test(userAgent)) return 'Firefox'
   if (/Chrome\//.test(userAgent) && /Safari\//.test(userAgent)) return 'Chrome'
   if (/Safari\//.test(userAgent) && !/Chrome\//.test(userAgent)) return 'Safari'
-  if (/SamsungBrowser\//.test(userAgent)) return 'Samsung Internet'
   return 'Unknown browser'
 }
 
@@ -35,6 +35,31 @@ function osLabel(userAgent = '') {
   if (/Mac OS X|Macintosh/.test(userAgent)) return 'macOS'
   if (/Linux/.test(userAgent)) return 'Linux'
   return 'Unknown OS'
+}
+
+function deviceLabel(visit) {
+  const parsedBrowser = browserLabel(visit.userAgent)
+  const parsedOs = osLabel(visit.userAgent)
+
+  if (parsedBrowser !== 'Unknown browser' || parsedOs !== 'Unknown OS') {
+    return {
+      primary: parsedBrowser,
+      secondary: parsedOs,
+    }
+  }
+
+  if (visit.source && visit.source !== 'web' && visit.source !== 'unknown') {
+    const [browser, platform] = visit.source.split('/').map((item) => item.trim())
+    return {
+      primary: browser || visit.source,
+      secondary: platform || 'Unknown OS',
+    }
+  }
+
+  return {
+    primary: 'Unknown browser',
+    secondary: 'Unknown OS',
+  }
 }
 
 export default function VisitorDashboard() {
@@ -162,35 +187,36 @@ export default function VisitorDashboard() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-100">
-                {visits.map((visit) => (
-                  <tr key={visit.id} className="align-top">
-                    <td className="whitespace-nowrap px-4 py-3 text-zinc-600">
-                      {formatDate(visit.visitedAt)}
-                    </td>
-                    <td className="max-w-xs px-4 py-3 font-medium text-ething-ink">
-                      <span className="break-words">{visit.path}</span>
-                    </td>
-                    <td className="px-4 py-3 text-zinc-600">
-                      <span className="inline-flex items-start gap-2">
-                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-zinc-400" />
-                        {sourceLabel(visit)}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3 text-zinc-600">
-                      <div className="font-medium text-zinc-800">{browserLabel(visit.userAgent)}</div>
-                      <div className="mt-1 text-xs text-zinc-500">{osLabel(visit.userAgent)}</div>
-                      <div className="mt-1 text-xs text-zinc-400">
-                        {visit.screen} | {visit.language}
-                      </div>
-                    </td>
-                    <td className="max-w-sm px-4 py-3 text-zinc-600">
-                      <span className="break-words">{visit.referrer}</span>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-3 font-mono text-xs text-zinc-500">
-                      {visit.ip}
-                    </td>
-                  </tr>
-                ))}
+                {visits.map((visit) => {
+                  const device = deviceLabel(visit)
+
+                  return (
+                    <tr key={visit.id} className="align-top">
+                      <td className="whitespace-nowrap px-4 py-3 text-zinc-600">
+                        {formatDate(visit.visitedAt)}
+                      </td>
+                      <td className="max-w-xs px-4 py-3 font-medium text-ething-ink">
+                        <span className="break-words">{visit.path}</span>
+                      </td>
+                      <td className="px-4 py-3 text-zinc-600">
+                        <span className="inline-flex items-start gap-2">
+                          <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-zinc-400" />
+                          {sourceLabel(visit)}
+                        </span>
+                      </td>
+                      <td className="px-4 py-3 text-zinc-600">
+                        <div className="font-medium text-zinc-800">{device.primary}</div>
+                        <div className="mt-1 text-xs text-zinc-500">{device.secondary}</div>
+                      </td>
+                      <td className="max-w-sm px-4 py-3 text-zinc-600">
+                        <span className="break-words">{visit.referrer}</span>
+                      </td>
+                      <td className="whitespace-nowrap px-4 py-3 font-mono text-xs text-zinc-500">
+                        {visit.ip}
+                      </td>
+                    </tr>
+                  )
+                })}
                 {!visits.length ? (
                   <tr>
                     <td className="px-4 py-10 text-center text-zinc-500" colSpan="6">
