@@ -1,0 +1,2 @@
+# Netlify etc.: SPA fallbacks — all routes resolve to index.html
+/* /index.html 200

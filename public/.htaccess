@@ -1,0 +1,10 @@
+# React Router (single-page app): send unknown paths to index.html
+# Needed on Apache (typical Hostinger shared hosting) so /about_us etc. work on refresh.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
