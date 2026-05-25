@@ -12,7 +12,9 @@ import Privacy from './pages/Privacy.jsx'
 import Blogs from './pages/Blogs.jsx'
 import Contact from './pages/Contact.jsx'
 import AiStaffAugmentation from './pages/AiStaffAugmentation.jsx'
+import VisitorDashboard from './pages/VisitorDashboard.jsx'
 import NotFound from './pages/NotFound.jsx'
+import VisitTracker from './components/VisitTracker.jsx'
 import { siteContent } from './data/siteContent.js'
 
 function ScrollToTopOnRoute() {
@@ -65,6 +67,7 @@ function AppRoutes() {
         <Route path="/careers" element={<Careers content={siteContent} />} />
         <Route path="/privacy-policy" element={<Privacy content={siteContent} />} />
         <Route path="/contact" element={<Contact content={siteContent} />} />
+        <Route path="/visitor-dashboard" element={<VisitorDashboard />} />
 
         <Route path="/about" element={<Navigate to="/about_us" replace />} />
         <Route path="/staffing-services" element={<Navigate to="/staffing_services" replace />} />
@@ -78,6 +81,7 @@ function AppRoutes() {
 export default function App() {
   return (
     <Layout content={siteContent}>
+      <VisitTracker />
       <ScrollToTopOnRoute />
       <AppRoutes />
     </Layout>

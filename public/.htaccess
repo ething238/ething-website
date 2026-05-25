@@ -1,10 +1,16 @@
-# React Router (single-page app): send unknown paths to index.html
-# Needed on Apache (typical Hostinger shared hosting) so /about_us etc. work on refresh.
+# React Router (single-page app): send unknown paths to index.html.
+# API routes map to PHP endpoints for Hostinger/Apache shared hosting.
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  RewriteRule ^api/visit/?$ api/visit.php [L]
+  RewriteRule ^api/visits/?$ api/visits.php [L]
   RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
   RewriteRule . /index.html [L]
 </IfModule>
