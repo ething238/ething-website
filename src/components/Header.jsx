@@ -66,7 +66,7 @@ export default function Header({ content }) {
           )}
         </div>
 
-        {/* overflow must stay visible — overflow-x-auto on nav clips dropdown menus vertically */}
+        {/* overflow must stay visible - overflow-x-auto on nav clips dropdown menus vertically */}
         <div ref={ref} className="relative z-[60] hidden min-w-0 flex-1 overflow-visible lg:block">
           <nav className="mx-auto flex flex-nowrap justify-center gap-1 overflow-visible py-px xl:gap-1.5">
             {navigation.map((item) => {

@@ -2,7 +2,7 @@ const RSS2JSON = 'https://api.rss2json.com/v1/api.json'
 const CONTENT_NS = 'http://purl.org/rss/1.0/modules/content/'
 const DC_NS = 'http://purl.org/dc/elements/1.1/'
 
-/** rss2json keys are long; placeholders in .env often trigger 422 — only send key when it looks real. */
+/** rss2json keys are long; placeholders in .env often trigger 422 - only send key when it looks real. */
 const MIN_RSS2JSON_KEY_LEN = 28
 
 const CACHE_MS = 10 * 60 * 1000
@@ -27,7 +27,7 @@ function normalizeMediumFeedUrl(url) {
   return s
 }
 
-/** Local Vite middleware only runs in dev — `/api/medium-rss` is not available on static production hosts. */
+/** Local Vite middleware only runs in dev - `/api/medium-rss` is not available on static production hosts. */
 function shouldTryLocalRssProxy() {
   return !import.meta.env.PROD
 }
@@ -163,7 +163,7 @@ function cacheStorageKey(feedUrl) {
   return `${CACHE_STORAGE_KEY}:${feedUrl}`
 }
 
-/** For instant paint on repeat visits — read synchronously. */
+/** For instant paint on repeat visits - read synchronously. */
 export function peekMediumPostsCache(feedUrl) {
   const url = feedUrl?.trim()
   if (!url || typeof sessionStorage === 'undefined')
@@ -218,7 +218,7 @@ async function fetchPostsViaRss2Json(feedUrl, { useApiKey }) {
 }
 
 /**
- * Fetch RSS via Vite `/api/medium-rss` (dev only — avoids browser CORS to Medium).
+ * Fetch RSS via Vite `/api/medium-rss` (dev only - avoids browser CORS to Medium).
  *
  * @param {string} feedUrl
  */
@@ -249,7 +249,7 @@ async function fetchPostsViaLocalRssProxy(feedUrl) {
 }
 
 /**
- * Fetch raw RSS through public CORS proxies (prod fallback — often slow/unreliable).
+ * Fetch raw RSS through public CORS proxies (prod fallback - often slow/unreliable).
  *
  * @param {string} feedUrl
  */
@@ -294,7 +294,7 @@ export async function fetchMediumPosts(feedUrl) {
     let posts = []
 
     if (shouldTryLocalRssProxy()) {
-      /** Dev: Medium + rss2json in parallel — whichever returns posts first avoids waiting twice. */
+      /** Dev: Medium + rss2json in parallel - whichever returns posts first avoids waiting twice. */
       const [localPosts, rssPlain] = await Promise.all([
         fetchPostsViaLocalRssProxy(url),
         fetchPostsViaRss2Json(url, { useApiKey: false }),

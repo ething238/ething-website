@@ -7,28 +7,33 @@ import { pageTitles, pageDescriptions } from '../data/siteContent.js'
 
 const knownPaths = new Set(Object.keys(pageTitles))
 
+const landingPagePaths = new Set(['/hire-developers-india'])
+
 export default function Layout({ content, children }) {
   const location = useLocation()
-  const isFullBleed = location.pathname === '/'
   const pathname = location.pathname
-  const isKnownRoute = knownPaths.has(pathname)
-  const title = isKnownRoute ? pageTitles[pathname] : 'Page not found — Ething'
+  const isLandingPage = landingPagePaths.has(pathname)
+  const isFullBleed = location.pathname === '/' || isLandingPage
+  const isKnownRoute = knownPaths.has(pathname) || isLandingPage
+  const title = isKnownRoute ? pageTitles[pathname] : 'Page not found - Ething'
   const description = isKnownRoute
     ? pageDescriptions[pathname]
     : 'The page you are looking for is not available. Browse Ething for software engineering, staffing, and services.'
 
   return (
     <div className="flex min-h-screen flex-col">
-      <Seo
-        title={title}
-        description={description}
-        pathname={pathname}
-        ogImage={content.meta.defaultOgImage}
-        noindex={!isKnownRoute}
-        organizationJsonLd={pathname === '/' ? content : undefined}
-        siteName={content.meta.siteName}
-      />
-      <Header content={content} />
+      {!isLandingPage && (
+        <Seo
+          title={title}
+          description={description}
+          pathname={pathname}
+          ogImage={content.meta.defaultOgImage}
+          noindex={!isKnownRoute}
+          organizationJsonLd={pathname === '/' ? content : undefined}
+          siteName={content.meta.siteName}
+        />
+      )}
+      {!isLandingPage && <Header content={content} />}
       <main
         className={
           isFullBleed
@@ -38,8 +43,8 @@ export default function Layout({ content, children }) {
       >
         {children}
       </main>
-      <Footer content={content} />
-      <ScrollToTopButton />
+      {!isLandingPage && <Footer content={content} />}
+      {!isLandingPage && <ScrollToTopButton />}
     </div>
   )
 }

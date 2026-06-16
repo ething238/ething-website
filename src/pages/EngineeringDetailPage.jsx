@@ -320,7 +320,7 @@ export default function EngineeringDetailPage({ content }) {
   )
 
   useEffect(() => {
-    document.title = pageTitles[pathname] || `${page?.title ?? 'Engineering'} — Ething`
+    document.title = pageTitles[pathname] || `${page?.title ?? 'Engineering'} - Ething`
   }, [pathname, page?.title])
 
   if (!page) return null

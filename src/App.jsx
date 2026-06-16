@@ -12,6 +12,7 @@ import Privacy from './pages/Privacy.jsx'
 import Blogs from './pages/Blogs.jsx'
 import Contact from './pages/Contact.jsx'
 import AiStaffAugmentation from './pages/AiStaffAugmentation.jsx'
+import HireDevelopersLanding from './pages/HireDevelopersLanding.jsx'
 import VisitorDashboard from './pages/VisitorDashboard.jsx'
 import NotFound from './pages/NotFound.jsx'
 import VisitTracker from './components/VisitTracker.jsx'
@@ -67,6 +68,7 @@ function AppRoutes() {
         <Route path="/careers" element={<Careers content={siteContent} />} />
         <Route path="/privacy-policy" element={<Privacy content={siteContent} />} />
         <Route path="/contact" element={<Contact content={siteContent} />} />
+        <Route path="/hire-developers-india" element={<HireDevelopersLanding />} />
         <Route path="/visitor-dashboard" element={<VisitorDashboard />} />
 
         <Route path="/about" element={<Navigate to="/about_us" replace />} />
