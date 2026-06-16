@@ -15,7 +15,7 @@ export { pageTitles } from './pageTitles.js'
 /** Meta descriptions by path. Keep in sync with routes in `App.jsx` / `pageTitles`. */
 export const pageDescriptions = {
   '/':
-    'Ething provides software engineering and AI staff augmentation—experienced engineers, ML specialists, and data professionals for enterprise and product teams.',
+    'Ething provides software engineering and AI staff augmentation-experienced engineers, ML specialists, and data professionals for enterprise and product teams.',
   '/about_us':
     'Meet Ething Solutions: software engineering, staffing, and technology consulting built for enterprises that need reliable delivery and industry-aligned teams.',
   '/healthcare_industry':
@@ -56,6 +56,8 @@ export const pageDescriptions = {
     'Contact Ething for staffing, engineering services, or partnership enquiries in Gurugram, India. Phone and email on this page.',
   '/blogs':
     'Articles and engineering insights from the Ething team on Medium: staffing, software delivery, cloud, and platform topics.',
+  '/hire-developers-india':
+    'Global companies (20-300 employees) hire pre-vetted remote engineers from India. Staff augmentation & dedicated teams for CEOs, CTOs, CFOs & VPs-profiles in 48 hours.',
 }
 
 export const siteContent = {
@@ -63,7 +65,7 @@ export const siteContent = {
     siteName: 'Ething',
     titleTemplate: '%s · Ething · Engineering & Staff Augmentation',
     defaultDescription:
-      'Ething provides software and AI engineering talent for staff augmentation—embedded specialists for enterprise and product teams, alongside consulting and engineering services.',
+      'Ething provides software and AI engineering talent for staff augmentation-embedded specialists for enterprise and product teams, alongside consulting and engineering services.',
     /** Relative to site origin. Used for Open Graph when a page does not set its own image. */
     defaultOgImage: '/images/ething-logo.png',
   },
@@ -714,7 +716,7 @@ export const siteContent = {
             id: 'railways-application-software',
             navLabel: 'Application Software',
             index: '03',
-            title: 'Application Software – Development / Porting / Integration',
+            title: 'Application Software - Development / Porting / Integration',
             paragraphs: [
               'Design and development of application software for various railway technology systems. Porting and integration services for seamless operation across platforms. Ensures compatibility with legacy systems and modern infrastructure. Enhances operational efficiency through automation and intelligent workflows. Supports real-time monitoring, control, and reporting functionalities.',
             ],
@@ -1025,7 +1027,7 @@ export const siteContent = {
         },
         {
           title: 'Tailored Staffing',
-          body: 'Scale effortlessly with on-site or remote experts. Skip recruitment hassles – we adjust to your needs seamlessly.',
+          body: 'Scale effortlessly with on-site or remote experts. Skip recruitment hassles - we adjust to your needs seamlessly.',
         },
         {
           title: 'Seamless Collaboration',

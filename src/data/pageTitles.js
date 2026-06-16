@@ -21,4 +21,6 @@ export const pageTitles = {
   '/privacy-policy': 'Privacy Policy · Ething',
   '/contact': 'Contact · Ething',
   '/blogs': 'Blogs · Ething',
+  '/hire-developers-india':
+    'Hire Remote Developers from India | Global Engineering Teams | Ething',
 }

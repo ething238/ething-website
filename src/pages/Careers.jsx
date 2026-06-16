@@ -129,7 +129,7 @@ export default function Careers({ content }) {
         </div>
       </section>
 
-      {/* Why us — card stack */}
+      {/* Why us - card stack */}
       <section
         id="why-us"
         className="scroll-mt-[calc(4rem+1px)] border-b border-zinc-200/80 bg-white py-16 sm:py-20 lg:py-24"

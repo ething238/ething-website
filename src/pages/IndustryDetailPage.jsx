@@ -120,7 +120,7 @@ function RichIndustryPage({ page, content }) {
                   className="scroll-mt-28 border-b border-zinc-200/80 pb-14 last:border-b-0 last:pb-0 sm:scroll-mt-32 sm:pb-16 lg:pb-20"
                 >
                   <p className="text-xs font-medium text-zinc-400">
-                    {section.index} — Capability
+                    {section.index} - Capability
                   </p>
                   <h3 className="mt-2 font-[family:var(--font-display)] text-xl font-bold text-ething-ink md:text-2xl">
                     {section.title}
@@ -166,7 +166,7 @@ export default function IndustryDetailPage({ content }) {
   )
 
   useEffect(() => {
-    document.title = pageTitles[pathname] || `${page?.title ?? 'Industry'} — Ething`
+    document.title = pageTitles[pathname] || `${page?.title ?? 'Industry'} - Ething`
   }, [pathname, page?.title])
 
   if (!page) return null

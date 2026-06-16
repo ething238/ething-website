@@ -38,7 +38,7 @@
       radial-gradient(ellipse 52% 58% at 48% 100%, rgba(14, 165, 233, 0.22), transparent 54%),
       #070b14;
   }
-  /* Hero: navy · teal · sky — subtle drift (on-brand with rest of site) */
+  /* Hero: navy · teal · sky - subtle drift (on-brand with rest of site) */
   .hero-mesh-animated {
     position: relative;
     background-color: #070b14;
@@ -103,5 +103,8 @@
       linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
     background-size: 64px 64px;
+  }
+  .hero-illustration {
+    perspective: 1200px;
   }
 }

@@ -13,11 +13,11 @@ function absoluteUrl(base, pathOrAbsolute) {
  * @param {object} props
  * @param {string} props.title
  * @param {string} props.description
- * @param {string} props.pathname — router pathname, e.g. `/about_us`
- * @param {string} [props.ogImage] — absolute URL or path relative to site origin
+ * @param {string} props.pathname - router pathname, e.g. `/about_us`
+ * @param {string} [props.ogImage] - absolute URL or path relative to site origin
  * @param {boolean} [props.noindex]
  * @param {object} [props.organizationJsonLd]
- * @param {string} [props.siteName] — for `og:site_name`
+ * @param {string} [props.siteName] - for `og:site_name`
  */
 export default function Seo({
   title,
