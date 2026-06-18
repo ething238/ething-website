@@ -22,5 +22,5 @@ export const pageTitles = {
   '/contact': 'Contact · Ething',
   '/blogs': 'Blogs · Ething',
   '/hire-developers-india':
-    'Hire Remote Developers from India | Global Engineering Teams | Ething',
+    'Hire Developers India | Remote Engineers in 48 Hours | Ething',
 }

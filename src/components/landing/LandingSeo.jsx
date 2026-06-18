@@ -215,7 +215,7 @@ export default function LandingSeo() {
       {ogImageUrl && (
         <meta
           property="og:image:alt"
-          content="Ething Solutions - Hire remote developers from India for global companies"
+          content={landingPageMeta.ogImageAlt}
         />
       )}
       <meta property="og:locale" content="en_US" />
@@ -227,7 +227,7 @@ export default function LandingSeo() {
       {ogImageUrl && (
         <meta
           name="twitter:image:alt"
-          content="Ething Solutions - Hire remote developers from India for global companies"
+          content={landingPageMeta.ogImageAlt}
         />
       )}
 
