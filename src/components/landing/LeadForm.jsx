@@ -4,6 +4,7 @@ import { CheckCircle2, Loader2 } from 'lucide-react'
 import { utmParamsForForm } from '../../lib/utmParams.js'
 import { isHubSpotConfigured, loadHubSpotConfig, submitLeadToHubSpot } from '../../lib/hubspot.js'
 import { trackLeadConversion } from '../../lib/tracking.js'
+import { sendLeadFormEmailNotification } from '../../lib/web3forms.js'
 
 const COMPANY_SIZES = [
   '1-10 employees',
@@ -91,26 +92,36 @@ export default function LeadForm({
 
     setStatus('submitting')
 
-    const result = await submitLeadToHubSpot({
+    const lead = {
       name,
       email,
       company,
       companySize,
       hiringNeed,
       engineersNeeded,
-    })
+      utm,
+    }
 
-    if (result.ok) {
+    const [hubspotResult, emailResult] = await Promise.all([
+      submitLeadToHubSpot(lead),
+      sendLeadFormEmailNotification(lead),
+    ])
+
+    if (!emailResult.ok) {
+      console.warn('[LeadForm] Email notification failed', emailResult)
+    }
+
+    if (hubspotResult.ok) {
       setStatus('success')
       trackLeadConversion(formId)
       formEl.reset()
       onSuccess?.()
     } else {
       setStatus('error')
-      if (result.error === 'network_error') {
+      if (hubspotResult.error === 'network_error') {
         setSubmitError('Network error. Check your connection or disable ad blockers, then try again.')
-      } else if (result.message) {
-        setSubmitError(result.message)
+      } else if (hubspotResult.message) {
+        setSubmitError(hubspotResult.message)
       }
     }
   }
