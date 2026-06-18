@@ -57,7 +57,7 @@ export const pageDescriptions = {
   '/blogs':
     'Articles and engineering insights from the Ething team on Medium: staffing, software delivery, cloud, and platform topics.',
   '/hire-developers-india':
-    'Global companies (20-300 employees) hire pre-vetted remote engineers from India. Staff augmentation & dedicated teams for CEOs, CTOs, CFOs & VPs-profiles in 48 hours.',
+    'Hire pre-vetted developers from India in 48 hours. Ething helps 20–300 employee companies scale with remote engineers, QA, DevOps & AI talent. NDA protected staff augmentation.',
 }
 
 export const siteContent = {

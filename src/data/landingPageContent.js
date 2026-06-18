@@ -1,14 +1,18 @@
 /** Google Ads landing page - hire global talent from India */
 
 export const landingPageMeta = {
-  title: 'Hire Remote Developers from India | Global Engineering Teams | Ething',
+  title: 'Hire Developers India | Remote Engineers in 48 Hours | Ething',
   description:
-    'Global companies (20-300 employees) hire pre-vetted remote engineers from India. Staff augmentation & dedicated teams for CEOs, CTOs, CFOs & VPs-profiles in 48 hours.',
+    'Hire pre-vetted developers from India in 48 hours. Ething helps 20–300 employee companies scale with remote engineers, QA, DevOps & AI talent. NDA protected staff augmentation.',
   path: '/hire-developers-india',
   keywords: [
+    'hire developers india',
     'hire remote developers from India',
-    'global engineering team India',
     'hire developers in India',
+    'hire indian developers',
+    'remote developers india',
+    'offshore developers india',
+    'global engineering team India',
     'offshore development team',
     'remote engineering team',
     'dedicated development team',
@@ -18,11 +22,15 @@ export const landingPageMeta = {
     'startup hire engineers India',
     'global talent India',
     'engineering team augmentation',
+    'hire software engineers india',
+    'india software developers for hire',
   ],
   ogImage: '/images/ething-logo.png',
+  ogImageAlt:
+    'Ething Solutions — hire pre-vetted remote developers from India for global engineering teams',
   siteName: 'Ething Solutions',
   locale: 'en',
-  breadcrumbLabel: 'Hire Remote Developers from India',
+  breadcrumbLabel: 'Hire Developers India',
   geo: {
     targetCountries: ['US', 'GB', 'CA', 'AU', 'DE', 'SG'],
     targetCountryNames: ['United States', 'United Kingdom', 'Canada', 'Australia', 'Germany', 'Singapore'],
@@ -43,19 +51,23 @@ export const landingPageContent = {
   },
 
   clients: [
-    { id: 'posthog', name: 'PostHog', industry: 'Product Analytics', logo: '/clients/posthog.svg' },
+    { id: 'posthug', name: 'PostHug', industry: '', logo: '/clients/posthug.svg' },
     {
       id: 'plausible',
       name: 'Plausible Analytics',
-      industry: 'Web Analytics',
-      logo: '/clients/plausibleanalytics.svg',
+      industry: '',
+      logo: '/clients/plausible.svg',
     },
-    { id: 'buffer', name: 'Buffer', industry: 'Social Media SaaS', logo: '/clients/buffer.svg' },
-    { id: 'convertkit', name: 'ConvertKit', industry: 'Email Marketing', logo: '/clients/convertkit.svg' },
-    { id: 'toggl', name: 'Toggl', industry: 'Time Tracking', logo: '/clients/toggl.svg' },
-    { id: 'hotjar', name: 'Hotjar', industry: 'UX Analytics', logo: '/clients/hotjar.svg' },
-    { id: 'typeform', name: 'Typeform', industry: 'Forms & Surveys', logo: '/clients/typeform.svg' },
-    { id: 'ghost', name: 'Ghost', industry: 'Publishing Platform', logo: '/clients/ghost.svg' },
+    { id: 'buffer', name: 'Buffer', industry: '', logo: '/clients/buffer.svg' },
+    { id: 'convertkit', name: 'ConvertKit', industry: '', logo: '/clients/convertkit.svg' },
+    { id: 'toggl', name: 'Toggl', industry: '', logo: '/clients/toggl.svg' },
+    { id: 'hotjar', name: 'Hotjar', industry: '', logo: '/clients/hotjar.svg' },
+    { id: 'typeform', name: 'Typeform', industry: '', logo: '/clients/typeform.svg' },
+    { id: 'ghost', name: 'Ghost', industry: '', logo: '/clients/ghost.svg' },
+    { id: 'mercer', name: 'Mercer', industry: '', logo: '/clients/mercer.svg' },
+    { id: 'aionos', name: 'Aionos', industry: '', logo: '/clients/aionos.png' },
+    { id: 'salispay', name: 'Salispay', industry: '', logo: '/clients/salispay.svg' },
+    { id: 'credopay', name: 'Credopay', industry: '', logo: '/clients/credopay.svg' },
   ],
 
   icp: {
