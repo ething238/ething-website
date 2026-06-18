@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle2, Loader2 } from 'lucide-react'
 import { utmParamsForForm } from '../../lib/utmParams.js'
-import { isHubSpotConfigured, submitLeadToHubSpot } from '../../lib/hubspot.js'
+import { isHubSpotConfigured, loadHubSpotConfig, submitLeadToHubSpot } from '../../lib/hubspot.js'
 import { trackLeadConversion } from '../../lib/tracking.js'
 
 const COMPANY_SIZES = [
@@ -46,10 +46,12 @@ export default function LeadForm({
 }) {
   const [status, setStatus] = useState('idle')
   const [errors, setErrors] = useState({})
+  const [submitError, setSubmitError] = useState('')
   const [utm, setUtm] = useState({})
 
   useEffect(() => {
     setUtm(utmParamsForForm())
+    loadHubSpotConfig()
   }, [])
 
   async function onSubmit(e) {
@@ -79,6 +81,9 @@ export default function LeadForm({
     }
 
     setErrors({})
+    setSubmitError('')
+
+    await loadHubSpotConfig()
     if (!isHubSpotConfigured()) {
       setStatus('not_configured')
       return
@@ -102,6 +107,11 @@ export default function LeadForm({
       onSuccess?.()
     } else {
       setStatus('error')
+      if (result.error === 'network_error') {
+        setSubmitError('Network error. Check your connection or disable ad blockers, then try again.')
+      } else if (result.message) {
+        setSubmitError(result.message)
+      }
     }
   }
 
@@ -219,7 +229,7 @@ export default function LeadForm({
 
       {status === 'error' && (
         <p className="text-center text-sm text-red-600">
-          Something went wrong. Please try again or email support@ething.in
+          {submitError || 'Something went wrong. Please try again or email support@ething.in'}
         </p>
       )}
       {status === 'not_configured' && (
