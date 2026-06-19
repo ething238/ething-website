@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle2, Loader2 } from 'lucide-react'
 import { utmParamsForForm } from '../../lib/utmParams.js'
+import { appendLeadToGoogleSheet, loadGoogleSheetsConfig } from '../../lib/googleSheets.js'
 import { isHubSpotConfigured, loadHubSpotConfig, submitLeadToHubSpot } from '../../lib/hubspot.js'
 import { trackLeadConversion } from '../../lib/tracking.js'
 import { sendLeadFormEmailNotification } from '../../lib/web3forms.js'
@@ -53,6 +54,7 @@ export default function LeadForm({
   useEffect(() => {
     setUtm(utmParamsForForm())
     loadHubSpotConfig()
+    loadGoogleSheetsConfig()
   }, [])
 
   async function onSubmit(e) {
@@ -102,13 +104,18 @@ export default function LeadForm({
       utm,
     }
 
-    const [hubspotResult, emailResult] = await Promise.all([
+    const [hubspotResult, emailResult, sheetsResult] = await Promise.all([
       submitLeadToHubSpot(lead),
       sendLeadFormEmailNotification(lead),
+      appendLeadToGoogleSheet(lead),
     ])
 
     if (!emailResult.ok) {
       console.warn('[LeadForm] Email notification failed', emailResult)
+    }
+
+    if (!sheetsResult.ok && sheetsResult.error !== 'not_configured') {
+      console.warn('[LeadForm] Google Sheets append failed', sheetsResult)
     }
 
     if (hubspotResult.ok) {
