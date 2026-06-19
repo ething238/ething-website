@@ -1,4 +1,6 @@
 {
   "hubspotPortalId": "246502959",
-  "hubspotFormGuid": "2ae6f313-cb93-4a7b-bb7a-d52de9c8e98a"
+  "hubspotFormGuid": "2ae6f313-cb93-4a7b-bb7a-d52de9c8e98a",
+  "googleSheetsWebhookUrl": "https://script.google.com/macros/s/AKfycbwlDFBJGW4-UE7obArkjvI9S2qkgryqXEmh4GW0VHSDHsQXNWxbwyVaZpJKnjK1WZ6QZA/exec",
+  "googleSheetsSecret": "vN7$kQ9z!R2mX8@Lp4#Tw6Yc1&Hs5JuD3FgE0Bn"
 }
