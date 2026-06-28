@@ -52,7 +52,7 @@ export function initTracking() {
     injectScript('ething-ga4', `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`)
     injectInlineScript(
       'ething-ga4-init',
-      `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}');`,
+      `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}');${ADS_ID ? `gtag('config','${ADS_ID}');` : ''}`,
     )
   }
 
