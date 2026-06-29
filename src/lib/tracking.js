@@ -54,6 +54,9 @@ export function initTracking() {
       'ething-ga4-init',
       `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}');${ADS_ID ? `gtag('config','${ADS_ID}');` : ''}`,
     )
+  } else if (ADS_ID && typeof window.gtag === 'function') {
+    // gtag was bootstrapped externally (index.html) without the AW conversion ID — register it now
+    window.gtag('config', ADS_ID)
   }
 
   if (META_PIXEL_ID) {
