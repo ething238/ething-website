@@ -4,7 +4,7 @@
  */
 
 import anujPortrait from '../assets/anuj.png'
-import raghavPortrait from '../assets/raghav.png'
+// import raghavPortrait from '../assets/raghav.png'
 
 /**
  * Lives in `./pageTitles.js` so imports here (e.g. PNGs for leaders) are not pulled in when Node
@@ -388,16 +388,6 @@ export const siteContent = {
             alt: 'Anuj Gupta',
           },
           linkedInUrl: 'https://www.linkedin.com/in/anuj-k-gupta/',
-        },
-        {
-          name: 'Raghav Gupta',
-          role: 'Strategy and Client Success',
-          note: 'University of London',
-          image: {
-            src: raghavPortrait,
-            alt: 'Raghav Gupta',
-          },
-          linkedInUrl: 'https://www.linkedin.com/in/raghav-gupta-7b4a85171/',
         },
       ],
     },
