@@ -28,7 +28,6 @@ import LeadCaptureModal from '../components/landing/LeadCaptureModal.jsx'
 import ExitIntentPopup from '../components/landing/ExitIntentPopup.jsx'
 import StickyMobileCta from '../components/landing/StickyMobileCta.jsx'
 import CalendlyButton, { openCalendly } from '../components/landing/CalendlyButton.jsx'
-import HeroIllustration from '../components/landing/HeroIllustration.jsx'
 import ClientsSection from '../components/landing/ClientsSection.jsx'
 import IcpSection from '../components/landing/IcpSection.jsx'
 import AnimatedCounter, { FadeInSection, SectionHeading } from '../components/landing/AnimatedCounter.jsx'
@@ -215,8 +214,17 @@ export default function HireDevelopersLanding() {
               initial={{ opacity: 0, x: 24 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: easeOut }}
+              className="order-first rounded-2xl border border-white/10 bg-white p-5 shadow-2xl shadow-black/25 sm:p-6 lg:order-none lg:p-7"
             >
-              <HeroIllustration reduceMotion={reduceMotion} />
+              <div className="mb-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-teal-600">
+                  {c.leadMagnet.title}
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-zinc-600">
+                  {c.leadMagnet.subtitle}
+                </p>
+              </div>
+              <LeadForm cta={c.leadMagnet.cta} formId="lead-magnet-form" />
             </motion.div>
           </div>
         </div>
@@ -536,33 +544,29 @@ export default function HireDevelopersLanding() {
       {/* SECTION 11 - LEAD MAGNET */}
       <section id="lead-magnet" aria-labelledby="lead-magnet-heading" className="border-t border-zinc-200 bg-zinc-50 py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-start gap-12 lg:grid-cols-2">
+          <div className="mx-auto max-w-3xl">
             <FadeInSection>
               <SectionHeading
                 titleId="lead-magnet-heading"
-                center={false}
                 title={c.leadMagnet.title}
                 subtitle={c.leadMagnet.subtitle}
               />
-              <ul className="mt-8 space-y-4">
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
                 {[
                   { icon: Users, text: '3 profiles matched to your stack and seniority' },
                   { icon: Zap, text: 'Delivered within 48 hours - no waiting' },
                   { icon: Shield, text: 'NDA protected, no recruiting fees' },
                   { icon: Globe2, text: 'Engineers with global client experience' },
                 ].map(({ icon: Icon, text }) => (
-                  <li key={text} className="flex items-start gap-3 text-sm text-zinc-600">
+                  <li
+                    key={text}
+                    className="flex items-start gap-3 rounded-2xl border border-zinc-200 bg-white p-4 text-sm text-zinc-600 shadow-sm"
+                  >
                     <Icon className="mt-0.5 h-5 w-5 shrink-0 text-teal-600" />
                     {text}
                   </li>
                 ))}
               </ul>
-            </FadeInSection>
-
-            <FadeInSection delay={0.1}>
-              <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-lg sm:p-8">
-                <LeadForm cta={c.leadMagnet.cta} formId="lead-magnet-form" />
-              </div>
             </FadeInSection>
           </div>
         </div>
