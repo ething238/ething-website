@@ -15,8 +15,9 @@ export default function LandingFooter() {
               className="mb-4"
             />
             <p className="text-sm leading-relaxed text-zinc-400">
-              Ething Solutions helps global companies (20-300 employees) hire vetted remote engineering
-              talent from India - staff augmentation, dedicated teams, and managed offshore development.
+              Ething Solutions provides software and AI engineering talent for staff augmentation plus
+              consulting and delivery support so enterprises can scale teams with credible, experienced
+              practitioners.
             </p>
           </div>
 
