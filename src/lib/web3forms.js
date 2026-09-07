@@ -43,6 +43,7 @@ export async function sendWeb3FormsEmail({ subject, name, email, message }) {
 export function buildLeadFormEmailMessage({
   name,
   email,
+  mobileNumber,
   company,
   companySize,
   hiringNeed,
@@ -54,6 +55,7 @@ export function buildLeadFormEmailMessage({
     '',
     `Name: ${name}`,
     `Email: ${email}`,
+    `Mobile number: ${mobileNumber}`,
     `Company: ${company}`,
     `Company size: ${companySize}`,
     `Hiring need: ${hiringNeed}`,
