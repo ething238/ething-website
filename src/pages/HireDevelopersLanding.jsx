@@ -25,7 +25,6 @@ import LandingHeader from '../components/landing/LandingHeader.jsx'
 import LandingFooter from '../components/landing/LandingFooter.jsx'
 import LeadForm from '../components/landing/LeadForm.jsx'
 import LeadCaptureModal from '../components/landing/LeadCaptureModal.jsx'
-import ExitIntentPopup from '../components/landing/ExitIntentPopup.jsx'
 import StickyMobileCta from '../components/landing/StickyMobileCta.jsx'
 import CalendlyButton, { openCalendly } from '../components/landing/CalendlyButton.jsx'
 import ClientsSection from '../components/landing/ClientsSection.jsx'
@@ -624,7 +623,6 @@ export default function HireDevelopersLanding() {
           />
         )}
       </AnimatePresence>
-      <ExitIntentPopup onOpenForm={openFormModal} />
     </>
   )
 }
