@@ -49,11 +49,13 @@ function buildWebhookUrl(webhookUrl, params) {
 }
 
 function leadParams(secret, lead) {
-  const { name, email, company, companySize, hiringNeed, engineersNeeded, utm = {} } = lead
+  const { name, email, mobileNumber, company, companySize, hiringNeed, engineersNeeded, utm = {} } = lead
   return {
     token: secret,
     name,
     email,
+    mobileNumber,
+    phone: mobileNumber,
     company,
     companySize,
     hiringNeed,
