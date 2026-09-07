@@ -39,6 +39,13 @@ function validateWorkEmail(email) {
   return null
 }
 
+function validateMobileNumber(mobileNumber) {
+  const digits = mobileNumber.replace(/\D/g, '')
+  if (!digits) return 'Mobile number is required.'
+  if (digits.length < 7 || digits.length > 15) return 'Please enter a valid mobile number.'
+  return null
+}
+
 export default function LeadForm({
   cta = 'Send Me Profiles',
   compact = false,
@@ -64,6 +71,7 @@ export default function LeadForm({
 
     const name = String(fd.get('name') ?? '').trim()
     const email = String(fd.get('email') ?? '').trim()
+    const mobileNumber = String(fd.get('mobile_number') ?? '').trim()
     const company = String(fd.get('company') ?? '').trim()
     const companySize = String(fd.get('company_size') ?? '').trim()
     const hiringNeed = String(fd.get('hiring_need') ?? '').trim()
@@ -73,6 +81,8 @@ export default function LeadForm({
     if (!name) nextErrors.name = 'Name is required.'
     const emailErr = validateWorkEmail(email)
     if (emailErr) nextErrors.email = emailErr
+    const mobileErr = validateMobileNumber(mobileNumber)
+    if (mobileErr) nextErrors.mobile_number = mobileErr
     if (!company) nextErrors.company = 'Company is required.'
     if (!companySize) nextErrors.company_size = 'Please select company size.'
     if (!hiringNeed) nextErrors.hiring_need = 'Please select a hiring need.'
@@ -97,6 +107,7 @@ export default function LeadForm({
     const lead = {
       name,
       email,
+      mobileNumber,
       company,
       companySize,
       hiringNeed,
@@ -170,6 +181,20 @@ export default function LeadForm({
           {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email}</p>}
         </label>
       </div>
+
+      <label className="block text-left">
+        <span className={labelClass}>Mobile Number *</span>
+        <input
+          name="mobile_number"
+          type="tel"
+          autoComplete="tel"
+          className={fieldClass}
+          placeholder="+1 555 000 0000"
+        />
+        {errors.mobile_number && (
+          <p className="mt-1 text-xs text-red-600">{errors.mobile_number}</p>
+        )}
+      </label>
 
       <label className="block text-left">
         <span className={labelClass}>Company *</span>
