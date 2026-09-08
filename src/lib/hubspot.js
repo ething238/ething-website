@@ -78,7 +78,6 @@ function formatHubSpotError(data) {
 export async function submitLeadToHubSpot({
   name,
   email,
-  mobileNumber,
   company,
   companySize,
   hiringNeed,
@@ -95,7 +94,6 @@ export async function submitLeadToHubSpot({
     contactField('firstname', firstname),
     contactField('lastname', lastname),
     contactField('email', email),
-    contactField('phone', mobileNumber),
     contactField('company', company),
     contactField('engineers_needed', engineersNeeded),
     companyField('company_size', companySize),
