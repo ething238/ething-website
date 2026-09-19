@@ -14,11 +14,11 @@ function countryArea(code, name) {
   return { '@type': 'Country', name, alternateName: code }
 }
 
-function buildJsonLd(base, canonical) {
+function buildJsonLd(base, canonical, meta, content) {
   const orgId = `${base}/#organization`
   const pageId = `${canonical}#webpage`
   const serviceId = `${canonical}#service`
-  const { geo } = landingPageMeta
+  const { geo } = meta
 
   const globalService = {
     '@type': 'Service',
@@ -42,8 +42,8 @@ function buildJsonLd(base, canonical) {
         '@type': 'WebPage',
         '@id': pageId,
         url: canonical,
-        name: landingPageMeta.title,
-        description: landingPageMeta.description,
+        name: meta.title,
+        description: meta.description,
         isPartOf: { '@id': `${base}/#website` },
         about: { '@id': serviceId },
         inLanguage: 'en',
@@ -56,7 +56,7 @@ function buildJsonLd(base, canonical) {
         },
         primaryImageOfPage: {
           '@type': 'ImageObject',
-          url: absoluteUrl(base, landingPageMeta.ogImage),
+          url: absoluteUrl(base, meta.ogImage),
         },
       },
       {
@@ -67,7 +67,7 @@ function buildJsonLd(base, canonical) {
           {
             '@type': 'ListItem',
             position: 2,
-            name: landingPageMeta.breadcrumbLabel,
+            name: meta.breadcrumbLabel,
             item: canonical,
           },
         ],
@@ -76,9 +76,9 @@ function buildJsonLd(base, canonical) {
         '@type': 'ProfessionalService',
         '@id': serviceId,
         name: 'Ething Solutions - Remote Engineering Talent from India',
-        description: landingPageMeta.description,
+        description: meta.description,
         url: canonical,
-        image: absoluteUrl(base, landingPageMeta.ogImage),
+        image: absoluteUrl(base, meta.ogImage),
         provider: { '@id': orgId },
         areaServed: geo.targetCountryNames.map((name, i) =>
           countryArea(geo.targetCountries[i], name),
@@ -94,11 +94,11 @@ function buildJsonLd(base, canonical) {
           'Dedicated remote engineering teams',
           'Mid-size company engineering hiring',
         ],
-        serviceType: landingPageContent.services.items.map((s) => s.title),
+        serviceType: content.services.items.map((s) => s.title),
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'Remote Engineering Hiring for Global Companies',
-          itemListElement: landingPageContent.services.items.map((s, i) => ({
+          itemListElement: content.services.items.map((s, i) => ({
             '@type': 'Offer',
             position: i + 1,
             areaServed: geo.targetCountryNames.map((name, j) =>
@@ -116,9 +116,9 @@ function buildJsonLd(base, canonical) {
       {
         '@type': 'Organization',
         '@id': orgId,
-        name: landingPageMeta.siteName,
+        name: meta.siteName,
         url: `${base}/`,
-        logo: absoluteUrl(base, landingPageMeta.ogImage),
+        logo: absoluteUrl(base, meta.ogImage),
         email: 'support@ething.in',
         telephone: '+1-929-557-4560',
         address: {
@@ -160,14 +160,14 @@ function buildJsonLd(base, canonical) {
         '@type': 'WebSite',
         '@id': `${base}/#website`,
         url: `${base}/`,
-        name: landingPageMeta.siteName,
+        name: meta.siteName,
         publisher: { '@id': orgId },
         inLanguage: 'en',
       },
       {
         '@type': 'FAQPage',
         '@id': `${canonical}#faq`,
-        mainEntity: landingPageContent.faqs.map((faq) => ({
+        mainEntity: content.faqs.map((faq) => ({
           '@type': 'Question',
           name: faq.question,
           acceptedAnswer: { '@type': 'Answer', text: faq.answer },
@@ -177,18 +177,18 @@ function buildJsonLd(base, canonical) {
   }
 }
 
-export default function LandingSeo() {
+export default function LandingSeo({ meta = landingPageMeta, content = landingPageContent }) {
   const base = getSiteBaseUrl()
-  const canonical = base ? `${base}${landingPageMeta.path}` : undefined
-  const ogImageUrl = absoluteUrl(base, landingPageMeta.ogImage)
-  const keywords = landingPageMeta.keywords.join(', ')
-  const jsonLd = base && canonical ? buildJsonLd(base, canonical) : null
-  const { geo } = landingPageMeta
+  const canonical = base ? `${base}${meta.path}` : undefined
+  const ogImageUrl = absoluteUrl(base, meta.ogImage)
+  const keywords = meta.keywords.join(', ')
+  const jsonLd = base && canonical ? buildJsonLd(base, canonical, meta, content) : null
+  const { geo } = meta
 
   return (
     <Helmet htmlAttributes={{ lang: 'en' }}>
-      <title>{landingPageMeta.title}</title>
-      <meta name="description" content={landingPageMeta.description} />
+      <title>{meta.title}</title>
+      <meta name="description" content={meta.description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Ething Solutions" />
       <meta
@@ -207,27 +207,27 @@ export default function LandingSeo() {
       {canonical && <link rel="alternate" hrefLang="x-default" href={canonical} />}
 
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content={landingPageMeta.siteName} />
-      <meta property="og:title" content={landingPageMeta.title} />
-      <meta property="og:description" content={landingPageMeta.description} />
+      <meta property="og:site_name" content={meta.siteName} />
+      <meta property="og:title" content={meta.title} />
+      <meta property="og:description" content={meta.description} />
       {canonical && <meta property="og:url" content={canonical} />}
       {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
       {ogImageUrl && (
         <meta
           property="og:image:alt"
-          content={landingPageMeta.ogImageAlt}
+          content={meta.ogImageAlt}
         />
       )}
       <meta property="og:locale" content="en_US" />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={landingPageMeta.title} />
-      <meta name="twitter:description" content={landingPageMeta.description} />
+      <meta name="twitter:title" content={meta.title} />
+      <meta name="twitter:description" content={meta.description} />
       {ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
       {ogImageUrl && (
         <meta
           name="twitter:image:alt"
-          content={landingPageMeta.ogImageAlt}
+          content={meta.ogImageAlt}
         />
       )}
 

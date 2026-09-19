@@ -159,6 +159,12 @@ npm run build      # production build → dist/
 npm run preview    # preview the production build locally
 ```
 
+### One-click Windows preview
+
+On Windows, double-click `start-local-preview.bat`. It installs dependencies when needed,
+starts Vite on `http://127.0.0.1:5173`, and opens `/hire-top-talent` automatically. Keep the
+terminal window open while testing and press `Ctrl+C` to stop the server.
+
 ## Integrations
 
 ### Lead Capture (`/hire-developers-india`)

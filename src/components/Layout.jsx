@@ -4,10 +4,11 @@ import Footer from './Footer.jsx'
 import ScrollToTopButton from './ScrollToTopButton.jsx'
 import Seo from './Seo.jsx'
 import { pageTitles, pageDescriptions } from '../data/siteContent.js'
+import { technologyLandingPagePaths } from '../data/technologyLandingPages.js'
 
 const knownPaths = new Set(Object.keys(pageTitles))
 
-const landingPagePaths = new Set(['/hire-developers-india'])
+const landingPagePaths = new Set(['/hire-developers-india', ...technologyLandingPagePaths])
 
 export default function Layout({ content, children }) {
   const location = useLocation()

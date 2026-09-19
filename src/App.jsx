@@ -17,6 +17,7 @@ import VisitorDashboard from './pages/VisitorDashboard.jsx'
 import NotFound from './pages/NotFound.jsx'
 import VisitTracker from './components/VisitTracker.jsx'
 import { siteContent } from './data/siteContent.js'
+import { technologyLandingPages } from './data/technologyLandingPages.js'
 
 function ScrollToTopOnRoute() {
   const { pathname, hash } = useLocation()
@@ -69,6 +70,13 @@ function AppRoutes() {
         <Route path="/privacy-policy" element={<Privacy content={siteContent} />} />
         <Route path="/contact" element={<Contact content={siteContent} />} />
         <Route path="/hire-developers-india" element={<HireDevelopersLanding />} />
+        {Object.values(technologyLandingPages).map(({ meta, content }) => (
+          <Route
+            key={meta.path}
+            path={meta.path}
+            element={<HireDevelopersLanding meta={meta} content={content} />}
+          />
+        ))}
         <Route path="/visitor-dashboard" element={<VisitorDashboard />} />
 
         <Route path="/about" element={<Navigate to="/about_us" replace />} />

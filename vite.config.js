@@ -302,7 +302,7 @@ function seoStaticFilesPlugin() {
     },
     closeBundle() {
       const env = loadEnv(viteConfig.mode, process.cwd(), '')
-      const baseUrl = (env.VITE_SITE_URL || 'https://example.com').replace(/\/$/, '')
+      const baseUrl = (env.VITE_SITE_URL || 'https://www.ethingsolutions.com').replace(/\/$/, '')
       const outDir = viteConfig.build.outDir
       const paths = Object.keys(pageTitles).sort((a, b) => {
         if (a === '/') return -1

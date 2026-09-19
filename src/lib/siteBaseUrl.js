@@ -1,6 +1,6 @@
 /**
  * Canonical site origin for meta tags and JSON-LD.
- * Set `VITE_SITE_URL` in `.env` for production (e.g. https://www.example.com).
+ * Set `VITE_SITE_URL` in `.env` to override the production origin.
  */
 export function getSiteBaseUrl() {
   const raw = import.meta.env.VITE_SITE_URL
@@ -10,5 +10,5 @@ export function getSiteBaseUrl() {
   if (import.meta.env.DEV && typeof window !== 'undefined') {
     return window.location.origin
   }
-  return ''
+  return 'https://www.ethingsolutions.com'
 }
