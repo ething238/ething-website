@@ -23,4 +23,12 @@ export const pageTitles = {
   '/blogs': 'Blogs · Ething',
   '/hire-developers-india':
     'Hire Developers India | Remote Engineers in 48 Hours | Ething',
+  '/hire-top-talent': 'Hire Top Technology Talent in India | Ething Solutions',
+  '/hire-developers': 'Hire Software Developers in India | Ething Solutions',
+  '/staff-augmentation': 'IT Staff Augmentation Services in India | Ething Solutions',
+  '/hire-ai-developers': 'Hire AI Developers & Engineers in India | Ething Solutions',
+  '/hire-python-developers': 'Hire Python Developers in India | Ething Solutions',
+  '/hire-full-stack-developers': 'Hire Full Stack Developers in India | Ething Solutions',
+  '/hire-react-developers': 'Hire React Developers in India | Ething Solutions',
+  '/hire-devops-engineers': 'Hire DevOps Engineers in India | Ething Solutions',
 }

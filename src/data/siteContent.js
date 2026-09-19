@@ -58,6 +58,22 @@ export const pageDescriptions = {
     'Articles and engineering insights from the Ething team on Medium: staffing, software delivery, cloud, and platform topics.',
   '/hire-developers-india':
     'Hire pre-vetted developers from India in 48 hours. Ething helps 20–300 employee companies scale with remote engineers, QA, DevOps & AI talent. NDA protected staff augmentation.',
+  '/hire-top-talent':
+    'Hire pre-vetted technology talent from India across software, AI, cloud, data, QA and product engineering roles.',
+  '/hire-developers':
+    'Hire pre-vetted software developers from India for web, backend, mobile, cloud and product engineering roles.',
+  '/staff-augmentation':
+    'Scale your engineering team with flexible IT staff augmentation from India across software, AI, cloud, data and DevOps.',
+  '/hire-ai-developers':
+    'Hire pre-vetted AI and machine-learning engineers from India for generative AI, LLM, RAG, NLP and MLOps initiatives.',
+  '/hire-python-developers':
+    'Hire pre-vetted Python developers from India for backend APIs, automation, data engineering and AI development.',
+  '/hire-full-stack-developers':
+    'Hire pre-vetted full-stack developers from India across frontend, backend, APIs, databases and cloud platforms.',
+  '/hire-react-developers':
+    'Hire pre-vetted React developers from India for Next.js applications, component systems and frontend product delivery.',
+  '/hire-devops-engineers':
+    'Hire pre-vetted DevOps engineers from India for cloud, Kubernetes, Terraform, CI/CD and platform engineering.',
 }
 
 export const siteContent = {
@@ -97,6 +113,20 @@ export const siteContent = {
       id: 'staffing',
       label: 'Staffing Services',
       path: '/staffing_services',
+    },
+    {
+      id: 'hire-talent',
+      label: 'Hire Talent',
+      children: [
+        { label: 'Top Technology Talent', path: '/hire-top-talent' },
+        { label: 'Software Developers', path: '/hire-developers' },
+        { label: 'IT Staff Augmentation', path: '/staff-augmentation' },
+        { label: 'AI Developers', path: '/hire-ai-developers' },
+        { label: 'Python Developers', path: '/hire-python-developers' },
+        { label: 'Full Stack Developers', path: '/hire-full-stack-developers' },
+        { label: 'React Developers', path: '/hire-react-developers' },
+        { label: 'DevOps Engineers', path: '/hire-devops-engineers' },
+      ],
     },
     {
       id: 'engineering',

@@ -17,9 +17,9 @@ import {
   ShoppingCart,
   Sparkles,
 } from 'lucide-react'
-import { landingPageContent } from '../data/landingPageContent.js'
+import { landingPageContent, landingPageMeta } from '../data/landingPageContent.js'
 import { captureUtmParams } from '../lib/utmParams.js'
-import { initTracking } from '../lib/tracking.js'
+import { initTracking, trackEvent } from '../lib/tracking.js'
 import LandingSeo from '../components/landing/LandingSeo.jsx'
 import LandingHeader from '../components/landing/LandingHeader.jsx'
 import LandingFooter from '../components/landing/LandingFooter.jsx'
@@ -123,8 +123,8 @@ function FaqAccordion({ faqs }) {
   )
 }
 
-export default function HireDevelopersLanding() {
-  const c = landingPageContent
+export default function HireDevelopersLanding({ content = landingPageContent, meta = landingPageMeta }) {
+  const c = content
   const reduceMotion = useReducedMotion()
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -133,11 +133,15 @@ export default function HireDevelopersLanding() {
   useEffect(() => {
     captureUtmParams()
     initTracking()
-  }, [])
+    trackEvent('landing_page_view', {
+      landing_page: meta.path,
+      page_category: meta.category || 'developers-india',
+    })
+  }, [meta.category, meta.path])
 
   return (
     <>
-      <LandingSeo />
+      <LandingSeo meta={meta} content={c} />
 
       <LandingHeader
         onGetProfiles={openFormModal}
@@ -150,7 +154,7 @@ export default function HireDevelopersLanding() {
       {/* SECTION 1 - HERO */}
       <section
         id="hero"
-        aria-label="Hire remote developers from India for global companies"
+        aria-label={meta.breadcrumbLabel}
         className={`relative overflow-hidden pt-20 ${reduceMotion ? 'mesh-bg' : 'hero-mesh-animated'}`}
       >
         <div className="pointer-events-none absolute inset-0 grid-pattern opacity-30" />
