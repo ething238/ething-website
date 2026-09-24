@@ -13,6 +13,7 @@ import Blogs from './pages/Blogs.jsx'
 import Contact from './pages/Contact.jsx'
 import AiStaffAugmentation from './pages/AiStaffAugmentation.jsx'
 import HireDevelopersLanding from './pages/HireDevelopersLanding.jsx'
+import SoftwareDevelopersCampaign from './pages/SoftwareDevelopersCampaign.jsx'
 import VisitorDashboard from './pages/VisitorDashboard.jsx'
 import NotFound from './pages/NotFound.jsx'
 import VisitTracker from './components/VisitTracker.jsx'
@@ -74,7 +75,7 @@ function AppRoutes() {
           <Route
             key={meta.path}
             path={meta.path}
-            element={<HireDevelopersLanding meta={meta} content={content} />}
+            element={meta.category === 'developers' ? <SoftwareDevelopersCampaign meta={meta} content={content} /> : <HireDevelopersLanding meta={meta} content={content} />}
           />
         ))}
         <Route path="/visitor-dashboard" element={<VisitorDashboard />} />
