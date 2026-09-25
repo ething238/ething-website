@@ -7,6 +7,14 @@ import Logo, { LogoLight } from './Logo.jsx'
 const navItemBase =
   'whitespace-nowrap rounded-full px-2.5 py-2 text-[13px] font-medium tracking-tight transition xl:px-3 xl:text-sm'
 
+// These routes are independently exported My ad 1 pages in /public. Use a
+// normal navigation so the Hire Talent menu loads their exact page build.
+const exportedTalentPaths = new Set([
+  '/hire-developers', '/hire-ai-developers', '/hire-python-developers',
+  '/hire-full-stack-developers', '/hire-react-developers',
+  '/hire-devops-engineers', '/staff-augmentation', '/hire-top-talent',
+])
+
 export default function Header({ content }) {
   const { brand, navigation, cta } = content
   const location = useLocation()
@@ -107,6 +115,20 @@ export default function Header({ content }) {
                         className={`absolute left-0 top-full z-[70] mt-2 min-w-[220px] overflow-hidden rounded-2xl border p-1.5 shadow-lg ${glass}`}
                       >
                         {item.children.map((c) => (
+                          exportedTalentPaths.has(c.path) ? (
+                          <a
+                            key={c.path + c.label}
+                            href={c.path}
+                            onClick={() => setOpen(null)}
+                            className={`block whitespace-normal rounded-xl px-3 py-2.5 text-sm leading-snug transition ${
+                              dark
+                                ? 'text-zinc-100 hover:bg-white/12 hover:text-white'
+                                : 'text-zinc-700 hover:bg-ething-navy/5 hover:text-ething-ink'
+                            }`}
+                          >
+                            {c.label}
+                          </a>
+                          ) : (
                           <Link
                             key={c.path + c.label}
                             to={c.path}
@@ -119,6 +141,7 @@ export default function Header({ content }) {
                           >
                             {c.label}
                           </Link>
+                          )
                         ))}
                       </motion.div>
                     )}
@@ -177,6 +200,16 @@ export default function Header({ content }) {
                     </div>
                   )}
                   {item.children?.map((c) => (
+                    exportedTalentPaths.has(c.path) ? (
+                    <a
+                      key={c.label}
+                      href={c.path}
+                      onClick={() => setMobile(false)}
+                      className="ml-2 block rounded-lg px-2 py-1.5 text-sm text-zinc-600"
+                    >
+                      {c.label}
+                    </a>
+                    ) : (
                     <Link
                       key={c.label}
                       to={c.path}
@@ -185,6 +218,7 @@ export default function Header({ content }) {
                     >
                       {c.label}
                     </Link>
+                    )
                   ))}
                 </div>
               ))}
