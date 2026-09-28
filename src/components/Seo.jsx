@@ -28,6 +28,9 @@ export default function Seo({
   organizationJsonLd,
   siteName = 'Ething',
 }) {
+  // Build-time homepage metadata is emitted into the document head by the
+  // prerender step. Helmet only manages it after browser hydration.
+  if (import.meta.env.SSR) return null
   const base = getSiteBaseUrl()
   const canonicalHref =
     base && pathname != null

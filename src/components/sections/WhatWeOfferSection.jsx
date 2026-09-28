@@ -41,6 +41,15 @@ export default function WhatWeOfferSection({ data }) {
         <div className="mt-14 sm:mt-16">
           <ServiceGrid cards={serviceCards} />
         </div>
+        <div className="mt-12 border-t border-zinc-200 pt-10">
+          <h2 className="font-[family:var(--font-display)] text-2xl font-semibold text-zinc-900">{whatWeOffer.specialistTitle}</h2>
+          <p className="mt-2 text-zinc-600">{whatWeOffer.specialistIntro}</p>
+          <ul className="mt-5 flex flex-wrap gap-3">
+            {whatWeOffer.specialistLinks.map(({ label, path }) => (
+              <li key={path}><a href={path} className="inline-flex rounded-full border border-zinc-300 bg-white px-4 py-2 text-sm font-medium text-zinc-800 transition hover:border-orange-500 hover:text-orange-700">{label}</a></li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   )

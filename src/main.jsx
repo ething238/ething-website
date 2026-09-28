@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
@@ -18,12 +18,14 @@ if (!root) {
   throw new Error('Mount point #root not found. Check index.html.')
 }
 
-createRoot(root).render(
+const app = (
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter basename={routerBasename()}>
         <App />
       </BrowserRouter>
     </HelmetProvider>
-  </StrictMode>,
+  </StrictMode>
 )
+if (root.hasChildNodes()) hydrateRoot(root, app)
+else createRoot(root).render(app)
