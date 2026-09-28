@@ -1,6 +1,6 @@
 /** Browser tab titles by path. Used in `Layout` / page components. */
 export const pageTitles = {
-  '/': 'Ething · Engineering & AI Staff Augmentation',
+  '/': 'IT Staff Augmentation & Offshore Engineering | Ething',
   '/about_us': 'About Us · Ething',
   '/healthcare_industry': 'Healthcare · Ething',
   '/aerospace_industry': 'Aerospace & Defence · Ething',

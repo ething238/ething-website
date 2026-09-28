@@ -15,7 +15,7 @@ export { pageTitles } from './pageTitles.js'
 /** Meta descriptions by path. Keep in sync with routes in `App.jsx` / `pageTitles`. */
 export const pageDescriptions = {
   '/':
-    'Ething provides software engineering and AI staff augmentation-experienced engineers, ML specialists, and data professionals for enterprise and product teams.',
+    'Hire software developers, AI engineers and IT specialists from India. Ething provides flexible staff augmentation and offshore engineering teams for growing businesses.',
   '/about_us':
     'Meet Ething Solutions: software engineering, staffing, and technology consulting built for enterprises that need reliable delivery and industry-aligned teams.',
   '/healthcare_industry':
@@ -154,12 +154,12 @@ export const siteContent = {
   home: {
     hero: {
       badge: 'Software & AI engineering talent for your teams',
-      title: 'Engineering & AI Staff Augmentation Solutions',
-      titleHighlight: 'Staff Augmentation',
+      title: 'IT Staff Augmentation & Offshore Engineering Teams from India',
+      titleHighlight: 'Offshore Engineering',
       description:
-        'Helping enterprises scale faster with experienced software engineers, AI engineers, ML specialists, and data professionals.',
+        'Build and scale your technology team with experienced software developers, AI specialists, cloud engineers and other IT professionals. Ething helps businesses access skilled talent from India through flexible hiring and offshore engineering models.',
       primaryCta: { label: 'Hire Talent', path: '/contact' },
-      secondaryCta: { label: 'Contact Us', path: '/contact#reach-out' },
+      secondaryCta: { label: 'Talk to Our Team', path: '/contact#reach-out' },
       highlightsTitle: 'Where We Help',
       /** Shown in the lower hero band. Edit freely */
       highlights: [
@@ -201,16 +201,45 @@ export const siteContent = {
       id: 'what-we-offer',
       kicker: 'Capabilities',
       title: 'What We Offer',
-      subtitle: 'Consulting, Staffing Solutions and Engineering Services',
-      lead: 'Empowering Your Success Through Tailored Talent Solutions.',
+      subtitle: 'Flexible technology teams built around your requirements',
+      lead: 'Find the skills you need, from one specialist to a dedicated engineering team.',
       body:
-        'We offer comprehensive staffing solutions designed to address all your human capital requirements seamlessly. Through a meticulous recruitment process, we handpick the finest talent, ensuring a perfect fit for your organization.',
+        'Extend your team with IT staff augmentation, hire software developers and AI specialists, or build offshore engineering capacity in India. Explore the services below to find the right model and technical expertise for your project.',
+      specialistTitle: 'Hire specialists by technology',
+      specialistIntro: 'Explore dedicated hiring options for the technologies your team uses.',
+      specialistLinks: [
+        { label: 'Hire Python developers', path: '/hire-python-developers' },
+        { label: 'Hire React developers', path: '/hire-react-developers' },
+        { label: 'Hire full-stack developers', path: '/hire-full-stack-developers' },
+        { label: 'Hire DevOps engineers', path: '/hire-devops-engineers' },
+        { label: 'Hire top technology talent', path: '/hire-top-talent' },
+      ],
     },
 
     /**
      * serviceCards: `icon` matches lucide map in `ServiceGrid.jsx`
      */
     serviceCards: [
+      {
+        id: 'it-staff-augmentation', category: 'Staffing', title: 'IT Staff Augmentation',
+        description: 'Add software, cloud and data specialists to your existing team with a flexible engagement model.',
+        icon: 'Users', to: '/staff-augmentation', featured: true,
+      },
+      {
+        id: 'software-developers', category: 'Hiring', title: 'Hire Software Developers',
+        description: 'Find frontend, backend and full-stack developers who fit your product and engineering requirements.',
+        icon: 'Sparkles', to: '/hire-developers', featured: false,
+      },
+      {
+        id: 'ai-talent', category: 'AI', title: 'Hire AI Developers',
+        description: 'Add AI and machine learning expertise for data, models and production applications.',
+        icon: 'Brain', to: '/hire-ai-developers', featured: false,
+      },
+      {
+        id: 'offshore-engineering', category: 'Engineering', title: 'Offshore Engineering Teams',
+        description: 'Build engineering capacity in India for software, cloud, testing and product delivery.',
+        icon: 'Users', to: '/engineering-services', featured: false,
+      },
       {
         id: 'contract',
         category: 'Staffing',
