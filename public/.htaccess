@@ -3,6 +3,9 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+  # The eight exported landing pages already POST to this extensionless URL.
+  # Keep the request body/method; never send this API request to the SPA.
+  RewriteRule ^api/hire-developers/?$ api/hire-developers.php [L]
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

@@ -30,3 +30,9 @@ Thumbs.db
 # Test/cache output
 coverage/
 .vite/
+
+# Private form-delivery configuration, installed dependencies and limiter state.
+server/lead-delivery/config.local.php
+server/lead-delivery/vendor/
+server/lead-delivery/storage/
+artifacts/lead-delivery/

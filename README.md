@@ -196,6 +196,14 @@ Results are viewable at `/visitor-dashboard`.
 
 ## Deployment
 
+### Eight exported landing-page forms
+
+The eight statically exported Hire Talent pages post to `/api/hire-developers`. They need the private PHP backend in `server/lead-delivery` and the explicit rewrite in `public/.htaccess`; exporting pages or merging source code alone does not activate email delivery. The recipient is `support@ething.in`.
+
+Follow [the hosting/email administrator handoff](docs/landing-form-email-setup.md) for the targeted upload, private Gmail setup, verification and rollback. It preserves existing page designs and routes. Do not copy private backend configuration into `public_html`, `public/config.json`, frontend environment variables or GitHub. The Windows packaging script `scripts/package-lead-delivery.ps1` produces an allowlisted, credential-free installation zip after `composer install` in the private backend directory.
+
+This shared endpoint is separate from the `/hire-developers-india` HubSpot/Sheets/Web3Forms integration described above.
+
 Build and upload `dist/` to Hostinger via FTP or the file manager. The `public/.htaccess` handles SPA routing (all paths → `index.html`).
 
 ```bash
