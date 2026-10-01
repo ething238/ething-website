@@ -118,6 +118,7 @@ export const siteContent = {
       id: 'hire-talent',
       label: 'Hire Talent',
       children: [
+        { label: 'Explore Engineering Talent', path: '/other-services/' },
         { label: 'Top Technology Talent', path: '/hire-top-talent' },
         { label: 'Software Developers', path: '/hire-developers' },
         { label: 'IT Staff Augmentation', path: '/staff-augmentation' },

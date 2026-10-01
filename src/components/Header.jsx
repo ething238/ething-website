@@ -10,6 +10,7 @@ const navItemBase =
 // These routes are independently exported My ad 1 pages in /public. Use a
 // normal navigation so the Hire Talent menu loads their exact page build.
 const exportedTalentPaths = new Set([
+  '/other-services/',
   '/hire-developers', '/hire-ai-developers', '/hire-python-developers',
   '/hire-full-stack-developers', '/hire-react-developers',
   '/hire-devops-engineers', '/staff-augmentation', '/hire-top-talent',
