@@ -1,0 +1,14 @@
+{
+  "name": "ething/landing-lead-delivery",
+  "description": "Private SMTP backend for the eight exported eThing landing pages",
+  "type": "project",
+  "require": {
+    "php": ">=8.2",
+    "ext-openssl": "*",
+    "phpmailer/phpmailer": "^7.1.1"
+  },
+  "config": {
+    "allow-plugins": false,
+    "sort-packages": true
+  }
+}

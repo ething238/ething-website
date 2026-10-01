@@ -1,0 +1,2 @@
+# Defense in depth if this private directory is accidentally copied into a web root.
+Require all denied
