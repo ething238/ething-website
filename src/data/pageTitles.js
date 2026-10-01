@@ -24,6 +24,7 @@ export const pageTitles = {
   '/hire-developers-india':
     'Hire Developers India | Remote Engineers in 48 Hours | Ething',
   '/hire-top-talent': 'Hire Top Technology Talent in India | Ething Solutions',
+  '/other-services/': 'Hire Software & AI Engineers from India | eThing Solutions',
   '/hire-developers': 'Hire Software Developers in India | Ething Solutions',
   '/staff-augmentation': 'IT Staff Augmentation Services in India | Ething Solutions',
   '/hire-ai-developers': 'Hire AI Developers & Engineers in India | Ething Solutions',
