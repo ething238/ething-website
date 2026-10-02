@@ -1,0 +1,11 @@
+/* The video's baked-in logo must not depend on the form covering it.
+   Fade the upper video area into the hero at every viewport size; the
+   independently rendered wordmark and moving lower waves stay intact. */
+.services-hub .hub-hero .hero-video-loop {
+  background: radial-gradient(ellipse at 95% 0%, #0b2854 0%, #061a35 38%, #031322 76%);
+}
+
+.services-hub .hub-hero .hero-background-video {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 40%, #000 57%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 40%, #000 57%, #000 100%);
+}
