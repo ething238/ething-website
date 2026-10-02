@@ -136,7 +136,7 @@ export const technologyLandingPages = {
       'hire engineering team India',
     ],
     badge: 'Software engineering talent',
-    headline: 'Find the Right Software Developer, Fast',
+    headline: 'Hire Software Developers in India',
     subheadline:
       'Tell us who you need. We will share suitable developer profiles matched to your technology, experience and delivery goals within 48 hours.',
     primaryCta: 'Get Developer Profiles',
@@ -173,7 +173,7 @@ export const technologyLandingPages = {
       'offshore staff augmentation',
     ],
     badge: 'Flexible IT staff augmentation',
-    headline: 'Build Your Tech Team in 48 Hours',
+    headline: 'IT Staff Augmentation Services in India',
     subheadline:
       'Add the engineering skills and delivery capacity you need without waiting months for traditional recruitment.',
     primaryCta: 'Get Vetted Engineering Profiles',
@@ -210,7 +210,7 @@ export const technologyLandingPages = {
       'AI staff augmentation India',
     ],
     badge: 'AI engineering talent',
-    headline: 'Hire Pre-Vetted AI Developers in 48 Hours',
+    headline: 'Hire AI Developers and Engineers in India',
     subheadline:
       'Build AI products faster with engineers matched to your models, data platforms, product requirements and deployment environment.',
     primaryCta: 'Get AI Developer Profiles',
