@@ -3,6 +3,14 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Redirect direct requests only; the internal homepage rewrite must not loop.
+  RewriteCond %{THE_REQUEST} \s/+home\.html(?:[?\s]) [NC]
+  RewriteRule ^home\.html$ / [R=301,L]
+
+  # Serve the pre-rendered homepage at the canonical root URL.
+  RewriteRule ^$ home.html [L]
+
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
