@@ -4,6 +4,8 @@ import { createServer } from 'vite'
 
 const server = await createServer({ server: { middlewareMode: true }, appType: 'custom' })
 try {
+  const manifest = JSON.parse(await fs.readFile('dist/.vite/manifest.json', 'utf8'))
+  const assetPaths = Object.entries(manifest).filter(([source]) => source.startsWith('src/'))
   const { renderPage } = await server.ssrLoadModule('/src/prerender-entry.jsx')
   const { pageTitles } = await server.ssrLoadModule('/src/data/pageTitles.js')
   const template = (await fs.readFile('dist/index.html', 'utf8'))
@@ -33,6 +35,10 @@ try {
     }
 
     let { markup } = renderPage(pathname)
+    // SSR imports expose source URLs; use the corresponding production assets.
+    for (const [source, asset] of assetPaths) {
+      markup = markup.replaceAll(`"/${source}"`, `"/${asset.file}"`)
+    }
     // React 19 renders Helmet metadata inline in renderToString. Move it into
     // the document head, using the exact same Seo components as the browser.
     const head = []

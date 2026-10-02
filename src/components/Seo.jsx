@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async'
+import { pageLabels } from '../data/relatedPages.js'
 import { getSiteBaseUrl } from '../lib/siteBaseUrl.js'
 
 function absoluteUrl(base, pathOrAbsolute) {
@@ -34,6 +35,30 @@ export default function Seo({
       ? `${base}${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}`
       : undefined
   const ogImageUrl = absoluteUrl(base, ogImage)
+
+  const pageScript = canonicalHref && !noindex ? JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': pathname === '/about_us' ? 'AboutPage' : pathname === '/contact' ? 'ContactPage' : 'WebPage',
+        '@id': `${canonicalHref}#webpage`,
+        url: canonicalHref,
+        name: title,
+        description,
+        inLanguage: 'en',
+        isPartOf: { '@id': `${base}/#website` },
+        ...(pathname !== '/' && { breadcrumb: { '@id': `${canonicalHref}#breadcrumb` } }),
+      },
+      ...(pathname !== '/' ? [{
+        '@type': 'BreadcrumbList',
+        '@id': `${canonicalHref}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${base}/` },
+          { '@type': 'ListItem', position: 2, name: pageLabels[pathname] || title, item: canonicalHref },
+        ],
+      }] : []),
+    ],
+  }) : null
 
   const orgScript =
     organizationJsonLd && base
@@ -86,7 +111,7 @@ export default function Seo({
       : null
 
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: 'en' }}>
       <title>{title}</title>
       <meta name="description" content={description} />
       {canonicalHref && <link rel="canonical" href={canonicalHref} />}
@@ -109,6 +134,7 @@ export default function Seo({
       <meta name="twitter:description" content={description} />
       {ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
 
+      {pageScript && <script type="application/ld+json">{pageScript}</script>}
       {orgScript && (
         <script type="application/ld+json">{orgScript}</script>
       )}

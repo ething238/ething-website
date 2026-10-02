@@ -50,7 +50,7 @@ function RichIndustryPage({ page, content }) {
               {page.heroKicker ?? 'Industries'}
             </p>
             <h1 className="mt-4 font-[family:var(--font-display)] text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-[3.25rem] lg:leading-tight">
-              {page.title}
+              {page.heading ?? page.title}
             </h1>
             <Link
               to={content.cta.path}
@@ -176,7 +176,7 @@ export default function IndustryDetailPage({ content }) {
   }
 
   return (
-    <PageShell title={page.title} kicker="Industries">
+    <PageShell title={page.heading ?? page.title} kicker="Industries">
       <motion.p
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}

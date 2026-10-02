@@ -1,3 +1,4 @@
+import { pageTitles, pageDescriptions } from './pageTitles.js'
 import { landingPageContent, landingPageMeta } from './landingPageContent.js'
 
 const sharedGeo = landingPageMeta.geo
@@ -25,8 +26,8 @@ function createLandingPage({
       ...landingPageMeta,
       path,
       category,
-      title,
-      description,
+      title: pageTitles[path] || title,
+      description: pageDescriptions[path] || description,
       breadcrumbLabel,
       keywords,
       geo: sharedGeo,

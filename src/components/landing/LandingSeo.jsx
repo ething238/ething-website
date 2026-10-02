@@ -73,9 +73,9 @@ function buildJsonLd(base, canonical, meta, content) {
         ],
       },
       {
-        '@type': 'ProfessionalService',
+        '@type': 'Service',
         '@id': serviceId,
-        name: 'Ething Solutions - Remote Engineering Talent from India',
+        name: meta.breadcrumbLabel,
         description: meta.description,
         url: canonical,
         image: absoluteUrl(base, meta.ogImage),
