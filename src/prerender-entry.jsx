@@ -3,11 +3,11 @@ import { StaticRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App.jsx'
 
-export function renderHome() {
+export function renderPage(pathname = '/') {
   const context = {}
   const markup = renderToString(
     <HelmetProvider context={context}>
-      <StaticRouter location="/"><App /></StaticRouter>
+      <StaticRouter location={pathname}><App /></StaticRouter>
     </HelmetProvider>,
   )
   return { markup, helmet: context.helmet }

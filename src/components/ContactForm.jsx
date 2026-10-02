@@ -6,6 +6,7 @@ const WEB3FORMS_URL = 'https://api.web3forms.com/submit'
 export default function ContactForm({
   content,
   showTitle = true,
+  titleAs: Title = 'h2',
   title: titleOverride,
   className = '',
   headingId = 'contact-title',
@@ -91,12 +92,12 @@ export default function ContactForm({
   return (
     <div className={className}>
       {showTitle && (
-        <h2
+        <Title
           id={headingId}
           className="mb-2 text-center font-[family:var(--font-display)] text-3xl font-bold tracking-tight text-ething-ink md:text-4xl"
         >
           {heading}
-        </h2>
+        </Title>
       )}
       <p className="mb-8 text-center text-sm text-zinc-500">{note}</p>
       <motion.form

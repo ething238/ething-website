@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender-home.mjs",
+    "build": "vite build && node scripts/prerender-pages.mjs && node scripts/verify-prerender.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {

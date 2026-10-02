@@ -196,7 +196,7 @@ Results are viewable at `/visitor-dashboard`.
 
 ## Deployment
 
-Build and upload `dist/` to Hostinger via FTP or the file manager. The `public/.htaccess` handles SPA routing (all paths → `index.html`).
+Build and upload `dist/` to Hostinger via FTP or the file manager. The build prerenders every sitemap route and verifies its H1, content links, unique title, description, canonical and scripts. Existing standalone landing pages are preserved. `public/.htaccess` serves each route’s HTML, redirects legacy aliases, and returns HTTP 404 for unknown routes. Upload the entire `dist/` directory, including `.htaccess`, `404.html`, assets and PHP APIs. Remove any older hosting-level catch-all SPA rewrite that overrides these rules.
 
 ```bash
 npm run build
