@@ -6,6 +6,11 @@ ErrorDocument 404 /404.html
   RewriteEngine On
   RewriteBase /
 
+  # Permanently consolidate the bare domain onto the preferred HTTPS www host.
+  # REQUEST_URI preserves the path; the original query string is retained.
+  RewriteCond %{HTTP_HOST} ^ethingsolutions\.com(?::[0-9]+)?$ [NC]
+  RewriteRule ^ https://www.ethingsolutions.com%{REQUEST_URI} [R=301,L,NE]
+
   RewriteCond %{THE_REQUEST} \s/+home\.html(?:[?\s]) [NC]
   RewriteRule ^home\.html$ / [R=301,L]
   RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
