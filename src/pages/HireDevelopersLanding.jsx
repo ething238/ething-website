@@ -20,6 +20,7 @@ import {
 import { landingPageContent, landingPageMeta } from '../data/landingPageContent.js'
 import { captureUtmParams } from '../lib/utmParams.js'
 import { initTracking, trackEvent } from '../lib/tracking.js'
+import KeywordPageContent from '../components/KeywordPageContent.jsx'
 import LandingSeo from '../components/landing/LandingSeo.jsx'
 import LandingHeader from '../components/landing/LandingHeader.jsx'
 import LandingFooter from '../components/landing/LandingFooter.jsx'
@@ -398,6 +399,8 @@ export default function HireDevelopersLanding({ content = landingPageContent, me
           </div>
         </div>
       </section>
+
+      <KeywordPageContent pathname={meta.path} landing />
 
       {/* SECTION 6 - HOW IT WORKS */}
       <section id="how-it-works" aria-labelledby="how-it-works-heading" className="bg-white py-20 sm:py-24">
