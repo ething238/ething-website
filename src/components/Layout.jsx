@@ -3,6 +3,7 @@ import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 import ScrollToTopButton from './ScrollToTopButton.jsx'
 import Seo from './Seo.jsx'
+import KeywordPageContent from './KeywordPageContent.jsx'
 import RelatedServices from './RelatedServices.jsx'
 import { pageLabels } from '../data/relatedPages.js'
 import { pageTitles, pageDescriptions } from '../data/siteContent.js'
@@ -54,6 +55,7 @@ export default function Layout({ content, children }) {
           </nav>
         )}
         {children}
+        {isKnownRoute && <KeywordPageContent pathname={pathname} />}
         {isKnownRoute && <RelatedServices pathname={pathname} />}
       </main>
       {!isLandingPage && <Footer content={content} />}

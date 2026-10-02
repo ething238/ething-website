@@ -921,7 +921,7 @@ export const siteContent = {
       offeringsId: 'offerings',
       heroKicker: 'Staffing services',
       heroTitle:
-        'IT Staffing Services for Contract and Permanent Hiring',
+        'IT Staff Augmentation and Staffing Services in India',
       heroIntro:
         'Build your technology team with contract professionals or permanent hires matched to your skills, experience and location requirements. Ething supports onsite and remote staffing, candidate shortlisting and onboarding. Tell us the roles you need, your delivery priorities and the engagement duration so we can recommend a suitable hiring approach.',
       heroImage: {
