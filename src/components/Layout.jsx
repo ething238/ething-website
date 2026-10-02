@@ -55,7 +55,7 @@ export default function Layout({ content, children }) {
           </nav>
         )}
         {children}
-        {isKnownRoute && <KeywordPageContent pathname={pathname} />}
+        {isKnownRoute && !isLandingPage && <KeywordPageContent pathname={pathname} />}
         {isKnownRoute && <RelatedServices pathname={pathname} />}
       </main>
       {!isLandingPage && <Footer content={content} />}
