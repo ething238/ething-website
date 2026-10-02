@@ -311,7 +311,7 @@ function seoStaticFilesPlugin() {
       })
       const urlBlocks = paths
         .map((p) => {
-          const loc = p === '/' ? `${baseUrl}/` : `${baseUrl}${p}`
+          const loc = p === '/' ? `${baseUrl}/` : `${baseUrl}${p.replace(/\/$/, '')}`
           const priority = p === '/' ? '1.0' : '0.8'
           return `  <url>\n    <loc>${escapeXml(loc)}</loc>\n    <changefreq>weekly</changefreq>\n    <priority>${priority}</priority>\n  </url>`
         })

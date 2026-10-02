@@ -13,6 +13,7 @@ export default function Contact({ content }) {
       <ContactForm
         content={content}
         title={p.pageTitle}
+        titleAs="h1"
         showTitle
         className="py-2"
       />

@@ -1,18 +1,32 @@
-# React Router (single-page app): send unknown paths to index.html
-# Needed on Apache (typical Hostinger shared hosting) so /about_us etc. work on refresh.
+# Serve route-specific prerendered HTML on Hostinger/Apache.
+DirectoryIndex index.html
+DirectorySlash Off
+ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Redirect direct requests only; the internal homepage rewrite must not loop.
   RewriteCond %{THE_REQUEST} \s/+home\.html(?:[?\s]) [NC]
   RewriteRule ^home\.html$ / [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
 
-  # Serve the pre-rendered homepage at the canonical root URL.
-  RewriteRule ^$ home.html [L]
+  # Match the canonical slashless URLs in React and the sitemap.
+  RewriteCond %{REQUEST_URI} !^/$
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
 
-  RewriteRule ^index\.html$ - [L]
+  # Legacy route aliases remain permanent redirects.
+  RewriteRule ^about/?$ /about_us [R=301,L]
+  RewriteRule ^staffing-services/?$ /staffing_services [R=301,L]
+  RewriteRule ^ai-staff-augmentation/?$ /ai_staff_augmentation [R=301,L]
+
+  RewriteRule ^$ index.html [L]
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+?)/?$ $1/index.html [L]
+
+  # Leave real assets, PHP APIs and directories alone. Unknown paths are 404s.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  RewriteRule ^ - [R=404,L]
 </IfModule>

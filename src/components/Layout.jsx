@@ -12,11 +12,11 @@ const landingPagePaths = new Set(['/hire-developers-india', ...technologyLanding
 
 export default function Layout({ content, children }) {
   const location = useLocation()
-  const pathname = location.pathname
+  const pathname = location.pathname === '/' ? '/' : location.pathname.replace(/\/$/, '')
   const isLandingPage = landingPagePaths.has(pathname)
   const isFullBleed = location.pathname === '/' || isLandingPage
   const isKnownRoute = knownPaths.has(pathname) || isLandingPage
-  const title = isKnownRoute ? pageTitles[pathname] : 'Page not found - Ething'
+  const title = pathname === '/visitor-dashboard' ? 'Visitor Dashboard - Ething' : isKnownRoute ? pageTitles[pathname] : 'Page not found - Ething'
   const description = isKnownRoute
     ? pageDescriptions[pathname]
     : 'The page you are looking for is not available. Browse Ething for software engineering, staffing, and services.'
