@@ -12,69 +12,7 @@ import anujPortrait from '../assets/anuj.png'
  */
 export { pageTitles } from './pageTitles.js'
 
-/** Meta descriptions by path. Keep in sync with routes in `App.jsx` / `pageTitles`. */
-export const pageDescriptions = {
-  '/':
-    'Hire software developers, AI engineers and IT specialists from India. Ething provides flexible staff augmentation and offshore engineering teams for growing businesses.',
-  '/about_us':
-    'Meet Ething Solutions: software engineering, staffing, and technology consulting built for enterprises that need reliable delivery and industry-aligned teams.',
-  '/healthcare_industry':
-    'Healthcare software engineering and staffing from Ething: HIPAA-minded delivery, clinical and payer systems experience, and scalable teams for digital health.',
-  '/aerospace_industry':
-    'Aerospace and defence technology services: safety-critical software, compliance-aware engineering, and vetted talent for complex programmes.',
-  '/automotive_industry':
-    'Automotive software engineering and staffing: connected vehicles, embedded systems, validation, and product teams that match OEM and supplier pace.',
-  '/railways_industries':
-    'Rail and transportation technology: signalling, operations, and asset systems, with engineering and staffing aligned to regulated environments.',
-  '/banking_finance_industry':
-    'Banking and fintech engineering: core platforms, APIs, cloud migration, and staffing for regulated financial services delivery.',
-  '/education_industry':
-    'EdTech and education-sector software: learning platforms, integrations, and engineering talent for institutions and education providers.',
-  '/staffing_services':
-    'IT staffing and talent solutions: contract and full-time hiring, time-and-material and fixed-scope models, onboarding, and flexible onsite or remote delivery.',
-  '/ai_staff_augmentation':
-    'AI staff augmentation from Ething: AI engineers, ML engineers, data scientists, NLP and MLOps specialists, and Python AI developers embedded with your teams.',
-  '/engineering-services':
-    'Engineering services from Ething: custom software, mobile, firmware, cloud, QA, and product security, with end-to-end delivery and embedded experts.',
-  '/software_development':
-    'Custom software development: web and enterprise applications, modern stacks, architecture, and teams that ship maintainable products.',
-  '/mobile_application':
-    'Mobile application development for iOS and Android: product engineering, integrations, performance, and secure releases.',
-  '/firmware_engg':
-    'Firmware and embedded engineering: BSP, drivers, IoT devices, and low-level software with quality and traceability.',
-  '/cloud_services':
-    'Cloud services and platform engineering: AWS, Azure, GCP migrations, DevOps, scalability, and cloud-native architecture.',
-  '/quality_testing':
-    'Quality engineering and software testing: automation, performance, regression, and release confidence for critical products.',
-  '/product_security':
-    'Product security: secure SDLC, reviews, and hardening so your software meets customer and regulatory expectations.',
-  '/careers':
-    'Careers at Ething: join a software engineering and staffing team building solutions for global enterprises across industries.',
-  '/privacy-policy':
-    'Ething privacy policy: how we collect, use, and protect personal information when you use our website and services.',
-  '/contact':
-    'Contact Ething for staffing, engineering services, or partnership enquiries in Gurugram, India. Phone and email on this page.',
-  '/blogs':
-    'Articles and engineering insights from the Ething team on Medium: staffing, software delivery, cloud, and platform topics.',
-  '/hire-developers-india':
-    'Hire pre-vetted developers from India in 48 hours. Ething helps 20–300 employee companies scale with remote engineers, QA, DevOps & AI talent. NDA protected staff augmentation.',
-  '/hire-top-talent':
-    'Hire pre-vetted technology talent from India across software, AI, cloud, data, QA and product engineering roles.',
-  '/hire-developers':
-    'Hire pre-vetted software developers from India for web, backend, mobile, cloud and product engineering roles.',
-  '/staff-augmentation':
-    'Scale your engineering team with flexible IT staff augmentation from India across software, AI, cloud, data and DevOps.',
-  '/hire-ai-developers':
-    'Hire pre-vetted AI and machine-learning engineers from India for generative AI, LLM, RAG, NLP and MLOps initiatives.',
-  '/hire-python-developers':
-    'Hire pre-vetted Python developers from India for backend APIs, automation, data engineering and AI development.',
-  '/hire-full-stack-developers':
-    'Hire pre-vetted full-stack developers from India across frontend, backend, APIs, databases and cloud platforms.',
-  '/hire-react-developers':
-    'Hire pre-vetted React developers from India for Next.js applications, component systems and frontend product delivery.',
-  '/hire-devops-engineers':
-    'Hire pre-vetted DevOps engineers from India for cloud, Kubernetes, Terraform, CI/CD and platform engineering.',
-}
+export { pageDescriptions } from './pageTitles.js'
 
 export const siteContent = {
   meta: {
@@ -396,7 +334,7 @@ export const siteContent = {
     about: {
       path: '/about_us',
       heroKicker: 'Company',
-      heroTitle: 'About Us',
+      heroTitle: 'About Ething Solutions',
       heroParagraphs: [
         'As a software engineering company, Ething Solutions specializes in providing expert guidance and solutions for software development, IT strategy, and technology implementation.',
         'Our engineering services encompass software architecture design, custom development, system integration, quality assurance, and technology strategy planning. Backed by a team proficient in diverse programming languages and industry best practices, we optimize software projects and IT initiatives for businesses.',
@@ -455,6 +393,7 @@ export const siteContent = {
     industryPages: [
       {
         path: '/healthcare_industry',
+        heading: 'Healthcare Software Engineering and IT Staffing',
         title: 'Healthcare',
         intro:
           'Interoperability, compliance aware delivery, and mission critical support for providers, payers, and health tech.',
@@ -555,6 +494,7 @@ export const siteContent = {
       },
       {
         path: '/aerospace_industry',
+        heading: 'Aerospace and Defence Software Engineering',
         title: 'Aerospace & Defence',
         intro:
           'Safety-critical software, systems integration, and delivery aligned to rigorous aerospace and defence standards.',
@@ -625,6 +565,7 @@ export const siteContent = {
       },
       {
         path: '/automotive_industry',
+        heading: 'Automotive Software Engineering and Staffing',
         title: 'Automotive',
         intro:
           'Connected systems, quality engineering, and supplier-aligned teams from concept through production.',
@@ -722,6 +663,7 @@ export const siteContent = {
       },
       {
         path: '/railways_industries',
+        heading: 'Railway Software and Embedded Engineering',
         title: 'Railways',
         intro:
           'Operational resilience, safety culture, and long-running programs for signaling, operations, and passenger systems.',
@@ -818,6 +760,7 @@ export const siteContent = {
       },
       {
         path: '/banking_finance_industry',
+        heading: 'Banking and Fintech Software Engineering',
         title: 'Banking & Finance',
         intro:
           'Risk-aware delivery, controls, and scalable platforms for banks, fintech, and capital markets.',
@@ -888,6 +831,7 @@ export const siteContent = {
       },
       {
         path: '/education_industry',
+        heading: 'EdTech Software Development and IT Staffing',
         title: 'Education',
         intro:
           'Accessible digital experiences and secure data practices for institutions and edtech.',
@@ -977,9 +921,9 @@ export const siteContent = {
       offeringsId: 'offerings',
       heroKicker: 'Staffing services',
       heroTitle:
-        'Empower Your Projects with Expertise: Ething\'s Agile Staff Augmentation Solutions',
+        'IT Staffing Services for Contract and Permanent Hiring',
       heroIntro:
-        'Staff augmentation services provided by Ething involve the strategic deployment of skilled professionals to augment existing teams and bolster project capacities. With a meticulous selection process, we handpick experts in various fields to seamlessly integrate into our clients\' workflows, ensuring a smooth transition and alignment with project objectives. Whether short-term or long-term engagements, our staff augmentation services offer flexible solutions to address fluctuating resource needs and project demands. By leveraging our extensive network of talent, clients gain access to specialized expertise, accelerating project timelines and achieving operational excellence. With a commitment to quality and efficiency, Ething\'s staff augmentation services empower organizations to achieve their goals with confidence.',
+        'Build your technology team with contract professionals or permanent hires matched to your skills, experience and location requirements. Ething supports onsite and remote staffing, candidate shortlisting and onboarding. Tell us the roles you need, your delivery priorities and the engagement duration so we can recommend a suitable hiring approach.',
       heroImage: {
         src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=960&q=85&auto=format&fit=crop',
         alt: 'Team of professionals collaborating on a project',
@@ -987,7 +931,7 @@ export const siteContent = {
       solutionsKicker: 'Our staff augmentation solutions',
       onsiteStaffing: {
         title: 'Onsite Staffing',
-        body: 'Ething\'s staffing solution gives you the flexibility to quickly scale your team with top tier developers who are already aligned with your needs. We take care of so you can focus on growing your business.',
+        body: 'Hire IT professionals who work alongside your team at your office or project location. Ething helps shortlist candidates and coordinate onboarding based on your role, experience and location requirements.',
       },
       remoteStaffing: {
         title: 'Remote Staffing',
@@ -1141,7 +1085,7 @@ export const siteContent = {
     aiStaffAugmentation: {
       path: '/ai_staff_augmentation',
       heroKicker: 'Staff augmentation',
-      heroTitle: 'AI & data engineering talent, embedded with your teams',
+      heroTitle: 'AI Staff Augmentation for AI, ML and Data Teams',
       heroIntro:
         'Ething provides AI staff augmentation: experienced practitioners who join your roadmap, tools, and delivery cadence. You get depth in modelling, data, and production workflows without overstating transformation or strategy the focus is credible execution alongside your engineers and leads.',
       primaryCta: { label: 'Hire Talent', path: '/contact' },
@@ -1161,9 +1105,9 @@ export const siteContent = {
         'AI Solution Architects',
       ],
       fitKicker: 'Fit',
-      fitTitle: 'Built for augmentation, not rebranding',
+      fitTitle: 'AI specialists who work within your team',
       fitBody:
-        'We augment your bench with people who ship: code reviews, design discussions, experimentation, pipelines, and handovers that match how you already work. This page is deliberately practical no sweeping “AI transformation” narrative, just skilled people when you need them.',
+        'Add AI and data specialists who contribute to code reviews, experiments, pipelines and production handovers. Share your data environment, model requirements and security expectations so candidate profiles can be matched to the work your team needs to deliver.',
       processKicker: 'How it works',
       processTitle: 'A simple engagement path',
       processSteps: [
@@ -1299,7 +1243,7 @@ export const siteContent = {
         intro:
           'Native and cross-platform mobile apps with focus on performance, accessibility, and secure data handling.',
         heroKicker: 'Engineering services',
-        heroHeading: 'Mobile Application',
+        heroHeading: 'Mobile App Development for iOS and Android',
         heroLead:
           'Experience the future of mobile technology with our cutting-edge mobile application development services. Whether you\'re looking to launch a groundbreaking new app or enhance your existing mobile presence, our team is here to make it happen. We specialize in creating innovative, user friendly mobile apps that engage your audience and drive results. From concept to launch, we work tirelessly to bring your vision to life, leveraging the latest technologies and design trends to deliver a seamless user experience. With our mobile apps, you can connect with your customers anytime, anywhere, and stand out in today\'s competitive market. Elevate your mobile strategy and unlock new possibilities for your business. Partner with us to turn your mobile app dreams into reality.',
         heroImage: {
@@ -1438,7 +1382,7 @@ export const siteContent = {
         intro:
           'Embedded software close to the metal: RTOS, drivers, connectivity, and bring-up for hardware programs.',
         heroKicker: 'Engineering services',
-        heroHeading: 'Firmware Engineering',
+        heroHeading: 'Firmware and Embedded Software Engineering',
         heroLead:
           'Discover the essence of seamless hardware functionality with our firmware engineering expertise. At Ething, we specialize in crafting the intricate software that powers your embedded systems. From writing efficient code in C and assembly to developing robust bootloaders and drivers, our team ensures your devices operate with precision and reliability. With a focus on security and real-time responsiveness, we deliver firmware solutions that exceed industry standards. Whether you\'re in healthcare, automotive, aerospace, or IoT, trust us to bring your hardware to life. Explore the possibilities with Ething and unlock the full potential of your embedded devices.',
         heroImage: {
@@ -1608,7 +1552,7 @@ export const siteContent = {
         intro:
           'Cloud-native design, migrations, and platform operations with automation, observability, and cost-aware growth.',
         heroKicker: 'Engineering services',
-        heroHeading: 'Cloud Development',
+        heroHeading: 'Cloud Engineering and Migration Services',
         heroLead:
           'Unlock the boundless potential of cloud technology with Ething. Our cloud development services empower businesses to leverage the scalability, flexibility, and innovation of the cloud. From crafting and deploying cloud-native applications to seamlessly migrating existing systems, our team harnesses cutting-edge technologies and best practices to fulfill your unique requirements. Whether you seek to optimize performance, enhance efficiency, or foster collaboration, Ething has the expertise to transform your cloud aspirations into reality. Partner with us and embark on a cloud journey that propels your business to new heights.',
         heroImage: {
@@ -1718,7 +1662,7 @@ export const siteContent = {
         intro:
           'Test strategy, automation, and quality gates so releases stay predictable in complex and regulated environments.',
         heroKicker: 'Engineering services',
-        heroHeading: 'Testing',
+        heroHeading: 'Software Testing and QA Engineering Services',
         heroLead:
           'At Ething, we ensure the quality and reliability of your software products through our comprehensive manual and automation testing services. Our skilled testing team meticulously evaluates your software applications, identifying and resolving any defects or inconsistencies to deliver flawless user experiences. With manual testing, we conduct rigorous functional testing, regression testing, and user acceptance testing to validate the software\'s performance against defined requirements. Additionally, our expertise in automation testing allows us to expedite testing processes and enhance test coverage using cutting-edge tools and frameworks. By combining manual and automation testing strategies, we guarantee the robustness and efficiency of your software solutions, empowering your business to thrive in today\'s competitive market. Partner with Ething and elevate the quality of your software products with our meticulous testing services.',
         heroImage: {
@@ -1851,7 +1795,7 @@ export const siteContent = {
         intro:
           'Threat modeling, secure design reviews, and hardening so your product meets stakeholder and compliance expectations.',
         heroKicker: 'Engineering services',
-        heroHeading: 'Product Security',
+        heroHeading: 'Product Security and Secure Software Development',
         heroLead:
           'At Ething, we understand the paramount importance of product security in today\'s digital landscape. Our dedicated team specializes in fortifying your products against potential threats, ensuring they meet the highest standards of security and compliance. From conducting thorough risk assessments to implementing robust security protocols, we prioritize the protection of your assets and data. Whether you\'re developing software applications, IoT devices, or hardware solutions, our comprehensive approach to product security safeguards your reputation and instills trust among your customers. Partner with Ething and safeguard your products against evolving cybersecurity challenges.',
         heroImage: {
@@ -2148,7 +2092,7 @@ export const siteContent = {
 
     contact: {
       path: '/contact',
-      pageTitle: 'Reach Out to Us',
+      pageTitle: 'Contact Ething for IT Hiring and Engineering',
     },
   },
 

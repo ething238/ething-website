@@ -1,9 +1,9 @@
 /** Google Ads landing page - hire global talent from India */
 
 export const landingPageMeta = {
-  title: 'Hire Developers India | Remote Engineers in 48 Hours | Ething',
+  title: 'Hire Remote Developers from India | Ething',
   description:
-    'Hire pre-vetted developers from India in 48 hours. Ething helps 20–300 employee companies scale with remote engineers, QA, DevOps & AI talent. NDA protected staff augmentation.',
+    'Hire remote software developers from India for your existing team. Discuss your stack, experience needs and timezone overlap with Ething to request matched profiles.',
   path: '/hire-developers-india',
   keywords: [
     'hire developers india',
@@ -42,7 +42,7 @@ export const landingPageMeta = {
 export const landingPageContent = {
   hero: {
     badge: 'Trusted Partner for Global Engineering Teams',
-    headline: 'Hire Top Talent from India in Days, Not Months',
+    headline: 'Hire Remote Software Developers from India',
     subheadline:
       'We help small and mid-size companies worldwide hire pre-vetted software engineers, QA specialists, DevOps experts, and AI talent from India - integrated into your team, workflows, and timezone overlap, often within 48 hours.',
     primaryCta: 'Find Engineers',
