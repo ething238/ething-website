@@ -1,0 +1,282 @@
+{
+  "sourceUrl": "https://www.ethingsolutions.com/about_us",
+  "title": "About Ething Solutions | IT Staffing & Engineering",
+  "description": "Meet Ething Solutions, your IT staffing and engineering partner in Gurugram, India. Explore our team, approach and flexible technology hiring services.",
+  "siteName": "Ething",
+  "about": {
+    "path": "/about_us",
+    "heroKicker": "Company",
+    "heroTitle": "About Ething Solutions",
+    "heroParagraphs": [
+      "As a software engineering company, Ething Solutions specializes in providing expert guidance and solutions for software development, IT strategy, and technology implementation.",
+      "Our engineering services encompass software architecture design, custom development, system integration, quality assurance, and technology strategy planning. Backed by a team proficient in diverse programming languages and industry best practices, we optimize software projects and IT initiatives for businesses.",
+      "We prioritize quality and client satisfaction, aiming to deliver projects on time and within budget while maximizing ROI. Committed to fostering enduring partnerships, we dedicate ourselves to our clients' success through strategic staffing solutions and steadfast support. Trust ETHING to propel your business towards its goals with proven expertise and unwavering dedication."
+    ],
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=85&auto=format&fit=crop",
+      "alt": "Team collaborating in a modern office"
+    },
+    "visionImage": {
+      "src": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=85&auto=format&fit=crop",
+      "alt": "Colleagues working together at a table with laptops"
+    },
+    "vision": {
+      "eyebrow": "Vision",
+      "body": "Crafting transformative software solutions to shape a brighter future."
+    },
+    "mission": {
+      "eyebrow": "Mission",
+      "body": "Our mission is to become an indispensable technology partner for our clients, cultivating a culture of innovation and delivering cutting edge solutions that empower their success."
+    },
+    "valuesHeading": "Our Values",
+    "values": [
+      {
+        "title": "Integrity",
+        "body": "Integrity at the Heart of Everything We Do"
+      },
+      {
+        "title": "People",
+        "body": "Empowering People, Driving Success Together"
+      },
+      {
+        "title": "Customer Commitment",
+        "body": "Committed to Customers, Committed to Excellence"
+      },
+      {
+        "title": "Quality Focus",
+        "body": "Where Precision Meets Purpose: Quality Is Our Trademark"
+      }
+    ],
+    "leadersHeading": "Our Leaders",
+    "leaders": [
+      {
+        "name": "Anuj Gupta",
+        "role": "Founder and CEO",
+        "image": {
+          "src": "/about-us/anuj.png",
+          "alt": "Anuj Gupta"
+        },
+        "linkedInUrl": "https://www.linkedin.com/in/anuj-k-gupta/"
+      }
+    ]
+  },
+  "navigation": [
+    {
+      "id": "about",
+      "label": "About Us",
+      "path": "/about_us"
+    },
+    {
+      "id": "industries",
+      "label": "Industries",
+      "children": [
+        {
+          "label": "Healthcare",
+          "path": "/healthcare_industry"
+        },
+        {
+          "label": "Aerospace & Defence",
+          "path": "/aerospace_industry"
+        },
+        {
+          "label": "Automotive",
+          "path": "/automotive_industry"
+        },
+        {
+          "label": "Railways",
+          "path": "/railways_industries"
+        },
+        {
+          "label": "Banking & Finance",
+          "path": "/banking_finance_industry"
+        },
+        {
+          "label": "Education",
+          "path": "/education_industry"
+        }
+      ]
+    },
+    {
+      "id": "staffing",
+      "label": "Staffing Services",
+      "path": "/staffing_services"
+    },
+    {
+      "id": "hire-talent",
+      "label": "Hire Talent",
+      "children": [
+        {
+          "label": "Explore Engineering Talent",
+          "path": "/other-services/"
+        },
+        {
+          "label": "Top Technology Talent",
+          "path": "/hire-top-talent"
+        },
+        {
+          "label": "Software Developers",
+          "path": "/hire-developers"
+        },
+        {
+          "label": "IT Staff Augmentation",
+          "path": "/staff-augmentation"
+        },
+        {
+          "label": "AI Developers",
+          "path": "/hire-ai-developers"
+        },
+        {
+          "label": "Python Developers",
+          "path": "/hire-python-developers"
+        },
+        {
+          "label": "Full Stack Developers",
+          "path": "/hire-full-stack-developers"
+        },
+        {
+          "label": "React Developers",
+          "path": "/hire-react-developers"
+        },
+        {
+          "label": "DevOps Engineers",
+          "path": "/hire-devops-engineers"
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "label": "Engineering Services",
+      "path": "/engineering-services",
+      "children": [
+        {
+          "label": "Software Development",
+          "path": "/software_development"
+        },
+        {
+          "label": "Mobile Application",
+          "path": "/mobile_application"
+        },
+        {
+          "label": "Firmware Engineering",
+          "path": "/firmware_engg"
+        },
+        {
+          "label": "Cloud Services",
+          "path": "/cloud_services"
+        },
+        {
+          "label": "Testing",
+          "path": "/quality_testing"
+        },
+        {
+          "label": "Product Security",
+          "path": "/product_security"
+        }
+      ]
+    },
+    {
+      "id": "ai-staff",
+      "label": "AI Staff Augmentation",
+      "path": "/ai_staff_augmentation"
+    },
+    {
+      "id": "blogs",
+      "label": "Blogs",
+      "path": "/blogs"
+    },
+    {
+      "id": "careers",
+      "label": "Careers",
+      "path": "/careers"
+    }
+  ],
+  "brand": {
+    "name": "ETHING",
+    "shortTagline": "Software & AI engineering staff augmentation",
+    "logoSrc": "/about-us/ething-logo.png",
+    "logoAlt": "Ething"
+  },
+  "footer": {
+    "aboutTitle": "Ething",
+    "aboutBody": "Ething Solutions provides software and AI engineering talent for staff augmentation plus consulting and delivery support so enterprises can scale teams with credible, experienced practitioners.",
+    "quickLinksTitle": "Quick Links",
+    "quickLinks": [
+      {
+        "label": "Home",
+        "path": "/"
+      },
+      {
+        "label": "About Us",
+        "path": "/about_us"
+      },
+      {
+        "label": "Careers",
+        "path": "/careers"
+      },
+      {
+        "label": "Contact Us",
+        "path": "/contact"
+      },
+      {
+        "label": "Blogs",
+        "path": "/blogs"
+      },
+      {
+        "label": "Privacy Policy",
+        "path": "/privacy-policy"
+      },
+      {
+        "label": "AI Staff Augmentation",
+        "path": "/ai_staff_augmentation"
+      }
+    ],
+    "industriesTitle": "Industries",
+    "industries": [
+      {
+        "label": "Healthcare",
+        "path": "/healthcare_industry"
+      },
+      {
+        "label": "Aerospace & Defence",
+        "path": "/aerospace_industry"
+      },
+      {
+        "label": "Automotive",
+        "path": "/automotive_industry"
+      },
+      {
+        "label": "Railways",
+        "path": "/railways_industries"
+      },
+      {
+        "label": "Banking & Finance",
+        "path": "/banking_finance_industry"
+      },
+      {
+        "label": "Education",
+        "path": "/education_industry"
+      }
+    ],
+    "contactTitle": "Contact Us",
+    "address": {
+      "line1": "Building Number 145, Sector 44 Rd,",
+      "line2": "Gurugram, Haryana, 122003"
+    },
+    "phones": [
+      {
+        "label": "India",
+        "value": "+91-7011956780"
+      },
+      {
+        "label": "USA",
+        "value": "+1-929-557-4560"
+      }
+    ],
+    "email": "support@ething.in",
+    "copyright": "© 2023 Ething"
+  },
+  "cta": {
+    "label": "Contact us",
+    "path": "/contact"
+  }
+}
