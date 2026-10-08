@@ -1,0 +1,120 @@
+/* Chrome for the nine standalone Hire Talent exports only. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body:has(> .hire-site-header) #__next > .paid-page > header,
+body:has(> .hire-site-header) #__next > .paid-page > footer,
+body:has(> .hire-site-header) #__next > .other-services-page > .hub-nav,
+body:has(> .hire-site-header) #__next > .other-services-page > .hub-footer {
+  display: none !important;
+}
+
+.hire-site-header,
+.hire-site-footer,
+.hire-site-top {
+  font-family: Inter, system-ui, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #52525b;
+}
+.hire-site-header *, .hire-site-footer *, .hire-site-top { box-sizing: border-box; }
+.hire-site-header a, .hire-site-footer a { color: inherit; text-decoration: none; }
+.hire-site-header svg, .hire-site-footer svg, .hire-site-top svg { display: block; flex-shrink: 0; }
+.hire-site-header a:focus-visible, .hire-site-header summary:focus-visible,
+.hire-site-header button:focus-visible, .hire-site-footer a:focus-visible,
+.hire-site-top:focus-visible { outline: 2px solid #f97316; outline-offset: 4px; }
+.hire-site-logo { display: inline-flex; flex-shrink: 0; align-items: center; }
+.hire-site-logo img { display: block; width: 44px; height: 44px; max-width: none; margin: 0; padding: 0; border: 0; border-radius: 0; object-fit: contain; }
+
+.hire-site-header {
+  position: sticky;
+  inset: 0 0 auto;
+  z-index: 100;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #fafafa;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+}
+.hire-site-header-inner { display: flex; width: 100%; max-width: 1440px; min-width: 0; margin: 0 auto; padding: 12px 32px; align-items: center; gap: 20px; }
+.hire-site-nav { display: flex; flex: 1; min-width: 0; margin: 0; padding: 0; justify-content: center; gap: 6px; overflow: visible; }
+.hire-site-header .hire-site-nav-link { display: inline-flex; align-items: center; justify-content: center; gap: 4px; margin: 0; padding: 8px 12px; border: 0; border-radius: 999px; background: transparent; color: #52525b; font: 500 14px/20px Inter, system-ui, 'Segoe UI', sans-serif; letter-spacing: -.025em; white-space: nowrap; cursor: pointer; }
+.hire-site-header .hire-site-nav-link:hover { color: #0c1222; }
+.hire-site-header .hire-site-nav-link.is-active { background: rgb(19 35 71 / 8%); color: #0c1222; }
+.hire-site-nav-link svg { width: 12px; height: 12px; opacity: .6; }
+.hire-site-dropdown { position: relative; flex-shrink: 0; margin: 0; padding: 0; border: 0; }
+.hire-site-dropdown summary { list-style: none; }
+.hire-site-dropdown summary::-webkit-details-marker { display: none; }
+.hire-site-dropdown-menu { position: absolute; top: 100%; left: 0; z-index: 110; min-width: 220px; margin-top: 8px; padding: 6px; border: 1px solid rgb(19 35 71 / 10%); border-radius: 16px; background: #fff; box-shadow: 0 10px 20px rgb(0 0 0 / 12%); }
+.hire-site-header .hire-site-dropdown-menu a { display: block; padding: 10px 12px; border-radius: 12px; color: #3f3f46; font-size: 14px; line-height: 20px; white-space: normal; }
+.hire-site-dropdown-menu a:hover, .hire-site-dropdown-menu a[aria-current='page'] { background: rgb(19 35 71 / 5%); color: #0c1222; }
+.hire-site-header .hire-site-contact { display: inline-flex; flex-shrink: 0; justify-content: center; align-items: center; min-height: 36px; padding: 8px 20px; border: 0; border-radius: 999px; background: #132347; color: #fff; font-size: 14px; line-height: 20px; font-weight: 600; white-space: nowrap; box-shadow: 0 1px 3px rgb(0 0 0 / 15%); }
+.hire-site-header .hire-site-contact:hover { background: #1d315c; }
+.hire-site-mobile-toggle { display: none; margin: 0 0 0 auto; padding: 8px; border: 0; border-radius: 999px; background: transparent; color: #0c1222; cursor: pointer; }
+.hire-site-mobile-toggle svg { width: 24px; height: 24px; }
+.hire-site-header .hire-site-mobile-toggle:hover { background: transparent; color: #0c1222; transform: none; }
+.hire-site-mobile-toggle .hire-site-close-icon { display: none; }
+.hire-site-mobile-toggle[aria-expanded='true'] .hire-site-menu-icon { display: none; }
+.hire-site-mobile-toggle[aria-expanded='true'] .hire-site-close-icon { display: block; }
+.hire-site-mobile-nav { display: none; }
+
+.hire-site-footer { position: relative; display: block; width: 100%; max-width: none; height: auto; margin: 0; padding: 0; border: 0; border-top: 1px solid rgb(19 35 71 / 10%); background: #f4f4f5; }
+.hire-site-footer-inner { width: 100%; max-width: 1152px; margin: 0 auto; padding: 56px 32px; }
+.hire-site-footer-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; }
+.hire-site-footer .hire-site-logo { margin-bottom: 16px; }
+.hire-site-footer p { margin: 0; padding: 0; max-width: none; color: #52525b; font-size: 14px; line-height: 1.625; letter-spacing: normal; }
+.hire-site-footer .hire-site-footer-title { margin: 0 0 16px; padding: 0; max-width: none; color: #0c1222; font: 600 14px/20px Inter, system-ui, 'Segoe UI', sans-serif; letter-spacing: .05em; text-transform: uppercase; }
+.hire-site-footer ul { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.hire-site-footer li { margin: 0; padding: 0; font-size: 14px; line-height: 20px; }
+.hire-site-footer-links a { display: flex; align-items: center; gap: 8px; }
+.hire-site-footer a:hover { color: #0c1222; }
+.hire-site-check { display: flex; width: 20px; height: 20px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 50%; background: rgb(249 115 22 / 15%); color: #ea580c; }
+.hire-site-check svg { width: 12px; height: 12px; stroke-width: 3; }
+.hire-site-footer .hire-site-footer-contact { gap: 16px; }
+.hire-site-footer-contact li, .hire-site-phone { display: flex; align-items: flex-start; gap: 8px; }
+.hire-site-footer-contact svg { width: 16px; height: 16px; margin-top: 2px; color: #f97316; }
+.hire-site-footer-contact .hire-site-phones { display: block; }
+.hire-site-footer-bottom { display: flex; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgb(19 35 71 / 10%); align-items: center; justify-content: space-between; gap: 16px; }
+.hire-site-footer-bottom p { color: #71717a; line-height: 20px; }
+.hire-site-footer .hire-site-footer-bottom a { color: #132347; font-weight: 500; }
+.hire-site-footer-bottom a:hover { text-decoration: underline; }
+.hire-site-top { position: fixed; bottom: 24px; right: 24px; z-index: 90; display: flex; width: 44px; height: 44px; margin: 0; padding: 0; align-items: center; justify-content: center; border: 0; border-radius: 12px; background: #132347; color: #fff; box-shadow: 0 4px 6px rgb(19 35 71 / 25%); cursor: pointer; }
+.hire-site-top svg { width: 20px; height: 20px; }
+.hire-site-top[hidden] { display: none; }
+.hire-site-top:hover { background: #1d315c; color: #fff; transform: none; }
+
+@media (max-width: 1279px) and (min-width: 1200px) {
+  .hire-site-header-inner { padding-top: 10px; padding-bottom: 10px; }
+  .hire-site-nav { gap: 4px; }
+  .hire-site-header .hire-site-nav-link { padding: 8px 10px; font-size: 13px; }
+  .hire-site-header .hire-site-contact { padding-right: 16px; padding-left: 16px; }
+}
+@media (max-width: 1199px) {
+  .hire-site-header-inner { padding: 10px 24px; gap: 16px; }
+  .hire-site-nav, .hire-site-header-inner > .hire-site-contact { display: none; }
+  .hire-site-mobile-toggle { display: inline-flex; }
+  .hire-site-mobile-nav:not([hidden]) { display: flex; max-height: 70vh; overflow-y: auto; padding: 12px 16px; border-top: 1px solid rgb(19 35 71 / 10%); flex-direction: column; gap: 4px; }
+  .hire-site-mobile-nav .hire-site-nav-link { justify-content: flex-start; padding: 8px; border-radius: 8px; font-size: 14px; }
+  .hire-site-mobile-nav .hire-site-dropdown-menu { position: static; min-width: 0; margin: 0 0 0 8px; padding: 0; border: 0; box-shadow: none; background: transparent; }
+  .hire-site-mobile-nav .hire-site-dropdown-menu a { padding: 6px 8px; }
+  .hire-site-mobile-nav > .hire-site-contact { margin-top: 8px; padding: 10px 16px; }
+}
+@media (max-width: 1023px) {
+  .hire-site-footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hire-site-footer-inner { padding-right: 24px; padding-left: 24px; }
+}
+@media (max-width: 639px) {
+  .hire-site-header-inner { padding: 10px 16px; gap: 12px; }
+  .hire-site-logo img { width: 40px; height: 40px; }
+  .hire-site-footer-inner { padding-right: 16px; padding-left: 16px; }
+  .hire-site-footer-grid { grid-template-columns: 1fr; }
+  .hire-site-footer-bottom { flex-direction: column; }
+  .hire-site-top { bottom: 96px; }
+}
