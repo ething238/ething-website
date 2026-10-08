@@ -8,6 +8,12 @@ body:has(> .hire-site-header) #__next > .other-services-page > .hub-footer {
   display: none !important;
 }
 
+/* Remove the closing CTA above the footer on these same nine exports. */
+body:has(> .hire-site-header) #__next > .paid-page > main > section.final,
+body:has(> .hire-site-header) #__next > .other-services-page.services-hub > main > section.hub-contact#lead-form {
+  display: none !important;
+}
+
 .hire-site-header,
 .hire-site-footer,
 .hire-site-top {
