@@ -24,6 +24,9 @@ export default function Layout({ content, children }) {
     ? pageDescriptions[pathname]
     : 'The page you are looking for is not available. Browse Ething for software engineering, staffing, and services.'
 
+  // About Us owns its reviewed layout, metadata and enquiry form.
+  if (pathname === '/about_us') return children
+
   return (
     <div className="flex min-h-screen flex-col">
       {!isLandingPage && (
