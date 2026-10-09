@@ -222,8 +222,9 @@
 .about-us-copy .about-copy-vision-copy hr { height: 0; margin-block: 40px; border: 0; border-top: 1px solid #e4e4e7; }
 .about-us-copy .about-copy-mission-statement { margin-top: 12px; color: #52525b; font-size: 16px; line-height: 1.625; }
 .about-us-copy .about-copy-vision-art { position: relative; }
-.about-us-copy .about-copy-vision-art::before { content: ""; position: absolute; top: 32px; right: -4px; z-index: 0; display: none; width: 8px; height: 160px; border-radius: 999px; background: #0ea5e9; }
-.about-us-copy .about-copy-vision-image { position: relative; display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; overflow: hidden; border: 1px solid rgb(228 228 231 / 80%); border-radius: 24px; background: #f4f4f5; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%); }
+.about-us-copy .about-copy-vision-art::before { content: ""; position: absolute; bottom: -12px; left: -12px; z-index: 0; display: block; width: 80px; height: 80px; border-radius: 12px; background: #0ea5e9; box-shadow: 0 10px 15px -3px rgb(14 165 233 / 25%); }
+.about-us-copy .about-copy-vision-art::after { content: ""; position: absolute; top: -16px; right: -16px; z-index: 0; width: 128px; height: 96px; border-radius: 16px; background: rgb(139 92 246 / 90%); box-shadow: 0 10px 15px -3px rgb(139 92 246 / 20%); }
+.about-us-copy .about-copy-vision-image { position: relative; z-index: 1; display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; overflow: hidden; border: 1px solid rgb(228 228 231 / 80%); border-radius: 24px; background: #f4f4f5; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%); }
 .about-us-copy .about-copy-values { padding-block: 64px; border-top: 1px solid rgb(228 228 231 / 80%); }
 .about-us-copy .about-copy-section-title { color: var(--about-ink); font-size: 24px; font-weight: 700; line-height: 1.33333; text-align: center; }
 .about-us-copy .about-copy-values-grid { display: grid; gap: 16px; margin: 48px 0 0; padding: 0; list-style: none; }
@@ -279,7 +280,8 @@
   .about-us-copy .about-copy-hero-decor-violet { width: 160px; height: 112px; }
   .about-us-copy .about-copy-hero-decor-blue { width: 96px; height: 96px; }
   .about-us-copy .about-copy-hero-image { aspect-ratio: 5 / 6; }
-  .about-us-copy .about-copy-vision-art::before { display: block; }
+  .about-us-copy .about-copy-vision-art::before { width: 96px; height: 96px; }
+  .about-us-copy .about-copy-vision-art::after { width: 160px; height: 112px; }
   .about-us-copy .about-copy-values { padding-block: 80px; }
   .about-us-copy .about-copy-values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .about-us-copy .about-copy-leaders { padding-top: 80px; padding-bottom: 96px; }
