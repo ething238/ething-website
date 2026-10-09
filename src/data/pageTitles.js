@@ -2,7 +2,7 @@
 export const pageTitles = {
   "/": "IT Staff Augmentation & Offshore Engineering | Ething",
   "/about_us": "About Ething Solutions | IT Staffing & Engineering",
-  "/healthcare_industry": "Healthcare Software Development & IT Staffing | Ething",
+  "/healthcare_industry": "Healthcare Software Development & IT Staffing | eThing",
   "/aerospace_industry": "Aerospace & Defence Software Engineering | Ething",
   "/automotive_industry": "Automotive Software Engineering & Staffing | Ething",
   "/railways_industries": "Railway Software & Embedded Engineering | Ething",
@@ -36,7 +36,7 @@ export const pageTitles = {
 export const pageDescriptions = {
   "/": "Hire software developers, AI engineers and IT specialists from India. Build your team with flexible staff augmentation and offshore engineering from Ething.",
   "/about_us": "Meet Ething Solutions, your IT staffing and engineering partner in Gurugram, India. Explore our team, approach and flexible technology hiring services.",
-  "/healthcare_industry": "Build healthcare applications, clinical systems and integrations with Ething. Explore software engineering, testing and IT staffing for digital health teams.",
+  "/healthcare_industry": "Explore healthcare software development with eThing: clinical workflows, EHR requirements, integration, testing and engineering team support.",
   "/aerospace_industry": "Explore aerospace and defence software engineering from Ething, including embedded systems, ground control software, device drivers and specialist staffing.",
   "/automotive_industry": "Support automotive product teams with Ething software engineering and IT staffing for connectivity, cloud platforms, cybersecurity and analytics.",
   "/railways_industries": "Explore railway software and embedded engineering from Ething, covering firmware, interfaces, application integration, board support packages and testing.",
