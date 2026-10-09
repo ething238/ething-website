@@ -30,6 +30,39 @@ for (const url of urls) {
     assert.match(html, /aria-label="Breadcrumb"/, `${route}: missing visible breadcrumb`)
     assert.ok(schemas.some((schema) => (schema['@graph'] || [schema]).some((node) => node['@type'] === 'BreadcrumbList')), `${route}: missing breadcrumb schema`)
   }
+  if (route === '/healthcare_industry') {
+    assert.equal(title, 'Healthcare Software Development &amp; IT Staffing | eThing', `${route}: reviewed title changed`)
+    assert.equal(description, 'Explore healthcare software development with eThing: clinical workflows, EHR requirements, integration, testing and engineering team support.', `${route}: reviewed description changed`)
+    assert.equal(canonical, 'https://www.ethingsolutions.com/healthcare_industry', `${route}: reviewed canonical changed`)
+    assert.equal((html.match(/<h2\b/gi) || []).length, 6, `${route}: expected six section headings`)
+    for (const id of ['consumer-health-applications', 'clinical-applications', 'navigation-systems', 'surgical-ui', 'integration-services', 'testing-validation']) {
+      assert.equal((html.match(new RegExp(`<article\\b[^>]*id="${id}"`, 'g')) || []).length, 1, `${route}: missing or duplicate capability ${id}`)
+    }
+    const caseGrid = html.match(/<div\b[^>]*class="healthcare-case-grid"[^>]*>([\s\S]*?)<\/div>/)?.[1]
+    assert.ok(caseGrid, `${route}: missing governance approach cards`)
+    assert.equal((caseGrid.match(/<article\b/gi) || []).length, 3, `${route}: expected three governance approach cards`)
+    assert.doesNotMatch(html, /healthcare-case-measures|On this page/i, `${route}: removed content returned`)
+    assert.equal((html.match(/<img\b[^>]*src="\/brand\/ething-logo\.png"/g) || []).length, 2, `${route}: expected supplied PNG logo in header and footer`)
+    assert.match(html, /<img\b[^>]*class="healthcare-hero-image"[^>]*src="\/healthcare\/healthcare-it-utopia\.png"/, `${route}: missing local healthcare hero`)
+
+    assert.equal((html.match(/<script\b[^>]*src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4"/g) || []).length, 1, `${route}: expected one GA4 loader`)
+    assert.equal((html.match(/gtag\(\s*['"]config['"]\s*,\s*['"]G-2W7W1TB2H4['"]/g) || []).length, 1, `${route}: expected one GA4 configuration`)
+    assert.equal((html.match(/['"]dataLayer['"]\s*,\s*['"]GTM-TX73DK5H['"]\s*\)/g) || []).length, 1, `${route}: expected one GTM initialization`)
+    assert.equal((html.match(/<noscript\b[^>]*>(?:(?!<\/noscript>)[\s\S])*?<iframe\b[^>]*src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-TX73DK5H"/g) || []).length, 1, `${route}: expected one GTM noscript iframe`)
+
+    const nodes = schemas.flatMap((schema) => schema['@graph'] || [schema])
+    const works = nodes.filter((node) => node['@type'] === 'CreativeWork')
+    const pages = nodes.filter((node) => node['@type'] === 'WebPage')
+    assert.equal(works.length, 1, `${route}: expected one governance CreativeWork`)
+    assert.equal(pages.length, 1, `${route}: expected one WebPage`)
+    const work = works[0]
+    const page = pages[0]
+    assert.equal(work['@id'], `${url}#ai-governance-approach`, `${route}: governance approach ID changed`)
+    assert.equal(work.genre, 'Service experience and approach', `${route}: governance approach genre changed`)
+    assert.ok(!Object.hasOwn(work, 'citation'), `${route}: governance approach must not contain a citation`)
+    assert.deepEqual(page.hasPart, { '@id': work['@id'] }, `${route}: WebPage must link to its governance approach`)
+    assert.deepEqual(work.isPartOf, { '@id': page['@id'] }, `${route}: governance approach must link back to WebPage`)
+  }
   // Detect broken local links and image URLs, including SSR source asset leaks.
   for (const match of html.matchAll(/<(?:a|img)\b[^>]*(?:href|src)="([^"#]+)"/gi)) {
     const local = new URL(match[1], url)

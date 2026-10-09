@@ -32,7 +32,7 @@ export default function Logo({ name, logoSrc, logoAlt, to = '/', className = '',
       <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block">
         <Link to={to} className={`flex items-center ${className}`}>
           <span className="inline-flex items-center justify-center rounded-2xl bg-white/95 px-3 py-2 shadow-sm ring-1 ring-white/25">
-            <img src={src} alt={alt} className={`${DARK_H} object-contain object-left`} width={220} height={48} />
+            <img src={src} alt={alt} className={`${DARK_H} object-contain object-left`} width={1122} height={1402} />
           </span>
         </Link>
       </motion.div>
@@ -42,7 +42,7 @@ export default function Logo({ name, logoSrc, logoAlt, to = '/', className = '',
   return (
     <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }} className="inline-block">
       <Link to={to} className={`flex items-center ${className}`}>
-        <img src={src} alt={alt} className={`object-contain object-left ${DEFAULT_H}`} width={260} height={56} />
+        <img src={src} alt={alt} className={`object-contain object-left ${DEFAULT_H}`} width={1122} height={1402} />
       </Link>
     </motion.div>
   )

@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
+import Healthcare from './pages/Healthcare.jsx'
 import IndustryDetailPage from './pages/IndustryDetailPage.jsx'
 import StaffingServices from './pages/StaffingServices.jsx'
 import EngineeringServices from './pages/EngineeringServices.jsx'
@@ -40,7 +41,8 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<Home content={siteContent} />} />
         <Route path="/about_us" element={<About content={siteContent} />} />
-        {siteContent.pages.industryPages.map((page) => (
+        <Route path="/healthcare_industry" element={<Healthcare />} />
+        {siteContent.pages.industryPages.filter((page) => page.path !== '/healthcare_industry').map((page) => (
           <Route
             key={page.path}
             path={page.path.replace(/^\//, '')}
