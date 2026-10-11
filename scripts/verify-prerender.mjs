@@ -27,8 +27,32 @@ for (const url of urls) {
   const schemas = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)].map((match) => JSON.parse(match[1]))
   assert.ok(schemas.length, `${route}: missing structured data`)
   if (route !== '/') {
-    assert.match(html, /aria-label="Breadcrumb"/, `${route}: missing visible breadcrumb`)
+    if (route !== '/aerospace_industry') assert.match(html, /aria-label="Breadcrumb"/, `${route}: missing visible breadcrumb`)
     assert.ok(schemas.some((schema) => (schema['@graph'] || [schema]).some((node) => node['@type'] === 'BreadcrumbList')), `${route}: missing breadcrumb schema`)
+  }
+  if (route === '/aerospace_industry') {
+    assert.equal(title, 'Aerospace Software Engineers | eThing', `${route}: reviewed title changed`)
+    assert.equal(description, 'eThing provides engineers for aerospace teams. Find talent for embedded software, hardware integration, ground control and testing.', `${route}: reviewed description changed`)
+    assert.match(html, /<h1[^>]*>Aerospace Software Engineers<\/h1>/, `${route}: missing rendered heading`)
+    assert.equal((html.match(/class="aerospace-service-image"/g) || []).length, 5, `${route}: expected five service photos`)
+    assert.equal((html.match(/class="aerospace-technology-card"/g) || []).length, 5, `${route}: expected five technology cards`)
+    for (const id of ['aerospace-defense-software', 'embedded-systems-defense', 'fpga-drivers-bsp', 'ground-control-systems', 'aerospace-software-testing']) {
+      assert.match(html, new RegExp(`<article[^>]*id="${id}"`), `${route}: missing service ${id}`)
+    }
+    for (const name of ['name', 'email', 'phone', 'company', 'hiringNeed', 'projectDetails']) {
+      assert.match(html, new RegExp(`(?:input|select|textarea)[^>]*name="${name}"`), `${route}: missing form field ${name}`)
+    }
+    assert.doesNotMatch(html, /aria-label="Breadcrumb"|FAQPage|aerospace-faq|aerospace-process|\/api\/hire-developers/, `${route}: removed or incompatible content returned`)
+    const service = schemas.flatMap(schema => schema['@graph'] || [schema]).find(node => node['@type'] === 'Service')
+    assert.equal(service?.serviceType, 'Aerospace engineering staffing', `${route}: must describe staffing`)
+    assert.equal(service.hasOfferCatalog.itemListElement.length, 5, `${route}: expected five staffing areas`)
+    assert.match(html, /Illustrative roles/, `${route}: examples must not be presented as completed client projects`)
+  }
+  if (route === '/healthcare_industry' || route === '/aerospace_industry') {
+    assert.equal((html.match(/<script\b[^>]*src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4"/g) || []).length, 1, `${route}: expected one GA4 loader`)
+    assert.equal((html.match(/gtag\(\s*['"]config['"]\s*,\s*['"]G-2W7W1TB2H4['"]/g) || []).length, 1, `${route}: expected one GA4 configuration`)
+    assert.equal((html.match(/['"]dataLayer['"]\s*,\s*['"]GTM-TX73DK5H['"]\s*\)/g) || []).length, 1, `${route}: expected one GTM initialization`)
+    assert.equal((html.match(/<noscript\b[^>]*>(?:(?!<\/noscript>)[\s\S])*?<iframe\b[^>]*src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-TX73DK5H"/g) || []).length, 1, `${route}: expected one GTM noscript iframe`)
   }
   if (route === '/healthcare_industry') {
     assert.equal(title, 'Healthcare Software Development &amp; IT Staffing | eThing', `${route}: reviewed title changed`)

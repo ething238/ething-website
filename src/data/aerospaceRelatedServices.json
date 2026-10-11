@@ -1,0 +1,18 @@
+{
+  "title": "Explore related services",
+  "description": "Find the engineering service or hiring option that fits your requirements.",
+  "links": [
+    {
+      "label": "Firmware and embedded engineering",
+      "path": "/firmware_engg"
+    },
+    {
+      "label": "Software testing and QA engineering",
+      "path": "/quality_testing"
+    },
+    {
+      "label": "Contract and permanent IT staffing",
+      "path": "/staffing_services"
+    }
+  ]
+}
