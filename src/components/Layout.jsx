@@ -25,7 +25,7 @@ export default function Layout({ content, children }) {
     : 'The page you are looking for is not available. Browse Ething for software engineering, staffing, and services.'
 
   // Reviewed pages own their layout and metadata; keep their App-level trackers.
-  if (pathname === '/about_us' || pathname === '/healthcare_industry') return children
+  if (pathname === '/about_us' || pathname === '/healthcare_industry' || pathname === '/aerospace_industry') return children
 
   return (
     <div className="flex min-h-screen flex-col">

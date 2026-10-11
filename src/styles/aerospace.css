@@ -1,0 +1,147 @@
+/* Aerospace editorial layout follows the owner's Healthcare typography. */
+.aerospace-copy { background: #fff; }
+.aerospace-copy main { display: block; }
+.aerospace-copy .aerospace-skip-link { position: absolute; top: 8px; left: 16px; z-index: 100; padding: 12px 20px; border-radius: 8px; background: #fff; color: #132347; transform: translateY(-200%); }
+.aerospace-copy .aerospace-skip-link:focus { transform: translateY(0); }
+.aerospace-copy .about-copy-nav-dropdown[data-active] > summary { background: rgb(19 35 71 / 8%); color: #0c1222; }
+.aerospace-copy h1 { color: #fff; font-size: 30px; font-weight: 800; line-height: 1.2; letter-spacing: -.025em; text-wrap: balance; }
+.aerospace-copy h2 { color: #0c1222; font-size: 24px; font-weight: 800; line-height: 1.3; text-wrap: balance; }
+.aerospace-copy main h2 { text-align: center; }
+.aerospace-copy h3 { color: #0c1222; font-size: 20px; font-weight: 750; line-height: 1.35; }
+.aerospace-copy p { color: #52525b; font-size: 16px; line-height: 1.7; }
+.aerospace-copy .aerospace-section-intro { max-width: 820px; margin: 20px auto 0; text-align: center; }
+.aerospace-copy .aerospace-hero { position: relative; isolation: isolate; min-height: 540px; overflow: hidden; padding: 0; background: #0b2341; }
+.aerospace-copy .aerospace-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% center; }
+.aerospace-copy .aerospace-hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgb(7 25 49 / 88%), rgb(7 25 49 / 65%) 55%, rgb(7 25 49 / 20%)); }
+.aerospace-copy .aerospace-hero-inner { position: relative; display: flex; align-items: center; min-height: 540px; padding-top: 64px; padding-bottom: 64px; }
+.aerospace-copy .aerospace-hero-copy { max-width: 590px; }
+.aerospace-copy .aerospace-hero-intro { max-width: 540px; margin-top: 24px; color: #e6eef8; }
+.aerospace-copy .aerospace-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 32px; }
+.aerospace-copy .aerospace-primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 48px; border-radius: 999px; padding: 12px 22px; font-size: 14px; font-weight: 700; line-height: 1.5; text-align: center; }
+.aerospace-copy .aerospace-primary-button { background: #fff; color: #132347; box-shadow: 0 8px 20px rgb(0 0 0 / 12%); }
+.aerospace-copy .aerospace-primary-button:hover { background: #e7f6f8; }
+.aerospace-copy .aerospace-services,
+.aerospace-copy .aerospace-technologies,
+.aerospace-copy .aerospace-projects,
+.aerospace-copy .aerospace-enquiry { padding-block: 56px; scroll-margin-top: 112px; }
+.aerospace-copy .aerospace-overview { padding-block: 40px; scroll-margin-top: 112px; border-bottom: 1px solid #dfe9ee; background: linear-gradient(120deg,#edf6fa,#f5fafb 70%,#fff); }
+.aerospace-copy .aerospace-overview-grid { display: grid; gap: 20px; }
+.aerospace-copy .aerospace-overview-grid > div { display: grid; gap: 16px; }
+.aerospace-copy .aerospace-service-list { margin-top: 40px; }
+.aerospace-copy .aerospace-service-list article { border-bottom: 1px solid #dfe9ee; padding-bottom: 40px; scroll-margin-top: 112px; }
+.aerospace-copy .aerospace-service-list article + article { padding-top: 32px; }
+.aerospace-copy .aerospace-service-list article:last-child { border-bottom: 0; padding-bottom: 0; }
+.aerospace-copy .aerospace-service-list h3 { display: flex; align-items: center; justify-content: flex-start; gap: 14px; text-align: left; }
+.aerospace-copy .aerospace-service-symbol { display: flex; align-items: center; justify-content: center; flex: 0 0 44px; height: 44px; border-radius: 12px; color: #0e6d7e; background: #eaf5f7; }
+.aerospace-copy .aerospace-service-grid { display: grid; grid-template-areas: "heading" "image" "description"; gap: 24px; }
+.aerospace-copy .aerospace-service-copy { display: contents; }
+.aerospace-copy .aerospace-service-copy h3 { grid-area: heading; }
+.aerospace-copy .aerospace-service-description { grid-area: description; }
+.aerospace-copy .aerospace-service-grid p + p { margin-top: 16px; }
+.aerospace-copy .aerospace-service-image { grid-area: image; width: 100%; max-width: 420px; height: auto; aspect-ratio: 4 / 3; object-fit: cover; justify-self: center; border: 1px solid #dfe9ee; border-radius: 16px; box-shadow: 0 4px 14px rgb(19 35 71 / 7%); }
+.aerospace-copy .aerospace-technologies { border-block: 1px solid #dfe9ee; background: #f1f7fa; }
+.aerospace-copy .aerospace-technologies .aerospace-section-intro { white-space: pre-line; text-wrap: balance; }
+.aerospace-copy .aerospace-technology-grid { display: grid; gap: 24px; margin-top: 36px; }
+.aerospace-copy .aerospace-technology-grid article { padding: 24px; border: 1px solid #dbe6ec; border-radius: 16px; background: #fff; transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease; }
+.aerospace-copy .aerospace-technology-heading { display: flex; align-items: center; gap: 14px; }
+.aerospace-copy .aerospace-technology-heading h3 { min-width: 0; }
+.aerospace-copy .aerospace-technology-symbol { display: grid; place-items: center; flex: 0 0 44px; height: 44px; border-radius: 12px; background: #eaf5f7; transition: background-color 240ms ease, transform 240ms ease; }
+.aerospace-copy .aerospace-technology-icon { color: #0e6d7e; transform-origin: center; transition: transform 240ms ease; }
+.aerospace-copy .aerospace-technology-grid p { margin-top: 16px; }
+.aerospace-copy .aerospace-technology-card.is-revealed { animation: aerospace-card-enter 560ms cubic-bezier(.2,.8,.2,1) var(--aerospace-card-delay,0ms) backwards; }
+.aerospace-copy .aerospace-technology-card.is-revealed .aerospace-technology-icon { animation: aerospace-icon-settle 850ms ease-out var(--aerospace-card-delay,0ms) backwards; }
+@keyframes aerospace-card-enter {
+  from { opacity: .35; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes aerospace-icon-settle {
+  0% { transform: translateY(5px) rotate(-10deg) scale(.9); }
+  60% { transform: translateY(-2px) rotate(4deg) scale(1.04); }
+  100% { transform: translateY(0) rotate(0) scale(1); }
+}
+@media (hover: hover) and (pointer: fine) {
+  .aerospace-copy .aerospace-technology-card:hover { transform: translateY(-5px); border-color: #81bbc6; box-shadow: 0 14px 30px rgb(19 35 71 / 9%); }
+  .aerospace-copy .aerospace-technology-card:hover .aerospace-technology-symbol { background: #d9f0f1; transform: rotate(-4deg); }
+  .aerospace-copy .aerospace-technology-card:hover .aerospace-technology-icon { transform: translateY(-2px) scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aerospace-copy .aerospace-technology-card,
+  .aerospace-copy .aerospace-technology-symbol,
+  .aerospace-copy .aerospace-technology-icon { animation: none !important; transition: none !important; transform: none !important; }
+}
+.aerospace-copy .aerospace-projects { background: #132347; }
+.aerospace-copy .aerospace-projects h2,
+.aerospace-copy .aerospace-projects h3 { color: #fff; }
+.aerospace-copy .aerospace-projects p { color: #dbe6f2; }
+.aerospace-copy .aerospace-project-grid { display: grid; gap: 24px; margin-top: 36px; }
+.aerospace-copy .aerospace-project-grid article { padding: 28px; border: 1px solid #49627e; border-radius: 16px; background: linear-gradient(145deg,rgb(45 99 120 / 25%),rgb(255 255 255 / 3%)); }
+.aerospace-copy .aerospace-project-icon { color: #82dedb; margin-bottom: 20px; }
+.aerospace-copy .aerospace-project-grid dl { display: grid; gap: 24px; margin-top: 24px; margin-bottom: 0; }
+.aerospace-copy .aerospace-project-grid dt { font-size: 16px; font-weight: 700; color: #97dedf; }
+.aerospace-copy .aerospace-project-grid dd { margin: 8px 0 0; color: #dbe6f2; line-height: 1.7; }
+.aerospace-copy .aerospace-success-link { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 32px; margin-top: 32px; }
+.aerospace-copy .aerospace-success-link a { display: inline-flex; align-items: center; gap: 12px; color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.aerospace-copy .aerospace-enquiry { background: linear-gradient(120deg,#e9f4f8,#eff9f5); }
+.aerospace-copy .aerospace-enquiry-grid { display: grid; gap: 32px; align-items: start; }
+.aerospace-copy .aerospace-direct-contact { display: grid; gap: 12px; margin-top: 28px; }
+.aerospace-copy .aerospace-role-summary { margin-top: 32px; padding-top: 24px; border-top: 1px solid #c9dfe6; }
+.aerospace-copy .aerospace-role-summary p { margin-top: 16px; }
+.aerospace-copy .aerospace-direct-contact a { width: fit-content; color: #132347; font-weight: 600; }
+.aerospace-copy .aerospace-team-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 28px; color: #132347; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.aerospace-copy .aerospace-form-intro { color: #132347; }
+.aerospace-copy .aerospace-form-help { font-size: 13px; color: #637580; }
+.aerospace-copy .aerospace-form-optional { font-size: 13px; font-weight: 400; color: #637580; }
+.aerospace-copy .about-copy-form-grid textarea { display: block; width: 100%; min-width: 0; min-height: 112px; margin-top: 6px; padding: 12px 16px; border: 1px solid #d7e0e5; border-radius: 9px; resize: vertical; font: inherit; font-weight: 400; color: #0c1222; background: #fff; }
+.aerospace-copy .about-copy-form-grid textarea:focus-visible { outline: 3px solid #8b5cf6; outline-offset: 4px; }
+.aerospace-copy .about-copy-form-card button { border-radius: 999px; background: #132347; color: #fff; }
+.aerospace-copy .about-copy-related { padding-block: 40px; }
+.aerospace-copy .about-copy-related-title { font-size: 24px; font-weight: 800; line-height: 1.3; }
+.aerospace-copy .about-copy-related-copy { margin-inline: auto; font-size: 14px; text-align: center; }
+.aerospace-copy .about-copy-related-links { justify-content: center; }
+.aerospace-copy .about-copy-footer-title { font-size: 16px; font-weight: 700; line-height: 1.4; letter-spacing: normal; text-transform: none; }
+.aerospace-copy .about-copy-footer p { color: #3f3f46; font-size: 14px; }
+@media (min-width: 640px) {
+  .aerospace-copy .aerospace-services,
+  .aerospace-copy .aerospace-technologies,
+  .aerospace-copy .aerospace-projects,
+  .aerospace-copy .aerospace-enquiry { padding-block: 64px; }
+  .aerospace-copy .aerospace-service-list article { padding-bottom: 48px; }
+}
+@media (min-width: 768px) {
+  .aerospace-copy h2,
+  .aerospace-copy .about-copy-related-title { font-size: 30px; }
+  .aerospace-copy .aerospace-service-list h3 { font-size: 24px; }
+  .aerospace-copy .aerospace-overview { padding-block: 48px; }
+  .aerospace-copy .aerospace-overview-grid > div { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; }
+  .aerospace-copy .aerospace-overview p { font-size: 18px; }
+  .aerospace-copy .aerospace-service-grid { grid-template-columns: minmax(0,1fr) minmax(0,320px); grid-template-areas: "copy image"; align-items: center; gap: 40px; }
+  .aerospace-copy .aerospace-service-copy { display: block; grid-area: copy; min-width: 0; }
+  .aerospace-copy .aerospace-service-description { margin-top: 24px; }
+  .aerospace-copy .aerospace-service-image { justify-self: end; }
+  .aerospace-copy .aerospace-technology-grid { grid-template-columns: repeat(6,minmax(0,1fr)); }
+  .aerospace-copy .aerospace-technology-grid > article { grid-column: span 2; }
+  .aerospace-copy .aerospace-technology-grid > article:nth-last-child(-n+2) { grid-column: span 3; }
+  .aerospace-copy .aerospace-project-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (min-width: 1024px) {
+  .aerospace-copy h1 { font-size: 40px; }
+  .aerospace-copy .aerospace-hero,
+  .aerospace-copy .aerospace-hero-inner { min-height: 600px; }
+  .aerospace-copy .aerospace-hero-inner { padding-block: 88px; }
+  .aerospace-copy .aerospace-hero-image { object-position: center; }
+  .aerospace-copy .aerospace-hero-overlay { background: linear-gradient(90deg,rgb(7 25 49 / 78%) 0%,rgb(7 25 49 / 55%) 34%,rgb(7 25 49 / 6%) 70%); }
+  .aerospace-copy .aerospace-hero-intro { font-size: 18px; }
+  .aerospace-copy .aerospace-services,
+  .aerospace-copy .aerospace-technologies,
+  .aerospace-copy .aerospace-projects,
+  .aerospace-copy .aerospace-enquiry { padding-block: 80px; }
+  .aerospace-copy .aerospace-service-grid { grid-template-columns: minmax(0,1fr) minmax(0,360px); }
+  .aerospace-copy .aerospace-enquiry-grid { grid-template-columns: minmax(0,1fr) minmax(0,1.2fr); gap: 64px; }
+}
+@supports (grid-template-rows: subgrid) {
+  @media (min-width: 768px) {
+    .aerospace-copy .aerospace-technology-grid > article { display: grid; grid-template-columns: minmax(0,1fr); grid-template-rows: subgrid; grid-row: span 2; row-gap: 0; align-items: start; }
+    .aerospace-copy .aerospace-project-grid > article { display: grid; grid-template-columns: minmax(0,1fr); grid-template-rows: subgrid; grid-row: span 5; row-gap: 0; align-items: start; }
+    .aerospace-copy .aerospace-project-grid dl { grid-row: span 3; grid-template-rows: subgrid; }
+  }
+}
