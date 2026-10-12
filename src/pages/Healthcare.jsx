@@ -53,7 +53,6 @@ export default function HealthcareIndustryCopy() {
       <a className="healthcare-skip-link" href="#healthcare-main">Skip to content</a>
       <CopyHeader activePath="/healthcare_industry" />
       <main id="healthcare-main">
-        <nav aria-label="Breadcrumb" className="about-copy-breadcrumb about-copy-container"><ol><li><a href={`${siteUrl}/`}>Home</a></li><li aria-hidden="true">/</li><li aria-current="page">Healthcare</li></ol></nav>
         <section className="healthcare-hero" aria-labelledby="healthcare-heading">
           <img className="healthcare-hero-image" src={page.heroImage.src} alt={page.heroImage.alt} width={page.heroImage.width || 1920} height={page.heroImage.height || 1080} fetchPriority="high" />
           <div className="healthcare-hero-overlay" aria-hidden="true" />
