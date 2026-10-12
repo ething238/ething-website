@@ -9,7 +9,7 @@ import {
   resolveMediumFeedUrl,
 } from '../lib/mediumFeed.js'
 
-const fallbackImage = '/images/ething-logo.png'
+const fallbackImage = '/brand/ething-logo-new-font.png'
 
 function blogsBootstrapState(feedUrl) {
   if (!feedUrl) return { posts: [], loading: false }

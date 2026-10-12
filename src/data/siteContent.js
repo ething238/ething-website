@@ -21,14 +21,14 @@ export const siteContent = {
     defaultDescription:
       'Ething provides software and AI engineering talent for staff augmentation-embedded specialists for enterprise and product teams, alongside consulting and engineering services.',
     /** Relative to site origin. Used for Open Graph when a page does not set its own image. */
-    defaultOgImage: '/images/ething-logo.png',
+    defaultOgImage: '/brand/ething-logo-new-font.png',
   },
 
   brand: {
     name: 'ETHING',
     shortTagline: 'Software & AI engineering staff augmentation',
     /** Header / footer mark. Place file under `public/images/` */
-    logoSrc: '/images/ething-logo.png',
+    logoSrc: '/brand/ething-logo-new-font.png',
     logoAlt: 'Ething',
   },
 

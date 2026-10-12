@@ -25,7 +25,7 @@ export const landingPageMeta = {
     'hire software engineers india',
     'india software developers for hire',
   ],
-  ogImage: '/images/ething-logo.png',
+  ogImage: '/brand/ething-logo-new-font.png',
   ogImageAlt:
     'Ething Solutions — hire pre-vetted remote developers from India for global engineering teams',
   siteName: 'Ething Solutions',

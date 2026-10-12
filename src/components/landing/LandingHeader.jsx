@@ -26,7 +26,7 @@ export default function LandingHeader({ onGetProfiles, onBookCall, primaryCta, s
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Logo
           name="ETHING"
-          logoSrc="/images/ething-logo.png"
+          logoSrc="/brand/ething-logo-new-font.png"
           logoAlt="Ething"
           variant={scrolled ? 'on-light' : 'on-dark'}
           className="shrink-0"
