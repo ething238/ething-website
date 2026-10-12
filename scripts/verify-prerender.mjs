@@ -66,7 +66,7 @@ for (const url of urls) {
     assert.ok(caseGrid, `${route}: missing governance approach cards`)
     assert.equal((caseGrid.match(/<article\b/gi) || []).length, 3, `${route}: expected three governance approach cards`)
     assert.doesNotMatch(html, /healthcare-case-measures|On this page/i, `${route}: removed content returned`)
-    assert.equal((html.match(/<img\b[^>]*src="\/brand\/ething-logo\.png"/g) || []).length, 2, `${route}: expected supplied PNG logo in header and footer`)
+    assert.equal((html.match(/<img\b[^>]*src="\/brand\/ething-logo-new-font\.png"/g) || []).length, 2, `${route}: expected supplied PNG logo in header and footer`)
     assert.match(html, /<img\b[^>]*class="healthcare-hero-image"[^>]*src="\/healthcare\/healthcare-it-utopia\.png"/, `${route}: missing local healthcare hero`)
 
     assert.equal((html.match(/<script\b[^>]*src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4"/g) || []).length, 1, `${route}: expected one GA4 loader`)

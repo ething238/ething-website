@@ -10,7 +10,7 @@ export default function LandingFooter() {
           <div>
             <LogoLight
               name="ETHING"
-              logoSrc="/images/ething-logo.png"
+              logoSrc="/brand/ething-logo-new-font.png"
               logoAlt="Ething"
               className="mb-4"
             />
