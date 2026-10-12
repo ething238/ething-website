@@ -425,5 +425,5 @@
 
 /* Supplied logo dimensions, scoped to About Us. */
 .about-us-copy .about-copy-logo.brand-logo { height:60px; max-width:none; }
-.about-us-copy .about-copy-logo.brand-logo img { width:48px; height:60px; object-fit:contain; }
-@media(max-width:639px){.about-us-copy .about-copy-logo.brand-logo{height:48px}.about-us-copy .about-copy-logo.brand-logo img{width:38.4px;height:48px}}
+.about-us-copy .about-copy-logo.brand-logo img { width:60px; height:60px; object-fit:contain; }
+@media(max-width:639px){.about-us-copy .about-copy-logo.brand-logo{height:48px}.about-us-copy .about-copy-logo.brand-logo img{width:48px;height:48px}}

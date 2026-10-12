@@ -153,7 +153,6 @@ export default function AboutUsCopy() {
     <div className="about-us-copy">
       <Header />
       <main className="about-copy-main">
-        <nav aria-label="Breadcrumb" className="about-copy-breadcrumb about-copy-container"><ol><li><a href={`${siteUrl}/`}>Home</a></li><li aria-hidden="true">/</li><li aria-current="page">About us</li></ol></nav>
         <div className="about-copy-grid-bg">
           <section className="about-copy-hero about-copy-container">
             <div className="about-copy-hero-grid">

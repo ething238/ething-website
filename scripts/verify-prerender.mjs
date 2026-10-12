@@ -26,8 +26,8 @@ for (const url of urls) {
   descriptions.add(description)
   const schemas = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)].map((match) => JSON.parse(match[1]))
   assert.ok(schemas.length, `${route}: missing structured data`)
+  assert.doesNotMatch(html, /aria-label="Breadcrumb"/i, `${route}: removed breadcrumb strip returned`)
   if (route !== '/') {
-    if (route !== '/aerospace_industry') assert.match(html, /aria-label="Breadcrumb"/, `${route}: missing visible breadcrumb`)
     assert.ok(schemas.some((schema) => (schema['@graph'] || [schema]).some((node) => node['@type'] === 'BreadcrumbList')), `${route}: missing breadcrumb schema`)
   }
   if (route === '/aerospace_industry') {

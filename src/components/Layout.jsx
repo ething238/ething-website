@@ -1,11 +1,10 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 import ScrollToTopButton from './ScrollToTopButton.jsx'
 import Seo from './Seo.jsx'
 import KeywordPageContent from './KeywordPageContent.jsx'
 import RelatedServices from './RelatedServices.jsx'
-import { pageLabels } from '../data/relatedPages.js'
 import { pageTitles, pageDescriptions } from '../data/siteContent.js'
 import { technologyLandingPagePaths } from '../data/technologyLandingPages.js'
 
@@ -48,15 +47,6 @@ export default function Layout({ content, children }) {
             : 'flex-1 bg-zinc-50'
         }
       >
-        {pathname !== '/' && isKnownRoute && (
-          <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl px-4 pt-6 text-sm text-zinc-600 sm:px-6 lg:px-8">
-            <ol className="flex flex-wrap items-center gap-2">
-              <li><Link to="/" className="hover:underline">Home</Link></li>
-              <li aria-hidden="true">/</li>
-              <li aria-current="page">{pageLabels[pathname]}</li>
-            </ol>
-          </nav>
-        )}
         {children}
         {isKnownRoute && !isLandingPage && <KeywordPageContent pathname={pathname} />}
         {isKnownRoute && <RelatedServices pathname={pathname} />}
