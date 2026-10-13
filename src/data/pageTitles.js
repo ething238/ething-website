@@ -1,6 +1,6 @@
 /** Shared route metadata for browser rendering, prerendering and sitemap generation. */
 export const pageTitles = {
-  "/": "IT Staff Augmentation & Offshore Engineering | Ething",
+  "/": "IT Staff Augmentation & Software Developers | eThing",
   "/about_us": "About Ething Solutions | IT Staffing & Engineering",
   "/healthcare_industry": "Healthcare Software Development & IT Staffing | eThing",
   "/aerospace_industry": "Aerospace Software Engineers | eThing",
@@ -34,7 +34,7 @@ export const pageTitles = {
 }
 
 export const pageDescriptions = {
-  "/": "Hire software developers, AI engineers and IT specialists from India. Build your team with flexible staff augmentation and offshore engineering from Ething.",
+  "/": "IT staff augmentation services for teams worldwide. Hire software developers for Python, React and mobile projects, with flexible engineering support from eThing.",
   "/about_us": "Meet Ething Solutions, your IT staffing and engineering partner in Gurugram, India. Explore our team, approach and flexible technology hiring services.",
   "/healthcare_industry": "Explore healthcare software development with eThing: clinical workflows, EHR requirements, integration, testing and engineering team support.",
   "/aerospace_industry": "eThing provides engineers for aerospace teams. Find talent for embedded software, hardware integration, ground control and testing.",
