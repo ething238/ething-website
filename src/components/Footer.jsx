@@ -1,22 +1,17 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Phone, Mail, Check } from 'lucide-react'
-import { LogoLight } from './Logo.jsx'
+import FooterLogo from './FooterLogo.jsx'
 import { motion } from 'framer-motion'
 
 export default function Footer({ content }) {
-  const { brand, footer } = content
+  const { footer } = content
 
   return (
     <footer className="border-t border-ething-navy/10 bg-zinc-100/90">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <LogoLight
-              name={brand.name}
-              logoSrc={brand.logoSrc}
-              logoAlt={brand.logoAlt}
-              className="mb-4"
-            />
+            <FooterLogo className="mb-4" />
             <p className="text-sm leading-relaxed text-zinc-600">{footer.aboutBody}</p>
           </div>
           <div>

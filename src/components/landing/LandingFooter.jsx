@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Phone, Mail } from 'lucide-react'
-import { LogoLight } from '../Logo.jsx'
+import FooterLogo from '../FooterLogo.jsx'
 
 export default function LandingFooter() {
   return (
@@ -8,14 +8,9 @@ export default function LandingFooter() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <LogoLight
-              name="ETHING"
-              logoSrc="/brand/ething-logo-new-font.png"
-              logoAlt="Ething"
-              className="mb-4"
-            />
+            <FooterLogo className="mb-4" />
             <p className="text-sm leading-relaxed text-zinc-400">
-              Ething Solutions provides software and AI engineering talent for staff augmentation plus
+              eThing provides software and AI engineering talent for staff augmentation plus
               consulting and delivery support so enterprises can scale teams with credible, experienced
               practitioners.
             </p>
@@ -99,7 +94,7 @@ export default function LandingFooter() {
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
-          <p className="text-sm text-zinc-500">© {new Date().getFullYear()} Ething Solutions. All rights reserved.</p>
+          <p className="text-sm text-zinc-500">© {new Date().getFullYear()} eThing. All rights reserved.</p>
           <p className="text-xs text-zinc-500">
             Global remote developers from India · 20-300 employee companies · Staff augmentation
           </p>

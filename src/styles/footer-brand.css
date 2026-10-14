@@ -1,0 +1,25 @@
+footer .site-footer-logo {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  max-width: none;
+}
+
+footer .site-footer-logo img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  max-width: none;
+  object-fit: contain;
+  object-position: left;
+}
+
+@media (max-width: 639px) {
+  footer .site-footer-logo,
+  footer .site-footer-logo img {
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import originalCopy from '../data/aboutUsCopy.json';
-import BrandLogo from './AboutBrandLogo.jsx';
+import FooterLogo from './FooterLogo.jsx';
 import SiteHeader from './SiteHeader.jsx';
 
 const siteUrl = 'https://www.ethingsolutions.com';
@@ -33,7 +33,7 @@ export function CopyIcon({ kind, className }) {
 }
 
 function CopyLogo() {
-  return <BrandLogo href={`${siteUrl}/`} className="about-copy-logo brand-logo" />;
+  return <FooterLogo href={`${siteUrl}/`} className="about-copy-logo brand-logo" />;
 }
 
 export function CopyHeader({ activePath = '', contactHref = `${siteUrl}/contact` }) {
