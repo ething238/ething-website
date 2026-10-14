@@ -249,3 +249,5 @@
 @media(max-width:640px) {
   .homepage-reviewed .hero-section { padding-top:120px; }.homepage-reviewed .hero-grid { padding-block:30px 38px; }.homepage-reviewed .hero-copy .eyebrow { font-size:10px; letter-spacing:.45px; padding:8px 10px; }.homepage-reviewed .hero-visual { border-radius:24px; }.homepage-reviewed .roadmap-node { margin-top:37px; }.homepage-reviewed .expertise-tabs>button { border-color:#d4d4d8; border-radius:12px; }.homepage-reviewed .expertise-panel { border-radius:20px; }.homepage-reviewed .industry-grid>a { border-radius:16px; }.homepage-reviewed .enquiry-card { border-radius:20px; }
 }
+.homepage-reviewed .form-error { color:#b91c1c; }
+.homepage-reviewed .form-submit:disabled { cursor:wait; opacity:.65; transform:none; }
