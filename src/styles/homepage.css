@@ -251,3 +251,35 @@
 }
 .homepage-reviewed .form-error { color:#b91c1c; }
 .homepage-reviewed .form-submit:disabled { cursor:wait; opacity:.65; transform:none; }
+
+/* Keep the homepage compact without changing type sizes or tab stability. */
+.homepage-reviewed .section { padding-block:64px; }
+.homepage-reviewed .hero-section { padding-top:24px; }
+.homepage-reviewed .hero-grid { align-items:start; padding-block:12px 36px; }
+.homepage-reviewed .hero-copy h1 { margin-block:0 20px; }
+.homepage-reviewed .hero-actions { margin-top:24px; }
+.homepage-reviewed .hero-proof { margin-top:24px; }
+.homepage-reviewed .hero-proof>div { min-height:112px; padding:18px; }
+.homepage-reviewed .section-heading { margin-bottom:28px; }
+.homepage-reviewed .centered-heading>p,.homepage-reviewed .faq-intro.centered-heading>p { margin-top:14px; }
+.homepage-reviewed .expertise-panel { min-height:0; padding:26px 28px; }
+.homepage-reviewed .expertise-columns { margin-top:20px; }
+.homepage-reviewed .section-benefits { margin-top:22px; gap:14px; }
+.homepage-reviewed .ai-workstreams article { padding-block:20px; }
+.homepage-reviewed .source-review,.homepage-reviewed .hiring-card { padding:26px; }
+.homepage-reviewed .delivery-proof { padding:24px 28px; }
+.homepage-reviewed .contact-layout { align-items:start; }
+.homepage-reviewed .contact-copy>p:not(.eyebrow) { margin-top:20px; }
+.homepage-reviewed .contact-benefits { margin-top:22px; gap:14px; }
+.homepage-reviewed .contact-email { margin-top:28px; }
+@media(max-width:900px) { .homepage-reviewed .section { padding-block:56px; } }
+@media(max-width:640px) {
+  .homepage-reviewed .section { padding-block:44px; }
+  .homepage-reviewed .hero-section { padding-top:16px; }
+  .homepage-reviewed .hero-grid { padding-block:8px 28px; gap:28px; }
+  .homepage-reviewed .hero-copy h1 { margin-block:0 18px; }
+  .homepage-reviewed .section-heading { margin-bottom:24px; }
+  .homepage-reviewed .expertise-panel { padding:22px; }
+  .homepage-reviewed .source-review,.homepage-reviewed .hiring-card,.homepage-reviewed .delivery-proof { padding:22px; }
+  .homepage-reviewed .ai-layout,.homepage-reviewed .contact-layout { gap:28px; }
+}
