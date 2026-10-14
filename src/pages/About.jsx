@@ -1,10 +1,11 @@
 import { Helmet as Head } from 'react-helmet-async';
 import '../styles/about-us.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import originalCopy from '../data/aboutUsCopy.json';
 import seo from '../data/aboutUsSeoContent.js';
 import AboutUsEnquiryForm from '../components/AboutUsEnquiryForm.jsx';
 import BrandLogo from '../components/AboutBrandLogo.jsx';
+import SiteHeader from '../components/SiteHeader.jsx';
 import { brandLogo } from '../data/aboutBrand.js';
 
 const copy = {
@@ -44,50 +45,6 @@ function Icon({ kind, className }) {
 
 function Logo() {
   return <BrandLogo href={`${siteUrl}/`} className="about-copy-logo brand-logo" />;
-}
-
-function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const headerRef = useRef(null);
-  useEffect(() => {
-    const closeDropdowns = (event) => {
-      if (event.type === 'keydown' && event.key !== 'Escape') return;
-      headerRef.current?.querySelectorAll('details[open]').forEach((detail) => {
-        if (event.type === 'keydown' || !detail.contains(event.target)) detail.open = false;
-      });
-      if (event.type === 'keydown') setMobileOpen(false);
-    };
-    document.addEventListener('click', closeDropdowns);
-    document.addEventListener('keydown', closeDropdowns);
-    return () => {
-      document.removeEventListener('click', closeDropdowns);
-      document.removeEventListener('keydown', closeDropdowns);
-    };
-  }, []);
-  return <header className="about-copy-header" ref={headerRef}>
-    <div className="about-copy-header-inner">
-      <div className="about-copy-header-brand"><Logo /></div>
-      <nav className="about-copy-nav" aria-label="Main navigation">
-        {copy.navigation.map((item) => item.children?.length ? (
-          <details className="about-copy-nav-dropdown" key={item.id}>
-            <summary className="about-copy-nav-link">{item.label}<Icon kind="chevron" /></summary>
-            <div className="about-copy-dropdown-menu">
-              {item.children.map((child) => <a key={child.path} href={destination(child.path)}>{child.label}</a>)}
-            </div>
-          </details>
-        ) : <a className="about-copy-nav-link" href={destination(item.path)} aria-current={item.path === '/about_us' ? 'page' : undefined} key={item.id}>{item.label}</a>)}
-      </nav>
-      <a href={destination(copy.cta.path)} className="about-copy-contact-button">{copy.cta.label}</a>
-      <button className="about-copy-mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded={mobileOpen} aria-controls="about-copy-mobile-nav" onClick={() => setMobileOpen(!mobileOpen)}><Icon kind={mobileOpen ? 'close' : 'menu'} /></button>
-    </div>
-    {mobileOpen && <nav id="about-copy-mobile-nav" className="about-copy-mobile-nav" aria-label="Mobile navigation">
-      {copy.navigation.map((item) => <div key={item.id}>
-        {item.path ? <a href={destination(item.path)} onClick={() => setMobileOpen(false)}>{item.label}</a> : <span>{item.label}</span>}
-        {item.children?.map((child) => <a key={child.path} href={destination(child.path)} onClick={() => setMobileOpen(false)}>{child.label}</a>)}
-      </div>)}
-      <a href={destination(copy.cta.path)} className="about-copy-contact-button">{copy.cta.label}</a>
-    </nav>}
-  </header>;
 }
 
 function LinkedInGlyph() {
@@ -151,7 +108,7 @@ export default function AboutUsCopy() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
     </Head>
     <div className="about-us-copy">
-      <Header />
+      <SiteHeader activePath="/about_us" contactHref={destination(copy.cta.path)} />
       <main className="about-copy-main">
         <div className="about-copy-grid-bg">
           <section className="about-copy-hero about-copy-container">
