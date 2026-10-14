@@ -34,11 +34,12 @@ test('all Skills tabs reserve space but only one is accessible', () => {
   }
 })
 
-test('preparing an enquiry does not invoke the GTM native-submit conversion trigger', () => {
-  assert.match(html, /<button[^>]*type="button"[^>]*>Review your request/)
+test('homepage submits on site without triggering a native-submit conversion on attempts', () => {
+  assert.match(html, /<button[^>]*type="button"[^>]*>Send enquiry/)
   const form = html.match(/<form\b[\s\S]*?<\/form>/)?.[0]
   assert.ok(form)
   assert.doesNotMatch(form, /type="submit"/)
+  assert.doesNotMatch(html, /Open email draft|Review your enquiry|Copy enquiry/)
   for (const name of ['name', 'email', 'engagement', 'specialty', 'message']) assert.match(form, new RegExp(`name="${name}"`))
 })
 
