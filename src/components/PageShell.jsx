@@ -1,6 +1,6 @@
-export default function PageShell({ title, kicker, children, className = '' }) {
+export default function PageShell({ title, kicker, children, className = '', compact = false }) {
   return (
-    <div className={`mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 ${className}`}>
+    <div className={`mx-auto max-w-6xl px-4 ${compact ? 'pb-11 pt-6 sm:px-6 sm:pb-16 sm:pt-9' : 'py-14 sm:px-6 sm:py-20'} lg:px-8 ${className}`}>
       {kicker && (
         <p className="text-xs font-semibold uppercase tracking-widest text-violet-600">{kicker}</p>
       )}

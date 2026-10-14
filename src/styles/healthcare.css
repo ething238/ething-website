@@ -102,3 +102,21 @@
     .healthcare-copy .healthcare-audience-grid article { grid-row: span 2; }
   }
 }
+
+/* Remove the fixed hero height and excess content-section padding. */
+.healthcare-copy .healthcare-hero,
+.healthcare-copy .healthcare-hero-inner { min-height:0; }
+.healthcare-copy .healthcare-hero-inner { justify-content:flex-start; padding-block:36px 64px; }
+.healthcare-copy .healthcare-overview,
+.healthcare-copy .healthcare-capabilities,
+.healthcare-copy .healthcare-audiences,
+.healthcare-copy .healthcare-governance-case,
+.healthcare-copy .healthcare-team-support { padding-block:64px; }
+@media(max-width:767px) {
+  .healthcare-copy .healthcare-hero-inner { padding-block:24px 44px; }
+  .healthcare-copy .healthcare-overview,
+  .healthcare-copy .healthcare-capabilities,
+  .healthcare-copy .healthcare-audiences,
+  .healthcare-copy .healthcare-governance-case,
+  .healthcare-copy .healthcare-team-support { padding-block:44px; }
+}

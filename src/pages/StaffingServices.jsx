@@ -62,12 +62,12 @@ export default function StaffingServices({ content }) {
           aria-hidden
         />
 
-        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-20">
+        <div className="relative mx-auto max-w-6xl px-4 pb-11 pt-6 sm:px-6 sm:pb-14 sm:pt-9 lg:px-8 lg:pb-16">
           <motion.div
             initial="hidden"
             animate="show"
             variants={stagger}
-            className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-14"
+            className="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-14"
           >
             <motion.div className="lg:col-span-6" variants={fadeUp}>
               <p className="inline-flex items-center gap-2 rounded-full border border-violet-200/80 bg-violet-50/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-800">
@@ -113,7 +113,7 @@ export default function StaffingServices({ content }) {
       </section>
 
       {/* Onsite + Remote */}
-      <section className="border-b border-zinc-200/80 bg-zinc-50 py-14 sm:py-20 lg:py-24">
+      <section className="border-b border-zinc-200/80 bg-zinc-50 py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">
             {p.solutionsKicker}
@@ -158,7 +158,7 @@ export default function StaffingServices({ content }) {
       </section>
 
       {/* Advantages */}
-      <section className="border-b border-zinc-200/80 bg-white py-14 sm:py-20 lg:py-24">
+      <section className="border-b border-zinc-200/80 bg-white py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">
             {p.advantagesKicker}
@@ -193,7 +193,7 @@ export default function StaffingServices({ content }) {
       </section>
 
       {/* Partner highlights */}
-      <section className="border-b border-zinc-200/80 bg-gradient-to-b from-zinc-50 to-white py-14 sm:py-20 lg:py-24">
+      <section className="border-b border-zinc-200/80 bg-gradient-to-b from-zinc-50 to-white py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 12 }}
@@ -224,7 +224,7 @@ export default function StaffingServices({ content }) {
       </section>
 
       {/* Process */}
-      <section className="border-b border-zinc-200/80 bg-white py-14 sm:py-20 lg:py-24">
+      <section className="border-b border-zinc-200/80 bg-white py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">
             {p.processKicker}
@@ -259,7 +259,7 @@ export default function StaffingServices({ content }) {
       </section>
 
       {/* Unique */}
-      <section className="border-b border-zinc-200/80 bg-zinc-50 py-14 sm:py-20 lg:py-24">
+      <section className="border-b border-zinc-200/80 bg-zinc-50 py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">
             {p.uniqueKicker}
@@ -299,7 +299,7 @@ export default function StaffingServices({ content }) {
       {/* Engagement models */}
       <section
         id="engagement-models"
-        className="scroll-mt-28 border-b border-zinc-200/80 bg-white py-14 sm:scroll-mt-32 sm:py-20 lg:py-24"
+        className="scroll-mt-28 border-b border-zinc-200/80 bg-white py-11 sm:scroll-mt-32 sm:py-14 lg:py-16"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">
@@ -356,7 +356,7 @@ export default function StaffingServices({ content }) {
       </section>
 
       {/* CTA band */}
-      <section className="bg-ething-navy py-14 sm:py-16">
+      <section className="bg-ething-navy py-11 sm:py-14 lg:py-16">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:px-8">
           <p className="text-base leading-relaxed text-white/85">
             With a commitment to quality and efficiency, Ething&apos;s staff augmentation services
@@ -375,7 +375,7 @@ export default function StaffingServices({ content }) {
       {/* Offerings anchor for home / service cards */}
       <section
         id={p.offeringsId}
-        className="scroll-mt-28 border-b border-zinc-200/80 bg-zinc-50 py-14 sm:scroll-mt-32 sm:py-20 lg:py-24"
+        className="scroll-mt-28 border-b border-zinc-200/80 bg-zinc-50 py-11 sm:scroll-mt-32 sm:py-14 lg:py-16"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-[family:var(--font-display)] text-xl font-bold text-ething-ink md:text-2xl">

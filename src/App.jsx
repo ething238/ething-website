@@ -37,8 +37,11 @@ function ScrollToTopOnRoute() {
 }
 
 function AppRoutes() {
+  const { pathname } = useLocation()
+  // These shorter content pages already sit inside Layout's full-height shell.
+  const compactPage = ['/blogs', '/engineering-services', '/contact'].includes(pathname.replace(/\/$/, ''))
   return (
-    <div className="min-h-screen">
+    <div className={compactPage ? 'min-w-0' : 'min-h-screen'}>
       <Routes>
         <Route path="/" element={<Home content={siteContent} />} />
         <Route path="/about_us" element={<About content={siteContent} />} />

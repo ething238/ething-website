@@ -34,7 +34,7 @@ function RichIndustryPage({ page, content }) {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="relative isolate min-h-[min(52vh,440px)] overflow-hidden">
+      <section className="relative isolate overflow-hidden">
         <img
           src={page.heroImage.src}
           alt={page.heroImage.alt}
@@ -43,7 +43,7 @@ function RichIndustryPage({ page, content }) {
           height={900}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ething-navy/92 via-ething-navy/82 to-ething-navy/65" />
-        <div className="relative mx-auto flex min-h-[min(52vh,440px)] max-w-6xl flex-col justify-end px-4 pb-12 pt-28 sm:px-6 lg:px-8 lg:pb-16 lg:pt-32">
+        <div className="relative mx-auto flex max-w-6xl flex-col px-4 pb-11 pt-6 sm:px-6 sm:pb-14 sm:pt-9 lg:px-8 lg:pb-16">
           <div className="max-w-2xl">
             <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80">
               <Layers className="h-4 w-4 opacity-90" strokeWidth={1.75} aria-hidden />
@@ -64,7 +64,7 @@ function RichIndustryPage({ page, content }) {
       </section>
 
       {/* Overview */}
-      <section className="border-b border-zinc-200/80 py-14 sm:py-16 lg:py-20">
+      <section className="border-b border-zinc-200/80 py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400">
             {page.overviewEyebrow ?? 'Overview'}
@@ -74,7 +74,7 @@ function RichIndustryPage({ page, content }) {
       </section>
 
       {/* Capabilities + sidebar */}
-      <section className="border-b border-zinc-100 bg-zinc-50/40 py-14 sm:py-16 lg:py-20">
+      <section className="border-b border-zinc-100 bg-zinc-50/40 py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 lg:mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-700/90">
@@ -117,7 +117,7 @@ function RichIndustryPage({ page, content }) {
                 <article
                   key={section.id}
                   id={section.id}
-                  className="scroll-mt-28 border-b border-zinc-200/80 pb-14 last:border-b-0 last:pb-0 sm:scroll-mt-32 sm:pb-16 lg:pb-20"
+                  className="scroll-mt-28 border-b border-zinc-200/80 pb-11 last:border-b-0 last:pb-0 sm:scroll-mt-32 sm:pb-14 lg:pb-16"
                 >
                   <p className="text-xs font-medium text-zinc-400">
                     {section.index} - Capability

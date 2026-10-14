@@ -24,6 +24,7 @@ import KeywordPageContent from '../components/KeywordPageContent.jsx'
 import LandingSeo from '../components/landing/LandingSeo.jsx'
 import LandingHeader from '../components/landing/LandingHeader.jsx'
 import LandingFooter from '../components/landing/LandingFooter.jsx'
+import '../styles/hiring-page-spacing.css'
 import LeadForm from '../components/landing/LeadForm.jsx'
 import LeadCaptureModal from '../components/landing/LeadCaptureModal.jsx'
 import StickyMobileCta from '../components/landing/StickyMobileCta.jsx'
@@ -151,7 +152,7 @@ export default function HireDevelopersLanding({ content = landingPageContent, me
         secondaryCta={c.hero.secondaryCta}
       />
 
-      <main id="main-content">
+      <main id="main-content" className="hiring-landing-spacing">
       {/* SECTION 1 - HERO */}
       <section
         id="hero"
