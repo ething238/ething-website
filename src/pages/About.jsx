@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import originalCopy from '../data/aboutUsCopy.json';
 import seo from '../data/aboutUsSeoContent.js';
 import AboutUsEnquiryForm from '../components/AboutUsEnquiryForm.jsx';
-import BrandLogo from '../components/AboutBrandLogo.jsx';
+import FooterLogo from '../components/FooterLogo.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import { brandLogo } from '../data/aboutBrand.js';
 
@@ -44,7 +44,7 @@ function Icon({ kind, className }) {
 }
 
 function Logo() {
-  return <BrandLogo href={`${siteUrl}/`} className="about-copy-logo brand-logo" />;
+  return <FooterLogo href={`${siteUrl}/`} className="about-copy-logo brand-logo" />;
 }
 
 function LinkedInGlyph() {

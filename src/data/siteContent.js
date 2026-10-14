@@ -1983,7 +1983,7 @@ export const siteContent = {
       description:
         "How we collect, use, and protect information when you use Ething's website and services. For questions, use the contact details at the end of this page.",
       lastUpdated: '2025',
-      footerNote: '© 2026 ethingsolutions.com. All rights reserved. | Terms of Service',
+      footerNote: '© 2026 eThing. All rights reserved. | Terms of Service',
       sections: [
         {
           id: 'information-we-collect',
@@ -2097,9 +2097,9 @@ export const siteContent = {
   },
 
   footer: {
-    aboutTitle: 'Ething',
+    aboutTitle: 'eThing',
     aboutBody:
-      'Ething Solutions provides software and AI engineering talent for staff augmentation plus consulting and delivery support so enterprises can scale teams with credible, experienced practitioners.',
+      'eThing provides software and AI engineering talent for staff augmentation plus consulting and delivery support so enterprises can scale teams with credible, experienced practitioners.',
     quickLinksTitle: 'Quick Links',
     quickLinks: [
       { label: 'Home', path: '/' },
@@ -2129,6 +2129,6 @@ export const siteContent = {
       { label: 'USA', value: '+1-929-557-4560' },
     ],
     email: 'support@ething.in',
-    copyright: '© 2026 Ething',
+    copyright: '© 2026 eThing',
   },
 }
