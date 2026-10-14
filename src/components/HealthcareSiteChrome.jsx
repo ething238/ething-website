@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import originalCopy from '../data/aboutUsCopy.json';
 import BrandLogo from './AboutBrandLogo.jsx';
+import SiteHeader from './SiteHeader.jsx';
 
 const siteUrl = 'https://www.ethingsolutions.com';
 const localRoutes = new Set([
@@ -36,55 +37,7 @@ function CopyLogo() {
 }
 
 export function CopyHeader({ activePath = '', contactHref = `${siteUrl}/contact` }) {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const headerRef = useRef(null);
-  const isActive = (path) => path?.replace(/\/$/, '') === activePath.replace(/\/$/, '');
-
-  useEffect(() => {
-    const closeDropdowns = (event) => {
-      if (event.type === 'keydown' && event.key !== 'Escape') return;
-      headerRef.current?.querySelectorAll('details[open]').forEach((detail) => {
-        if (event.type === 'keydown' || !detail.contains(event.target)) detail.open = false;
-      });
-      if (event.type === 'keydown' || !headerRef.current?.contains(event.target)) setMobileOpen(false);
-    };
-    document.addEventListener('click', closeDropdowns);
-    document.addEventListener('keydown', closeDropdowns);
-    return () => {
-      document.removeEventListener('click', closeDropdowns);
-      document.removeEventListener('keydown', closeDropdowns);
-    };
-  }, []);
-
-  return <header className="about-copy-header" ref={headerRef}>
-    <div className="about-copy-header-inner">
-      <div className="about-copy-header-brand"><CopyLogo /></div>
-      <nav className="about-copy-nav" aria-label="Main navigation">
-        {originalCopy.navigation.map((item) => item.children?.length ? (
-          <details className="about-copy-nav-dropdown" key={item.id} data-active={item.children.some(child => isActive(child.path)) || undefined}>
-            <summary className="about-copy-nav-link">{item.label}<CopyIcon kind="chevron" /></summary>
-            <div className="about-copy-dropdown-menu">
-              {item.children.map((child) => <a key={child.path} href={copyDestination(child.path)} aria-current={isActive(child.path) ? 'page' : undefined}>{child.label}</a>)}
-            </div>
-          </details>
-        ) : <a className="about-copy-nav-link" href={copyDestination(item.path)} aria-current={isActive(item.path) ? 'page' : undefined} key={item.id}>{item.label}</a>)}
-      </nav>
-      <a href={copyDestination(contactHref)} className="about-copy-contact-button">{originalCopy.cta.label}</a>
-      <button className="about-copy-mobile-toggle" type="button" aria-label={mobileOpen ? 'Close menu' : 'Open menu'} aria-expanded={mobileOpen} aria-controls="about-copy-mobile-nav" onClick={() => setMobileOpen(!mobileOpen)}><CopyIcon kind={mobileOpen ? 'close' : 'menu'} /></button>
-    </div>
-    {mobileOpen && <nav id="about-copy-mobile-nav" className="about-copy-mobile-nav" aria-label="Mobile navigation">
-      {originalCopy.navigation.map((item) => item.children?.length ? (
-        <details className="about-copy-nav-dropdown" key={item.id} data-active={item.children.some(child => isActive(child.path)) || undefined}>
-          <summary className="about-copy-nav-link">{item.label}<CopyIcon kind="chevron" /></summary>
-          <div className="about-copy-dropdown-menu">
-            {item.path && <a href={copyDestination(item.path)} aria-current={isActive(item.path) ? 'page' : undefined} onClick={() => setMobileOpen(false)}>{item.label}</a>}
-            {item.children.map((child) => <a key={child.path} href={copyDestination(child.path)} aria-current={isActive(child.path) ? 'page' : undefined} onClick={() => setMobileOpen(false)}>{child.label}</a>)}
-          </div>
-        </details>
-      ) : <div key={item.id}><a href={copyDestination(item.path)} aria-current={isActive(item.path) ? 'page' : undefined} onClick={() => setMobileOpen(false)}>{item.label}</a></div>)}
-      <a href={copyDestination(contactHref)} className="about-copy-contact-button">{originalCopy.cta.label}</a>
-    </nav>}
-  </header>;
+  return <SiteHeader activePath={activePath} contactHref={contactHref} />;
 }
 
 export function CopyFooter({ activePath = '', contactHref = `${siteUrl}/contact`, aboutBody }) {

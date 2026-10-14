@@ -5,12 +5,14 @@
   const toggle = header.querySelector('.hire-site-mobile-toggle');
   const mobileNav = header.querySelector('.hire-site-mobile-nav');
   const topButton = document.querySelector('.hire-site-top');
+  const updateMenuIcon = open => { toggle.querySelector('path').setAttribute('d', open ? 'm6 6 12 12M6 18 18 6' : 'M4 6h16M4 12h16M4 18h16'); };
 
   function closeMenus() {
     header.querySelectorAll('details[open]').forEach(detail => { detail.open = false; });
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', 'Open menu');
     mobileNav.hidden = true;
+    updateMenuIcon(false);
   }
 
   toggle.addEventListener('click', () => {
@@ -18,6 +20,7 @@
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     mobileNav.hidden = !open;
+    updateMenuIcon(open);
   });
   header.addEventListener('toggle', event => {
     if (event.target.tagName !== 'DETAILS' || !event.target.open) return;
@@ -30,7 +33,7 @@
   });
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
-    const focusedMenu = document.activeElement?.closest('.hire-site-dropdown');
+    const focusedMenu = document.activeElement?.closest('.about-copy-nav-dropdown');
     if (focusedMenu) focusedMenu.querySelector('summary').focus();
     else if (header.contains(document.activeElement)) toggle.focus();
     closeMenus();
