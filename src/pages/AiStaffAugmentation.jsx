@@ -37,7 +37,7 @@ export default function AiStaffAugmentation({ content }) {
           aria-hidden
         />
 
-        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-20">
+        <div className="relative mx-auto max-w-6xl px-4 pb-11 pt-6 sm:px-6 sm:pb-14 sm:pt-9 lg:px-8 lg:pb-16">
           <motion.div
             initial="hidden"
             animate="show"
@@ -75,7 +75,7 @@ export default function AiStaffAugmentation({ content }) {
         </div>
       </section>
 
-      <section className="border-b border-zinc-200/80 py-14 sm:py-20 lg:py-24">
+      <section className="border-b border-zinc-200/80 py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600">{p.rolesKicker}</p>
@@ -103,7 +103,7 @@ export default function AiStaffAugmentation({ content }) {
         </div>
       </section>
 
-      <section className="border-b border-zinc-200/80 bg-white py-14 sm:py-20">
+      <section className="border-b border-zinc-200/80 bg-white py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-14 lg:items-start">
             <div>
@@ -136,7 +136,7 @@ export default function AiStaffAugmentation({ content }) {
         </div>
       </section>
 
-      <section className="py-14 sm:py-20 lg:py-24">
+      <section className="py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-3xl rounded-3xl border border-zinc-200/90 bg-white px-6 py-10 text-center shadow-sm sm:px-10">
           <h2 className="font-[family:var(--font-display)] text-xl font-bold text-ething-ink sm:text-2xl">
             {p.closing.title}

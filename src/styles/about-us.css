@@ -427,3 +427,19 @@
 .about-us-copy .about-copy-logo.brand-logo { height:60px; max-width:none; }
 .about-us-copy .about-copy-logo.brand-logo img { width:60px; height:60px; object-fit:contain; }
 @media(max-width:639px){.about-us-copy .about-copy-logo.brand-logo{height:48px}.about-us-copy .about-copy-logo.brand-logo img{width:48px;height:48px}}
+
+/* Compact content spacing; keep shared header and footer dimensions intact. */
+.about-us-copy .about-copy-hero { padding-block:36px 64px; }
+.about-us-copy .about-copy-hero-grid { align-items:start; }
+.about-us-copy .about-copy-vision,
+.about-us-copy .about-copy-values,
+.about-us-copy .about-copy-leaders,
+.about-us-copy .about-copy-section { padding-block:64px; }
+.about-us-copy .about-copy-values-grid { margin-top:32px; }
+@media(max-width:767px) {
+  .about-us-copy .about-copy-hero { padding-block:24px 44px; }
+  .about-us-copy .about-copy-vision,
+  .about-us-copy .about-copy-values,
+  .about-us-copy .about-copy-leaders,
+  .about-us-copy .about-copy-section { padding-block:44px; }
+}

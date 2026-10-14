@@ -12,9 +12,9 @@ export default function EngineeringServices({ content }) {
   }, [])
 
   return (
-    <PageShell title={p.title} kicker="Delivery">
+    <PageShell title={p.title} kicker="Delivery" compact>
       <p className="mt-4 max-w-2xl text-lg text-zinc-600 leading-relaxed">{p.intro}</p>
-      <div id={p.capabilitiesId} className="mt-12 scroll-mt-24">
+      <div id={p.capabilitiesId} className="mt-8 scroll-mt-24">
         <h2 className="mb-6 text-sm font-semibold uppercase tracking-widest text-violet-600">
           Capabilities
         </h2>

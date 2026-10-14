@@ -145,3 +145,19 @@
     .aerospace-copy .aerospace-project-grid dl { grid-row: span 3; grid-template-rows: subgrid; }
   }
 }
+
+/* Compact the hero and content sections without changing typography. */
+.aerospace-copy .aerospace-hero,
+.aerospace-copy .aerospace-hero-inner { min-height:0; }
+.aerospace-copy .aerospace-hero-inner { align-items:flex-start; padding-block:36px 64px; }
+.aerospace-copy .aerospace-services,
+.aerospace-copy .aerospace-technologies,
+.aerospace-copy .aerospace-projects,
+.aerospace-copy .aerospace-enquiry { padding-block:64px; }
+@media(max-width:767px) {
+  .aerospace-copy .aerospace-hero-inner { padding-block:24px 44px; }
+  .aerospace-copy .aerospace-services,
+  .aerospace-copy .aerospace-technologies,
+  .aerospace-copy .aerospace-projects,
+  .aerospace-copy .aerospace-enquiry { padding-block:44px; }
+}

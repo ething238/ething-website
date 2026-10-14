@@ -42,7 +42,7 @@ export default function Privacy({ content }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-3xl px-4 pb-11 pt-6 text-center sm:px-6 sm:pb-14 sm:pt-9 lg:px-8 lg:pb-16">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-violet-600">
             {p.heroEyebrow}
           </p>
@@ -61,7 +61,7 @@ export default function Privacy({ content }) {
         </div>
       </motion.header>
 
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="mx-auto max-w-6xl px-4 py-11 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-14">
           <aside className="lg:col-span-3">
             <div className="lg:sticky lg:top-28">

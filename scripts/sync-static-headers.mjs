@@ -8,6 +8,8 @@ try {
   await fs.copyFile('src/styles/site-header.css', 'public/site-header/site-header.css')
   await fs.mkdir('public/footer-brand', { recursive: true })
   await fs.copyFile('src/styles/footer-brand.css', 'public/footer-brand/footer-brand.css')
+  await fs.mkdir('public/page-spacing', { recursive: true })
+  await fs.copyFile('src/styles/hiring-page-spacing.css', 'public/page-spacing/hiring-page-spacing.css')
   const { renderStaticHeader } = await server.ssrLoadModule('/scripts/static-header-entry.jsx')
   const directories = await fs.readdir('public', { withFileTypes: true })
   let updated = 0
@@ -21,6 +23,8 @@ try {
     if (!html.includes(styles)) html = html.replace('</head>', styles + '</head>')
     const footerStyles = '<link rel="stylesheet" href="/footer-brand/footer-brand.css"/>'
     if (!html.includes(footerStyles)) html = html.replace('</head>', footerStyles + '</head>')
+    const spacingStyles = '<link rel="stylesheet" href="/page-spacing/hiring-page-spacing.css"/>'
+    if (!html.includes(spacingStyles)) html = html.replace('</head>', spacingStyles + '</head>')
     html = html.replace(/<footer\b[^>]*class="hire-site-footer"[^>]*>[\s\S]*?<\/footer>/g, footer => footer
       .replace(/Ething Solutions/g, 'eThing')
       .replace(/© 2026 Ething/g, '© 2026 eThing')

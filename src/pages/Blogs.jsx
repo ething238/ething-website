@@ -92,7 +92,7 @@ export default function Blogs({ content }) {
   }, [feedUrl])
 
   return (
-    <PageShell title={p.title} kicker={p.kicker}>
+    <PageShell title={p.title} kicker={p.kicker} compact>
       <p className="mt-4 max-w-2xl text-lg text-zinc-600 leading-relaxed">{p.intro}</p>
 
       {!feedUrl && (

@@ -9,7 +9,7 @@ export default function Contact({ content }) {
   }, [])
 
   return (
-    <section id={content.contactSection.id} className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+    <section id={content.contactSection.id} className="mx-auto max-w-6xl px-4 pb-11 pt-6 sm:px-6 sm:pb-16 sm:pt-9 lg:px-8">
       <ContactForm
         content={content}
         title={p.pageTitle}

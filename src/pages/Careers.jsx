@@ -24,8 +24,8 @@ export default function Careers({ content }) {
           className="pointer-events-none absolute -right-20 bottom-0 h-[320px] w-[320px] rounded-full bg-sky-400/15 blur-3xl"
           aria-hidden
         />
-        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-20">
-          <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-10">
+        <div className="relative mx-auto max-w-6xl px-4 pb-11 pt-6 sm:px-6 sm:pb-14 sm:pt-9 lg:px-8 lg:pb-16">
+          <div className="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-10">
             <div className="lg:col-span-5">
               <p className="inline-flex items-center gap-2 rounded-full border border-violet-200/80 bg-violet-50/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-800">
                 <span className="h-1.5 w-1.5 rounded-full bg-violet-500" aria-hidden />
@@ -68,9 +68,9 @@ export default function Careers({ content }) {
       </section>
 
       {/* Bento-style gallery */}
-      <section className="border-b border-zinc-200/80 bg-zinc-50 py-12 sm:py-16 lg:py-20">
+      <section className="border-b border-zinc-200/80 bg-zinc-50 py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-12 lg:gap-5">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-12 lg:gap-5">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ export default function Careers({ content }) {
       {/* Why us - card stack */}
       <section
         id="why-us"
-        className="scroll-mt-[calc(4rem+1px)] border-b border-zinc-200/80 bg-white py-16 sm:py-20 lg:py-24"
+        className="scroll-mt-[calc(4rem+1px)] border-b border-zinc-200/80 bg-white py-11 sm:py-14 lg:py-16"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -147,7 +147,7 @@ export default function Careers({ content }) {
             </h2>
           </div>
 
-          <div className="mt-14 grid gap-6 md:mt-16 md:grid-cols-3 md:gap-8">
+          <div className="mt-8 grid gap-6 md:grid-cols-3 md:gap-8">
             {p.whyUsPillars.map((col, i) => {
               const Icon = pillarIcons[i] ?? TrendingUp
               return (
@@ -187,7 +187,7 @@ export default function Careers({ content }) {
       </section>
 
       {/* CTA band */}
-      <section className="bg-zinc-50 py-14 sm:py-16 lg:py-20">
+      <section className="bg-zinc-50 py-11 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 12 }}

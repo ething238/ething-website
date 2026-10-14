@@ -1,0 +1,47 @@
+/* Only hiring-page content: shared navigation and footers retain their sizing. */
+.hiring-landing-spacing > #hero { padding-top:0; }
+.hiring-landing-spacing > #hero > .max-w-6xl { padding-block:36px 64px; }
+.hiring-landing-spacing > #hero > .max-w-6xl > .grid { align-items:start; }
+.hiring-landing-spacing > section:not(#hero) { padding-block:64px; }
+
+.paid-page main > section.hero,
+.paid-page.developers main > section.hero { min-height:0; padding-block:36px 48px; align-items:start; }
+.paid-page main > section.software-proof,
+.paid-page main > section.role-capabilities,
+.paid-page main > section.case-study,
+.paid-page main > section.hiring-comparison,
+.paid-page main > section.software-testimonials,
+.paid-page main > section.developer-profiles,
+.paid-page main > section.software-faq { padding-block:64px!important; }
+/* The exported campaign styles use !important for these section paddings. */
+.paid-page.campaign-role main > section.software-testimonials { padding-bottom:48px!important; }
+
+.other-services-page main > section.hub-hero { min-height:0; padding-block:36px 48px; align-items:start; }
+.other-services-page .hub-hero-layout { align-items:start; }
+.other-services-page main > section.hub-specialties,
+.other-services-page main > section.hub-proof,
+.other-services-page main > section.hub-process,
+.other-services-page main > section.hub-more,
+.other-services-page main > section.hub-faq { padding-block:64px; }
+.other-services-page main > section.hub-more { padding-bottom:60px; }
+
+@media(max-width:800px) {
+  .hiring-landing-spacing > #hero > .max-w-6xl { padding-block:24px 44px; }
+  .hiring-landing-spacing > section:not(#hero) { padding-block:44px; }
+  .paid-page main > section.software-proof,
+  .paid-page main > section.role-capabilities,
+  .paid-page main > section.case-study,
+  .paid-page main > section.hiring-comparison,
+  .paid-page main > section.software-testimonials,
+  .paid-page main > section.developer-profiles,
+  .paid-page main > section.software-faq { padding-block:44px!important; }
+  .paid-page.campaign-role main > section.software-testimonials { padding-bottom:44px!important; }
+  .other-services-page main > section.hub-specialties,
+  .other-services-page main > section.hub-proof,
+  .other-services-page main > section.hub-process,
+  .other-services-page main > section.hub-more,
+  .other-services-page main > section.hub-faq { padding-block:44px; }
+  .paid-page main > section.hero,
+  .paid-page.developers main > section.hero { padding-block:24px 44px!important; }
+  .other-services-page main > section.hub-hero { padding-block:24px 44px; }
+}
