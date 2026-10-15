@@ -16,7 +16,7 @@ export { pageDescriptions } from './pageTitles.js'
 
 export const siteContent = {
   meta: {
-    siteName: 'Ething',
+    siteName: 'eThing',
     titleTemplate: '%s · Ething · Engineering & Staff Augmentation',
     defaultDescription:
       'Ething provides software and AI engineering talent for staff augmentation-embedded specialists for enterprise and product teams, alongside consulting and engineering services.',
