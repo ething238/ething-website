@@ -184,7 +184,7 @@
 
 /* Homepage scroll colors change without changing the shared header geometry. */
 .ething-header[data-home-transition="true"] { transition:background-color .5s ease-out,color .3s ease-out,box-shadow .5s ease-out; }
-.ething-header[data-surface="dark"] { background:#0c1222; color:#fff; box-shadow:none; }
+.ething-header[data-surface="dark"] { background:transparent; color:#fff; box-shadow:none; backdrop-filter:none; }
 .ething-header[data-surface="dark"] .about-copy-nav-link { color:#e4e4e7; }
 .ething-header[data-surface="dark"] .about-copy-nav-link:hover { color:#fff; }
 .ething-header[data-surface="dark"] .about-copy-nav-link[aria-current="page"] { color:#fff; background:rgb(255 255 255 / 10%); }
