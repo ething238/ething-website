@@ -28,7 +28,7 @@ export const landingPageMeta = {
   ogImage: '/brand/ething-logo-new-font.png',
   ogImageAlt:
     'Ething Solutions — hire pre-vetted remote developers from India for global engineering teams',
-  siteName: 'Ething Solutions',
+  siteName: 'eThing',
   locale: 'en',
   breadcrumbLabel: 'Hire Developers India',
   geo: {

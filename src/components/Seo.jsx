@@ -27,7 +27,7 @@ export default function Seo({
   ogImage,
   noindex,
   organizationJsonLd,
-  siteName = 'Ething',
+  siteName = 'eThing',
 }) {
   const base = getSiteBaseUrl()
   const canonicalHref =
@@ -103,7 +103,7 @@ export default function Seo({
               '@type': 'WebSite',
               '@id': `${base}/#website`,
               url: `${base}/`,
-              name: organizationJsonLd.meta?.siteName || 'Ething',
+              name: organizationJsonLd.meta?.siteName || 'eThing',
               publisher: { '@id': `${base}/#organization` },
             },
           ],
