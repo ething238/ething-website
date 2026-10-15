@@ -25,6 +25,7 @@ import LandingSeo from '../components/landing/LandingSeo.jsx'
 import LandingHeader from '../components/landing/LandingHeader.jsx'
 import LandingFooter from '../components/landing/LandingFooter.jsx'
 import '../styles/hiring-page-spacing.css'
+import RelatedServices from '../components/RelatedServices.jsx'
 import LeadForm from '../components/landing/LeadForm.jsx'
 import LeadCaptureModal from '../components/landing/LeadCaptureModal.jsx'
 import StickyMobileCta from '../components/landing/StickyMobileCta.jsx'
@@ -613,6 +614,7 @@ export default function HireDevelopersLanding({ content = landingPageContent, me
       </main>
 
       {/* SECTION 13 - FOOTER */}
+      <RelatedServices pathname={meta.path} />
       <LandingFooter />
 
       {/* Conversion components */}

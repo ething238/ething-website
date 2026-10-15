@@ -49,7 +49,7 @@ export default function Layout({ content, children }) {
       >
         {children}
         {pathname !== '/' && isKnownRoute && !isLandingPage && <KeywordPageContent pathname={pathname} />}
-        {pathname !== '/' && isKnownRoute && <RelatedServices pathname={pathname} />}
+        {pathname !== '/' && isKnownRoute && !isLandingPage && <RelatedServices pathname={pathname} />}
       </main>
       {!isLandingPage && <Footer content={content} />}
       {!isLandingPage && <ScrollToTopButton />}
