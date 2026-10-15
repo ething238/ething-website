@@ -7,10 +7,18 @@ export function HeaderIcon({ kind }) {
   return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={kind === 'chevron' ? 'm6 9 6 6 6-6' : kind === 'close' ? 'm6 6 12 12M6 18 18 6' : 'M4 6h16M4 12h16M4 18h16'} /></svg>
 }
 
-export default function SiteHeader({ activePath = '', contactHref = '/contact', staticMarkup = false }) {
+export default function SiteHeader({ activePath = '', contactHref = '/contact', staticMarkup = false, darkAtTop = false }) {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const headerRef = useRef(null)
   const isActive = path => path?.replace(/\/$/, '') === activePath.replace(/\/$/, '')
+  useEffect(() => {
+    if (!darkAtTop) return
+    const onScroll = () => setScrolled(window.scrollY > 48)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [darkAtTop])
   useEffect(() => {
     const closeDropdowns = event => {
       if (event.type === 'keydown' && event.key !== 'Escape') return
@@ -23,7 +31,7 @@ export default function SiteHeader({ activePath = '', contactHref = '/contact', 
     document.addEventListener('keydown', closeDropdowns)
     return () => { document.removeEventListener('click', closeDropdowns); document.removeEventListener('keydown', closeDropdowns) }
   }, [])
-  return <header className={'about-copy-header ething-header' + (staticMarkup ? ' hire-site-header' : '')} ref={headerRef}>
+  return <header className={'about-copy-header ething-header' + (staticMarkup ? ' hire-site-header' : '')} ref={headerRef} data-home-transition={darkAtTop ? 'true' : undefined} data-surface={darkAtTop ? (scrolled ? 'light' : 'dark') : undefined}>
     <div className="about-copy-header-inner">
       <div className="about-copy-header-brand"><BrandLogo href="/" className="about-copy-logo brand-logo" /></div>
       <nav className="about-copy-nav" aria-label="Main navigation">
