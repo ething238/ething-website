@@ -27,7 +27,7 @@ export default function Layout({ content, children }) {
   if (pathname === '/about_us' || pathname === '/healthcare_industry' || pathname === '/aerospace_industry') return children
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className={'flex min-h-screen flex-col' + (pathname === '/' ? ' homepage-layout' : '')}>
       {!isLandingPage && (
         <Seo
           title={title}

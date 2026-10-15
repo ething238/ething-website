@@ -14,6 +14,16 @@ export default function SiteHeader({ activePath = '', contactHref = '/contact', 
   const isActive = path => path?.replace(/\/$/, '') === activePath.replace(/\/$/, '')
   useEffect(() => {
     if (!darkAtTop) return
+    const layout = headerRef.current.parentElement
+    const inner = headerRef.current.querySelector('.about-copy-header-inner')
+    const updateHeight = () => layout.style.setProperty('--homepage-header-height', `${inner.getBoundingClientRect().height}px`)
+    updateHeight()
+    const observer = new ResizeObserver(updateHeight)
+    observer.observe(inner)
+    return () => { observer.disconnect(); layout.style.removeProperty('--homepage-header-height') }
+  }, [darkAtTop])
+  useEffect(() => {
+    if (!darkAtTop) return
     const onScroll = () => setScrolled(window.scrollY > 48)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })

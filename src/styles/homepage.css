@@ -254,7 +254,7 @@
 
 /* Keep the homepage compact without changing type sizes or tab stability. */
 .homepage-reviewed .section { padding-block:64px; }
-.homepage-reviewed .hero-section { padding-top:24px; }
+.homepage-reviewed .hero-section { padding-top:calc(24px + var(--homepage-header-height, 0px)); }
 .homepage-reviewed .hero-grid { align-items:start; padding-block:12px 36px; }
 .homepage-reviewed .hero-copy h1 { margin-block:0 20px; }
 .homepage-reviewed .hero-actions { margin-top:24px; }
@@ -275,7 +275,7 @@
 @media(max-width:900px) { .homepage-reviewed .section { padding-block:56px; } }
 @media(max-width:640px) {
   .homepage-reviewed .section { padding-block:44px; }
-  .homepage-reviewed .hero-section { padding-top:16px; }
+  .homepage-reviewed .hero-section { padding-top:calc(16px + var(--homepage-header-height, 0px)); }
   .homepage-reviewed .hero-grid { padding-block:8px 28px; gap:28px; }
   .homepage-reviewed .hero-copy h1 { margin-block:0 18px; }
   .homepage-reviewed .section-heading { margin-bottom:24px; }
@@ -283,3 +283,9 @@
   .homepage-reviewed .source-review,.homepage-reviewed .hiring-card,.homepage-reviewed .delivery-proof { padding:22px; }
   .homepage-reviewed .ai-layout,.homepage-reviewed .contact-layout { gap:28px; }
 }
+
+/* Let the hero paint behind the sticky header without moving its content. */
+.homepage-layout { --homepage-header-height:86px; }
+.homepage-layout > .ething-header { margin-bottom:calc(-1 * var(--homepage-header-height)); }
+@media(min-width:1280px) { .homepage-layout { --homepage-header-height:90px; } }
+@media(max-width:639px) { .homepage-layout { --homepage-header-height:74px; } }
