@@ -1,6 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import fs from 'node:fs/promises'
+import path from 'node:path'
 import postcss from 'postcss'
 
 const html = await fs.readFile('dist/index.html', 'utf8')
@@ -43,11 +44,32 @@ test('homepage submits on site without triggering a native-submit conversion on 
   for (const name of ['name', 'email', 'engagement', 'specialty', 'message']) assert.match(form, new RegExp(`name="${name}"`))
 })
 
-test('homepage CSS cannot target other pages or shared chrome', async () => {
+test('homepage CSS stays scoped with a limited header spacing exception', async () => {
   const css = postcss.parse(await fs.readFile('src/styles/homepage.css', 'utf8'))
+  const layoutProperties = new Map([
+    ['.homepage-layout', new Set(['--homepage-header-height'])],
+    ['.homepage-layout > .ething-header', new Set(['margin-bottom'])],
+  ])
   css.walkRules(rule => {
     let parent = rule.parent
     while (parent) { if (parent.type === 'atrule' && parent.name.includes('keyframes')) return; parent = parent.parent }
-    for (const selector of rule.selectors) assert.ok(selector.startsWith('.homepage-reviewed'), selector)
+    for (const selector of rule.selectors) {
+      const allowedProperties = layoutProperties.get(selector)
+      if (allowedProperties) {
+        rule.walkDecls(({ prop }) => assert.ok(allowedProperties.has(prop), `${selector}: unexpected ${prop}`))
+      } else {
+        assert.match(selector, /^\.homepage-reviewed(?=$|[\s.#:[>+~])/, selector)
+      }
+    }
   })
+})
+
+test('the header blending wrapper is present only in homepage documents', async () => {
+  const files = (await fs.readdir('dist', { recursive: true })).filter(file => file.endsWith('.html'))
+  for (const file of files) {
+    const page = await fs.readFile(path.join('dist', file), 'utf8')
+    const wrappers = [...page.matchAll(/\bclass="([^"]*)"/g)]
+      .filter(([, classes]) => classes.split(/\s+/).includes('homepage-layout'))
+    assert.equal(wrappers.length, ['index.html', 'home.html'].includes(file) ? 1 : 0, file)
+  }
 })
