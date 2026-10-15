@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { relatedPages, pageLabels } from '../data/relatedPages.js'
+import { technologyLandingPagePaths } from '../data/technologyLandingPages.js'
 import '../styles/related-services.css'
 
 export default function RelatedServices({
@@ -18,7 +19,7 @@ export default function RelatedServices({
         <p className="related-services-strip__description">{description}</p>
         <ul className="related-services-strip__links">
           {items.map(({ path, label }) => (
-            <li key={path}>{nativeLinks ? <a href={path}>{label}</a> : <Link to={path}>{label}</Link>}</li>
+            <li key={path}>{nativeLinks ? <a href={path}>{label}</a> : <Link to={path} reloadDocument={technologyLandingPagePaths.includes(path.split(/[?#]/)[0].replace(/\/$/, ''))}>{label}</Link>}</li>
           ))}
         </ul>
       </div>

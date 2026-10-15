@@ -11,6 +11,7 @@ import {
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { technologyLandingPagePaths } from '../data/technologyLandingPages.js'
 
 const ICONS = { Users, UserPlus, ShieldCheck, MapPin, Clock, Banknote, Sparkles, Brain }
 
@@ -53,6 +54,7 @@ export default function ServiceGrid({ cards }) {
           <motion.li key={c.id} variants={item} className="h-full">
             <Link
               to={href}
+              reloadDocument={technologyLandingPagePaths.includes(href.split(/[?#]/)[0].replace(/\/$/, ''))}
               className={[
                 'group relative flex h-full min-h-[220px] flex-col rounded-2xl border p-6 text-left transition duration-300 sm:p-7',
                 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500',
