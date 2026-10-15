@@ -181,3 +181,22 @@
 .ething-header .about-copy-logo.brand-logo { height:60px; max-width:none; }
 .ething-header .about-copy-logo.brand-logo img { width:60px; height:60px; object-fit:contain; }
 @media(max-width:639px){.ething-header .about-copy-logo.brand-logo{height:48px}.ething-header .about-copy-logo.brand-logo img{width:48px;height:48px}}
+
+/* Homepage scroll colors change without changing the shared header geometry. */
+.ething-header[data-home-transition="true"] { transition:background-color .5s ease-out,color .3s ease-out,box-shadow .5s ease-out; }
+.ething-header[data-surface="dark"] { background:#0c1222; color:#fff; box-shadow:none; }
+.ething-header[data-surface="dark"] .about-copy-nav-link { color:#e4e4e7; }
+.ething-header[data-surface="dark"] .about-copy-nav-link:hover { color:#fff; }
+.ething-header[data-surface="dark"] .about-copy-nav-link[aria-current="page"] { color:#fff; background:rgb(255 255 255 / 10%); }
+.ething-header[data-surface="dark"] .about-copy-dropdown-menu { background:rgb(19 35 71 / 98%); border-color:rgb(255 255 255 / 15%); }
+.ething-header[data-surface="dark"] .about-copy-dropdown-menu a { color:#e4e4e7; }
+.ething-header[data-surface="dark"] .about-copy-dropdown-menu a:hover { background:rgb(255 255 255 / 10%); color:#fff; }
+.ething-header[data-surface="dark"] .about-copy-contact-button { background:#fff; color:#132347; }
+.ething-header[data-surface="dark"] .about-copy-contact-button:hover { background:#e2e8f0; }
+.ething-header[data-surface="dark"] .about-copy-mobile-toggle { color:#fff; }
+.ething-header[data-surface="dark"] .about-copy-mobile-toggle:hover { background:rgb(255 255 255 / 10%); }
+.ething-header[data-surface="dark"] .about-copy-mobile-nav { background:rgb(12 18 34 / 98%); border-color:rgb(255 255 255 / 15%); }
+.ething-header[data-surface="dark"] .about-copy-mobile-nav > div > a,
+.ething-header[data-surface="dark"] .about-copy-mobile-nav > div > span { color:#e4e4e7; }
+.ething-header[data-surface="dark"] .about-copy-mobile-nav > div > a:hover { background:rgb(255 255 255 / 10%); color:#fff; }
+@media(prefers-reduced-motion:reduce) { .ething-header[data-home-transition="true"] { transition:none; } }
