@@ -116,7 +116,7 @@ export default function Home({ content }) {
 
     <section className="section faq-section" id="faq">
       <div className="container faq-layout">
-        <div className="section-heading centered-heading faq-intro"><h2>Frequently asked questions</h2><p>Learn how we find developers, plan the work and help your team get started.</p><a className="text-link" href={'mailto:' + content.footer.email}>Ask another question <ArrowUpRight size={17} aria-hidden="true" /></a></div>
+        <div className="section-heading centered-heading faq-intro"><h2>Frequently asked questions</h2><p>Learn how we find developers, plan the work and help your team get started.</p></div>
         <div className="faq-columns">
           {[faqs.slice(0, faqMidpoint), faqs.slice(faqMidpoint)].map((column, columnIndex) => <div className="faq-list" key={columnIndex}>{column.map((item, i) => <details key={item.question}><summary><span className="faq-number">{String(columnIndex * faqMidpoint + i + 1).padStart(2, '0')}</span><span>{item.question}</span><ChevronDown size={19} aria-hidden="true" /></summary><p>{item.answer}</p></details>)}</div>)}
         </div>

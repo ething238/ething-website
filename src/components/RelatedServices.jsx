@@ -1,17 +1,24 @@
 import { Link } from 'react-router-dom'
 import { relatedPages, pageLabels } from '../data/relatedPages.js'
+import '../styles/related-services.css'
 
-export default function RelatedServices({ pathname }) {
-  const paths = relatedPages[pathname]
-  if (!paths) return null
+export default function RelatedServices({
+  pathname,
+  links,
+  title = 'Explore related services',
+  description = 'Find the engineering service or hiring option that fits your requirements.',
+  nativeLinks = false,
+}) {
+  const items = links ?? relatedPages[pathname]?.map(path => ({ path, label: pageLabels[path] }))
+  if (!items?.length) return null
   return (
-    <section aria-labelledby="related-services-heading" className="border-t border-zinc-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <h2 id="related-services-heading" className="text-xl font-semibold text-ething-ink">Explore related services</h2>
-        <p className="mt-2 text-sm text-zinc-600">Find the engineering service or hiring option that fits your requirements.</p>
-        <ul className="mt-5 flex flex-wrap gap-3">
-          {paths.map((path) => (
-            <li key={path}><Link className="inline-block rounded-full border border-zinc-200 px-4 py-2 text-sm font-medium text-ething-navy hover:underline" to={path}>{pageLabels[path]}</Link></li>
+    <section data-ething-related-services="true" aria-labelledby="related-services-heading" className="related-services-strip">
+      <div className="related-services-strip__inner">
+        <h2 id="related-services-heading" className="related-services-strip__title">{title}</h2>
+        <p className="related-services-strip__description">{description}</p>
+        <ul className="related-services-strip__links">
+          {items.map(({ path, label }) => (
+            <li key={path}>{nativeLinks ? <a href={path}>{label}</a> : <Link to={path}>{label}</Link>}</li>
           ))}
         </ul>
       </div>

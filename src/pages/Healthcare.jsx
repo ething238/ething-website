@@ -7,6 +7,7 @@ import { brandLogo, brandLogoUrl } from '../data/aboutBrand.js';
 import seo from '../data/healthcareSeoContent';
 import governanceCase from '../data/healthcareAiGovernanceCase';
 import delivery from '../data/healthcareDeliveryContent';
+import RelatedServices from '../components/RelatedServices.jsx';
 
 const siteUrl = 'https://www.ethingsolutions.com';
 const pageUrl = `${siteUrl}/healthcare_industry`;
@@ -82,7 +83,7 @@ export default function HealthcareIndustryCopy() {
           <div className="healthcare-case-grid">{governanceCase.sections.map((section, index) => <article key={section.title}><span className="healthcare-case-number" aria-hidden="true">0{index + 1}</span><h3>{section.title}</h3><p>{section.body}</p></article>)}</div>
         </div></section>
         <section id="healthcare-team-support" className="healthcare-team-support" aria-labelledby="team-support-heading"><div className="about-copy-container healthcare-team-support-grid"><div><h2 id="team-support-heading">{seo.teamSupport.heading}</h2></div><div>{seo.teamSupport.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}<a className="healthcare-team-link" href="/staff-augmentation">Explore flexible team support <span aria-hidden="true">→</span></a></div></div></section>
-        <section className="about-copy-related" aria-labelledby="related-services-heading"><div className="about-copy-container"><h2 id="related-services-heading" className="about-copy-related-title">{original.relatedServices.title}</h2><p className="about-copy-related-copy">{original.relatedServices.description}</p><ul className="about-copy-related-links">{original.relatedServices.links.map((link) => <li key={link.path}><a href={`${siteUrl}${link.path}`}>{link.label}</a></li>)}</ul></div></section>
+        <RelatedServices title={original.relatedServices.title} description={original.relatedServices.description} nativeLinks links={original.relatedServices.links.map(link => ({ ...link, path: `${siteUrl}${link.path}` }))} />
       </main>
       <CopyFooter activePath="/healthcare_industry" aboutBody={seo.footerAbout} />
       <CopyBackToTop />
