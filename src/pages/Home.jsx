@@ -126,7 +126,7 @@ export default function Home({ content }) {
     <section className="section contact-section" id="reach-out">
       <div className="container contact-layout">
         <div className="contact-copy">
-          <h2>Contact us</h2>
+          <h2>Book a free consultation</h2>
           <p>Share your IT staff augmentation needs, skills and start date. eThing matches developers to your project and sets out clear roles, costs and next steps.</p>
           <ul className="contact-benefits">
             <li><Check size={20} aria-hidden="true" /><span>Developers matched to project requirements.</span></li>
