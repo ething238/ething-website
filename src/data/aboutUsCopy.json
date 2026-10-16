@@ -153,6 +153,10 @@
           "path": "/software_development"
         },
         {
+          "label": "Website Development",
+          "path": "/website-development"
+        },
+        {
           "label": "Mobile Application",
           "path": "/mobile_application"
         },

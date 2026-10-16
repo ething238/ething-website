@@ -1,0 +1,329 @@
+{
+  "canonical": "https://www.ethingsolutions.com/website-development",
+  "mainWordCount": 2700,
+  "combinedPhraseMentions": 54,
+  "combinedDensityPercent": 2.0,
+  "formula": "Longest non-overlapping exact phrase mentions / main-content words \u00d7 100.",
+  "scope": "All 19 requested phrases; prerendered main content including selectable panels and FAQ answers, excluding shared header/footer, scripts, styles and duplicate noscript content.",
+  "intentionalAbsences": "App-development phrases and removed local-search variants remain absent, following the owner's later website-only and repetition-removal instructions.",
+  "keywords": [
+    {
+      "phrase": "website developer",
+      "occurrences": 12
+    },
+    {
+      "phrase": "website development company",
+      "occurrences": 3
+    },
+    {
+      "phrase": "website development services",
+      "occurrences": 20
+    },
+    {
+      "phrase": "web developer",
+      "occurrences": 7
+    },
+    {
+      "phrase": "web application development",
+      "occurrences": 0
+    },
+    {
+      "phrase": "web development companies near me",
+      "occurrences": 1
+    },
+    {
+      "phrase": "website development near me",
+      "occurrences": 0
+    },
+    {
+      "phrase": "website and app development",
+      "occurrences": 0
+    },
+    {
+      "phrase": "website development company near me",
+      "occurrences": 0
+    },
+    {
+      "phrase": "best website development company",
+      "occurrences": 1
+    },
+    {
+      "phrase": "web dev company",
+      "occurrences": 1
+    },
+    {
+      "phrase": "website dev",
+      "occurrences": 1
+    },
+    {
+      "phrase": "top website development companies",
+      "occurrences": 1
+    },
+    {
+      "phrase": "web and app development services",
+      "occurrences": 0
+    },
+    {
+      "phrase": "web3 development company",
+      "occurrences": 2
+    },
+    {
+      "phrase": "web app development services",
+      "occurrences": 0
+    },
+    {
+      "phrase": "web designing company",
+      "occurrences": 2
+    },
+    {
+      "phrase": "website redesign services",
+      "occurrences": 4
+    },
+    {
+      "phrase": "web app development agency",
+      "occurrences": 0
+    }
+  ],
+  "headingCounts": {
+    "h1": 1,
+    "h2": 11,
+    "h3": 46
+  },
+  "headingLevelSkips": [],
+  "headingOutline": [
+    {
+      "tag": "h1",
+      "text": "Website development services"
+    },
+    {
+      "tag": "h2",
+      "text": "Our services"
+    },
+    {
+      "tag": "h3",
+      "text": "Business websites"
+    },
+    {
+      "tag": "h3",
+      "text": "Ecommerce websites"
+    },
+    {
+      "tag": "h3",
+      "text": "Website integrations"
+    },
+    {
+      "tag": "h3",
+      "text": "Content management websites"
+    },
+    {
+      "tag": "h3",
+      "text": "SEO and analytics setup"
+    },
+    {
+      "tag": "h3",
+      "text": "Website redesign services"
+    },
+    {
+      "tag": "h3",
+      "text": "Web3 websites"
+    },
+    {
+      "tag": "h3",
+      "text": "Maintenance and support"
+    },
+    {
+      "tag": "h2",
+      "text": "What your website needs"
+    },
+    {
+      "tag": "h3",
+      "text": "Works on every screen"
+    },
+    {
+      "tag": "h3",
+      "text": "Ready for search"
+    },
+    {
+      "tag": "h3",
+      "text": "Connected to your tools"
+    },
+    {
+      "tag": "h3",
+      "text": "Checked before launch"
+    },
+    {
+      "tag": "h2",
+      "text": "SEO and website analytics"
+    },
+    {
+      "tag": "h3",
+      "text": "Search engine optimisation"
+    },
+    {
+      "tag": "h3",
+      "text": "Google Search Console"
+    },
+    {
+      "tag": "h3",
+      "text": "Google Analytics 4 (GA4)"
+    },
+    {
+      "tag": "h2",
+      "text": "How we build your website"
+    },
+    {
+      "tag": "h3",
+      "text": "Plan"
+    },
+    {
+      "tag": "h3",
+      "text": "Design"
+    },
+    {
+      "tag": "h3",
+      "text": "Build"
+    },
+    {
+      "tag": "h3",
+      "text": "Test and launch"
+    },
+    {
+      "tag": "h3",
+      "text": "Support"
+    },
+    {
+      "tag": "h2",
+      "text": "Our technical expertise"
+    },
+    {
+      "tag": "h3",
+      "text": "Frontend"
+    },
+    {
+      "tag": "h3",
+      "text": "Backend & APIs"
+    },
+    {
+      "tag": "h3",
+      "text": "Content & commerce"
+    },
+    {
+      "tag": "h3",
+      "text": "Cloud & quality"
+    },
+    {
+      "tag": "h2",
+      "text": "Ways to work with us"
+    },
+    {
+      "tag": "h3",
+      "text": "Project delivery"
+    },
+    {
+      "tag": "h3",
+      "text": "Hire a website developer"
+    },
+    {
+      "tag": "h3",
+      "text": "Dedicated team"
+    },
+    {
+      "tag": "h2",
+      "text": "Why work with eThing"
+    },
+    {
+      "tag": "h3",
+      "text": "Clear costs and plans"
+    },
+    {
+      "tag": "h3",
+      "text": "The skills you need"
+    },
+    {
+      "tag": "h3",
+      "text": "Help after launch"
+    },
+    {
+      "tag": "h2",
+      "text": "Choosing a website partner"
+    },
+    {
+      "tag": "h2",
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "tag": "h3",
+      "text": "What website development services do you offer?"
+    },
+    {
+      "tag": "h3",
+      "text": "How much does a website cost?"
+    },
+    {
+      "tag": "h3",
+      "text": "How long does it take to build a website?"
+    },
+    {
+      "tag": "h3",
+      "text": "Can you redesign our existing website?"
+    },
+    {
+      "tag": "h3",
+      "text": "Will our website work on mobile and support SEO?"
+    },
+    {
+      "tag": "h3",
+      "text": "Do you provide SEO services?"
+    },
+    {
+      "tag": "h3",
+      "text": "Can you set up Google Search Console?"
+    },
+    {
+      "tag": "h3",
+      "text": "Can you set up Google Analytics and enquiry tracking?"
+    },
+    {
+      "tag": "h3",
+      "text": "Which technologies do you use?"
+    },
+    {
+      "tag": "h3",
+      "text": "Can I hire a website developer for my team?"
+    },
+    {
+      "tag": "h3",
+      "text": "Do you provide support after launch?"
+    },
+    {
+      "tag": "h3",
+      "text": "What should a web designing company include in a quote?"
+    },
+    {
+      "tag": "h3",
+      "text": "Should I hire a website developer or choose project delivery?"
+    },
+    {
+      "tag": "h3",
+      "text": "How do I compare web development companies near me?"
+    },
+    {
+      "tag": "h3",
+      "text": "What does a web dev company need for an estimate?"
+    },
+    {
+      "tag": "h3",
+      "text": "Do you build Web3 websites?"
+    },
+    {
+      "tag": "h2",
+      "text": "Discuss your project"
+    },
+    {
+      "tag": "h2",
+      "text": "Explore related services"
+    }
+  ],
+  "servicePanelsInHtml": 8,
+  "faqAnswersInHtml": 16
+}

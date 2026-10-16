@@ -8,6 +8,7 @@ import Aerospace from './pages/Aerospace.jsx'
 import IndustryDetailPage from './pages/IndustryDetailPage.jsx'
 import StaffingServices from './pages/StaffingServices.jsx'
 import EngineeringServices from './pages/EngineeringServices.jsx'
+import WebsiteDevelopment from './pages/WebsiteDevelopment.jsx'
 import EngineeringDetailPage from './pages/EngineeringDetailPage.jsx'
 import Careers from './pages/Careers.jsx'
 import Privacy from './pages/Privacy.jsx'
@@ -65,6 +66,7 @@ function AppRoutes() {
           path="/engineering-services"
           element={<EngineeringServices content={siteContent} />}
         />
+        <Route path="/website-development" element={<WebsiteDevelopment />} />
         {siteContent.pages.engineeringPages.map((page) => (
           <Route
             key={page.path}

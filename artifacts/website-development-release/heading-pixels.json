@@ -1,0 +1,936 @@
+{
+  "desktop": {
+    "canonical": "https://www.ethingsolutions.com/website-development",
+    "headings": [
+      {
+        "clipped": false,
+        "fontSize": "72px",
+        "height": 233,
+        "lineHeight": "77.76px",
+        "tag": "H1",
+        "text": "Website development services",
+        "width": 552
+      },
+      {
+        "clipped": false,
+        "fontSize": "48px",
+        "height": 55,
+        "lineHeight": "55.2px",
+        "tag": "H2",
+        "text": "Our services",
+        "width": 850
+      },
+      {
+        "clipped": false,
+        "fontSize": "26px",
+        "height": 34,
+        "lineHeight": "33.8px",
+        "tag": "H3",
+        "text": "Business websites",
+        "width": 505
+      },
+      {
+        "clipped": false,
+        "fontSize": "48px",
+        "height": 55,
+        "lineHeight": "55.2px",
+        "tag": "H2",
+        "text": "What your website needs",
+        "width": 548
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Works on every screen",
+        "width": 367
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Ready for search",
+        "width": 402
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Connected to your tools",
+        "width": 419
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Checked before launch",
+        "width": 391
+      },
+      {
+        "clipped": false,
+        "fontSize": "48px",
+        "height": 55,
+        "lineHeight": "55.2px",
+        "tag": "H2",
+        "text": "SEO and website analytics",
+        "width": 850
+      },
+      {
+        "clipped": false,
+        "fontSize": "25px",
+        "height": 34,
+        "lineHeight": "33.75px",
+        "tag": "H3",
+        "text": "Search engine optimisation",
+        "width": 330
+      },
+      {
+        "clipped": false,
+        "fontSize": "25px",
+        "height": 34,
+        "lineHeight": "33.75px",
+        "tag": "H3",
+        "text": "Google Search Console",
+        "width": 330
+      },
+      {
+        "clipped": false,
+        "fontSize": "25px",
+        "height": 34,
+        "lineHeight": "33.75px",
+        "tag": "H3",
+        "text": "Google Analytics 4 (GA4)",
+        "width": 330
+      },
+      {
+        "clipped": false,
+        "fontSize": "48px",
+        "height": 55,
+        "lineHeight": "55.2px",
+        "tag": "H2",
+        "text": "How we build your website",
+        "width": 850
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Plan",
+        "width": 216
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Design",
+        "width": 216
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Build",
+        "width": 216
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Test and launch",
+        "width": 216
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Support",
+        "width": 216
+      },
+      {
+        "clipped": false,
+        "fontSize": "48px",
+        "height": 55,
+        "lineHeight": "55.2px",
+        "tag": "H2",
+        "text": "Our technical expertise",
+        "width": 850
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Frontend",
+        "width": 280
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Backend & APIs",
+        "width": 280
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Content & commerce",
+        "width": 280
+      },
+      {
+        "clipped": false,
+        "fontSize": "22px",
+        "height": 31,
+        "lineHeight": "30.8px",
+        "tag": "H3",
+        "text": "Cloud & quality",
+        "width": 280
+      },
+      {
+        "clipped": false,
+        "fontSize": "48px",
+        "height": 55,
+        "lineHeight": "55.2px",
+        "tag": "H2",
+        "text": "Ways to work with us",
+        "width": 850
+      },
+      {
+        "clipped": false,
+        "fontSize": "26px",
+        "height": 35,
+        "lineHeight": "35.1px",
+        "tag": "H3",
+        "text": "Project delivery",
+        "width": 329
+      },
+      {
+        "clipped": false,
+        "fontSize": "26px",
+        "height": 35,
+        "lineHeight": "35.1px",
+        "tag": "H3",
+        "text": "Hire a website developer",
+        "width": 329
+      },
+      {
+        "clipped": false,
+        "fontSize": "26px",
+        "height": 35,
+        "lineHeight": "35.1px",
+        "tag": "H3",
+        "text": "Dedicated team",
+        "width": 329
+      },
+      {
+        "clipped": false,
+        "fontSize": "48px",
+        "height": 55,
+        "lineHeight": "55.2px",
+        "tag": "H2",
+        "text": "Why work with eThing",
+        "width": 572
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 25,
+        "lineHeight": "25.2px",
+        "tag": "H3",
+        "text": "Clear costs and plans",
+        "width": 468
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 25,
+        "lineHeight": "25.2px",
+        "tag": "H3",
+        "text": "The skills you need",
+        "width": 468
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 25,
+        "lineHeight": "25.2px",
+        "tag": "H3",
+        "text": "Help after launch",
+        "width": 468
+      },
+      {
+        "clipped": false,
+        "fontSize": "48px",
+        "height": 55,
+        "lineHeight": "55.2px",
+        "tag": "H2",
+        "text": "Choosing a website partner",
+        "width": 850
+      },
+      {
+        "clipped": false,
+        "fontSize": "48px",
+        "height": 55,
+        "lineHeight": "55.2px",
+        "tag": "H2",
+        "text": "Frequently Asked Questions",
+        "width": 850
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "What website development services do you offer?",
+        "width": 504
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "How much does a website cost?",
+        "width": 502
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "How long does it take to build a website?",
+        "width": 502
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Can you redesign our existing website?",
+        "width": 501
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Will our website work on mobile and support SEO?",
+        "width": 502
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Do you provide SEO services?",
+        "width": 502
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Can you set up Google Search Console?",
+        "width": 503
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Can you set up Google Analytics and enquiry tracking?",
+        "width": 502
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Which technologies do you use?",
+        "width": 502
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Can I hire a website developer for my team?",
+        "width": 504
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Do you provide support after launch?",
+        "width": 507
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "What should a web designing company include in a quote?",
+        "width": 505
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Should I hire a website developer or choose project delivery?",
+        "width": 505
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "How do I compare web development companies near me?",
+        "width": 504
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "What does a web dev company need for an estimate?",
+        "width": 505
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 27,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Do you build Web3 websites?",
+        "width": 505
+      },
+      {
+        "clipped": false,
+        "fontSize": "48px",
+        "height": 55,
+        "lineHeight": "55.2px",
+        "tag": "H2",
+        "text": "Discuss your project",
+        "width": 543
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 28,
+        "lineHeight": "28px",
+        "tag": "H2",
+        "text": "Explore related services",
+        "width": 1088
+      }
+    ],
+    "overflow": false,
+    "viewport": 1280
+  },
+  "mobile": {
+    "headings": [
+      {
+        "clipped": false,
+        "fontSize": "50px",
+        "height": 162,
+        "lineHeight": "54px",
+        "tag": "H1",
+        "text": "Website development services",
+        "width": 280
+      },
+      {
+        "clipped": false,
+        "fontSize": "36px",
+        "height": 41,
+        "lineHeight": "41.4px",
+        "tag": "H2",
+        "text": "Our services",
+        "width": 273
+      },
+      {
+        "clipped": false,
+        "fontSize": "24px",
+        "height": 31,
+        "lineHeight": "31.2px",
+        "tag": "H3",
+        "text": "Business websites",
+        "width": 229
+      },
+      {
+        "clipped": false,
+        "fontSize": "36px",
+        "height": 83,
+        "lineHeight": "41.4px",
+        "tag": "H2",
+        "text": "What your website needs",
+        "width": 273
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 28,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Works on every screen",
+        "width": 234
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 28,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Ready for search",
+        "width": 234
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 28,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Connected to your tools",
+        "width": 234
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 28,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Checked before launch",
+        "width": 234
+      },
+      {
+        "clipped": false,
+        "fontSize": "36px",
+        "height": 83,
+        "lineHeight": "41.4px",
+        "tag": "H2",
+        "text": "SEO and website analytics",
+        "width": 273
+      },
+      {
+        "clipped": false,
+        "fontSize": "24px",
+        "height": 65,
+        "lineHeight": "32.4px",
+        "tag": "H3",
+        "text": "Search engine optimisation",
+        "width": 229
+      },
+      {
+        "clipped": false,
+        "fontSize": "24px",
+        "height": 65,
+        "lineHeight": "32.4px",
+        "tag": "H3",
+        "text": "Google Search Console",
+        "width": 229
+      },
+      {
+        "clipped": false,
+        "fontSize": "24px",
+        "height": 65,
+        "lineHeight": "32.4px",
+        "tag": "H3",
+        "text": "Google Analytics 4 (GA4)",
+        "width": 229
+      },
+      {
+        "clipped": false,
+        "fontSize": "36px",
+        "height": 83,
+        "lineHeight": "41.4px",
+        "tag": "H2",
+        "text": "How we build your website",
+        "width": 273
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 30,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Plan",
+        "width": 193
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 30,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Design",
+        "width": 193
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 30,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Build",
+        "width": 193
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 30,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Test and launch",
+        "width": 193
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 30,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Support",
+        "width": 193
+      },
+      {
+        "clipped": false,
+        "fontSize": "36px",
+        "height": 83,
+        "lineHeight": "41.4px",
+        "tag": "H2",
+        "text": "Our technical expertise",
+        "width": 273
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 28,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Frontend",
+        "width": 126
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 56,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Backend & APIs",
+        "width": 126
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 56,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Content & commerce",
+        "width": 126
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 56,
+        "lineHeight": "28px",
+        "tag": "H3",
+        "text": "Cloud & quality",
+        "width": 126
+      },
+      {
+        "clipped": false,
+        "fontSize": "36px",
+        "height": 83,
+        "lineHeight": "41.4px",
+        "tag": "H2",
+        "text": "Ways to work with us",
+        "width": 273
+      },
+      {
+        "clipped": false,
+        "fontSize": "24px",
+        "height": 32,
+        "lineHeight": "32.4px",
+        "tag": "H3",
+        "text": "Project delivery",
+        "width": 229
+      },
+      {
+        "clipped": false,
+        "fontSize": "24px",
+        "height": 65,
+        "lineHeight": "32.4px",
+        "tag": "H3",
+        "text": "Hire a website developer",
+        "width": 229
+      },
+      {
+        "clipped": false,
+        "fontSize": "24px",
+        "height": 32,
+        "lineHeight": "32.4px",
+        "tag": "H3",
+        "text": "Dedicated team",
+        "width": 229
+      },
+      {
+        "clipped": false,
+        "fontSize": "36px",
+        "height": 83,
+        "lineHeight": "41.4px",
+        "tag": "H2",
+        "text": "Why work with eThing",
+        "width": 273
+      },
+      {
+        "clipped": false,
+        "fontSize": "17px",
+        "height": 24,
+        "lineHeight": "23.8px",
+        "tag": "H3",
+        "text": "Clear costs and plans",
+        "width": 182
+      },
+      {
+        "clipped": false,
+        "fontSize": "17px",
+        "height": 24,
+        "lineHeight": "23.8px",
+        "tag": "H3",
+        "text": "The skills you need",
+        "width": 182
+      },
+      {
+        "clipped": false,
+        "fontSize": "17px",
+        "height": 24,
+        "lineHeight": "23.8px",
+        "tag": "H3",
+        "text": "Help after launch",
+        "width": 182
+      },
+      {
+        "clipped": false,
+        "fontSize": "36px",
+        "height": 83,
+        "lineHeight": "41.4px",
+        "tag": "H2",
+        "text": "Choosing a website partner",
+        "width": 273
+      },
+      {
+        "clipped": false,
+        "fontSize": "36px",
+        "height": 83,
+        "lineHeight": "41.4px",
+        "tag": "H2",
+        "text": "Frequently Asked Questions",
+        "width": 273
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 81,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "What website development services do you offer?",
+        "width": 221
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "How much does a website cost?",
+        "width": 219
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "How long does it take to build a website?",
+        "width": 218
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Can you redesign our existing website?",
+        "width": 218
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Will our website work on mobile and support SEO?",
+        "width": 219
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Do you provide SEO services?",
+        "width": 218
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Can you set up Google Search Console?",
+        "width": 219
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 81,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Can you set up Google Analytics and enquiry tracking?",
+        "width": 218
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Which technologies do you use?",
+        "width": 218
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Can I hire a website developer for my team?",
+        "width": 221
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Do you provide support after launch?",
+        "width": 224
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 81,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "What should a web designing company include in a quote?",
+        "width": 221
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 81,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Should I hire a website developer or choose project delivery?",
+        "width": 221
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 81,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "How do I compare web development companies near me?",
+        "width": 221
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 81,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "What does a web dev company need for an estimate?",
+        "width": 222
+      },
+      {
+        "clipped": false,
+        "fontSize": "18px",
+        "height": 54,
+        "lineHeight": "27px",
+        "tag": "H3",
+        "text": "Do you build Web3 websites?",
+        "width": 221
+      },
+      {
+        "clipped": false,
+        "fontSize": "36px",
+        "height": 83,
+        "lineHeight": "41.4px",
+        "tag": "H2",
+        "text": "Discuss your project",
+        "width": 273
+      },
+      {
+        "clipped": false,
+        "fontSize": "20px",
+        "height": 28,
+        "lineHeight": "28px",
+        "tag": "H2",
+        "text": "Explore related services",
+        "width": 273
+      }
+    ],
+    "overflow": false,
+    "viewport": 320
+  },
+  "canonical": "https://www.ethingsolutions.com/website-development",
+  "headingLevels": "One H1; H2 sections; H3 service, card and FAQ headings; no skipped levels",
+  "note": "Pixel values describe the rendered design; they are not Google-mandated ranking thresholds."
+}
