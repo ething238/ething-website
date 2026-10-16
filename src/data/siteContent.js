@@ -73,6 +73,7 @@ export const siteContent = {
       path: '/engineering-services',
       children: [
         { label: 'Software Development', path: '/software_development' },
+        { label: 'Website Development', path: '/website-development' },
         { label: 'Mobile Application', path: '/mobile_application' },
         { label: 'Firmware Engineering', path: '/firmware_engg' },
         { label: 'Cloud Services', path: '/cloud_services' },

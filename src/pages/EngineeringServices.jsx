@@ -6,7 +6,12 @@ import { pageTitles } from '../data/siteContent.js'
 
 export default function EngineeringServices({ content }) {
   const p = content.pages.engineeringServices
-  const pages = content.pages.engineeringPages
+  const websiteDevelopment = {
+    path: '/website-development', title: 'Website Development',
+    intro: 'Business websites, online stores, redesigns and Web3 websites, with SEO, analytics and ongoing support.',
+  }
+  const pages = content.pages.engineeringPages.flatMap(page =>
+    page.path === '/software_development' ? [page, websiteDevelopment] : [page])
   useEffect(() => {
     document.title = pageTitles['/engineering-services']
   }, [])
@@ -29,6 +34,7 @@ export default function EngineeringServices({ content }) {
             >
               <Link
                 to={item.path}
+                reloadDocument={item.path === '/website-development'}
                 className="block text-lg font-semibold text-ething-ink hover:text-violet-700"
               >
                 {item.title}

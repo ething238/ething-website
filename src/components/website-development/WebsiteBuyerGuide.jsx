@@ -1,0 +1,23 @@
+import { DiagramIcon, EngagementDiagram } from './WebsiteInfographics.jsx';
+
+const engagementModels = [
+  { kind: 'project', title: 'Project delivery', description: 'We plan and deliver the agreed website. Our website development services cover design, development, testing and launch. You review the work at agreed stages.', fit: 'A defined website build', management: 'eThing leads delivery', contribution: 'Your brief, content and feedback', cta: 'Discuss a website project' },
+  { kind: 'developer', title: 'Hire a website developer', description: 'Add a web developer to your existing team. You manage their daily work and priorities. We help you choose the right skills and get the developer started.', fit: 'Extra skills for your team', management: 'Your team leads the work', contribution: 'Tasks, priorities and reviews', cta: 'Hire a web developer' },
+  { kind: 'team', title: 'Dedicated team', description: 'Bring designers, developers and testers together for ongoing website development services. We agree a shared work plan and responsibilities with your team.', fit: 'Ongoing work across several skills', management: 'Agreed leads on both sides', contribution: 'Goals and regular decisions', cta: 'Plan your development team' },
+];
+
+export function WebsiteEngagementModels() {
+  return <section className="wd-section wd-engagements" id="website-engagements"><div className="wd-container"><div className="wd-section-heading"><div><h2>Ways to work with us</h2></div><p>Choose who manages the work and how much support you need. Each option offers a different way to build your website.</p></div><div className="wd-engagement-grid">{engagementModels.map(model => <article key={model.title} data-engagement={model.kind}><div className="wd-engagement-art"><EngagementDiagram kind={model.kind}/></div><h3>{model.title}</h3><p className="wd-engagement-description">{model.description}</p><dl className="wd-engagement-details"><div><dt>Best for</dt><dd>{model.fit}</dd></div><div><dt>Daily work</dt><dd>{model.management}</dd></div><div><dt>You provide</dt><dd>{model.contribution}</dd></div></dl><a className="wd-text-link" href="#website-enquiry">{model.cta}<span aria-hidden="true">↗</span></a></article>)}</div></div></section>;
+}
+
+const comparisonRows = [
+  { icon: 'plan', criterion: 'Scope & priorities', ask: 'Which pages and features are included? What costs extra?', approach: 'We list the work, costs, timeline and how changes are handled.' },
+  { icon: 'design', criterion: 'Design & usability', ask: 'Can we review the design and mobile layouts before building?', approach: 'You review the page layouts and main tasks before development.' },
+  { icon: 'link', criterion: 'Technology & integrations', ask: 'Why use these tools? Will they connect to our systems?', approach: 'We explain the tools and connections your website needs.' },
+  { icon: 'launch', criterion: 'Testing & launch', ask: 'What will be tested? Who approves the launch?', approach: 'We agree the tests, review the results and plan the launch with you.' },
+  { icon: 'check', criterion: 'Ownership & continuity', ask: 'Who owns the code and accounts? What support is available?', approach: 'We agree ownership, access, handover and support before starting.' },
+];
+
+export function WebsitePartnerChecklist() {
+  return <section className="wd-section wd-comparison" id="website-comparison"><div className="wd-container"><div className="wd-section-heading"><div><h2>Choosing a website partner</h2></div><p>Compare top website development companies by their work, cost and support. The best website development company for you should explain its plan clearly.</p></div><div className="wd-comparison-table-wrap"><table className="wd-comparison-table"><caption className="wd-sr-only">Questions to ask a website development provider and how eThing approaches the work</caption><thead><tr><th scope="col">What matters</th><th scope="col">Ask your development partner</th><th scope="col">Our approach at eThing</th></tr></thead><tbody>{comparisonRows.map(row => <tr key={row.criterion}><th scope="row"><span className="wd-comparison-criterion"><DiagramIcon kind={row.icon} size={24}/>{row.criterion}</span></th><td data-label="Ask a provider">{row.ask}</td><td data-label="With eThing"><span className="wd-comparison-answer"><span className="wd-comparison-check"><DiagramIcon kind="check" size={21}/></span><span>{row.approach}</span></span></td></tr>)}</tbody></table></div><p className="wd-comparison-note">Check relevant work and client feedback too. Choose a partner that suits your project, budget and team.</p></div></section>;
+}
