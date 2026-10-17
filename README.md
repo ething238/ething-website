@@ -1,6 +1,6 @@
 # Ething Website
 
-Marketing website for [Ething ](https://www.ethingsolutions.com) - A Staff augmentation company based in India, serving enterprise and SMB clients globally.
+Marketing website for [Ething ](https://www.ethingsolutions.com) - A Staff augmentation company having HQ in India, serving enterprise and SMB clients globally.
 
 ## Tech Stack
 
