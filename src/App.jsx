@@ -9,6 +9,7 @@ import IndustryDetailPage from './pages/IndustryDetailPage.jsx'
 import StaffingServices from './pages/StaffingServices.jsx'
 import EngineeringServices from './pages/EngineeringServices.jsx'
 import WebsiteDevelopment from './pages/WebsiteDevelopment.jsx'
+import MobileApplication from './pages/MobileApplication.jsx'
 import EngineeringDetailPage from './pages/EngineeringDetailPage.jsx'
 import Careers from './pages/Careers.jsx'
 import Privacy from './pages/Privacy.jsx'
@@ -67,7 +68,8 @@ function AppRoutes() {
           element={<EngineeringServices content={siteContent} />}
         />
         <Route path="/website-development" element={<WebsiteDevelopment />} />
-        {siteContent.pages.engineeringPages.map((page) => (
+        <Route path="/mobile_application" element={<MobileApplication />} />
+        {siteContent.pages.engineeringPages.filter((page) => page.path !== '/mobile_application').map((page) => (
           <Route
             key={page.path}
             path={page.path.replace(/^\//, '')}

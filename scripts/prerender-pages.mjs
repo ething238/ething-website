@@ -44,7 +44,7 @@ try {
     const head = []
     markup = markup.replace(/<title\b[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*>|<link\b[^>]*rel="(?:canonical|alternate)"[^>]*>|<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, (tag) => {
       // This route hydrates its inline JSON-LD in place; moving it breaks its React tree.
-      if (pathname === '/website-development' && tag.startsWith('<script')) return tag
+      if (['/website-development', '/mobile_application'].includes(pathname) && tag.startsWith('<script')) return tag
       head.push(tag)
       return ''
     })
