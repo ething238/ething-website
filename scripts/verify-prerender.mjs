@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import assert from 'node:assert/strict'
+import vm from 'node:vm'
 
 const sitemap = await fs.readFile('dist/sitemap.xml', 'utf8')
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
@@ -10,6 +11,8 @@ for (const url of urls) {
   const route = new URL(url).pathname
   const file = route === '/' ? 'dist/index.html' : path.join('dist', route, 'index.html')
   const html = await fs.readFile(file, 'utf8')
+  const directGaLoaders = (html.match(/<script\b[^>]*src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4"/g) || []).length
+  const conditionalGaLoaders = (html.match(/googleTag\.src\s*=\s*['"]https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4['"]/g) || []).length
   assert.equal((html.match(/<h1\b/gi) || []).length, 1, `${route}: expected one H1`)
   assert.match(html, /<a\b[^>]*href=/i, `${route}: missing crawlable links`)
   assert.match(html, /<meta\b[^>]*name="description"[^>]*content="[^"]+"/i, `${route}: missing description`)
@@ -49,7 +52,7 @@ for (const url of urls) {
     assert.match(html, /Illustrative roles/, `${route}: examples must not be presented as completed client projects`)
   }
   if (route === '/healthcare_industry' || route === '/aerospace_industry') {
-    assert.equal((html.match(/<script\b[^>]*src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4"/g) || []).length, 1, `${route}: expected one GA4 loader`)
+    assert.equal(directGaLoaders + conditionalGaLoaders, 1, `${route}: expected one GA4 loader`)
     assert.equal((html.match(/gtag\(\s*['"]config['"]\s*,\s*['"]G-2W7W1TB2H4['"]/g) || []).length, 1, `${route}: expected one GA4 configuration`)
     assert.equal((html.match(/['"]dataLayer['"]\s*,\s*['"]GTM-TX73DK5H['"]\s*\)/g) || []).length, 1, `${route}: expected one GTM initialization`)
     assert.equal((html.match(/<noscript\b[^>]*>(?:(?!<\/noscript>)[\s\S])*?<iframe\b[^>]*src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-TX73DK5H"/g) || []).length, 1, `${route}: expected one GTM noscript iframe`)
@@ -69,7 +72,7 @@ for (const url of urls) {
     assert.equal((html.match(/<img\b[^>]*src="\/brand\/ething-logo-new-font\.png"/g) || []).length, 2, `${route}: expected supplied PNG logo in header and footer`)
     assert.match(html, /<img\b[^>]*class="healthcare-hero-image"[^>]*src="\/healthcare\/healthcare-it-utopia\.png"/, `${route}: missing local healthcare hero`)
 
-    assert.equal((html.match(/<script\b[^>]*src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4"/g) || []).length, 1, `${route}: expected one GA4 loader`)
+    assert.equal(directGaLoaders + conditionalGaLoaders, 1, `${route}: expected one GA4 loader`)
     assert.equal((html.match(/gtag\(\s*['"]config['"]\s*,\s*['"]G-2W7W1TB2H4['"]/g) || []).length, 1, `${route}: expected one GA4 configuration`)
     assert.equal((html.match(/['"]dataLayer['"]\s*,\s*['"]GTM-TX73DK5H['"]\s*\)/g) || []).length, 1, `${route}: expected one GTM initialization`)
     assert.equal((html.match(/<noscript\b[^>]*>(?:(?!<\/noscript>)[\s\S])*?<iframe\b[^>]*src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-TX73DK5H"/g) || []).length, 1, `${route}: expected one GTM noscript iframe`)
@@ -86,6 +89,22 @@ for (const url of urls) {
     assert.ok(!Object.hasOwn(work, 'citation'), `${route}: governance approach must not contain a citation`)
     assert.deepEqual(page.hasPart, { '@id': work['@id'] }, `${route}: WebPage must link to its governance approach`)
     assert.deepEqual(work.isPartOf, { '@id': page['@id'] }, `${route}: governance approach must link back to WebPage`)
+  }
+  if (route === '/mobile_application') {
+    assert.equal(directGaLoaders, 0, `${route}: GA is managed by GTM; no direct loader`)
+    assert.equal(conditionalGaLoaders, 1, `${route}: missing shared conditional GA bootstrap`)
+    const bootstrap = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(match => match[1]).find(code => code.includes('function gtag()'))
+    assert.ok(bootstrap, `${route}: missing gtag event queue`)
+    for (const pathname of ['/mobile_application', '/mobile_application/', '/website-development', '/about_us', '/']) {
+      const inserted = []
+      const context = { location: { pathname }, document: { createElement: () => ({}), head: { appendChild: script => inserted.push(script) } } }
+      context.window = context
+      vm.runInNewContext(bootstrap, context)
+      const mobile = /^\/mobile_application\/?$/.test(pathname)
+      assert.equal(inserted.length, mobile ? 0 : 1, `${pathname}: GA loader selection failed`)
+      assert.equal(context.dataLayer.filter(item => item[0] === 'config' && item[1] === 'G-2W7W1TB2H4').length, 1, `${pathname}: expected one explicit GA configuration`)
+      assert.equal(typeof context.gtag, 'function', `${pathname}: missing event queue`)
+    }
   }
   // Detect broken local links and image URLs, including SSR source asset leaks.
   for (const match of html.matchAll(/<(?:a|img)\b[^>]*(?:href|src)="([^"#]+)"/gi)) {
