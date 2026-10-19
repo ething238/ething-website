@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import originalCopy from '../data/aboutUsCopy.json'
 import BrandLogo from './AboutBrandLogo.jsx'
+import OptimizedBrandLogo from './website-development/BrandLogo.jsx'
 import '../styles/site-header.css'
 
 export function HeaderIcon({ kind }) {
   return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={kind === 'chevron' ? 'm6 9 6 6 6-6' : kind === 'close' ? 'm6 6 12 12M6 18 18 6' : 'M4 6h16M4 12h16M4 18h16'} /></svg>
 }
 
-export default function SiteHeader({ activePath = '', contactHref = '/contact', staticMarkup = false, darkAtTop = false }) {
+export default function SiteHeader({ activePath = '', contactHref = '/contact', staticMarkup = false, darkAtTop = false, optimizeMedia = false }) {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const headerRef = useRef(null)
@@ -43,7 +44,7 @@ export default function SiteHeader({ activePath = '', contactHref = '/contact', 
   }, [])
   return <header className={'about-copy-header ething-header' + (staticMarkup ? ' hire-site-header' : '')} ref={headerRef} data-home-transition={darkAtTop ? 'true' : undefined} data-surface={darkAtTop ? (scrolled ? 'light' : 'dark') : undefined}>
     <div className="about-copy-header-inner">
-      <div className="about-copy-header-brand"><BrandLogo href="/" className="about-copy-logo brand-logo" /></div>
+      <div className="about-copy-header-brand">{optimizeMedia ? <OptimizedBrandLogo href="/" className="about-copy-logo brand-logo" optimized/> : <BrandLogo href="/" className="about-copy-logo brand-logo" />}</div>
       <nav className="about-copy-nav" aria-label="Main navigation">
         {originalCopy.navigation.map(item => item.children?.length ? <details className="about-copy-nav-dropdown" key={item.id}>
           <summary className="about-copy-nav-link">{item.label}<HeaderIcon kind="chevron" /></summary>

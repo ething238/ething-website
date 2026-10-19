@@ -1,0 +1,110 @@
+[
+  {
+    "applicationPanels": [
+      {
+        "height": 720,
+        "width": 572.4000244140625
+      },
+      {
+        "height": 720,
+        "width": 572.4000244140625
+      }
+    ],
+    "clipped": [],
+    "consultationContainerWidth": 1184.800048828125,
+    "consultationPanels": [
+      {
+        "height": 579.2000122070312,
+        "width": 572.4000244140625
+      },
+      {
+        "height": 579.2000122070312,
+        "width": 572.4000244140625
+      }
+    ],
+    "faqColumns": "568.4px 568.4px",
+    "overflow": false,
+    "viewport": 1280
+  },
+  {
+    "applicationPanels": [
+      {
+        "height": 664.125,
+        "width": 704.7999877929688
+      },
+      {
+        "height": 454.3999938964844,
+        "width": 704.7999877929688
+      }
+    ],
+    "clipped": [],
+    "consultationContainerWidth": 704.7999877929688,
+    "consultationPanels": [
+      {
+        "height": 412,
+        "width": 704.7999877929688
+      },
+      {
+        "height": 579.2000122070312,
+        "width": 704.7999877929688
+      }
+    ],
+    "faqColumns": "338.4px 338.4px",
+    "overflow": false,
+    "viewport": 768
+  },
+  {
+    "applicationPanels": [
+      {
+        "height": 504.2124938964844,
+        "width": 335.20001220703125
+      },
+      {
+        "height": 976.7999877929688,
+        "width": 335.20001220703125
+      }
+    ],
+    "clipped": [],
+    "consultationContainerWidth": 335.20001220703125,
+    "consultationPanels": [
+      {
+        "height": 550,
+        "width": 335.20001220703125
+      },
+      {
+        "height": 809.6000366210938,
+        "width": 335.20001220703125
+      }
+    ],
+    "faqColumns": "335.2px",
+    "overflow": false,
+    "viewport": 390
+  },
+  {
+    "applicationPanels": [
+      {
+        "height": 570.2875366210938,
+        "width": 264.8000183105469
+      },
+      {
+        "height": 1372.800048828125,
+        "width": 264.8000183105469
+      }
+    ],
+    "clipped": [],
+    "consultationContainerWidth": 264.8000183105469,
+    "consultationPanels": [
+      {
+        "height": 594,
+        "width": 264.8000183105469
+      },
+      {
+        "height": 892.2000122070312,
+        "width": 264.8000183105469
+      }
+    ],
+    "faqColumns": "264.8px",
+    "overflow": false,
+    "viewport": 320
+  }
+]

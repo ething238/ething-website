@@ -14,6 +14,10 @@
   ],
   "rewrites": [
     {
+      "source": "/ai_staff_augmentation",
+      "destination": "/ai_staff_augmentation/index.html"
+    },
+    {
       "source": "/website-development",
       "destination": "/website-development/index.html"
     },

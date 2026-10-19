@@ -95,12 +95,12 @@ for (const url of urls) {
     assert.equal(conditionalGaLoaders, 1, `${route}: missing shared conditional GA bootstrap`)
     const bootstrap = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(match => match[1]).find(code => code.includes('function gtag()'))
     assert.ok(bootstrap, `${route}: missing gtag event queue`)
-    for (const pathname of ['/mobile_application', '/mobile_application/', '/website-development', '/about_us', '/']) {
+    for (const pathname of ['/ai_staff_augmentation', '/ai_staff_augmentation/', '/mobile_application', '/mobile_application/', '/website-development', '/about_us', '/']) {
       const inserted = []
       const context = { location: { pathname }, document: { createElement: () => ({}), head: { appendChild: script => inserted.push(script) } } }
       context.window = context
       vm.runInNewContext(bootstrap, context)
-      const mobile = /^\/mobile_application\/?$/.test(pathname)
+      const mobile = /^\/(?:mobile_application|ai_staff_augmentation)\/?$/.test(pathname)
       assert.equal(inserted.length, mobile ? 0 : 1, `${pathname}: GA loader selection failed`)
       assert.equal(context.dataLayer.filter(item => item[0] === 'config' && item[1] === 'G-2W7W1TB2H4').length, 1, `${pathname}: expected one explicit GA configuration`)
       assert.equal(typeof context.gtag, 'function', `${pathname}: missing event queue`)

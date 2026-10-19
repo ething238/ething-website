@@ -1,0 +1,91 @@
+{
+  "scope": "Prerendered main copy, including all FAQs and all three panels of the demonstration AI story",
+  "method": "Longest-first, non-overlapping keyword phrase matches divided by word count",
+  "words": 1954,
+  "keyword_occurrences": 39,
+  "combined_density_percent": 1.9959,
+  "keywords": {
+    "ai development companies": 2,
+    "artificial intelligence development companies": 2,
+    "ai developers": 9,
+    "ai devs": 1,
+    "artificial intelligence developer": 2,
+    "staff augmentation": 7,
+    "contract staffing": 2,
+    "hire ai engineers": 4,
+    "ml developer": 3,
+    "machine learning in drug discovery": 2,
+    "ai product development": 1,
+    "hire ai developers": 2,
+    "staffing solution": 2
+  },
+  "h1_count": 1,
+  "sections": [
+    {
+      "id": "ais-title",
+      "heading_count": 1
+    },
+    {
+      "id": "ais-clients-title",
+      "heading_count": 1
+    },
+    {
+      "id": "why-ething",
+      "heading_count": 1
+    },
+    {
+      "id": "expertise",
+      "heading_count": 1
+    },
+    {
+      "id": "ais-apps-title",
+      "heading_count": 1
+    },
+    {
+      "id": "industries",
+      "heading_count": 1
+    },
+    {
+      "id": "engagement",
+      "heading_count": 1
+    },
+    {
+      "id": "success-story",
+      "heading_count": 1
+    },
+    {
+      "id": "faqs",
+      "heading_count": 1
+    },
+    {
+      "id": "consultation",
+      "heading_count": 1
+    },
+    {
+      "id": "other-services",
+      "heading_count": 1
+    }
+  ],
+  "one_heading_per_section": true,
+  "section_navigation_removed": true,
+  "hero_bottom_strip_removed": true,
+  "prerendered_story_panels": [
+    "ais-story-panel-0",
+    "ais-story-panel-1",
+    "ais-story-panel-2"
+  ],
+  "main_content_links_to_hire_ai_page": [],
+  "em_dashes": 0,
+  "duplicate_ids": 0,
+  "broken_hash_links": [],
+  "required_section_ids": {
+    "why-ething": true,
+    "expertise": true,
+    "industries": true,
+    "success-story": true,
+    "faqs": true,
+    "consultation": true,
+    "ais-clients-title": true,
+    "other-services": true
+  }
+}

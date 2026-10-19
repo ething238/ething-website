@@ -1,0 +1,17 @@
+{
+  "total": 54,
+  "passed": 48,
+  "failed": 6,
+  "focused_checks_passed": 25,
+  "known_main_failures": [
+    "invalid or empty required values never reach the delivery service",
+    "the homepage sends all form fields to the existing contact service",
+    "missing configuration, rejected responses, malformed responses and network failures cannot report success",
+    "the email subject removes line breaks",
+    "existing GA4 and GTM are each bootstrapped once",
+    "website GA4 and GTM bootstrap matches the homepage without duplicate loaders"
+  ],
+  "baseline": "Same six failures reproduced on unchanged main 1c9ae85. Four homepage test fixtures do not remove their ESM import; two old analytics tests expect a direct script tag despite the existing conditional bootstrap.",
+  "other_routes_unchanged": 31,
+  "live_enquiry_sent": false
+}
