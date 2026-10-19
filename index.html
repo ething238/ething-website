@@ -22,8 +22,8 @@
         dataLayer.push(arguments)
       }
       // The existing GTM Google tag runtime can load this measurement ID.
-      // Avoid a second loader on mobile, while preserving its GA configuration.
-      if (!/^\/mobile_application\/?$/.test(window.location.pathname)) {
+      // Avoid a second loader on mobile and AI staffing, preserving GA configuration.
+      if (!/^\/(?:mobile_application|ai_staff_augmentation)\/?$/.test(window.location.pathname)) {
         var googleTag = document.createElement('script')
         googleTag.async = true
         googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=G-2W7W1TB2H4'

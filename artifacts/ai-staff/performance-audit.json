@@ -1,0 +1,12 @@
+{
+  "canonical": "https://www.ethingsolutions.com/ai_staff_augmentation",
+  "original_image_bytes": 1844386,
+  "desktop_image_bytes_dpr1": 257895,
+  "mobile_image_bytes_dpr1": 134419,
+  "desktop_image_reduction_percent": 86.02,
+  "mobile_image_reduction_percent": 92.71,
+  "html_bytes": 57417,
+  "html_gzip_bytes": 13216,
+  "missing_resources": [],
+  "note": "Image totals are file-byte budgets for a 1280px desktop or 390px mobile viewport at DPR 1, excluding favicon; viewport/DPR can select larger variants. Below-fold photos load lazily. This is not a measured network timing or PageSpeed score."
+}

@@ -44,14 +44,15 @@ try {
     const head = []
     markup = markup.replace(/<title\b[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*>|<link\b[^>]*rel="(?:canonical|alternate)"[^>]*>|<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, (tag) => {
       // This route hydrates its inline JSON-LD in place; moving it breaks its React tree.
-      if (['/website-development', '/mobile_application'].includes(pathname) && tag.startsWith('<script')) return tag
+      if (['/website-development', '/mobile_application', '/ai_staff_augmentation'].includes(pathname) && tag.startsWith('<script')) return tag
       head.push(tag)
       return ''
     })
     if (!head.some((tag) => tag.startsWith('<title'))) {
       throw new Error(`Missing SEO metadata for ${pathname}`)
     }
-    const html = template.replace('</head>', `${head.join('\n')}\n</head>`)
+    const pageTemplate = pathname === '/ai_staff_augmentation' ? template.replace(/<link\b[^>]*rel="(?:icon|apple-touch-icon)"[^>]*>/gi, '') : template
+    const html = pageTemplate.replace('</head>', `${head.join('\n')}\n</head>`)
       .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
     await fs.mkdir(path.dirname(output), { recursive: true })
     await fs.writeFile(output, html)

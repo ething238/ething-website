@@ -1,0 +1,84 @@
+{
+  "first": [
+    {
+      "animation": "ais-reason-transfer",
+      "class": "ais-reason-packet",
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 10.1698, 0)"
+    },
+    {
+      "animation": "ais-reason-transfer",
+      "class": "ais-reason-packet",
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 10.1698, 0)"
+    },
+    {
+      "animation": "ais-reason-transfer",
+      "class": "ais-reason-packet",
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 10.1698, 0)"
+    },
+    {
+      "animation": "ais-reason-transfer",
+      "class": "ais-reason-packet",
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 10.1698, 0)"
+    },
+    {
+      "animation": "ais-data-travel",
+      "class": "ais-map-packet ais-map-packet-docs",
+      "opacity": "0.828832",
+      "transform": "none"
+    },
+    {
+      "animation": "ais-data-travel",
+      "class": "ais-map-packet ais-map-packet-output",
+      "opacity": "0.992322",
+      "transform": "none"
+    }
+  ],
+  "second": [
+    {
+      "animation": "ais-reason-transfer",
+      "class": "ais-reason-packet",
+      "offsetDistance": "0px",
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 12.8028, 0)"
+    },
+    {
+      "animation": "ais-reason-transfer",
+      "class": "ais-reason-packet",
+      "offsetDistance": "0px",
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 12.8028, 0)"
+    },
+    {
+      "animation": "ais-reason-transfer",
+      "class": "ais-reason-packet",
+      "offsetDistance": "0px",
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 12.8028, 0)"
+    },
+    {
+      "animation": "ais-reason-transfer",
+      "class": "ais-reason-packet",
+      "offsetDistance": "0px",
+      "opacity": "1",
+      "transform": "matrix(1, 0, 0, 1, 12.8028, 0)"
+    },
+    {
+      "animation": "ais-data-travel",
+      "class": "ais-map-packet ais-map-packet-docs",
+      "offsetDistance": "58.8392%",
+      "opacity": "1",
+      "transform": "none"
+    },
+    {
+      "animation": "ais-data-travel",
+      "class": "ais-map-packet ais-map-packet-output",
+      "offsetDistance": "97.0833%",
+      "opacity": "0.194448",
+      "transform": "none"
+    }
+  ]
+}

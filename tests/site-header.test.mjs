@@ -17,7 +17,10 @@ test('every rendered page uses the About Us header and navigation', () => {
     assert.equal(headers.length, 1, `${file}: expected one common header`)
     assert.equal(desktopNav(headers[0][0]), expected, `${file}: navigation differs from About Us`)
     assert.match(headers[0][0], /class="about-copy-logo brand-logo"/)
-    assert.match(headers[0][0], /src="\/brand\/ething-logo-new-font\.png"/)
+    if (file === path.join('ai_staff_augmentation', 'index.html')) {
+      assert.match(headers[0][0], /src="\/website-development\/brand\/ething-logo-192\.webp"/)
+      assert.match(headers[0][0], /srcSet="[^\"]*ething-logo-96\.webp 96w/)
+    } else assert.match(headers[0][0], /src="\/brand\/ething-logo-new-font\.png"/)
     assert.match(headers[0][0], /aria-controls="about-copy-mobile-nav"/)
   }
 })
