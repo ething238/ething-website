@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="400" viewBox="0 0 320 400" data-sap-large-type="true" data-sap-middle-type="true">
+<defs><linearGradient id="core" x2="1" y2="1"><stop stop-color="#245da8"/><stop offset="1" stop-color="#132347"/></linearGradient></defs>
+<g fill="none" stroke="#6a98c4" stroke-width="2"><path stroke-dasharray="5 5" d="M160 96v32H80v20M160 128h80v20M80 230v20M240 230v20M80 332v16h160v-16M160 348v12"/></g>
+<rect x="44" y="12" width="232" height="84" rx="14" fill="url(#core)"/>
+<g fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="m144 36 16-9 16 9-16 9zM144 43l16 9 16-9M144 50l16 9 16-9"/></g>
+<text x="160" y="79" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="16" font-weight="700">ENTERPRISE CORE</text>
+<g fill="#fff" stroke="#afc9e5"><rect x="8" y="148" width="144" height="82" rx="12"/><rect x="168" y="148" width="144" height="82" rx="12"/><rect x="8" y="250" width="144" height="82" rx="12"/><rect x="168" y="250" width="144" height="82" rx="12"/></g>
+<g fill="none" stroke="#245da8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M65 185h30M68 185v-22h24v22M74 168h3m6 0h3m-12 6h3m6 0h3M78 185v-6h4v6"/>
+<path d="m225 168 15-8 15 8v17l-15 8-15-8zM225 168l15 8 15-8M240 176v17"/>
+<circle cx="80" cy="270" r="7"/><path d="M66 295v-5a14 14 0 0 1 28 0v5M61 276a5 5 0 0 0 0 10m38-10a5 5 0 0 1 0 10"/>
+<rect x="227" y="267" width="26" height="25" rx="4"/><path d="M232 274h16M232 280h16M232 286h7"/>
+</g>
+<g fill="#132347" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700"><text x="80" y="214">Finance</text><text x="240" y="214">Supply Chain</text><text x="80" y="316">People</text><text x="240" y="316">Operations</text></g>
+<rect x="8" y="360" width="304" height="32" rx="16" fill="#e4edf9" stroke="#afc9e5"/><text x="160" y="381" text-anchor="middle" fill="#132347" font-family="Arial,sans-serif" font-size="14" font-weight="600">Integration · Data · Access</text>
+<style id="sap-infographic-motion">
+@keyframes sap-line-flow{to{stroke-dashoffset:-60}}
+@keyframes sap-orbit{to{transform:rotate(360deg)}}
+@keyframes sap-node-glow{0%,100%{opacity:.35;transform:scale(.85)}50%{opacity:1;transform:scale(1.25)}}
+@keyframes sap-packet{0%{opacity:0;transform:translateY(20px)}20%,75%{opacity:1}100%{opacity:0;transform:translateY(-20px)}}
+@media(prefers-reduced-motion:no-preference){
+path[stroke-dasharray]{animation:sap-line-flow 8s linear infinite}
+circle[stroke-dasharray]{transform-box:fill-box;transform-origin:center;animation:sap-orbit 90s linear infinite}
+g[fill="#287F79"] circle{transform-box:fill-box;transform-origin:center;animation:sap-node-glow 4s ease-in-out infinite}
+.sap-packet{animation:sap-packet 3s linear infinite}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</svg>

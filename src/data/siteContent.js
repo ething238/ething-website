@@ -57,6 +57,7 @@ export const siteContent = {
       label: 'Hire Talent',
       children: [
         { label: 'Explore Engineering Talent', path: '/other-services/' },
+        { label: 'SAP Services', path: '/sap-services' },
         { label: 'Top Technology Talent', path: '/hire-top-talent' },
         { label: 'Software Developers', path: '/hire-developers' },
         { label: 'IT Staff Augmentation', path: '/staff-augmentation' },

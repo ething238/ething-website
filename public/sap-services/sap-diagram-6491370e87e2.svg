@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="310" viewBox="0 0 320 310" data-sap-large-type="true" data-sap-middle-type="true" aria-label="ONE WORKING RELATIONSHIP">
+<defs><linearGradient id="shared" x2="1" y2="1"><stop stop-color="#245da8"/><stop offset="1" stop-color="#132347"/></linearGradient></defs>
+<g fill="none" stroke="#6a98c4" stroke-width="2"><path stroke-dasharray="5 5" d="M80 112v25h80v19M240 112v25h-80M160 220v30"/></g>
+<g fill="#fff" stroke="#afc9e5"><rect x="8" y="12" width="144" height="100" rx="14"/><rect x="168" y="12" width="144" height="100" rx="14"/></g>
+<g fill="none" stroke="#287f79" stroke-width="2.2" stroke-linecap="round"><circle cx="80" cy="42" r="10"/><path d="M60 79V69a20 20 0 0 1 40 0v10"/><circle cx="240" cy="42" r="10"/><path d="M220 79V69a20 20 0 0 1 40 0v10M216 41a8 8 0 0 0-5 14m53-14a8 8 0 0 1 5 14"/></g>
+<g fill="#132347" font-family="Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle"><text x="80" y="99">The Specialist</text><text x="240" y="99">Your Team</text></g>
+<rect x="36" y="156" width="248" height="64" rx="14" fill="url(#shared)"/><path d="m64 186 9 9 18-21" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="184" y="194" text-anchor="middle" font-family="Arial,sans-serif" fill="#fff" font-size="17" font-weight="700">Shared Direction</text>
+<rect x="8" y="250" width="304" height="52" rx="14" fill="#e4edf9" stroke="#afc9e5"/><g text-anchor="middle" fill="#132347" font-family="Arial,sans-serif" font-size="14"><text x="160" y="272">Priorities · Feedback</text><text x="160" y="291">Responsibilities</text></g>
+<style id="sap-infographic-motion">
+@keyframes sap-line-flow{to{stroke-dashoffset:-60}}
+@keyframes sap-orbit{to{transform:rotate(360deg)}}
+@keyframes sap-node-glow{0%,100%{opacity:.35;transform:scale(.85)}50%{opacity:1;transform:scale(1.25)}}
+@keyframes sap-packet{0%{opacity:0;transform:translateY(20px)}20%,75%{opacity:1}100%{opacity:0;transform:translateY(-20px)}}
+@media(prefers-reduced-motion:no-preference){
+path[stroke-dasharray]{animation:sap-line-flow 8s linear infinite}
+circle[stroke-dasharray]{transform-box:fill-box;transform-origin:center;animation:sap-orbit 90s linear infinite}
+g[fill="#287F79"] circle{transform-box:fill-box;transform-origin:center;animation:sap-node-glow 4s ease-in-out infinite}
+.sap-packet{animation:sap-packet 3s linear infinite}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</svg>
