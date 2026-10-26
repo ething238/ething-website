@@ -1,0 +1,481 @@
+.sap-page{--sap-ink:#132347;--sap-blue:#245da8;--sap-muted:#56657b;--sap-teal:#287f79;--sap-line:#dce5ef;--sap-wash:#f3f7fb;--about-violet:#245da8;background:#fff;color:var(--sap-ink);overflow-wrap:break-word}.sap-page .sap-container{width:min(1180px,calc(100% - 64px));margin-inline:auto}.sap-page main>.sap-section{padding:88px 0}.sap-page [id]{scroll-margin-top:100px}.sap-page main h1,.sap-page main h2,.sap-page main h3{margin:0;color:var(--sap-ink);font-weight:700;letter-spacing:-.035em;text-wrap:balance}.sap-page main h1{font-size:64px;line-height:1.08;letter-spacing:-.047em}.sap-page main h2{font-size:40px;line-height:1.18}.sap-page main h3{font-size:21px;line-height:1.35;letter-spacing:-.025em}.sap-page main p{font-size:16px;line-height:1.75;color:var(--sap-muted)}.sap-page main ol,.sap-page main ul{list-style:none;padding:0;margin:0}.sap-page main a{text-decoration:none}.sap-page button,.sap-page input,.sap-page select,.sap-page textarea{font:inherit}.sap-page main :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #4389cf;outline-offset:4px}.sap-page .sap-sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.sap-page .sap-skip{position:fixed;top:-100px;left:20px;z-index:100;background:#fff;padding:14px 20px;color:var(--sap-ink)}.sap-page .sap-skip:focus{top:12px}.sap-page .sap-eyebrow{display:flex;align-items:center;gap:12px;color:var(--sap-blue);font-size:11px;font-weight:700;line-height:1.5;letter-spacing:.14em;margin:0 0 17px}.sap-page .sap-eyebrow>span:not(.sap-dot){font-size:11px;letter-spacing:.04em;opacity:.65;border-right:1px solid;padding-right:12px}.sap-page .sap-dot{display:inline-block;flex-shrink:0;width:7px;height:7px;border-radius:50%;background:var(--sap-teal);box-shadow:0 0 0 4px #287f7910}.sap-page .sap-button{display:inline-flex;align-items:center;justify-content:center;gap:22px;min-height:50px;padding:13px 21px;border:1px solid var(--sap-blue);border-radius:7px;background:var(--sap-blue);color:white;font-size:15px;font-weight:650;line-height:1.5;cursor:pointer;transition:background .2s,box-shadow .2s}.sap-page .sap-button:hover{background:#193e72;box-shadow:0 5px 18px #245da824;color:white}.sap-page .sap-button>svg,.sap-page .sap-text-link>svg{flex-shrink:0;transition:transform .2s}.sap-page .sap-button:hover>svg,.sap-page .sap-text-link:hover>svg{transform:translate(2px,-2px)}.sap-page .sap-text-link{display:inline-flex;align-items:center;justify-content:space-between;gap:16px;color:var(--sap-blue);font-size:14px;font-weight:650}.sap-page .sap-text-link:hover{color:#193e72}.sap-page .sap-icon{display:inline-grid;place-items:center;width:46px;height:46px;border:1px solid #245da81a;border-radius:12px;color:var(--sap-blue);background:#edf3fb;flex-shrink:0}.sap-page .sap-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 83% 20%,#deebf7,transparent 52%),linear-gradient(120deg,#f7f9fc,#eef5f9)}.sap-page .sap-hero:before{content:"";position:absolute;z-index:-1;inset:0;background-image:linear-gradient(#245da806 1px,transparent 0),linear-gradient(90deg,#245da806 1px,transparent 0);background-size:48px 48px;-webkit-mask-image:linear-gradient(100deg,transparent 25%,#000);mask-image:linear-gradient(100deg,transparent 25%,#000);animation:sap-grid-drift 32s linear infinite}.sap-page .sap-hero-grid{display:grid;grid-template-columns:1.07fr 1fr;grid-gap:64px;gap:64px;align-items:center;padding-block:62px 66px}.sap-page .sap-hero-copy{padding-block:14px;min-width:0;animation:sap-enter .7s both}.sap-page .sap-hero-copy .sap-eyebrow{margin-bottom:24px}.sap-page main h1 em{font-style:normal;color:var(--sap-blue);font-weight:500}.sap-page .sap-hero-description{font-size:18px;line-height:1.7;max-width:500px;margin:25px 0 28px}.sap-page .sap-hero-benefits{display:flex;flex-direction:column;gap:9px;margin-top:25px;font-size:14px;color:#435570}.sap-page .sap-hero-benefits li{display:flex;align-items:center;gap:10px}.sap-page .sap-hero-benefits svg{color:var(--sap-teal);flex-shrink:0}.sap-page .sap-hero-flow{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:31px;padding-top:20px;border-top:1px solid #d8e3ef;font-size:12px;color:var(--sap-muted);max-width:470px}.sap-page .sap-hero-flow i{font-style:normal;color:#718aa5}.sap-page .sap-hero-flow strong{font-weight:650;color:var(--sap-blue)}.sap-page .sap-enquiry-anchor{min-width:0;animation:sap-enter .75s .1s both}.sap-page .sap-hero-coordinate{position:absolute;bottom:12px;left:max(32px,calc((100% - 1180px)/2));font-size:9px;letter-spacing:.18em;color:#6b7e96}.sap-page .sap-form-card{position:relative;border:1px solid #d6e2ed;border-radius:18px;background:#fff;box-shadow:0 20px 60px #1323470c;overflow:hidden}.sap-page .sap-form-top{display:flex;align-items:center;gap:10px;background:#f8fbfd;border-bottom:1px solid #e7edf4;padding:16px 28px;font-size:10px;color:#586e89;letter-spacing:.11em;font-weight:650}.sap-page .sap-form-top>svg{margin-left:auto;color:var(--sap-blue);flex-shrink:0}.sap-page .sap-form-card form{padding:26px 28px 22px}.sap-page .sap-form-card h2{font-size:23px;line-height:1.3;letter-spacing:-.025em}.sap-page .sap-form-card form>p:first-of-type:not(.sap-privacy){margin:8px 0 21px;line-height:1.6}.sap-page .sap-form-card fieldset{border:0;margin:0;padding:0;min-width:0}.sap-page .sap-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-gap:15px 16px;gap:15px 16px}.sap-page .sap-form-grid label{display:block;font-size:12px;font-weight:600;color:#334662;line-height:1.5}.sap-page .sap-form-grid label>span:not(.sap-optional){color:var(--sap-teal)}.sap-page .sap-optional{font-size:10px;color:#6a798d;font-weight:400}.sap-page .sap-form-grid :is(input,select,textarea){display:block;width:100%;min-width:0;margin-top:6px;padding:11px 12px;border:1px solid #d7e0ea;border-radius:6px;background:#fff;font-size:14px;line-height:1.5;color:var(--sap-ink);transition:border-color .2s,box-shadow .2s}.sap-page .sap-form-grid :is(input,select){min-height:44px}.sap-page .sap-form-grid :is(input,textarea)::placeholder{color:#748297;opacity:1;font-size:13px}.sap-page .sap-form-grid :is(input,select,textarea):focus{border-color:var(--sap-blue);box-shadow:0 0 0 3px #245da80b}.sap-page .sap-form-grid textarea{resize:vertical;min-height:90px;max-height:360px}.sap-page .sap-form-wide{grid-column:1/-1}.sap-page .sap-form-card .sap-button{width:100%;margin-top:19px;font-size:14px}.sap-page .sap-form-card fieldset:disabled{opacity:.65}.sap-page .sap-form-card fieldset:disabled .sap-button{cursor:wait}.sap-page .sap-honeypot{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}.sap-page .sap-privacy{font-size:11px;line-height:1.6;margin-top:13px;text-align:center}.sap-page .sap-privacy a{text-decoration:underline;text-underline-offset:2px;color:var(--sap-blue)}.sap-page .sap-form-error{padding:12px;background:#fff3f1;color:#9e3528;font-size:13px;margin-top:14px;border:1px solid #f0d8d1;border-radius:6px}.sap-page .sap-form-success{padding:50px 32px;min-height:490px;display:flex;flex-direction:column;justify-content:center}.sap-page .sap-form-success>span{width:55px;height:55px;display:grid;place-items:center;border-radius:50%;color:var(--sap-teal);background:#eaf4f0;font-size:26px;margin-bottom:22px}.sap-page .sap-form-success p{margin-top:15px}.sap-page .sap-form-success a{margin-top:25px;color:var(--sap-blue);font-weight:650}.sap-page .sap-foundation{background:white;border-block:1px solid var(--sap-line)}.sap-page .sap-foundation-grid{display:grid;grid-template-columns:.82fr 1fr .9fr 1.3fr;grid-gap:26px;gap:26px;align-items:center;padding-block:28px}.sap-page .sap-foundation-grid>.sap-eyebrow{font-size:10px;letter-spacing:.1em;margin:0}.sap-page .sap-foundation-grid>div{display:flex;gap:13px;align-items:center;padding-left:25px;border-left:1px solid var(--sap-line)}.sap-page .sap-foundation-grid>div>svg{flex-shrink:0;color:var(--sap-teal)}.sap-page .sap-foundation-grid>div>span{font-size:12px;line-height:1.7;color:var(--sap-muted)}.sap-page .sap-foundation-grid strong{color:var(--sap-ink);font-weight:600}.sap-page .sap-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:55px;margin-bottom:37px}.sap-page .sap-section-head>div{flex:1 1;min-width:0}.sap-page .sap-section-intro{max-width:440px;flex:1 1}.sap-page .sap-situations{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-gap:28px;gap:28px}.sap-page .sap-situations article{min-width:0;padding-top:23px;border-top:1px solid var(--sap-line)}.sap-page .sap-situations h3{font-size:19px;margin-top:20px}.sap-page .sap-situations p{font-size:14px;line-height:1.75;margin-top:12px}.sap-page .sap-wash{background:var(--sap-wash);border-block:1px solid #e6edf4}.sap-page .sap-services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-gap:18px;gap:18px}.sap-page .sap-service-card{position:relative;min-width:0;display:flex;flex-direction:column;padding:25px 23px;border:1px solid #dce5ef;border-top:3px solid var(--sap-blue);border-radius:14px;background:linear-gradient(155deg,#fff 60%,#f0f5fb);box-shadow:0 5px 16px #13234703;transition:transform .22s,box-shadow .22s,border-color .22s}.sap-page .sap-service-card:nth-child(2n){border-top-color:var(--sap-teal);background:linear-gradient(155deg,#fff 60%,#f0f7f5)}.sap-page .sap-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:25px}.sap-page .sap-card-top>span:last-child{font-size:11px;color:#798aa0;letter-spacing:.05em}.sap-page .sap-service-card:nth-child(2n) .sap-icon{color:var(--sap-teal);background:#edf5f2;border-color:#287f7918}.sap-page .sap-service-card h3{font-size:20px;min-height:54px}.sap-page .sap-service-card>p{font-size:14px;margin-top:13px;line-height:1.7}.sap-page .sap-service-card ul{display:grid;grid-gap:9px;gap:9px;padding-block:21px 25px}.sap-page .sap-service-card li{display:flex;align-items:baseline;gap:8px;font-size:12px;line-height:1.6;color:#56657b}.sap-page .sap-service-card li>span{font-size:11px;color:var(--sap-teal);flex-shrink:0}.sap-page .sap-service-card .sap-text-link{margin-top:auto;padding-top:17px;border-top:1px solid #dfe8ef;font-size:12px}.sap-page .sap-expertise-layout{display:grid;grid-template-columns:.95fr 1fr;grid-gap:62px;gap:62px;align-items:stretch}.sap-page figure{margin:0}.sap-page .sap-landscape{display:flex;flex-direction:column;justify-content:space-between;min-width:0;background:linear-gradient(145deg,#f1f6fb,#eaf2f7);border:1px solid var(--sap-line);border-radius:18px;padding:25px 24px 23px;overflow:hidden}.sap-page .sap-figure-label{display:flex;align-items:center;gap:10px;font-size:9px;letter-spacing:.12em;color:#5b718e;font-weight:650}.sap-page .sap-landscape img{width:100%;height:auto;max-height:510px;object-fit:contain;animation:sap-float 9s ease-in-out infinite}.sap-page figcaption{font-size:12px;color:#617690;line-height:1.7}.sap-page .sap-landscape figcaption{text-align:center}.sap-page .sap-expertise-list{display:grid;align-content:center}.sap-page .sap-expertise-list article{display:flex;align-items:baseline;gap:20px;padding:19px 0;border-bottom:1px solid var(--sap-line)}.sap-page .sap-expertise-list article:first-child{padding-top:0}.sap-page .sap-expertise-list article:last-child{padding-bottom:0;border-bottom:0}.sap-page .sap-expertise-list article>span{font-size:11px;color:var(--sap-teal);flex-shrink:0;letter-spacing:.05em}.sap-page .sap-expertise-list h3{font-size:20px}.sap-page .sap-expertise-list p{font-size:14px;line-height:1.7;margin-top:7px}.sap-page .sap-roles{background:#f8fafc;border-block:1px solid #e6edf4}.sap-page .sap-roles-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-gap:19px;gap:19px}.sap-page .sap-roles-grid article{min-width:0;padding:27px;border:1px solid var(--sap-line);border-radius:12px;background:#fff;transition:border-color .2s,transform .2s}.sap-page .sap-roles-grid .sap-icon{height:40px;width:40px;border-radius:10px}.sap-page .sap-roles-grid h3{font-size:20px;margin-top:18px}.sap-page .sap-roles-grid p{font-size:14px;margin-top:10px}.sap-page .sap-inline-note{font-size:12px;margin-top:24px;line-height:1.7;color:#687990}.sap-page .sap-engagement-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-gap:23px;gap:23px}.sap-page .sap-engagement-grid article{min-width:0;display:flex;flex-direction:column;padding:30px 29px;border:1px solid var(--sap-line);border-radius:14px;background:#fff}.sap-page .sap-engagement-grid article:nth-child(2){background:linear-gradient(150deg,#f0f5fb,#f9fbfe);border-color:#bfcee1}.sap-page .sap-engagement-number{font-size:12px;color:var(--sap-blue);margin-bottom:25px}.sap-page .sap-engagement-grid h3{font-size:25px}.sap-page .sap-engagement-grid article>p{font-size:14px;margin-top:8px}.sap-page .sap-engagement-grid dl{margin:25px 0 26px}.sap-page .sap-engagement-grid dt{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sap-blue);margin-top:18px}.sap-page .sap-engagement-grid dd{margin:6px 0 0;font-size:14px;line-height:1.75;color:var(--sap-muted)}.sap-page .sap-fit{margin-top:auto;border-top:1px solid var(--sap-line);padding-top:19px}.sap-page .sap-fit>span{font-size:9px;letter-spacing:.13em;font-weight:650;color:var(--sap-teal)}.sap-page .sap-fit p{font-size:13px;margin-top:8px}.sap-page .sap-scope-note{display:flex;align-items:center;gap:17px;background:#f4f8fa;padding:22px 25px;border-radius:10px;margin-top:22px}.sap-page .sap-scope-note>svg{color:var(--sap-teal);flex-shrink:0}.sap-page .sap-scope-note p{font-size:13px;line-height:1.7;max-width:820px}.sap-page .sap-scope-note>a{white-space:nowrap;margin-left:auto;color:var(--sap-blue);font-size:13px;font-weight:650}.sap-page .sap-scope-note>a>svg{margin-left:15px;vertical-align:middle}.sap-page .sap-process-section{background:radial-gradient(ellipse at 80% 15%,#24456d77,transparent 65%),#132347;color:white;position:relative}.sap-page .sap-head-light h2{color:white}.sap-page .sap-head-light .sap-eyebrow{color:#a0c9ed}.sap-page .sap-head-light .sap-section-intro{color:#b9c7da}.sap-page .sap-process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-gap:23px;gap:23px}.sap-page .sap-process-grid li{position:relative;min-width:0;padding:27px;border:1px solid #ffffff20;border-radius:12px;background:linear-gradient(140deg,#ffffff07,#ffffff02);transition:background .25s}.sap-page .sap-step-number{display:flex;justify-content:space-between;align-items:center;font-size:23px;color:#b4cce4;margin-bottom:22px;font-weight:500;letter-spacing:-.03em}.sap-page .sap-step-number>svg{color:#78b6b1}.sap-page .sap-process-grid h3{color:#f7faff;font-size:20px}.sap-page .sap-process-grid p{color:#b9c7da;font-size:14px;margin-top:12px}.sap-page .sap-output{margin-top:25px;padding-top:16px;border-top:1px solid #ffffff1a;font-size:12px;color:#d5e8f3;line-height:1.6}.sap-page .sap-output>span{display:block;font-size:8px;letter-spacing:.13em;color:#8bb8b8;margin-bottom:5px}.sap-page .sap-approach-grid{display:grid;grid-template-columns:1fr 1fr;grid-gap:75px;gap:75px}.sap-page .sap-approach-grid>.sap-section-intro,.sap-page .sap-approach-grid>div>.sap-section-intro{margin-top:23px}.sap-page .sap-team-figure{margin-top:30px;background:#f5f8fb;border:1px solid var(--sap-line);border-radius:14px;padding:13px 17px 19px}.sap-page .sap-team-figure img{width:100%;height:auto}.sap-page .sap-team-figure figcaption{text-align:center}.sap-page .sap-approach-list article{display:flex;gap:22px;border-bottom:1px solid var(--sap-line);padding:24px 0}.sap-page .sap-approach-list article:first-child{padding-top:0}.sap-page .sap-approach-list article>span{display:grid;place-items:center;height:30px;width:30px;flex-shrink:0;font-size:10px;border:1px solid #dce5ed;border-radius:50%;color:var(--sap-teal);margin-top:1px}.sap-page .sap-approach-list h3{font-size:20px}.sap-page .sap-approach-list p{font-size:14px;margin-top:9px}.sap-page .sap-evidence{background:linear-gradient(125deg,#eff6f5,#f5f8fb);border-block:1px solid #dfe9e8}.sap-page .sap-evidence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-gap:24px;gap:24px}.sap-page .sap-evidence-grid article{min-width:0;border:1px solid #d8e3e6;padding:29px;background:#ffffffb3;border-radius:12px}.sap-page .sap-evidence-label{font-size:10px;color:var(--sap-teal);letter-spacing:.12em;display:block;margin-bottom:27px;font-weight:600}.sap-page .sap-evidence-grid h3{font-size:22px}.sap-page .sap-evidence-grid p{font-size:14px;margin-top:13px}.sap-page .sap-faq-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-gap:0 48px;gap:0 48px;align-items:start}.sap-page .sap-faq-columns details{border-top:1px solid var(--sap-line)}.sap-page .sap-faq-columns details:last-child{border-bottom:1px solid var(--sap-line)}.sap-page .sap-faq-columns summary{min-height:100px;display:flex;align-items:center;gap:13px;cursor:pointer;list-style:none;padding-block:23px}.sap-page .sap-faq-columns summary::-webkit-details-marker{display:none}.sap-page .sap-faq-index{font-size:10px;color:#6c8099;flex-shrink:0}.sap-page .sap-faq-columns h3{font-size:17px;line-height:1.5;letter-spacing:-.02em;text-wrap:pretty}.sap-page .sap-faq-toggle{font-size:23px;margin-left:auto;line-height:1;color:var(--sap-blue);transition:transform .2s;flex-shrink:0}.sap-page .sap-faq-columns details[open] .sap-faq-toggle{transform:rotate(45deg)}.sap-page .sap-faq-columns details>p{font-size:14px;line-height:1.85;padding:0 28px 25px}.sap-page .sap-final{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 20% 40%,#e5edf9,transparent 65%),#f2f6fb;border-block:1px solid #e0e8f1}.sap-page .sap-final-grid{display:grid;grid-template-columns:1.2fr 1fr;grid-gap:80px;gap:80px;align-items:center}.sap-page .sap-final-grid>div>p:not(.sap-eyebrow){max-width:525px;margin-top:22px}.sap-page .sap-final-actions{display:flex;align-items:flex-start;flex-direction:column;gap:20px;margin-top:29px}.sap-page .sap-contact-email{display:inline-flex;align-items:center;gap:18px;font-size:14px;color:var(--sap-blue);font-weight:500}.sap-page .sap-brief-card{padding:31px;border:1px solid #d7e3ed;background:#ffffffc7;border-radius:14px}.sap-page .sap-brief-label{font-size:10px;color:var(--sap-blue);font-weight:650;letter-spacing:.12em}.sap-page .sap-brief-card ul{margin-top:20px}.sap-page .sap-brief-card li{display:flex;align-items:baseline;gap:13px;padding:13px 0;border-bottom:1px solid var(--sap-line);font-size:14px;line-height:1.7;color:#435772}.sap-page .sap-brief-card li>span{font-size:10px;color:var(--sap-teal);flex-shrink:0}.sap-page .sap-brief-card>p{font-size:12px;margin-top:19px;line-height:1.8}.sap-page .about-copy-footer{background:#fff}.sap-page .about-copy-footer :is(h3,p){text-align:left}.sap-page .about-copy-footer-about,.sap-page .about-copy-footer-contact,.sap-page .about-copy-footer-links a{font-size:16px;line-height:1.75}.sap-page .about-copy-footer-title{font-size:16px}.sap-page .about-copy-footer-bottom{font-size:14px}@media(hover:hover){.sap-page .sap-service-card:hover{transform:translateY(-5px);box-shadow:0 15px 28px #1323470a}.sap-page .sap-roles-grid article:hover{border-color:#b4c9df;transform:translateY(-3px)}.sap-page .sap-process-grid li:hover{background:#ffffff08}}@media(prefers-reduced-motion:no-preference){html:has(.sap-page){scroll-behavior:smooth}.sap-page .sap-will-reveal{opacity:0;transform:translateY(18px)}.sap-page .sap-will-reveal.sap-is-visible{opacity:1;transform:none;transition:opacity .6s var(--sap-delay,0s),transform .6s var(--sap-delay,0s)}}@keyframes sap-enter{0%{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}@keyframes sap-grid-drift{to{background-position:48px 48px,48px 48px}}@keyframes sap-float{0%,to{transform:translateY(0)}50%{transform:translateY(-5px)}}@media(max-width:1279px){.sap-page main h1{font-size:56px}.sap-page main h2{font-size:36px}.sap-page .sap-hero-grid{gap:38px}.sap-page .sap-services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.sap-page .sap-service-card h3{min-height:0}.sap-page .sap-service-card{padding:28px}.sap-page .sap-service-card>p{max-width:400px}.sap-page .sap-service-card .sap-text-link{font-size:14px}.sap-page .sap-service-card li{font-size:13px}.sap-page .sap-foundation-grid{gap:18px;grid-template-columns:.85fr 1fr .9fr 1.25fr}.sap-page .sap-foundation-grid>div{padding-left:15px}.sap-page .sap-expertise-layout{gap:40px}}@media(max-width:1023px){.sap-page .sap-container{width:calc(100% - 48px)}.sap-page main>.sap-section{padding:68px 0}.sap-page main h1{font-size:48px}.sap-page .sap-hero-grid{gap:28px;padding-block:40px 50px}.sap-page .sap-hero-description{font-size:17px}.sap-page .sap-form-card form{padding:24px 22px 20px}.sap-page .sap-form-top{padding-inline:22px}.sap-page .sap-form-card h2{font-size:21px}.sap-page .sap-form-grid{gap:13px 10px}.sap-page .sap-form-grid :is(input,select,textarea){padding:10px;font-size:13px}.sap-page .sap-form-grid label{font-size:11px}.sap-page .sap-optional{font-size:9px}.sap-page .sap-form-card .sap-button{font-size:12px;gap:12px;padding-inline:11px}.sap-page .sap-foundation-grid{grid-template-columns:1fr 1fr;gap:22px}.sap-page .sap-foundation-grid>div{padding-left:0;border:0}.sap-page .sap-foundation-grid>.sap-eyebrow{max-width:140px}.sap-page .sap-situations{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}.sap-page .sap-section-head{gap:35px}.sap-page .sap-section-intro{font-size:15px}.sap-page .sap-expertise-layout{grid-template-columns:.9fr 1fr;gap:28px}.sap-page .sap-landscape{padding:20px 14px}.sap-page .sap-figure-label{font-size:8px;letter-spacing:.06em}.sap-page .sap-expertise-list h3{font-size:18px}.sap-page .sap-expertise-list article{gap:12px;padding-block:14px}.sap-page .sap-expertise-list p{font-size:13px}.sap-page .sap-roles-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sap-page .sap-engagement-grid{gap:15px}.sap-page .sap-engagement-grid article{padding:25px 20px}.sap-page .sap-engagement-grid h3{font-size:21px}.sap-page .sap-process-grid{gap:17px}.sap-page .sap-process-grid li{padding:22px}.sap-page .sap-approach-grid{gap:40px}.sap-page .sap-approach-list article{gap:15px}.sap-page .sap-evidence-grid{gap:16px}.sap-page .sap-evidence-grid article{padding:24px 20px}.sap-page .sap-faq-columns{gap:30px}.sap-page .sap-final-grid{gap:35px}}@media(max-width:767px){.sap-page .sap-container{width:calc(100% - 40px)}.sap-page main>.sap-section{padding:56px 0}.sap-page main h1{font-size:48px}.sap-page main h2{font-size:32px}.sap-page .sap-hero-grid{grid-template-columns:1fr;gap:35px;padding-block:42px 52px}.sap-page .sap-hero-copy{padding:0;max-width:570px}.sap-page .sap-hero-description{max-width:560px;margin-top:22px}.sap-page .sap-hero-benefits{gap:10px;margin-top:22px;flex-direction:row;flex-wrap:wrap;column-gap:20px;font-size:12px}.sap-page .sap-hero-flow{max-width:none;margin-top:25px}.sap-page .sap-hero-coordinate{left:20px;bottom:13px;font-size:8px}.sap-page .sap-form-card form{padding:26px}.sap-page .sap-form-top{padding-inline:26px}.sap-page .sap-form-card h2{font-size:24px}.sap-page .sap-form-grid{gap:16px}.sap-page .sap-form-grid label{font-size:12px}.sap-page .sap-form-grid :is(input,select,textarea){font-size:16px;padding:11px 12px}.sap-page .sap-form-card .sap-button{font-size:14px}.sap-page .sap-section-head{display:block;margin-bottom:30px}.sap-page .sap-section-head>.sap-section-intro{max-width:600px;margin-top:19px}.sap-page .sap-eyebrow{font-size:10px;margin-bottom:13px}.sap-page .sap-expertise-layout{grid-template-columns:1fr;gap:30px}.sap-page .sap-landscape{max-width:540px;width:100%;justify-self:center;padding:24px}.sap-page .sap-landscape img{max-height:390px}.sap-page .sap-figure-label{font-size:9px}.sap-page .sap-expertise-list article{padding-block:19px;gap:20px}.sap-page .sap-expertise-list h3{font-size:20px}.sap-page .sap-expertise-list p{font-size:14px}.sap-page .sap-engagement-grid{grid-template-columns:1fr;gap:20px}.sap-page .sap-engagement-grid article{padding:28px}.sap-page .sap-engagement-number{margin-bottom:15px}.sap-page .sap-engagement-grid h3{font-size:25px}.sap-page .sap-engagement-grid dl{display:grid;grid-template-columns:70px 1fr;grid-gap:14px 16px;gap:14px 16px;margin-block:22px}.sap-page .sap-engagement-grid dt{margin:3px 0 0}.sap-page .sap-engagement-grid dd{margin:0}.sap-page .sap-scope-note{align-items:flex-start;flex-wrap:wrap;padding:22px}.sap-page .sap-scope-note p{flex:1 1;min-width:0}.sap-page .sap-scope-note>a{margin-left:41px}.sap-page .sap-process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sap-page .sap-approach-grid{grid-template-columns:1fr;gap:35px}.sap-page .sap-approach-grid>div>.sap-section-intro{max-width:none}.sap-page .sap-team-figure{max-width:540px}.sap-page .sap-team-figure img{max-height:260px;object-fit:contain}.sap-page .sap-approach-list article:first-child{padding-top:22px;border-top:1px solid var(--sap-line)}.sap-page .sap-evidence-grid{grid-template-columns:1fr;gap:16px}.sap-page .sap-evidence-grid article{padding:25px}.sap-page .sap-evidence-label{margin-bottom:16px}.sap-page .sap-faq-columns{grid-template-columns:1fr;gap:0}.sap-page .sap-faq-columns>div:first-child details:last-child{border-bottom:0}.sap-page .sap-faq-columns summary{min-height:85px}.sap-page .sap-final-grid{grid-template-columns:1fr;gap:32px}.sap-page .sap-final-grid>div>p:not(.sap-eyebrow){max-width:none}.sap-page .sap-final-actions{gap:19px}.sap-page .sap-brief-card{padding:27px}}@media(max-width:549px){.sap-page .sap-container{width:calc(100% - 36px)}.sap-page main h1{font-size:40px}.sap-page main h2{font-size:28px}.sap-page main>.sap-section{padding:48px 0}.sap-page .sap-hero-description{font-size:17px}.sap-page .sap-hero-grid{padding-top:34px;gap:30px}.sap-page .sap-hero-copy>.sap-button{font-size:13px;gap:18px;padding-inline:18px}.sap-page .sap-hero-copy .sap-eyebrow{margin-bottom:18px}.sap-page .sap-hero-benefits{flex-direction:column;font-size:13px}.sap-page .sap-hero-flow{font-size:10px;gap:8px}.sap-page .sap-form-card form{padding:23px 20px 20px}.sap-page .sap-form-top{padding:15px 20px;font-size:9px;gap:9px}.sap-page .sap-form-card h2{font-size:22px}.sap-page .sap-form-card form>p:first-of-type:not(.sap-privacy){font-size:13px}.sap-page .sap-form-grid{grid-template-columns:1fr;gap:15px}.sap-page .sap-form-grid label{font-size:12px}.sap-page .sap-optional,.sap-page .sap-privacy{font-size:10px}.sap-page .sap-foundation-grid{grid-template-columns:1fr;gap:18px;padding-block:27px}.sap-page .sap-foundation-grid>.sap-eyebrow{max-width:none;margin-bottom:2px}.sap-page .sap-foundation-grid>div{gap:15px}.sap-page .sap-foundation-grid>div>span{font-size:12px}.sap-page .sap-foundation-grid br{display:none}.sap-page .sap-foundation-grid strong:before{content:" "}.sap-page .sap-situations{grid-template-columns:1fr;gap:25px}.sap-page .sap-situations article{display:grid;grid-template-columns:44px 1fr;grid-gap:0 16px;gap:0 16px;padding-top:22px}.sap-page .sap-situations .sap-icon{grid-row:1/3;width:40px;height:40px;border-radius:10px}.sap-page .sap-situations h3{font-size:19px;margin-top:0}.sap-page .sap-situations p{font-size:14px;margin-top:9px}.sap-page .sap-services-grid{grid-template-columns:1fr;gap:20px}.sap-page .sap-service-card{padding:25px}.sap-page .sap-card-top{margin-bottom:20px}.sap-page .sap-service-card h3{font-size:22px}.sap-page .sap-service-card .sap-text-link{font-size:13px}.sap-page .sap-landscape{padding:20px 13px}.sap-page .sap-landscape img{max-height:340px}.sap-page .sap-figure-label{font-size:8px}.sap-page .sap-expertise-list article{gap:17px}.sap-page .sap-expertise-list h3{font-size:19px}.sap-page .sap-roles-grid{grid-template-columns:1fr;gap:15px}.sap-page .sap-roles-grid article{padding:24px}.sap-page .sap-roles-grid h3{font-size:21px}.sap-page .sap-inline-note{font-size:11px;margin-top:19px}.sap-page .sap-engagement-grid article{padding:25px}.sap-page .sap-engagement-grid dl{display:block}.sap-page .sap-engagement-grid dt{margin-top:17px}.sap-page .sap-engagement-grid dd{margin-top:7px}.sap-page .sap-process-grid{grid-template-columns:1fr;gap:16px}.sap-page .sap-process-grid li{padding:25px}.sap-page .sap-step-number{margin-bottom:15px}.sap-page .sap-process-grid h3{font-size:22px}.sap-page .sap-approach-list h3{font-size:19px}.sap-page .sap-approach-list article{gap:14px}.sap-page .sap-team-figure{padding:10px 8px 17px}.sap-page .sap-faq-columns h3{font-size:16px}.sap-page .sap-faq-columns summary{gap:11px;padding-block:21px}.sap-page .sap-faq-columns details>p{padding-inline:24px 8px}.sap-page .sap-final-actions .sap-button{font-size:13px;gap:15px;padding-inline:16px}.sap-page .sap-brief-card{padding:23px}.sap-page .sap-brief-card li{font-size:13px}.sap-page .sap-form-success{min-height:420px;padding:36px 25px}}@media(max-width:359px){.sap-page .sap-container{width:calc(100% - 28px)}.sap-page main h1{font-size:34px}.sap-page .sap-form-card form{padding-inline:16px}.sap-page .sap-form-card h2{font-size:20px}.sap-page .sap-form-card .sap-button{font-size:12px;padding-inline:9px;gap:12px}.sap-page .sap-hero-flow{font-size:9px;gap:7px}.sap-page .sap-final-actions .sap-button{font-size:12px;gap:12px}}@media(prefers-reduced-motion:reduce){html:has(.sap-page){scroll-behavior:auto}.sap-page main *,.sap-page main :after,.sap-page main :before{animation:none!important;transition:none!important}.sap-page .sap-will-reveal{opacity:1;transform:none}}.sap-page main h1{font-size:56px;max-width:560px;color:var(--sap-ink)}.sap-page .sap-section-head>h2{flex:1 1;min-width:0}.sap-page .sap-foundation-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.sap-page .sap-foundation-grid>div:first-child{border-left:0;padding-left:0}.sap-page .sap-card-heading{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:center;grid-gap:14px;gap:14px;min-width:0}.sap-page .sap-card-heading>.sap-icon{width:44px;height:44px;grid-row:auto}.sap-page .sap-card-heading h3{margin:0;min-height:0;font-size:20px;line-height:1.35;text-wrap:pretty}.sap-page .sap-number-icon{display:grid;place-items:center;width:38px;height:38px;border:1px solid #ccdae8;border-radius:10px;background:#eff4fa;color:var(--sap-blue);font-size:11px;line-height:1;font-weight:600}.sap-page .sap-process-grid .sap-number-icon{background:#ffffff07;border-color:#ffffff25;color:#b6d3eb}.sap-page .sap-situations article{display:block}.sap-page .sap-roles-grid p,.sap-page .sap-situations p{margin-top:16px}.sap-page .sap-expertise-layout{grid-template-columns:.9fr 1.1fr;align-items:start;gap:58px}.sap-page .sap-approach-copy,.sap-page .sap-expertise-copy{min-width:0}.sap-page .sap-approach-copy .sap-section-head,.sap-page .sap-expertise-copy .sap-section-head{display:block;margin-bottom:25px}.sap-page .sap-approach-copy .sap-section-intro,.sap-page .sap-expertise-copy .sap-section-intro{max-width:none;margin-top:18px}.sap-page .sap-landscape{padding:25px 12px;justify-content:center;aspect-ratio:1/1.12}.sap-page .sap-landscape img{max-height:none}.sap-page .sap-team-figure{margin:0;padding:28px 12px;align-self:center}.sap-page .sap-approach-grid{grid-template-columns:.9fr 1.1fr;align-items:start;gap:58px}.sap-page .sap-brief-card ul{margin-top:0}.sap-page .sap-success-title{font-size:23px;line-height:1.4;font-weight:700;color:var(--sap-ink)}.sap-page .sap-form-card form>p:first-of-type:not(.sap-privacy){margin:0 0 23px;font-size:14px;line-height:1.7}.sap-page .sap-form-success>span,.sap-page .sap-service-card li>span{font-family:Arial,sans-serif}@media(max-width:1279px){.sap-page main h1{font-size:52px}.sap-page .sap-approach-grid,.sap-page .sap-expertise-layout{gap:36px}}@media(max-width:1023px){.sap-page main h1{font-size:46px}.sap-page .sap-foundation-grid{gap:23px}.sap-page .sap-card-heading{gap:12px}.sap-page .sap-card-heading h3{font-size:19px}.sap-page .sap-approach-grid,.sap-page .sap-expertise-layout{gap:28px}.sap-page .sap-section-intro{font-size:15px}}@media(max-width:767px){.sap-page main h1{font-size:46px}.sap-page .sap-foundation-grid{grid-template-columns:1fr;gap:18px}.sap-page .sap-foundation-grid>div{padding-left:0;border-left:0}.sap-page .sap-section-head>h2{max-width:none}.sap-page .sap-approach-grid,.sap-page .sap-expertise-layout{grid-template-columns:110px minmax(0,1fr);gap:20px;align-items:start}.sap-page .sap-landscape,.sap-page .sap-team-figure{padding:10px 3px;position:-webkit-sticky;position:sticky;top:105px;aspect-ratio:auto;align-self:start;margin-top:3px;border-radius:12px}.sap-page .sap-landscape img,.sap-page .sap-team-figure img{max-height:none;min-height:130px;object-fit:contain}.sap-page .sap-approach-copy .sap-section-head,.sap-page .sap-expertise-copy .sap-section-head{margin-bottom:21px}.sap-page .sap-approach-copy .sap-section-intro,.sap-page .sap-expertise-copy .sap-section-intro{font-size:14px;line-height:1.75}.sap-page .sap-expertise-list article{gap:10px;padding-block:17px}.sap-page .sap-expertise-list h3{font-size:18px}.sap-page .sap-expertise-list p{font-size:13px}.sap-page .sap-approach-list article{gap:10px}.sap-page .sap-approach-list article>span{width:24px;height:24px;font-size:9px}.sap-page .sap-approach-list h3{font-size:18px}.sap-page .sap-approach-list p{font-size:13px}.sap-page .sap-foundation-grid br{display:none}.sap-page .sap-foundation-grid strong:before{content:" "}}@media(max-width:549px){.sap-page main h1{font-size:38px}.sap-page .sap-card-heading h3{font-size:19px}.sap-page .sap-card-heading>.sap-icon{width:40px;height:40px}.sap-page .sap-card-heading{grid-template-columns:40px minmax(0,1fr);gap:13px}.sap-page .sap-approach-grid,.sap-page .sap-expertise-layout{grid-template-columns:80px minmax(0,1fr);gap:16px}.sap-page .sap-landscape img,.sap-page .sap-team-figure img{min-height:105px}.sap-page .sap-approach-copy h2,.sap-page .sap-expertise-copy h2{font-size:26px}.sap-page .sap-expertise-list article{gap:9px}.sap-page .sap-expertise-list h3{font-size:17px}.sap-page .sap-approach-list article{display:block}.sap-page .sap-approach-list article>span{display:none}.sap-page .sap-approach-list h3{font-size:17px}.sap-page .sap-form-card form>p:first-of-type:not(.sap-privacy){font-size:13px}.sap-page .sap-roles-grid p,.sap-page .sap-situations p{margin-top:14px}}@media(max-width:359px){.sap-page main h1{font-size:34px}.sap-page .sap-approach-grid,.sap-page .sap-expertise-layout{grid-template-columns:62px minmax(0,1fr);gap:13px}.sap-page .sap-landscape img,.sap-page .sap-team-figure img{min-height:88px}.sap-page .sap-approach-copy h2,.sap-page .sap-expertise-copy h2{font-size:24px}}.sap-page .sap-landscape picture,.sap-page .sap-team-figure picture{display:block;width:100%}.sap-page .sap-landscape,.sap-page .sap-team-figure{align-self:start;position:relative;top:auto}
+.sap-page { --sap-content:1180px; --sap-gutter:32px; --sap-column-gap:56px; --sap-line:#ccddef; }
+.sap-page main > section { padding-inline:0; position:relative; isolation:isolate; }
+.sap-page .sap-container { width:min(var(--sap-content),calc(100% - var(--sap-gutter)*2)); margin-inline:auto; min-width:0; }
+.sap-page main > .sap-section { padding-block:80px; }
+.sap-page .sap-section-head { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start; gap:var(--sap-column-gap); margin-bottom:36px; }
+.sap-page .sap-section-head > h2 { max-width:none; }
+.sap-page .sap-section-head .sap-section-intro { width:100%; max-width:none; margin:0; }
+.sap-page .sap-hero-grid,.sap-page .sap-final-grid { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:var(--sap-column-gap); }
+.sap-page .sap-hero { background:radial-gradient(ellipse at 78% 14%,#c4d9f5a8,transparent 60%),linear-gradient(120deg,#ecf3fc,#dce9f9); }
+.sap-page .sap-hero::before { background:url('/sap-services/sap-diagram-5740cce222a1.svg') center/cover; opacity:.55; mask-image:linear-gradient(100deg,transparent,#000); animation:none; }
+.sap-page .sap-hero::after { content:''; pointer-events:none; position:absolute; z-index:-1; width:530px; height:530px; border:1px solid #245da81c; border-radius:50%; left:-320px; bottom:-285px; box-shadow:0 0 0 62px #245da808,0 0 0 124px #245da805; }
+.sap-page .sap-hero-grid { padding-block:64px; }
+.sap-page .sap-hero-copy { padding-block:0; }
+.sap-page .sap-hero-flow { max-width:none; padding:19px 18px; border:1px solid #bed2ea; border-radius:10px; background:#ffffff64; }
+.sap-page .sap-hero-flow i { display:inline-block; color:var(--sap-blue); }
+.sap-page .sap-form-card { border-color:#b9cfe7; box-shadow:0 20px 60px #17386014; }
+.sap-page .sap-form-card::before { content:''; display:block; height:4px; background:linear-gradient(90deg,#132347,#245da8,#84b6e6); }
+.sap-page .sap-foundation { background:#e5eef9; border-block:1px solid #cbdcef; }
+.sap-page .sap-foundation-grid { padding-block:28px; }
+.sap-page #sap-situations { background:#f3f7fd; }
+.sap-page .sap-situations { gap:20px; }
+.sap-page .sap-situations article { padding:26px 22px; border:1px solid #d1dfef; border-radius:14px; background:linear-gradient(145deg,#fff,#edf4fc); }
+.sap-page #sap-services { background-color:#deebfa; background-image:radial-gradient(#245da815 .8px,transparent .8px); background-size:20px 20px; border-block:1px solid #c6d9ee; }
+.sap-page .sap-services-grid { gap:24px; }
+.sap-page .sap-service-card { border-color:#c1d5eb; box-shadow:0 8px 24px #13234706; background:linear-gradient(145deg,#fff 62%,#f0f6ff); }
+.sap-page .sap-service-card .sap-text-link { padding-top:20px; border-top:1px solid #d8e5f3; }
+.sap-page #sap-expertise { background:linear-gradient(125deg,#f3f7fd,#eaf2fc); }
+.sap-page .sap-expertise-layout,.sap-page .sap-approach-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:var(--sap-column-gap); row-gap:0; align-items:start; }
+.sap-page .sap-expertise-copy,.sap-page .sap-approach-copy { display:contents; }
+.sap-page .sap-expertise-copy .sap-section-head,.sap-page .sap-approach-copy .sap-section-head { display:grid; grid-column:1/-1; grid-row:1; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:var(--sap-column-gap); margin-bottom:36px; }
+.sap-page .sap-expertise-copy .sap-section-intro,.sap-page .sap-approach-copy .sap-section-intro { margin:0; }
+.sap-page .sap-landscape,.sap-page .sap-team-figure { grid-column:1; grid-row:2; margin:0; width:100%; max-width:none; min-width:0; padding:30px 20px; top:auto; position:relative; align-self:start; justify-self:stretch; border:1px solid #b9cfe8; border-radius:18px; background:radial-gradient(ellipse at 30% 15%,#f6faffcc,transparent 65%),linear-gradient(145deg,#e5effc,#ccddf3); box-shadow:inset 0 1px #ffffffb3,0 16px 38px #13234708; overflow:hidden; }
+.sap-page .sap-landscape { aspect-ratio:1/1.12; }
+.sap-page .sap-landscape::before,.sap-page .sap-team-figure::before { content:''; pointer-events:none; position:absolute; inset:0; background:linear-gradient(#245da80a 1px,transparent 1px),linear-gradient(90deg,#245da80a 1px,transparent 1px); background-size:32px 32px; mask-image:linear-gradient(130deg,#000,transparent 70%); }
+.sap-page .sap-landscape picture,.sap-page .sap-team-figure picture { position:relative; }
+.sap-page .sap-landscape img,.sap-page .sap-team-figure img { display:block; height:auto; max-height:none; min-height:0; width:100%; animation:none; }
+.sap-page .sap-expertise-list,.sap-page .sap-approach-list { grid-column:2; grid-row:2; }
+.sap-page .sap-expertise-list article { padding-block:19px; }
+.sap-page .sap-expertise-list article:first-child { padding-top:0; }
+.sap-page #sap-roles { background:#e5eef9; border-color:#cfdef0; }
+.sap-page .sap-roles-grid { gap:24px; }
+.sap-page .sap-roles-grid article { background:linear-gradient(130deg,#fff,#f2f7fd); border-color:#c5d8ed; }
+.sap-page #sap-engagement { background:linear-gradient(180deg,#f4f8fe,#edf4fd); }
+.sap-page .sap-engagement-grid { gap:24px; }
+.sap-page .sap-engagement-grid article { border-color:#c4d7ed; box-shadow:0 10px 30px #13234705; }
+.sap-page .sap-engagement-grid article:nth-child(2) { background:linear-gradient(145deg,#e0edfd,#f2f7ff); border-color:#9cbce1; }
+.sap-page .sap-engagement-grid dt:nth-of-type(2) { text-transform:none; letter-spacing:.02em; }
+.sap-page #sap-process { background:linear-gradient(135deg,#edf4fd,#e5eef9); border-block:1px solid #cbdcef; overflow:hidden; }
+.sap-page #sap-process::before { content:''; pointer-events:none; position:absolute; inset:0; z-index:-1; background:url('/sap-services/sap-diagram-5740cce222a1.svg') center/cover; opacity:.16; }
+.sap-page #sap-process h2 { color:var(--sap-ink); }
+.sap-page #sap-process .sap-section-intro { color:#43536b; }
+.sap-page .sap-process-grid { gap:24px; }
+.sap-page #sap-process .sap-process-grid li {
+ --step-background:#fff; --step-heading:#132347; --step-copy:#43536b;
+ --step-output:#245da8; --step-divider:#ccddef; --step-badge:#edf3fb;
+ --step-badge-ink:#245da8; --step-badge-line:#c4d6eb;
+ background:var(--step-background); border:2px solid #c7d9ee; border-radius:14px;
+ box-shadow:0 8px 24px #13234706; cursor:pointer;
+ transition:opacity .5s var(--sap-delay,0ms),transform .25s ease,background .25s ease,border-color .2s ease,box-shadow .25s ease;
+}
+.sap-page #sap-process .sap-process-grid li h3 { color:var(--step-heading); }
+.sap-page #sap-process .sap-process-grid li p { color:var(--step-copy); }
+.sap-page #sap-process .sap-process-grid li .sap-output { color:var(--step-output); border-top-color:var(--step-divider); }
+.sap-page #sap-process .sap-process-grid li .sap-number-icon { background:var(--step-badge); color:var(--step-badge-ink); border-color:var(--step-badge-line); }
+.sap-page #sap-process .sap-process-grid li :is(h3,p,.sap-output,.sap-number-icon) { transition:color .2s ease,background .2s ease,border-color .2s ease; }
+.sap-page #sap-process .sap-process-grid li:is(:hover,:has(.sap-card-heading:focus-visible),.sap-step-active) {
+ --step-background:#132347; --step-heading:#fff; --step-copy:#e0e9f5;
+ --step-output:#d5e3f4; --step-divider:#ffffff40; --step-badge:#ffffff12;
+ --step-badge-ink:#fff; --step-badge-line:#ffffff66;
+ border-color:#fff; transform:none;
+ box-shadow:0 0 0 1px #13234728,0 16px 30px #13234720;
+}
+.sap-page #sap-process .sap-card-heading[role="button"]:focus-visible { outline:none; }
+.sap-page #sap-approach { background:linear-gradient(130deg,#e9f2fd,#f3f7fc); }
+.sap-page .sap-team-figure { padding:36px 20px; }
+.sap-page #sap-evidence { background:#dfeaf8; border-color:#c8d9ed; }
+.sap-page .sap-evidence-grid { gap:24px; }
+.sap-page .sap-evidence-grid article { background:linear-gradient(140deg,#fff,#f0f6fd); border-color:#c0d4eb; }
+.sap-page #sap-faq { background:radial-gradient(ellipse at 95% 100%,#dfeafb,transparent 65%),#f5f8fd; }
+.sap-page .sap-faq-columns { gap:0 var(--sap-column-gap); }
+.sap-page .sap-faq-columns summary { transition:color .2s; }
+.sap-page .sap-faq-columns details[open] { background:#e8f0fc; border-radius:8px; }
+.sap-page #sap-next-step { background:radial-gradient(ellipse at 10% 5%,#f1f7ff,transparent 65%),#d3e4f8; border-color:#bdd2eb; }
+.sap-page .sap-brief-card { border-color:#afc9e5; box-shadow:0 12px 36px #13234708; }
+.sap-page #sap-main .sap-final-form-link { margin-top:20px; font-size:16px; line-height:1.55; gap:14px; text-decoration:none; }
+.sap-page #sap-main .sap-final-form-link:focus-visible { outline:2px solid #132347; outline-offset:4px; }
+.sap-page #sap-related { padding-block:44px; background:#f5f8fd; border-top:1px solid #cbdcef; }
+.sap-page #sap-main #sap-related h2 { margin:0; font-size:24px; line-height:1.35; font-weight:650; letter-spacing:normal; text-align:left; }
+.sap-page #sap-main #sap-related p { margin:8px 0 0; max-width:none; text-align:left; }
+.sap-page .sap-related-links { display:flex; flex-wrap:wrap; gap:12px; margin:20px 0 0; padding:0; list-style:none; }
+.sap-page .sap-related-links li { margin:0; padding:0; min-width:0; max-width:100%; }
+.sap-page .sap-related-links a { display:inline-block; max-width:100%; padding:10px 18px; border:1px solid #c4d7ed; border-radius:999px; background:#fff; color:#132347; font-size:15px; font-weight:500; line-height:1.5; text-decoration:none; overflow-wrap:anywhere; transition:background .2s,border-color .2s; }
+.sap-page .sap-related-links a:hover { background:#e5eef9; border-color:#7fa7d5; text-decoration:underline; }
+.sap-page .sap-related-links a:focus-visible { outline:2px solid #132347; outline-offset:3px; }
+.sap-page :is(.sap-situations article,.sap-service-card,.sap-roles-grid article,.sap-engagement-grid article,.sap-evidence-grid article,.sap-process-grid li) { position:relative; transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,background .3s ease; }
+.sap-page :is(.sap-situations article,.sap-service-card,.sap-roles-grid article,.sap-engagement-grid article,.sap-evidence-grid article)::after { content:''; position:absolute; pointer-events:none; inset:-1px auto auto 22px; width:38px; height:3px; border-radius:0 0 3px 3px; background:linear-gradient(90deg,#245da8,#91bced); transform-origin:left; transition:width .35s,opacity .35s; opacity:.65; }
+.sap-page .sap-icon,.sap-page .sap-number-icon { transition:transform .3s,background .3s,box-shadow .3s; }
+@media(hover:hover) {
+ .sap-page :is(.sap-situations article,.sap-service-card,.sap-roles-grid article,.sap-engagement-grid article,.sap-evidence-grid article):hover { transform:translateY(-6px); border-color:#7fa7d5; box-shadow:0 18px 36px #13234713; }
+ .sap-page :is(.sap-situations article,.sap-service-card,.sap-roles-grid article,.sap-engagement-grid article,.sap-evidence-grid article):hover::after { width:calc(100% - 44px); opacity:1; }
+ .sap-page :is(article,li):hover > .sap-card-heading :is(.sap-icon,.sap-number-icon) { transform:translateY(-2px) rotate(-4deg); box-shadow:0 5px 12px #245da818; background:#deebfc; }
+}
+@media(prefers-reduced-motion:no-preference) {
+ .sap-page .sap-hero-flow i { animation:sap-flow-arrow 2.8s ease-in-out infinite; }
+ .sap-page .sap-hero-flow i:nth-of-type(2) { animation-delay:.3s; }
+ .sap-page .sap-motion-active > .sap-card-heading .sap-icon svg { animation:sap-icon-breathe 5s ease-in-out var(--sap-delay,0ms) infinite; }
+ .sap-page .sap-motion-active::after { animation:sap-accent-breathe 5s ease-in-out var(--sap-delay,0ms) infinite; }
+ .sap-page .sap-motion-active.sap-landscape img,.sap-page .sap-motion-active.sap-team-figure img { animation:sap-diagram-float 7s ease-in-out infinite; }
+ .sap-page .sap-will-reveal.sap-is-visible { transition:opacity .65s var(--sap-delay,0ms),transform .65s var(--sap-delay,0ms),box-shadow .3s,border-color .3s; }
+}
+@keyframes sap-flow-arrow { 0%,100%{transform:translateX(0);opacity:.55} 50%{transform:translateX(4px);opacity:1} }
+@keyframes sap-icon-breathe { 0%,70%,100%{transform:translateY(0)} 82%{transform:translateY(-3px)} 90%{transform:translateY(0)} }
+@keyframes sap-accent-breathe { 0%,100%{opacity:.5} 50%{opacity:1} }
+@keyframes sap-diagram-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+@media(max-width:1023px) {
+ .sap-page { --sap-gutter:24px; --sap-column-gap:28px; }
+ .sap-page main > .sap-section { padding-block:64px; }
+ .sap-page .sap-situations { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .sap-page .sap-card-heading h3 { font-size:19px; }
+}
+@media(max-width:767px) {
+ .sap-page { --sap-gutter:20px; --sap-column-gap:24px; }
+ .sap-page #sap-related { padding-block:36px; }
+ .sap-page #sap-main #sap-related h2 { font-size:22px; }
+ .sap-page main > .sap-section { padding-block:52px; }
+ .sap-page .sap-section-head,.sap-page .sap-expertise-copy .sap-section-head,.sap-page .sap-approach-copy .sap-section-head { grid-template-columns:1fr; gap:16px; margin-bottom:28px; }
+ .sap-page .sap-section-head .sap-section-intro { margin:0; font-size:15px; }
+ .sap-page .sap-hero-grid,.sap-page .sap-final-grid { grid-template-columns:1fr; gap:32px; }
+ .sap-page .sap-hero-grid { padding-block:40px 48px; }
+ .sap-page .sap-expertise-layout,.sap-page .sap-approach-grid { grid-template-columns:110px minmax(0,1fr); column-gap:24px; }
+ .sap-page .sap-landscape,.sap-page .sap-team-figure { padding:20px 8px; aspect-ratio:auto; }
+ .sap-page .sap-landscape img,.sap-page .sap-team-figure img { min-height:0; }
+ .sap-page .sap-expertise-list article { padding-block:18px; }
+ .sap-page .sap-expertise-list article:first-child { padding-top:0; }
+ .sap-page .sap-approach-list article:first-child { padding-top:0; border-top:0; }
+ .sap-page .sap-foundation-grid { padding-block:26px; }
+ .sap-page .sap-faq-columns { grid-template-columns:1fr; gap:0; }
+ .sap-page .sap-expertise-copy h2,.sap-page .sap-approach-copy h2 { font-size:32px; }
+}
+@media(max-width:549px) {
+ .sap-page { --sap-gutter:18px; --sap-column-gap:20px; }
+ .sap-page .sap-situations,.sap-page .sap-roles-grid { grid-template-columns:1fr; gap:18px; }
+ .sap-page .sap-expertise-layout,.sap-page .sap-approach-grid { grid-template-columns:76px minmax(0,1fr); column-gap:18px; }
+ .sap-page .sap-landscape,.sap-page .sap-team-figure { padding:15px 4px; border-radius:12px; }
+ .sap-page .sap-situations article { display:block; padding:24px; }
+ .sap-page .sap-expertise-copy h2,.sap-page .sap-approach-copy h2 { font-size:28px; }
+ .sap-page .sap-expertise-list article { gap:10px; }
+ .sap-page .sap-expertise-list h3,.sap-page .sap-approach-list h3 { font-size:17px; }
+ .sap-page .sap-expertise-list p,.sap-page .sap-approach-list p { font-size:13px; }
+ .sap-page .sap-hero-flow { padding:16px 12px; gap:7px; font-size:10px; }
+}
+@media(max-width:359px) { .sap-page { --sap-gutter:14px; } .sap-page .sap-expertise-layout,.sap-page .sap-approach-grid { grid-template-columns:60px minmax(0,1fr); gap:0 14px; } }
+@media(prefers-reduced-motion:reduce) {
+ .sap-page main *,.sap-page main *::before,.sap-page main *::after { animation:none!important; transition:none!important; }
+ .sap-page #sap-process .sap-process-grid li:is(:hover,:has(.sap-card-heading:focus-visible),.sap-step-active) { transform:none; }
+}
+.sap-page {
+ --sap-body-size:16px;
+ --sap-heading-one:66px;
+ --sap-heading-two:42px;
+ --sap-heading-three:21.5px;
+}
+.sap-page #sap-main { font-size:var(--sap-body-size); }
+.sap-page #sap-main :is(p,li,dd) { font-size:var(--sap-body-size); line-height:1.7; }
+.sap-page #sap-main h1 { font-size:var(--sap-heading-one); line-height:1.12; }
+.sap-page #sap-main h2 { font-size:var(--sap-heading-two); line-height:1.2; }
+.sap-page #sap-main h3 { font-size:var(--sap-heading-three); line-height:1.4; }
+.sap-page #sap-main .sap-hero-description { font-size:19.5px; line-height:1.7; }
+.sap-page #sap-main .sap-section-intro { font-size:17.5px; line-height:1.7; }
+.sap-page #sap-main .sap-hero-benefits li { font-size:15.5px; line-height:1.65; }
+.sap-page #sap-main .sap-hero-flow { font-size:14px; line-height:1.6; }
+.sap-page #sap-main .sap-foundation-grid > div > span { font-size:15.5px; line-height:1.6; }
+.sap-page #sap-main :is(.sap-engagement-grid dt,.sap-number-icon,.sap-faq-index,.sap-brief-card li > span,.sap-expertise-list article > span,.sap-approach-list article > span) { font-size:12.5px; line-height:1.5; }
+.sap-page #sap-main .sap-output { font-size:14px; line-height:1.65; }
+.sap-page #sap-main :is(.sap-brief-card > p,.sap-scope-note > p,.sap-scope-note > a) { font-size:14.5px; line-height:1.7; }
+.sap-page #sap-main .sap-form-grid label { font-size:14px; line-height:1.55; }
+.sap-page #sap-main .sap-form-grid :is(input,select,textarea) { font-size:16px; line-height:1.55; padding:12px; }
+.sap-page #sap-main .sap-form-grid :is(input,textarea)::placeholder { font-size:15px; }
+.sap-page #sap-main .sap-form-card .sap-button { font-size:16px; line-height:1.55; padding:14px 18px; gap:14px; }
+.sap-page #sap-main .sap-privacy { font-size:12.5px; line-height:1.65; }
+.sap-page #sap-main .sap-form-error { font-size:14px; }
+.sap-page #sap-main .sap-success-title { font-size:25px; }
+.sap-page #sap-main .sap-faq-columns h3 { font-size:19px; line-height:1.5; }
+.sap-page #sap-main .sap-faq-columns summary { min-height:100px; }
+.sap-page #sap-main .sap-service-card li { font-size:15px; line-height:1.65; }
+.sap-page #sap-main .sap-service-card li > span { font-size:12.5px; }
+.sap-page .ething-header .about-copy-nav-link { font-size:14.5px; padding-inline:8px; }
+.sap-page .ething-header .about-copy-nav { gap:2px; }
+.sap-page .ething-header :is(.about-copy-contact-button,.about-copy-dropdown-menu a) { font-size:15px; }
+.sap-page .ething-header .about-copy-mobile-nav .about-copy-nav-link,
+.sap-page .ething-header .about-copy-mobile-nav > div > :is(a,span) { font-size:15px; line-height:1.6; }
+.sap-page footer.about-copy-footer :is(p,a,li) { font-size:16px; line-height:1.7; }
+.sap-page footer.about-copy-footer h3 { font-size:17px; line-height:1.5; }
+.sap-page footer .about-copy-footer-bottom { font-size:15px; line-height:1.6; }
+@media(max-width:1279px) {
+ .sap-page { --sap-heading-one:55px; --sap-heading-two:38px; }
+}
+@media(min-width:1100px) and (max-width:1199px) {
+ .sap-page .ething-header .about-copy-nav,
+ .sap-page .ething-header .about-copy-header-inner > .about-copy-contact-button { display:none; }
+ .sap-page .ething-header .about-copy-mobile-menu,
+ .sap-page .ething-header .about-copy-mobile-nav { display:block; }
+ .sap-page .ething-header .about-copy-mobile-toggle { display:inline-flex; }
+}
+@media(max-width:1023px) {
+ .sap-page { --sap-heading-one:49px; --sap-heading-two:37px; --sap-heading-three:20.5px; }
+ .sap-page #sap-main .sap-hero-description { font-size:18.5px; }
+}
+@media(max-width:767px) {
+ .sap-page { --sap-body-size:16px; --sap-heading-one:47px; --sap-heading-two:33px; --sap-heading-three:20px; }
+ .sap-page #sap-main .sap-section-intro { font-size:16.5px; }
+ .sap-page #sap-main .sap-hero-description { font-size:18px; }
+ .sap-page #sap-main .sap-faq-columns h3 { font-size:18.5px; }
+ .sap-page #sap-main .sap-faq-columns summary { min-height:94px; }
+ .sap-page #sap-main .sap-expertise-list article { gap:12px; }
+ .sap-page #sap-main .sap-scope-note { display:grid; grid-template-columns:24px minmax(0,1fr); gap:12px; align-items:start; }
+ .sap-page #sap-main .sap-scope-note p { width:100%; margin:0; }
+ .sap-page #sap-main .sap-scope-note > a { grid-column:2; margin:0; justify-self:start; white-space:normal; }
+ .sap-page footer.about-copy-footer :is(p,a,li) { font-size:15px; }
+}
+@media(max-width:549px) {
+ .sap-page { --sap-heading-one:41px; --sap-heading-two:30px; }
+ .sap-page #sap-main .sap-card-heading { gap:12px; }
+ .sap-page #sap-main .sap-hero-flow { display:flex; flex-direction:column; gap:8px; font-size:14px; padding:18px; }
+ .sap-page #sap-main .sap-hero-flow i { animation:none; transform:rotate(90deg); }
+ .sap-page #sap-main .sap-form-card .sap-button { font-size:15px; gap:10px; padding-inline:12px; }
+ .sap-page #sap-main .sap-engagement-grid article { padding:25px; }
+}
+@media(max-width:359px) {
+ .sap-page { --sap-heading-one:36px; --sap-heading-two:28px; --sap-heading-three:19px; }
+ .sap-page #sap-main .sap-form-card .sap-button { font-size:15px; gap:8px; padding-inline:10px; }
+}
+.sap-page .sap-role-explorer { display:grid; grid-template-columns:310px minmax(0,1fr); gap:24px; height:540px; }
+.sap-page .sap-role-sidebar { display:flex; flex-direction:column; min-width:0; min-height:0; border:1px solid #b9cfe7; border-radius:16px; background:#f8fbff; overflow:hidden; box-shadow:0 10px 30px #13234707; }
+.sap-page .sap-role-sidebar-head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:20px; border-bottom:1px solid #d4e1f0; color:#132347; font-size:18px; font-weight:650; }
+.sap-page .sap-role-count { padding:4px 9px; border-radius:999px; background:#e5eef9; color:#435a78; font-size:12px; font-weight:500; white-space:nowrap; }
+.sap-page .sap-role-menu { display:flex; flex-direction:column; gap:6px; flex:1; min-height:0; overflow:hidden; padding:10px; }
+.sap-page .sap-role-group { display:flex; flex-direction:column; flex:none; min-height:0; }
+.sap-page .sap-role-group-open { flex:1; }
+.sap-page #sap-main .sap-role-group-heading { flex:none; margin:0; font-size:14px; line-height:1.35; }
+.sap-page .sap-role-group-toggle { display:grid; grid-template-columns:minmax(0,1fr) 20px 12px; align-items:center; gap:8px; width:100%; min-height:44px; padding:10px 8px; border:1px solid #d2dfef; border-radius:8px; background:#edf3fb; color:#314d71; font:inherit; font-weight:600; text-align:left; cursor:pointer; }
+.sap-page .sap-role-group-toggle:hover { background:#e0ebfa; border-color:#a9c2e0; }
+.sap-page .sap-role-group-toggle[aria-expanded="true"] { background:#dce9fa; border-color:#a9c2e0; color:#193e72; }
+.sap-page .sap-role-group-toggle:focus-visible { outline:2px solid #245da8; outline-offset:2px; }
+.sap-page .sap-role-group-count { font-size:12px; text-align:center; }
+.sap-page .sap-role-group-arrow { font-size:17px; line-height:1; text-align:center; transition:transform .2s; }
+.sap-page .sap-role-group-toggle[aria-expanded="true"] .sap-role-group-arrow { transform:rotate(180deg); }
+.sap-page .sap-role-group-list { flex:1; min-height:0; padding-block:6px; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:#9eb7d6 #e8f0fa; }
+.sap-page .sap-role-group-list[hidden] { display:none!important; }
+.sap-page .sap-role-choice { display:grid; grid-template-columns:25px minmax(0,1fr) 12px; align-items:center; gap:10px; width:100%; min-height:64px; margin:0 0 6px; padding:10px 12px; border:1px solid transparent; border-radius:10px; background:transparent; color:#132347; font-family:inherit; font-size:16px; line-height:1.5; font-weight:550; text-align:left; cursor:pointer; transition:background .2s,border-color .2s,color .2s; }
+.sap-page .sap-role-choice:last-child { margin-bottom:0; }
+.sap-page .sap-role-choice-index { color:#6682a3; font-size:12px; font-weight:500; }
+.sap-page .sap-role-choice-arrow { color:#6d8caf; font-size:24px; font-weight:400; }
+.sap-page .sap-role-choice:hover { background:#e6effb; border-color:#c2d5ed; }
+.sap-page .sap-role-choice[aria-pressed="true"] { background:#132347; color:#fff; border-color:#132347; }
+.sap-page .sap-role-choice[aria-pressed="true"] :is(.sap-role-choice-index,.sap-role-choice-arrow) { color:#c9ddf8; }
+.sap-page .sap-role-choice:focus-visible { outline:2px solid #245da8; outline-offset:-3px; }
+.sap-page #sap-main .sap-role-scroll-hint { flex:none; margin:0; padding:12px 20px; border-top:1px solid #d4e1f0; color:#56708e; background:#eef4fc; font-size:12px; line-height:1.5; }
+.sap-page .sap-roles-grid.sap-role-details { display:grid; grid-template-columns:minmax(0,1fr); grid-template-rows:repeat(var(--sap-role-visible-count,3),minmax(0,1fr)); gap:14px; min-height:0; }
+.sap-page .sap-roles-grid.sap-role-details article { min-width:0; min-height:0; margin:0; padding:20px 24px; border:1px solid #c5d8ed; border-radius:14px; box-shadow:0 8px 24px #13234705; }
+.sap-page .sap-role-details article[hidden] { display:none!important; }
+.sap-page .sap-role-details .sap-card-heading { gap:12px; margin-bottom:8px; align-items:center; }
+.sap-page .sap-role-details .sap-icon { width:36px; height:36px; flex-basis:36px; border-radius:9px; }
+.sap-page .sap-role-details .sap-icon svg { width:21px; height:21px; }
+.sap-page #sap-main .sap-role-details p { margin:0; line-height:1.65; }
+.sap-page .sap-roles-grid .sap-role-selected { border-color:#7fa7d5; background:linear-gradient(120deg,#fff,#eaf3ff); box-shadow:inset 3px 0 #245da8,0 8px 24px #13234708; }
+@media(hover:hover) {
+ .sap-page .sap-roles-grid.sap-role-details article:hover { transform:none; }
+}
+@media(prefers-reduced-motion:no-preference) {
+ .sap-page .sap-role-details article:not([hidden]) { animation:sap-role-detail-in .3s ease both; }
+}
+@keyframes sap-role-detail-in { from { opacity:.3; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+@media(max-width:1100px) {
+ .sap-page .sap-role-explorer { grid-template-columns:275px minmax(0,1fr); gap:20px; }
+ .sap-page .sap-roles-grid.sap-role-details article { padding:18px 20px; }
+ .sap-page .sap-role-choice { padding-inline:10px; gap:8px; font-size:15.5px; }
+}
+@media(max-width:900px) {
+ .sap-page .sap-role-explorer { grid-template-columns:minmax(0,1fr); height:auto; gap:20px; }
+ .sap-page .sap-role-sidebar { height:360px; }
+ .sap-page .sap-role-menu { display:block; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:#9eb7d6 #e8f0fa; }
+ .sap-page .sap-role-group { margin-bottom:6px; }
+ .sap-page .sap-role-group:last-child { margin-bottom:0; }
+ .sap-page .sap-role-group-list { flex:none; overflow:visible; }
+ .sap-page .sap-role-sidebar-head { padding:16px 18px; }
+ .sap-page .sap-role-choice { min-height:68px; padding:12px 14px; }
+ .sap-page .sap-roles-grid.sap-role-details { grid-template-rows:none; grid-auto-rows:auto; }
+ .sap-page .sap-roles-grid.sap-role-details article { padding:22px; }
+}
+@media(max-width:549px) {
+ .sap-page .sap-role-explorer { gap:18px; }
+ .sap-page .sap-roles-grid.sap-role-details article { padding:20px; }
+ .sap-page #sap-main .sap-role-details h3 { font-size:19px; line-height:1.4; }
+ .sap-page .sap-role-details .sap-card-heading { align-items:start; gap:10px; }
+}
+.sap-page .sap-hero {
+ background-color:#102743;
+ background-image:linear-gradient(125deg,#07172c 0%,#0c2440 60%,#102743 100%);
+ background-size:cover;
+ background-position:center;
+ background-repeat:no-repeat;
+}
+.sap-page .sap-hero::before { opacity:.13; }
+.sap-page .sap-hero::after { opacity:.35; }
+.sap-page #sap-main .sap-hero h1 { color:#fff; }
+.sap-page #sap-main .sap-hero-description,
+.sap-page #sap-main .sap-hero-benefits li { color:#fff; }
+.sap-page #sap-main :is(.sap-hero h1,.sap-hero-description) { text-shadow:0 2px 12px #0008; }
+.sap-page .sap-hero-benefits svg { color:#add6ff; }
+.sap-page #sap-services {
+ background-color:#102743;
+ background-image:linear-gradient(180deg,#0b2040d4 0%,#102c4ab3 35%,#102b4599 100%),url('/sap-services/sap-background-680b015460db.webp');
+ background-size:cover;
+ background-position:center;
+ background-repeat:no-repeat;
+}
+.sap-page #sap-process {
+ background-color:#102743;
+ background-image:linear-gradient(180deg,#0b2040d4 0%,#102c4ab3 35%,#102b458c 100%),url('/sap-services/sap-background-e2197975de33.webp');
+ background-size:cover;
+ background-position:center;
+ background-repeat:no-repeat;
+}
+.sap-page #sap-process::before { background:none; }
+.sap-page.sap-has-js :is(#sap-services,#sap-process):not(.sap-photo-visible) {
+ background-image:linear-gradient(180deg,#0b2040 0%,#102c4a 100%);
+}
+.sap-page.sap-motion-paused *, .sap-page.sap-motion-paused *::before, .sap-page.sap-motion-paused *::after {
+ animation-play-state:paused!important;
+}
+.sap-page #sap-main :is(#sap-services,#sap-process) .sap-section-head h2 { color:#fff; }
+.sap-page #sap-main :is(#sap-services,#sap-process) .sap-section-intro { color:#e1eaf7; }
+@media(max-width:767px) {
+ .sap-page #sap-services { background-size:100% 100%,auto 1050px; background-position:center,center top; }
+ .sap-page #sap-process { background-size:100% 100%,auto 1000px; background-position:center,58% top; }
+}
+.sap-page { --sap-column-gap:32px; }
+.sap-page .ething-header .about-copy-header-inner { padding-block:8px; }
+.sap-page .ething-header .about-copy-logo img { width:52px; height:52px; object-fit:contain; }
+.sap-page main > .sap-section { padding-block:40px; }
+.sap-page .sap-section-head,
+.sap-page .sap-expertise-copy .sap-section-head,
+.sap-page .sap-approach-copy .sap-section-head { margin-bottom:20px; }
+.sap-page #sap-main :is(p,li,dd) { line-height:1.6; }
+.sap-page .sap-hero-grid { padding-block:32px; align-items:start; }
+.sap-page #sap-main .sap-hero-description { margin:16px 0; line-height:1.6; }
+.sap-page .sap-hero-benefits { margin-top:14px; gap:6px; }
+.sap-page .sap-form-card form { padding:20px; }
+.sap-page .sap-form-grid { gap:12px; }
+.sap-page #sap-main .sap-form-grid :is(input,select,textarea) { margin-top:5px; padding:9px 10px; min-height:44px; }
+.sap-page #sap-main .sap-form-grid textarea { height:84px; min-height:84px; }
+.sap-page #sap-main .sap-form-card .sap-button { min-height:44px; padding:10px 16px; margin-top:14px; }
+.sap-page #sap-main .sap-privacy { margin-top:10px; line-height:1.5; }
+.sap-page .sap-foundation-grid { padding-block:16px; gap:18px; }
+.sap-page :is(.sap-situations,.sap-services-grid,.sap-engagement-grid,.sap-process-grid,.sap-evidence-grid) { gap:16px; }
+.sap-page #sap-main :is(.sap-situations article,.sap-service-card,.sap-engagement-grid article,.sap-process-grid li,.sap-evidence-grid article) { padding:20px; }
+.sap-page .sap-card-heading { gap:10px; }
+.sap-page .sap-icon,.sap-page .sap-number-icon { width:36px; height:36px; flex-basis:36px; }
+.sap-page .sap-icon svg { width:22px; height:22px; }
+.sap-page #sap-main :is(.sap-situations article,.sap-service-card,.sap-process-grid li,.sap-evidence-grid article) > p { margin-top:8px; }
+.sap-page .sap-service-card ul { gap:6px; padding:12px 0 0; margin:0; }
+.sap-page .sap-engagement-grid article > p { margin-top:6px; }
+.sap-page .sap-engagement-grid dl { margin:14px 0; }
+.sap-page .sap-engagement-grid dd { margin-top:4px; }
+.sap-page .sap-engagement-grid dt:nth-of-type(2) { margin-top:12px; }
+.sap-page .sap-engagement-grid .sap-fit { margin-top:0; padding-top:12px; }
+.sap-page .sap-scope-note { margin-top:18px; padding:16px 18px; gap:14px; }
+.sap-page .sap-process-grid > li { display:flex; flex-direction:column; }
+.sap-page .sap-process-grid > li > p { margin-bottom:12px; }
+.sap-page .sap-process-grid .sap-output { margin-top:auto; padding-top:10px; flex-shrink:0; }
+.sap-page .sap-landscape,.sap-page .sap-team-figure { padding:16px; aspect-ratio:auto; }
+.sap-page .sap-expertise-list article,.sap-page .sap-approach-list article { padding-block:12px; gap:14px; }
+.sap-page .sap-expertise-list article:first-child,.sap-page .sap-approach-list article:first-child { padding-top:0; }
+.sap-page .sap-expertise-list p,.sap-page .sap-approach-list p { margin-top:6px; }
+.sap-page .sap-role-explorer { gap:18px; height:460px; }
+.sap-page .sap-role-explorer.sap-role-explorer-short { height:400px; }
+.sap-page .sap-role-sidebar-head { padding:12px 14px; }
+.sap-page .sap-role-menu { padding:8px; gap:4px; }
+.sap-page .sap-role-group-toggle { min-height:40px; padding:8px; }
+.sap-page .sap-role-group-list { padding-block:4px; }
+.sap-page .sap-role-choice { min-height:54px; padding:8px 10px; margin-bottom:4px; gap:8px; }
+.sap-page #sap-main .sap-role-scroll-hint { padding:8px 14px; }
+.sap-page .sap-roles-grid.sap-role-details { gap:10px; }
+.sap-page #sap-main .sap-roles-grid.sap-role-details article { padding:14px 16px; }
+.sap-page .sap-role-details .sap-card-heading { gap:10px; margin-bottom:6px; }
+.sap-page .sap-role-details .sap-icon { width:32px; height:32px; flex-basis:32px; }
+.sap-page #sap-main .sap-role-details p { line-height:1.55; }
+.sap-page #sap-main .sap-faq-columns summary { min-height:0; padding-block:14px; gap:10px; }
+.sap-page #sap-main .sap-faq-columns h3 { line-height:1.4; }
+.sap-page .sap-faq-columns details > p { margin:0; padding:0 14px 16px; }
+.sap-page .sap-final-grid { align-items:stretch; }
+.sap-page .sap-final-copy { display:flex; flex-direction:column; justify-content:center; text-align:left; }
+.sap-page .sap-final-grid > div > p:not(.sap-eyebrow) { margin-top:14px; }
+.sap-page .sap-brief-card { padding:20px; }
+.sap-page .sap-brief-card ul { margin:0; }
+.sap-page .sap-brief-card li { padding-block:8px; gap:10px; }
+.sap-page #sap-main .sap-brief-card > p { margin-top:14px; line-height:1.6; }
+.sap-page #sap-main .sap-final-form-link { margin-top:14px; }
+.sap-page #sap-related { padding-block:24px; }
+.sap-page #sap-main #sap-related p { margin-top:6px; }
+.sap-page .sap-related-links { gap:8px; margin-top:14px; }
+.sap-page footer.about-copy-footer { padding-block:32px; }
+.sap-page footer .about-copy-footer-grid { gap:24px; }
+.sap-page footer .about-copy-footer-brand { gap:12px; }
+.sap-page footer .about-copy-footer-title { margin-bottom:12px; }
+.sap-page footer .about-copy-footer-links { gap:6px; }
+.sap-page footer.about-copy-footer :is(p,a,li) { line-height:1.55; }
+.sap-page footer .about-copy-footer-bottom { margin-top:20px; padding-top:18px; gap:12px; }
+@media(max-width:1023px) {
+ .sap-page { --sap-column-gap:24px; }
+ .sap-page main > .sap-section { padding-block:32px; }
+ .sap-page .sap-role-explorer { grid-template-columns:260px minmax(0,1fr); }
+}
+@media(max-width:1000px) {
+ .sap-page .sap-role-explorer,.sap-page .sap-role-explorer.sap-role-explorer-short { grid-template-columns:minmax(0,1fr); height:auto; gap:14px; }
+ .sap-page .sap-role-sidebar { height:300px; }
+ .sap-page .sap-role-menu { display:block; overflow-y:auto; }
+ .sap-page .sap-role-group { margin-bottom:4px; }
+ .sap-page .sap-role-group-list { flex:none; overflow:visible; }
+ .sap-page .sap-roles-grid.sap-role-details { grid-template-rows:none; grid-auto-rows:auto; }
+}
+@media(max-width:767px) {
+ .sap-page { --sap-column-gap:16px; }
+ .sap-page main > .sap-section { padding-block:28px; }
+ .sap-page .sap-section-head,
+ .sap-page .sap-expertise-copy .sap-section-head,
+ .sap-page .sap-approach-copy .sap-section-head { gap:12px; margin-bottom:18px; }
+ .sap-page .sap-hero-grid { gap:22px; padding-block:24px 28px; }
+ .sap-page .sap-final-grid { gap:20px; }
+ .sap-page .sap-form-card form { padding:18px; }
+ .sap-page .sap-foundation-grid { gap:10px; padding-block:14px; }
+ .sap-page #sap-main :is(.sap-situations article,.sap-service-card,.sap-engagement-grid article,.sap-process-grid li,.sap-evidence-grid article) { padding:18px; }
+ .sap-page :is(.sap-situations,.sap-services-grid,.sap-engagement-grid,.sap-process-grid,.sap-evidence-grid) { gap:12px; }
+ .sap-page .sap-brief-card { padding:18px; }
+ .sap-page #sap-related { padding-block:24px; }
+}
+@media(max-width:1023px) {
+ .sap-page .sap-expertise-layout,.sap-page .sap-approach-grid { grid-template-columns:minmax(0,1fr); gap:0; }
+ .sap-page .sap-landscape,.sap-page .sap-team-figure { display:block; grid-column:1; grid-row:2; width:100%; max-width:420px; padding:12px; margin:0 auto 18px; justify-self:center; }
+ .sap-page .sap-landscape picture,.sap-page .sap-team-figure picture { display:block; width:100%; }
+ .sap-page .sap-expertise-list,.sap-page .sap-approach-list { grid-column:1; grid-row:3; }
+ .sap-page .sap-expertise-list article,.sap-page .sap-approach-list article { display:grid; grid-template-columns:32px minmax(0,1fr); position:relative; padding-block:12px; gap:6px 12px; }
+ .sap-page .sap-expertise-list article:first-child,.sap-page .sap-approach-list article:first-child { padding-top:0; }
+ .sap-page #sap-main :is(.sap-expertise-list,.sap-approach-list) article > span { display:inline-flex; position:static; grid-column:1; grid-row:1/3; align-items:center; justify-content:center; width:32px; height:32px; border:1px solid #9cb3d0; border-radius:8px; background:#e4edf9; color:#132347; font-size:13.5px; font-weight:700; }
+ .sap-page .sap-expertise-list h3,.sap-page .sap-approach-list h3 { grid-column:2; grid-row:1; padding-left:0; margin:0; }
+ .sap-page .sap-expertise-list p,.sap-page .sap-approach-list p { grid-column:2; grid-row:2; margin:0; }
+}
+.sap-page #sap-main .sap-section-head { grid-template-columns:minmax(0,1fr); justify-items:center; gap:12px; text-align:center; }
+.sap-page #sap-main .sap-section-head > h2 { margin:0; text-align:center; }
+.sap-page #sap-main .sap-section-head > .sap-section-intro { max-width:850px; margin:0 auto; text-align:center; }
+.sap-page #sap-main #sap-related :is(h2,p) { text-align:left; }
+.sap-page .sap-related-links { justify-content:flex-start; }
+.sap-page .sap-hero {
+ --sap-cover-image:url('/sap-services/sap-staffing-960-5a88f99115bf.webp');
+ background-image:linear-gradient(90deg,rgba(4,17,34,.99) 0%,rgba(4,17,34,.97) 58%,rgba(4,17,34,.68) 78%,rgba(4,17,34,.5) 100%),var(--sap-cover-image);
+ background-size:cover;
+ background-position:center;
+ background-repeat:no-repeat;
+}
+.sap-page .sap-hero::before,
+.sap-page .sap-hero::after { opacity:0; }
+.sap-page .sap-hero-grid { align-items:center; }
+.sap-page #sap-main .sap-hero :is(h1,.sap-hero-description,.sap-hero-benefits li) {
+ color:#fff;
+ text-shadow:none;
+}
+.sap-page #sap-main .sap-hero :is(.sap-hero-description,.sap-hero-benefits li) { font-weight:500; }
+.sap-page #sap-main .sap-form-grid :is(input,textarea)::placeholder { color:#52627a; opacity:1; }
+.sap-page #sap-enquiry { width:100%; min-width:0; align-self:center; }
+@media(max-width:767px) {
+ .sap-page .sap-hero {
+  background-image:linear-gradient(180deg,rgba(4,17,34,.99),rgba(4,17,34,.96) 50%,rgba(4,17,34,.72)),var(--sap-cover-image);
+  background-position:42% center;
+ }
+ .sap-page #sap-enquiry { align-self:start; }
+}
+
+@media(max-width:767px){.sap-page .sap-hero{--sap-cover-image:url("/sap-services/sap-staffing-768-e44566d8a567.webp");}}
+@media(max-width:480px){.sap-page .sap-hero{--sap-cover-image:url("/sap-services/sap-staffing-480-ac19bc8d9e04.webp");}}

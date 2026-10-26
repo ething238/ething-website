@@ -1,0 +1,28 @@
+<svg data-sap-middle-type="true" data-sap-large-type="true" xmlns="http://www.w3.org/2000/svg" width="600" height="620" viewBox="0 0 600 620" fill="none">
+<defs><linearGradient id="a" x1="175" y1="189" x2="421" y2="402" gradientUnits="userSpaceOnUse"><stop stop-color="#316DB6"/><stop offset="1" stop-color="#173860"/></linearGradient><linearGradient id="b" x1="120" y1="120" x2="500" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#E6EFF6"/></linearGradient><filter id="s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#132347" flood-opacity=".09"/></filter></defs>
+<circle cx="300" cy="295" r="222" stroke="#C8D9E8"/><circle cx="300" cy="295" r="173" stroke="#D4E1ED" stroke-dasharray="3 7"/>
+<path d="M300 152V92M181 295H91m328 0h90M300 416v80" stroke="#9AB7D1" stroke-width="2" stroke-dasharray="5 6"/>
+<path d="m300 184 149 86v111l-149 86-149-86V270z" fill="#D5E2EF"/><path d="m300 155 149 86v111l-149 86-149-86V241z" fill="url(#b)" stroke="#B4CADE"/>
+<path d="m300 155 149 86-149 86-149-86z" fill="#FDFEFF"/><path d="m300 327 149-86v111l-149 86z" fill="#D8E5F1"/>
+<path d="m300 201 104 60-104 60-104-60z" fill="url(#a)" filter="url(#s)"/>
+<path d="m196 261 104 60 104-60v36l-104 60-104-60z" fill="#245493"/><path d="m300 321 104-60v36l-104 60z" fill="#183C6B"/>
+<g stroke="#B3D6F0" stroke-width="2" opacity=".7"><path d="m253 253 47-27 47 27-47 27zM253 269l47 27 47-27M253 285l47 27 47-27"/></g>
+<g font-family="Arial, sans-serif" text-anchor="middle"><text x="300" y="389" fill="#245493" font-size="14.62" font-weight="700" letter-spacing="2">ENTERPRISE CORE</text>
+<g filter="url(#s)"><rect x="221" y="48" width="158" height="88" rx="15" fill="white" stroke="#D0DFEB"/><rect x="23" y="251" width="139" height="88" rx="15" fill="white" stroke="#D0DFEB"/><rect x="438" y="251" width="139" height="88" rx="15" fill="white" stroke="#D0DFEB"/><rect x="221" y="469" width="158" height="88" rx="15" fill="white" stroke="#D0DFEB"/></g>
+<text x="300" y="106" fill="#132347" font-size="15.75" font-weight="600">Finance</text><text x="92" y="309" fill="#132347" font-size="15.75" font-weight="600">Supply chain</text><text x="508" y="309" fill="#132347" font-size="15.75" font-weight="600">People</text><text x="300" y="527" fill="#132347" font-size="15.75" font-weight="600">Operations</text>
+<text x="300" y="599" fill="#5B718E" font-size="12.6" letter-spacing="1.4">INTEGRATION · DATA · ACCESS</text></g>
+<g stroke="#287F79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M287 85V71h26v14m-22-6h3m4 0h3m4 0h3M287 85h26M81 288v-14h22v14m-26 0h30M84 274v-5h16v5m-11 5h6M495 286v-3a7 7 0 0 1 14 0v3m-7-15a4 4 0 1 0 8 0 4 4 0 0 0-8 0m-14 14a5 5 0 0 1 7-5M288 510v-18h24v18m-18-12h3m5 0h3m-11 6h3m5 0h3"/></g>
+<g fill="#287F79"><circle cx="300" cy="152" r="4"/><circle cx="181" cy="295" r="4"/><circle cx="419" cy="295" r="4"/><circle cx="300" cy="442" r="4"/></g>
+<style id="sap-infographic-motion">
+@keyframes sap-line-flow{to{stroke-dashoffset:-60}}
+@keyframes sap-orbit{to{transform:rotate(360deg)}}
+@keyframes sap-node-glow{0%,100%{opacity:.35;transform:scale(.85)}50%{opacity:1;transform:scale(1.25)}}
+@keyframes sap-packet{0%{opacity:0;transform:translateY(20px)}20%,75%{opacity:1}100%{opacity:0;transform:translateY(-20px)}}
+@media(prefers-reduced-motion:no-preference){
+path[stroke-dasharray]{animation:sap-line-flow 8s linear infinite}
+circle[stroke-dasharray]{transform-box:fill-box;transform-origin:center;animation:sap-orbit 90s linear infinite}
+g[fill="#287F79"] circle{transform-box:fill-box;transform-origin:center;animation:sap-node-glow 4s ease-in-out infinite}
+.sap-packet{animation:sap-packet 3s linear infinite}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><circle class="sap-packet" cx="300" cy="164" r="4" fill="#245DA8"/><circle class="sap-packet" style="animation-delay:1.5s" cx="300" cy="448" r="4" fill="#245DA8"/></svg>

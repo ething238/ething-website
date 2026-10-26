@@ -14,6 +14,10 @@
   ],
   "rewrites": [
     {
+      "source": "/sap-services",
+      "destination": "/sap-services/index.html"
+    },
+    {
       "source": "/ai_staff_augmentation",
       "destination": "/ai_staff_augmentation/index.html"
     },
