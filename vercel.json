@@ -14,6 +14,10 @@
   ],
   "rewrites": [
     {
+      "source": "/salesforce-staff-augmentation",
+      "destination": "/salesforce-staff-augmentation/index.html"
+    },
+    {
       "source": "/sap-services",
       "destination": "/sap-services/index.html"
     },
