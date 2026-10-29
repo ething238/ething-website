@@ -8,6 +8,7 @@ import Aerospace from './pages/Aerospace.jsx'
 import IndustryDetailPage from './pages/IndustryDetailPage.jsx'
 import StaffingServices from './pages/StaffingServices.jsx'
 import SapServices from './pages/SapServices.jsx'
+import SalesforceStaffAugmentation from './pages/SalesforceStaffAugmentation.jsx'
 import EngineeringServices from './pages/EngineeringServices.jsx'
 import WebsiteDevelopment from './pages/WebsiteDevelopment.jsx'
 import MobileApplication from './pages/MobileApplication.jsx'
@@ -59,6 +60,7 @@ function AppRoutes() {
         ))}
         <Route path="/staffing_services" element={<StaffingServices content={siteContent} />} />
         <Route path="/sap-services" element={<SapServices />} />
+        <Route path="/salesforce-staff-augmentation" element={<SalesforceStaffAugmentation />} />
         <Route path="/ai_staff_augmentation" element={<AiStaffAugmentation content={siteContent} />} />
         {/* Legacy hyphen URL (bookmarks); canonical path matches underscore style like /staffing_services */}
         <Route

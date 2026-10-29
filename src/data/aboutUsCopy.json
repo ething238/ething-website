@@ -114,6 +114,10 @@
         "path": "/sap-services"
       },
         {
+          "label": "Salesforce Staff Augmentation",
+          "path": "/salesforce-staff-augmentation"
+        },
+        {
           "label": "Top Technology Talent",
           "path": "/hire-top-talent"
         },
