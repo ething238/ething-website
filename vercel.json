@@ -1,6 +1,26 @@
 {
   "redirects": [
     {
+      "source": "/ai_staff_augmentation",
+      "destination": "https://www.ethingsolutions.com/hire-ai-developers",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-staff-augmentation",
+      "destination": "https://www.ethingsolutions.com/hire-ai-developers",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai_staff_augmentation/index.html",
+      "destination": "https://www.ethingsolutions.com/hire-ai-developers",
+      "statusCode": 301
+    },
+    {
+      "source": "/ai-staff-augmentation/index.html",
+      "destination": "https://www.ethingsolutions.com/hire-ai-developers",
+      "statusCode": 301
+    },
+    {
       "source": "/:path*",
       "has": [
         {
@@ -14,6 +34,10 @@
   ],
   "rewrites": [
     {
+      "source": "/hire-ai-developers",
+      "destination": "/hire-ai-developers/index.html"
+    },
+    {
       "source": "/oracle-ebs",
       "destination": "/oracle-ebs/index.html"
     },
@@ -24,10 +48,6 @@
     {
       "source": "/sap-services",
       "destination": "/sap-services/index.html"
-    },
-    {
-      "source": "/ai_staff_augmentation",
-      "destination": "/ai_staff_augmentation/index.html"
     },
     {
       "source": "/website-development",

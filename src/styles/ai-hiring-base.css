@@ -1,0 +1,12 @@
+/* Minimal reset for this standalone page; the rest of the site keeps its reset. */
+html{font-size:16px;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5;background:#fff;color:#12243b}
+*,*:before,*:after{box-sizing:border-box}
+button,input,select,textarea{font:inherit;letter-spacing:normal}
+button{border:0;background:transparent;cursor:pointer}
+a{color:inherit;text-decoration:none}
+img,svg{vertical-align:middle}
+h1,h2,h3,p{margin:0}
+button:disabled{cursor:wait}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

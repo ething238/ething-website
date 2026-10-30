@@ -24,7 +24,7 @@ export default function Layout({ content, children }) {
     : 'The page you are looking for is not available. Browse Ething for software engineering, staffing, and services.'
 
   // Reviewed pages own their layout and metadata; keep their App-level trackers.
-  if (pathname === '/about_us' || pathname === '/healthcare_industry' || pathname === '/aerospace_industry' || pathname === '/website-development' || pathname === '/mobile_application' || pathname === '/ai_staff_augmentation' || pathname === '/sap-services' || pathname === '/salesforce-staff-augmentation' || pathname === '/oracle-ebs') return children
+  if (pathname === '/hire-ai-developers' || pathname === '/about_us' || pathname === '/healthcare_industry' || pathname === '/aerospace_industry' || pathname === '/website-development' || pathname === '/mobile_application' || pathname === '/ai_staff_augmentation' || pathname === '/sap-services' || pathname === '/salesforce-staff-augmentation' || pathname === '/oracle-ebs') return children
 
   return (
     <div className={'flex min-h-screen flex-col' + (pathname === '/' ? ' homepage-layout' : '')}>

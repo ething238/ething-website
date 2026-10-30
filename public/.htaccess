@@ -6,6 +6,9 @@ ErrorDocument 404 /404.html
   RewriteEngine On
   RewriteBase /
 
+  # Retire the AI staff augmentation page while preserving the existing AI hiring URL.
+  RewriteRule ^ai[-_]staff[-_]augmentation(?:/index\.html)?/?$ https://www.ethingsolutions.com/hire-ai-developers [R=301,L,NE,NC]
+
   # Permanently consolidate the bare domain onto the preferred HTTPS www host.
   # REQUEST_URI preserves the path; the original query string is retained.
   RewriteCond %{HTTP_HOST} ^ethingsolutions\.com(?::[0-9]+)?$ [NC]
@@ -24,7 +27,6 @@ ErrorDocument 404 /404.html
   # Legacy route aliases remain permanent redirects.
   RewriteRule ^about/?$ /about_us [R=301,L]
   RewriteRule ^staffing-services/?$ /staffing_services [R=301,L]
-  RewriteRule ^ai-staff-augmentation/?$ /ai_staff_augmentation [R=301,L]
 
   RewriteRule ^$ index.html [L]
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
