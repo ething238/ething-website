@@ -23,6 +23,7 @@ export default function Footer({ content }) {
                 <li key={`${l.label}-${l.path}`}>
                   <Link
                     to={l.path}
+                    reloadDocument={l.path === '/banking_finance_industry'}
                     className="group flex items-center gap-2 text-sm text-zinc-600 transition hover:text-ething-ink"
                   >
                     <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/15 text-[10px] text-orange-600">
@@ -43,6 +44,7 @@ export default function Footer({ content }) {
                 <li key={l.path}>
                   <Link
                     to={l.path}
+                    reloadDocument={l.path === '/banking_finance_industry'}
                     className="group flex items-center gap-2 text-sm text-zinc-600 transition hover:text-ething-ink"
                   >
                     <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/15 text-[10px] text-orange-600">
