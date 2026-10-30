@@ -114,6 +114,10 @@
         "path": "/sap-services"
       },
         {
+          "label": "Oracle EBS Staffing",
+          "path": "/oracle-ebs"
+        },
+        {
           "label": "Salesforce Staff Augmentation",
           "path": "/salesforce-staff-augmentation"
         },

@@ -1,0 +1,234 @@
+{
+  "route": "/oracle-ebs",
+  "canonical": "https://www.ethingsolutions.com/oracle-ebs",
+  "keywordMethod": "Non-overlapping exact phrase occurrences divided by editorial word count, multiplied by 100. Counts Oracle EBS and Oracle E-Business Suite as one topic family. Excludes navigation, footer, forms, SVG labels, eyebrow captions, hidden elements, script and style; includes all FAQ answers.",
+  "editorialWords": 1900,
+  "keywords": {
+    "Oracle EBS": 32,
+    "Oracle E-Business Suite": 6
+  },
+  "keywordOccurrences": 38,
+  "keywordDensityPercent": 2.0,
+  "keywordDensityDisplay": "2.00%",
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Hire Oracle EBS consultants for your team."
+    },
+    {
+      "tag": "h2",
+      "text": "Build your Oracle EBS team with eThing."
+    },
+    {
+      "tag": "h3",
+      "text": "The expertise your project needs"
+    },
+    {
+      "tag": "h3",
+      "text": "A clear brief from the start"
+    },
+    {
+      "tag": "h3",
+      "text": "Specialists who join your team"
+    },
+    {
+      "tag": "h2",
+      "text": "Oracle EBS specialists you can hire"
+    },
+    {
+      "tag": "h3",
+      "text": "Business processes & modules"
+    },
+    {
+      "tag": "h3",
+      "text": "Development & integrations"
+    },
+    {
+      "tag": "h3",
+      "text": "Connect business and technology"
+    },
+    {
+      "tag": "h3",
+      "text": "Application administration"
+    },
+    {
+      "tag": "h2",
+      "text": "Find expertise across Oracle EBS modules"
+    },
+    {
+      "tag": "h3",
+      "text": "Oracle finance functional consultant roles"
+    },
+    {
+      "tag": "h3",
+      "text": "Oracle SCM functional consultant roles"
+    },
+    {
+      "tag": "h3",
+      "text": "Oracle HCM consultant roles for EBS HRMS"
+    },
+    {
+      "tag": "h3",
+      "text": "Oracle technical consultant roles"
+    },
+    {
+      "tag": "h3",
+      "text": "Oracle Apps DBA & environment support"
+    },
+    {
+      "tag": "h3",
+      "text": "Upgrades, testing & production support"
+    },
+    {
+      "tag": "h2",
+      "text": "Oracle Fusion Cloud ERP Services and Staffing"
+    },
+    {
+      "tag": "h3",
+      "text": "Oracle Fusion Staffing & Cloud ERP Recruitment"
+    },
+    {
+      "tag": "h3",
+      "text": "Oracle Fusion Cloud ERP Services"
+    },
+    {
+      "tag": "h2",
+      "text": "Where does your Oracle EBS team need support?"
+    },
+    {
+      "tag": "h3",
+      "text": "Build the team around your Oracle EBS rollout."
+    },
+    {
+      "tag": "h2",
+      "text": "Staffing around your requirements"
+    },
+    {
+      "tag": "h3",
+      "text": "Modules & business processes"
+    },
+    {
+      "tag": "h3",
+      "text": "Release & technical landscape"
+    },
+    {
+      "tag": "h3",
+      "text": "Assessment & team fit"
+    },
+    {
+      "tag": "h3",
+      "text": "Access, ownership & handover"
+    },
+    {
+      "tag": "h2",
+      "text": "Ways to work with us"
+    },
+    {
+      "tag": "h3",
+      "text": "Contract staffing"
+    },
+    {
+      "tag": "h3",
+      "text": "Team augmentation"
+    },
+    {
+      "tag": "h2",
+      "text": "How we help you hire Oracle EBS talent"
+    },
+    {
+      "tag": "h3",
+      "text": "Define the requirement"
+    },
+    {
+      "tag": "h3",
+      "text": "Source & screen"
+    },
+    {
+      "tag": "h3",
+      "text": "Interview & select"
+    },
+    {
+      "tag": "h3",
+      "text": "Confirm & onboard"
+    },
+    {
+      "tag": "h2",
+      "text": "People who work with your team"
+    },
+    {
+      "tag": "h3",
+      "text": "A focused role brief"
+    },
+    {
+      "tag": "h3",
+      "text": "A fit for your delivery model"
+    },
+    {
+      "tag": "h3",
+      "text": "Skills for your wider team"
+    },
+    {
+      "tag": "h2",
+      "text": "Tell us which Oracle EBS skills you need"
+    },
+    {
+      "tag": "h3",
+      "text": "Ready to discuss your team?"
+    },
+    {
+      "tag": "h2",
+      "text": "Oracle EBS staffing FAQs"
+    },
+    {
+      "tag": "h2",
+      "text": "Explore Other Services"
+    },
+    {
+      "tag": "h3",
+      "text": "Quick Links"
+    },
+    {
+      "tag": "h3",
+      "text": "Industries"
+    },
+    {
+      "tag": "h3",
+      "text": "Contact Us"
+    }
+  ],
+  "htmlBytes": 51866,
+  "htmlGzipBytes": 12172,
+  "allFirstPartyAssetsBytes": 506107,
+  "assets": {
+    "analytics.js": 2223,
+    "enquiry.js": 3316,
+    "ething-logo.webp": 3554,
+    "inter-latin.woff2": 48256,
+    "oracle-ebs-cover-1024.webp": 30128,
+    "oracle-ebs-cover-1440.webp": 47308,
+    "oracle-ebs-cover-640.webp": 15914,
+    "oracle-ebs-photo-38a4077c58.webp": 76800,
+    "oracle-ebs-photo-57036a5361.webp": 33128,
+    "oracle-ebs-photo-5c4499d159.webp": 20192,
+    "oracle-ebs-photo-6059bc9217.webp": 26300,
+    "oracle-ebs-photo-d6464bab85.webp": 49036,
+    "oracle-ebs-photo-e07fe1f762.webp": 22032,
+    "outfit-latin.woff2": 32292,
+    "page.js": 16170,
+    "styles.css": 79458
+  },
+  "videoCount": 0,
+  "inlineImageCount": 0,
+  "brokenLocalLinks": [],
+  "imageCount": 13,
+  "lazyImageCount": 11,
+  "scriptFiles": [
+    "/oracle-ebs/assets/analytics.js",
+    "/oracle-ebs/assets/page.js",
+    "/oracle-ebs/assets/enquiry.js"
+  ],
+  "stylesheetFiles": [
+    "/oracle-ebs/assets/styles.css"
+  ],
+  "note": "Asset totals include every responsive image candidate; browsers select one cover image and defer below-fold photos. Google tag traffic is additional. Gzip size is an estimate, not a measured Core Web Vitals score."
+}
