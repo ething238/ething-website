@@ -19,6 +19,11 @@ ErrorDocument 404 /404.html
   RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
   RewriteRule ^index\.html$ / [R=301,L]
 
+  # Serve the AI export before directory/slash normalization can redirect it.
+  # Accept the slash variant for visitors with an older cached directory redirect;
+  # the page itself retains the original slashless canonical URL.
+  RewriteRule ^hire-ai-developers/?$ hire-ai-developers/index.html [L]
+
   # Match the canonical slashless URLs in React and the sitemap.
   RewriteCond %{REQUEST_URI} !^/$
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f

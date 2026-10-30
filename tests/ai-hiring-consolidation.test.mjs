@@ -53,6 +53,8 @@ test('retired page is absent from the sitemap, navigation and generated internal
 
 test('permanent redirects cover both retired spellings on supported hosts', async () => {
   const apache = await fs.readFile('dist/.htaccess', 'utf8');
+  assert.ok(apache.includes('RewriteRule ^hire-ai-developers/?$ hire-ai-developers/index.html [L]'));
+  assert.ok(apache.indexOf('^hire-ai-developers/?$') < apache.indexOf('^(.+)/$'), 'Serve AI HTML before slash normalization to prevent a directory redirect loop');
   assert.ok(apache.includes('^ai[-_]staff[-_]augmentation(?:/index\\.html)?/?$ https://www.ethingsolutions.com/hire-ai-developers [R=301,L,NE,NC]'));
   const netlify = await fs.readFile('dist/_redirects', 'utf8');
   assert.ok(netlify.includes('/ai_staff_augmentation /hire-ai-developers 301'));

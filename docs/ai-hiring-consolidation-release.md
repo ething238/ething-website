@@ -48,6 +48,7 @@ The hero is 72.3% smaller than its 166,784-byte JPEG source. It is preloaded; be
 - Removed the old page component, page data, stylesheet and obsolete page/form tests. The old URL is absent from the generated sitemap and published HTML links.
 - Apache redirects underscore/hyphen spellings, slash variants and `/index.html` variants directly to the HTTPS www canonical URL with **301**, retaining query strings. The rule precedes host canonicalization to avoid a second redirect.
 - Equivalent legacy mappings are included for Netlify and Vercel. The React router also forwards legacy in-app navigation.
+- Live verification exposed conflicting host directory-slash normalization. An explicit AI HTML rewrite precedes the shared trailing-slash rule; both slash forms serve the same HTML, with the original slashless canonical retained. This also accommodates visitors with a cached older directory redirect.
 - A real localhost HTTP check returns complete HTML with 200 at the retained URL, and 301 for the retired aliases with query preservation. Local preview redirects use the localhost destination; production uses the canonical domain.
 
 ## Validation and scope
