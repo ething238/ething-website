@@ -38,16 +38,4 @@
     blocks.forEach(block => { block.classList.add('scroll-enter'); observer.observe(block); });
   }
   reduced.addEventListener('change', reveal); reveal();
-  // One lightweight progress update per frame, with no moving backgrounds or animation library.
-  const progress = document.createElement('div'); progress.className = 'scroll-progress'; progress.setAttribute('aria-hidden','true');
-  document.body.appendChild(progress);
-  let queued = false;
-  function update() {
-    queued = false;
-    if (reduced.matches || document.hidden) return;
-    const max = document.documentElement.scrollHeight - innerHeight;
-    progress.style.transform = 'scaleX(' + Math.max(0, Math.min(1, max > 0 ? scrollY / max : 0)) + ')';
-  }
-  addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive:true });
-  addEventListener('resize', update); update();
 })();
