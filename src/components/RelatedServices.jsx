@@ -19,7 +19,7 @@ export default function RelatedServices({
         <p className="related-services-strip__description">{description}</p>
         <ul className="related-services-strip__links">
           {items.map(({ path, label }) => (
-            <li key={path}>{nativeLinks ? <a href={path}>{label}</a> : <Link to={path} reloadDocument={technologyLandingPagePaths.includes(path.split(/[?#]/)[0].replace(/\/$/, ''))}>{label}</Link>}</li>
+            <li key={path}>{nativeLinks ? <a href={path}>{label}</a> : <Link to={path} reloadDocument={technologyLandingPagePaths.includes(path.split(/[?#]/)[0].replace(/\/$/, '')) || path.split(/[?#]/)[0].replace(/\/$/, '') === '/banking_finance_industry'}>{label}</Link>}</li>
           ))}
         </ul>
       </div>
