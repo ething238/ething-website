@@ -67,7 +67,7 @@ public/
 | `/` | Home |
 | `/about_us` | About (team, vision, leaders) |
 | `/staffing_services` | Staffing Services |
-| `/ai_staff_augmentation` | AI Staff Augmentation |
+| `/hire-ai-developers` | AI developers and engineering talent |
 | `/engineering-services` | Engineering Services overview |
 | `/software_development` | Software Development |
 | `/mobile_application` | Mobile Application |
@@ -88,7 +88,7 @@ public/
 | `/hire-developers-india` | **Google Ads landing page** |
 | `/visitor-dashboard` | Internal analytics dashboard |
 
-Legacy redirect aliases: `/about` → `/about_us`, `/staffing-services` → `/staffing_services`, `/ai-staff-augmentation` → `/ai_staff_augmentation`
+Legacy redirect aliases: `/about` → `/about_us`, `/staffing-services` → `/staffing_services`, `/ai-staff-augmentation` and `/ai_staff_augmentation` → `/hire-ai-developers` (301)
 
 ## Editing Content
 

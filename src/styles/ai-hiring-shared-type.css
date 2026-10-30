@@ -1,0 +1,50 @@
+.ai-hiring-shell .ething-header .about-copy-nav-link {
+    font-size: calc(13px + var(--ai-type-increase))
+}
+.ai-hiring-shell .ething-header .about-copy-dropdown-menu a {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .ething-header .about-copy-contact-button {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .ething-header .about-copy-mobile-nav .about-copy-nav-link {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .ething-header .about-copy-mobile-nav > div > a,.ai-hiring-shell .ething-header .about-copy-mobile-nav > div > span {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+@media (min-width: 1280px) {
+    .ai-hiring-shell .ething-header .about-copy-nav-link {
+        font-size: calc(14px + var(--ai-type-increase))
+    }
+}
+.ai-hiring-shell .about-us-copy .about-copy-footer {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .about-us-copy .about-copy-footer-about {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .about-us-copy .about-copy-footer-title {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .about-us-copy .about-copy-footer-links a {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .about-us-copy .about-copy-footer-contact {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .about-us-copy .about-copy-footer-bottom p {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .about-us-copy .about-copy-footer-bottom a {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .related-services-strip .related-services-strip__title {
+    font-size: calc(20px + var(--ai-type-increase))
+}
+.ai-hiring-shell .related-services-strip .related-services-strip__description {
+    font-size: calc(14px + var(--ai-type-increase))
+}
+.ai-hiring-shell .related-services-strip .related-services-strip__links a {
+    font-size: calc(14px + var(--ai-type-increase))
+}

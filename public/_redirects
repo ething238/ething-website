@@ -1,2 +1,8 @@
+/ai_staff_augmentation/index.html /hire-ai-developers 301
+/ai-staff-augmentation/index.html /hire-ai-developers 301
+/ai_staff_augmentation /hire-ai-developers 301
+/ai_staff_augmentation/ /hire-ai-developers 301
+/ai-staff-augmentation /hire-ai-developers 301
+/ai-staff-augmentation/ /hire-ai-developers 301
 # Netlify etc.: SPA fallbacks — all routes resolve to index.html
 /* /index.html 200

@@ -1,0 +1,86 @@
+.ai-hiring-shell{--ai-type-increase:2pt;font-size:calc(16px + var(--ai-type-increase))}
+.ai-hiring-page .ai-example{--ai-type-increase:3.5pt}
+.ai-hiring-page h2{text-align:center}
+.ai-hiring-page h1,.ai-hiring-page .ai-card-title{text-align:left}
+.ai-hiring-page .ai-section-title{width:100%;max-width:none;margin-inline:0;text-align:left}
+.ai-hiring-page .ai-section-title>p{max-width:830px;margin-inline:0;text-align:left}
+.ai-hiring-page :is(.ai-example,.ai-why,.ai-process-section,.ai-engagement-section,.ai-profiles,.ai-faq) .ai-section-title>p{margin-inline:auto;text-align:center}
+.ai-hero-copy{text-align:left}
+.ai-hiring-page .ai-lede{margin-inline:0;text-align:left}
+.ai-hero-trust{justify-content:flex-start}
+.ai-lead-card .ai-form-title,.ai-lead-card .ai-form-copy{text-align:left}
+.ai-card-heading,.ai-application-heading{justify-content:flex-start}
+.ai-hiring-page .ai-card-heading .ai-card-title,.ai-hiring-page .ai-application-heading .ai-card-title{flex:1;text-align:left}
+.ai-hiring-page .ai-sector,.ai-profile-grid article,.ai-process-grid>li{text-align:left}
+.ai-hiring-page .ai-profile-grid .ai-card-title{max-width:none}
+.ai-application-grid .ai-text-button{margin-inline:0}
+.ai-example-grid{align-items:start}
+.ai-example-story>div:first-child{border-top:0;padding-top:0}
+.ai-example-story span{display:block;text-align:left}
+.ai-example-story p,.ai-example-top strong{text-align:left}
+.ai-example-panel{min-height:0}
+.ai-faq-grid{grid-template-columns:1fr;gap:26px}
+.ai-hiring-page .ai-faq-grid .ai-section-title{margin-inline:0;max-width:none}
+.ai-faq-list{width:100%;max-width:920px;margin-inline:auto}
+.ai-hiring-page .ai-engagement-grid{align-items:start;gap:16px}
+.ai-hiring-page .ai-engagement-grid article{min-height:0;padding:18px 20px}
+.ai-hiring-page .ai-engagement-grid article .ai-card-title{font-size:calc(1.1rem + var(--ai-type-increase));line-height:1.35;margin:0;color:var(--ai-ink)}
+.ai-hiring-page .ai-engagement-grid article>p:not(.ai-card-title){margin:8px 0 12px;line-height:1.55;text-align:left}
+.ai-hiring-page .ai-engagement-grid button{margin-top:0;padding-top:10px;line-height:1.4}
+.ai-hiring-page .related-services-strip__title{text-align:left}
+.ai-hiring-page .related-services-strip__description{text-align:left}
+.ai-hiring-page .related-services-strip__links{justify-content:flex-start}
+.ai-hiring-page .ai-final{text-align:left}
+.ai-hiring-page .ai-final>.ai-container>p{text-align:center}
+.ai-hiring-page .ai-final-actions{justify-content:center}
+/* The shared .about-us-copy shell imposes a viewport minimum on this footer.
+   Remove that minimum here so the document ends at the footer itself. */
+.ai-hiring-shell .ai-site-footer{min-height:0;height:auto;margin:0;padding-bottom:0}
+.ai-hiring-shell .ai-site-footer .about-copy-footer{margin-bottom:0;padding-bottom:24px}
+.ai-hiring-shell .about-copy-footer-title{text-align:left}
+.ai-hiring-shell .about-copy-footer-links a{justify-content:flex-start}
+.ai-hiring-shell>.about-copy-scroll-top{position:fixed;right:20px;bottom:20px;z-index:55;display:grid;place-items:center;width:40px;height:40px;margin:0;padding:0;border:1px solid #d1dfda;border-radius:50%;background:#fff;color:#087e73;box-shadow:0 3px 12px #0b263814;cursor:pointer}
+.ai-hiring-page .ai-hero{background-color:#010a16;background-image:linear-gradient(90deg,rgba(1,10,22,.99),rgba(2,15,30,.94) 50%,rgba(2,15,30,.86)),url('/ai-hiring-assets/ai-hero-f183a8ed6806.webp')}
+.ai-hiring-page .ai-hero:before{background:none}
+.ai-hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:64px}
+.ai-hiring-page .ai-hero h1{text-align:left;text-wrap:balance}
+.ai-hero-rating{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:22px;color:#d4e1e9;font-size:calc(.72rem + var(--ai-type-increase));line-height:1.6}
+.ai-hero-rating .ai-rating-stars{color:#ffc547;font-size:calc(.87rem + var(--ai-type-increase))}
+.ai-hero-rating strong{color:#fff;font-size:calc(.87rem + var(--ai-type-increase));font-weight:700}
+.ai-hiring-page .ai-hero-trust{gap:8px;margin:13px 0 26px!important;font-size:calc(.67rem + var(--ai-type-increase));line-height:1.5}
+.ai-hiring-page .ai-hero-trust li{display:flex;align-items:center;gap:6px;border:1px solid #ffffff2b;background:#07172655;border-radius:999px;padding:7px 11px;color:#d9e5ed}
+.ai-hiring-page .ai-hero-trust li:before{content:none}
+.ai-hero-trust li span{color:#d2e8ee}
+.ai-hero-grid .ai-lead-card{width:100%;max-width:420px;justify-self:end;padding:22px;min-width:0}
+.ai-lead-card .ai-form-title{margin-bottom:7px}
+.ai-lead-card .ai-form-copy{margin-bottom:15px;line-height:1.5}
+.ai-lead-card .form-grid{gap:12px}
+.ai-lead-card label{gap:5px}
+.ai-lead-card input,.ai-lead-card select{height:38px;line-height:20px;padding:7px 9px}
+.ai-lead-card .lead-form>button{margin-top:16px;padding:11px 10px}
+.ai-lead-card .lead-form>small{margin-top:10px}
+@media(min-width:1024px) and (max-width:1320px){
+  .ai-hiring-shell .ething-header .about-copy-nav-link{padding-inline:7px}
+  .ai-hiring-shell .ething-header .about-copy-header-inner{gap:12px}
+}
+@media(max-width:800px){
+  .ai-hero-grid{grid-template-columns:1fr;gap:28px}
+  .ai-hero-grid .ai-lead-card{justify-self:start}
+  .ai-faq-grid{gap:24px}
+  .ai-example-grid{gap:28px}
+}
+@media(max-width:540px){
+  .ai-hiring-page .ai-card-heading .ai-card-title,.ai-hiring-page .ai-application-heading .ai-card-title{flex:1}
+  .ai-hero-grid .ai-lead-card{max-width:none;padding:20px}
+  .ai-hiring-page .ai-hero-trust{gap:7px;font-size:calc(.63rem + var(--ai-type-increase))}
+  .ai-hiring-page .ai-hero-trust li{padding:6px 9px}
+  .ai-example-top{flex-wrap:wrap;gap:9px}
+  .ai-example-top strong{flex:1;min-width:0}
+  .ai-example-label{margin-left:0}
+  .ai-example-tabs{gap:5px;padding:12px}
+  .ai-example-tabs button{padding:10px 4px}
+  .ai-example-question{gap:9px}
+  .ai-hiring-page .ai-engagement-grid article{padding:16px 18px}
+  .ai-hiring-shell .ai-site-footer .about-copy-footer{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .ai-hiring-shell>.about-copy-scroll-top{bottom:calc(82px + env(safe-area-inset-bottom));right:14px}
+}

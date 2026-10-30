@@ -236,11 +236,6 @@
       ]
     },
     {
-      "id": "ai-staff",
-      "label": "AI Staff Augmentation",
-      "path": "/ai_staff_augmentation"
-    },
-    {
       "id": "blogs",
       "label": "Blogs",
       "path": "/blogs"
@@ -285,10 +280,6 @@
       {
         "label": "Privacy Policy",
         "path": "/privacy-policy"
-      },
-      {
-        "label": "AI Staff Augmentation",
-        "path": "/ai_staff_augmentation"
       }
     ],
     "industriesTitle": "Industries",

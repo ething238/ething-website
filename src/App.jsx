@@ -18,7 +18,7 @@ import Careers from './pages/Careers.jsx'
 import Privacy from './pages/Privacy.jsx'
 import Blogs from './pages/Blogs.jsx'
 import Contact from './pages/Contact.jsx'
-import AiStaffAugmentation from './pages/AiStaffAugmentation.jsx'
+import HireAiDevelopersRedirect from './pages/HireAiDevelopersRedirect.jsx'
 import HireDevelopersLanding from './pages/HireDevelopersLanding.jsx'
 import VisitorDashboard from './pages/VisitorDashboard.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -63,11 +63,12 @@ function AppRoutes() {
         <Route path="/sap-services" element={<SapServices />} />
         <Route path="/oracle-ebs" element={<OracleEbs />} />
         <Route path="/salesforce-staff-augmentation" element={<SalesforceStaffAugmentation />} />
-        <Route path="/ai_staff_augmentation" element={<AiStaffAugmentation content={siteContent} />} />
-        {/* Legacy hyphen URL (bookmarks); canonical path matches underscore style like /staffing_services */}
+        <Route path="/hire-ai-developers" element={<HireAiDevelopersRedirect />} />
+        <Route path="/ai_staff_augmentation" element={<Navigate to="/hire-ai-developers" replace />} />
+        {/* Both retired AI staffing URL spellings point to the consolidated hiring page. */}
         <Route
           path="/ai-staff-augmentation"
-          element={<Navigate to="/ai_staff_augmentation" replace />}
+          element={<Navigate to="/hire-ai-developers" replace />}
         />
         <Route
           path="/engineering-services"
@@ -87,7 +88,7 @@ function AppRoutes() {
         <Route path="/privacy-policy" element={<Privacy content={siteContent} />} />
         <Route path="/contact" element={<Contact content={siteContent} />} />
         <Route path="/hire-developers-india" element={<HireDevelopersLanding />} />
-        {Object.values(technologyLandingPages).map(({ meta, content }) => (
+        {Object.values(technologyLandingPages).filter(({ meta }) => meta.path !== '/hire-ai-developers').map(({ meta, content }) => (
           <Route
             key={meta.path}
             path={meta.path}

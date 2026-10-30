@@ -84,7 +84,6 @@ export const siteContent = {
         { label: 'Product Security', path: '/product_security' },
       ],
     },
-    { id: 'ai-staff', label: 'AI Staff Augmentation', path: '/ai_staff_augmentation' },
     { id: 'blogs', label: 'Blogs', path: '/blogs' },
     { id: 'careers', label: 'Careers', path: '/careers' },
   ],
@@ -206,9 +205,9 @@ export const siteContent = {
       {
         id: 'ai-staff-augmentation',
         category: 'Staffing',
-        title: 'AI Staff Augmentation',
+        title: 'AI Developers',
         icon: 'Brain',
-        to: '/ai_staff_augmentation',
+        to: '/hire-ai-developers',
         featured: false,
         detailLead: 'Provide experienced:',
         bullets: [
@@ -1084,56 +1083,6 @@ export const siteContent = {
       offeringsHeading: 'Related capabilities',
       primaryCta: { label: 'Contact us', path: '/contact' },
       secondaryCta: { label: 'View engagement models', hash: '#engagement-models' },
-    },
-
-    aiStaffAugmentation: {
-      path: '/ai_staff_augmentation',
-      heroKicker: 'Staff augmentation',
-      heroTitle: 'AI Staff Augmentation for AI, ML and Data Teams',
-      heroIntro:
-        'Ething provides AI staff augmentation: experienced practitioners who join your roadmap, tools, and delivery cadence. You get depth in modelling, data, and production workflows without overstating transformation or strategy the focus is credible execution alongside your engineers and leads.',
-      primaryCta: { label: 'Hire Talent', path: '/contact' },
-      secondaryCta: { label: 'All staffing options', path: '/staffing_services' },
-      rolesKicker: 'Roles',
-      rolesTitle: 'Specialists we place',
-      rolesIntro:
-        'These roles map to typical needs on modern product and platform teams; we tailor profiles to your stack, domain, and security expectations.',
-      roles: [
-        'Generative AI Engineers',
-        'Machine Learning Engineers',
-        'Data Scientists',
-        'NLP Engineers',
-        'MLOps Engineers',
-        'Python AI Developers',
-        'Data Engineers',
-        'AI Solution Architects',
-      ],
-      fitKicker: 'Fit',
-      fitTitle: 'AI specialists who work within your team',
-      fitBody:
-        'Add AI and data specialists who contribute to code reviews, experiments, pipelines and production handovers. Share your data environment, model requirements and security expectations so candidate profiles can be matched to the work your team needs to deliver.',
-      processKicker: 'How it works',
-      processTitle: 'A simple engagement path',
-      processSteps: [
-        {
-          title: 'Scope & profiles',
-          body: 'You share stacks, timelines, collaboration model (onsite, hybrid, or remote), and the seniority mix you need.',
-        },
-        {
-          title: 'Shortlist',
-          body: 'We propose candidates screened for relevant delivery experience and teamwork not generic résumés.',
-        },
-        {
-          title: 'Embed & iterate',
-          body: 'Selected engineers join your rituals and tools; we stay available for onboarding support and throughput adjustments.',
-        },
-      ],
-      closing: {
-        title: 'Need software engineers too?',
-        body:
-          'Our broader staffing covers full-stack, cloud, QA, firmware, and more often alongside AI and data hires on the same programme.',
-        cta: { label: 'Talk to us', path: '/contact' },
-      },
     },
 
     engineeringServices: {
@@ -2112,7 +2061,6 @@ export const siteContent = {
       { label: 'Contact Us', path: '/contact' },
       { label: 'Blogs', path: '/blogs' },
       { label: 'Privacy Policy', path: '/privacy-policy' },
-      { label: 'AI Staff Augmentation', path: '/ai_staff_augmentation' },
     ],
     industriesTitle: 'Industries',
     industries: [

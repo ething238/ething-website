@@ -57,7 +57,7 @@ try {
     await fs.writeFile(file, html)
     updated++
   }
-  if (updated !== 9) throw new Error(`Expected nine standalone pages; found ${updated}`)
+  if (updated !== 8) throw new Error(`Expected eight standalone pages; found ${updated}`)
   console.log(`Synchronized ${updated} standalone headers with the About Us reference and footer branding.`)
 } finally {
   await server.close()
