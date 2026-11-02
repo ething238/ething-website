@@ -1,6 +1,5 @@
+import SiteFooter from '../SiteFooter.jsx';
 import { useEffect, useState } from 'react';
-import originalCopy from '../../data/aboutUsCopy.json';
-import BrandLogo from './BrandLogo.jsx';
 
 const siteUrl = 'https://www.ethingsolutions.com';
 const localRoutes = new Set([
@@ -31,34 +30,8 @@ export function CopyIcon({ kind, className }) {
   return <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[kind]}</svg>;
 }
 
-function CopyLogo({ footer = false, optimized = false }) {
-  return <BrandLogo href={`${siteUrl}/`} className={`about-copy-logo brand-logo${footer ? ' site-footer-logo' : ''}`} optimized={optimized} lazy={footer} />;
-}
-
-export function CopyFooter({ activePath = '', contactHref = `${siteUrl}/contact`, aboutBody, preferLiveLinks = false, optimizeMedia = false }) {
-  const footer = originalCopy.footer;
-  const destination = path => preferLiveLinks && path?.startsWith('/') && !path.startsWith('//') ? `${siteUrl}${path}` : copyDestination(path);
-  const isActive = (path) => path?.replace(/\/$/, '') === activePath.replace(/\/$/, '');
-  return <footer className="about-copy-footer">
-    <div className="about-copy-container">
-      <div className="about-copy-footer-grid">
-        <div className="about-copy-footer-brand"><CopyLogo footer optimized={optimizeMedia} /><p className="about-copy-footer-about">{aboutBody ?? footer.aboutBody.replace('Ething Solutions', 'eThing').replace('staff augmentation plus consulting and delivery support so enterprises can scale teams', 'staff augmentation, along with consulting and delivery support, so enterprises can scale their teams')}</p></div>
-        {[{ title: footer.quickLinksTitle, links: footer.quickLinks }, { title: footer.industriesTitle, links: footer.industries }].map((group) => <div key={group.title}>
-          <h3 className="about-copy-footer-title">{group.title}</h3>
-          <ul className="about-copy-footer-links">{group.links.map((link) => <li key={link.path}><a href={destination(link.path === '/contact' ? contactHref : link.path)} aria-current={isActive(link.path) ? 'page' : undefined}><span><CopyIcon kind="check" /></span>{link.label}</a></li>)}</ul>
-        </div>)}
-        <div>
-          <h3 className="about-copy-footer-title">{footer.contactTitle}</h3>
-          <ul className="about-copy-footer-contact">
-            <li><CopyIcon kind="map" /><span>{footer.address.line1}<br />{footer.address.line2}</span></li>
-            <li><div>{footer.phones.map((phone) => <div key={phone.value}><CopyIcon kind="phone" /><span>{phone.label}: {phone.value}</span></div>)}</div></li>
-            <li><CopyIcon kind="mail" /><a href={`mailto:${footer.email}`}>{footer.email}</a></li>
-          </ul>
-        </div>
-      </div>
-      <div className="about-copy-footer-bottom"><p>© {new Date().getFullYear()} eThing</p><a href={destination(contactHref)}>{originalCopy.cta.label} →</a></div>
-    </div>
-  </footer>;
+export function CopyFooter() {
+  return <SiteFooter />;
 }
 
 export function CopyBackToTop() {

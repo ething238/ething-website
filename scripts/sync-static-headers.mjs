@@ -43,17 +43,9 @@ try {
     if (links.length !== 3) throw new Error(`${route}: expected three related links`)
     const title = decode(strip.match(/<h2\b[^>]*>([\s\S]*?)<\/h2>/)[1])
     const description = decode(strip.match(/<p\b[^>]*>([\s\S]*?)<\/p>/)[1])
-    const footerPattern = /<footer\b[^>]*class="hire-site-footer"[^>]*>/
+    const footerPattern = /<footer\b[^>]*class="(?:hire-site-footer|fs-footer)"[^>]*>/
     if (!footerPattern.test(html)) throw new Error(`${route}: missing visible site footer`)
     html = html.replace(relatedPattern, '').replace(footerPattern, match => renderStaticRelatedServices(route, links, title, description) + match)
-    html = html.replace(/<footer\b[^>]*class="hire-site-footer"[^>]*>[\s\S]*?<\/footer>/g, footer => footer
-      .replace(/Ething Solutions/g, 'eThing')
-      .replace(/© 2026 Ething/g, '© 2026 eThing')
-      .replace(/class="hire-site-logo"/g, 'class="hire-site-logo site-footer-logo"')
-      .replace(/alt="Ething"/g, 'alt="eThing"')
-      .replace(/aria-label="Ething home"/g, 'aria-label="eThing home"')
-      .replace(/width="44" height="44"/g, 'width="60" height="60"'))
-    html = html.replace(/(<footer\b[\s\S]*?<\/footer>)/g, footer => footer.replace(/© 2023/g, '© 2026'))
     await fs.writeFile(file, html)
     updated++
   }

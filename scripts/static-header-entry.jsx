@@ -1,3 +1,4 @@
+import SiteFooter from '../src/components/SiteFooter.jsx'
 import { renderToStaticMarkup } from 'react-dom/server'
 import SiteHeader from '../src/components/SiteHeader.jsx'
 import { StaticRouter } from 'react-router-dom'
@@ -12,4 +13,8 @@ export function renderStaticRelatedServices(pathname, links, title, description)
   return renderToStaticMarkup(<StaticRouter location={pathname}>
     <RelatedServices pathname={pathname} links={links} title={title} description={description} nativeLinks />
   </StaticRouter>)
+}
+
+export function renderStaticFooter() {
+  return renderToStaticMarkup(<SiteFooter />).replace(/<link\b[^>]*rel="preload"[^>]*>/g, '')
 }
