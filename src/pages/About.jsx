@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import originalCopy from '../data/aboutUsCopy.json';
 import seo from '../data/aboutUsSeoContent.js';
 import AboutUsEnquiryForm from '../components/AboutUsEnquiryForm.jsx';
-import FooterLogo from '../components/FooterLogo.jsx';
+import Footer from '../components/SiteFooter.jsx';
 import SiteHeader from '../components/SiteHeader.jsx';
 import RelatedServices from '../components/RelatedServices.jsx';
 import { brandLogo } from '../data/aboutBrand.js';
@@ -44,36 +44,8 @@ function Icon({ kind, className }) {
   return <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[kind]}</svg>;
 }
 
-function Logo() {
-  return <FooterLogo href={`${siteUrl}/`} className="about-copy-logo brand-logo" />;
-}
-
 function LinkedInGlyph() {
   return <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>;
-}
-
-function Footer() {
-  const footer = copy.footer;
-  return <footer className="about-copy-footer">
-    <div className="about-copy-container">
-      <div className="about-copy-footer-grid">
-        <div className="about-copy-footer-brand"><Logo /><p className="about-copy-footer-about">{footer.aboutBody}</p></div>
-        {[{ title: footer.quickLinksTitle, links: footer.quickLinks }, { title: footer.industriesTitle, links: footer.industries }].map((group) => <div key={group.title}>
-          <h3 className="about-copy-footer-title">{group.title}</h3>
-          <ul className="about-copy-footer-links">{group.links.map((link) => <li key={link.path}><a href={destination(link.path)}><span><Icon kind="check" /></span>{link.label}</a></li>)}</ul>
-        </div>)}
-        <div>
-          <h3 className="about-copy-footer-title">{footer.contactTitle}</h3>
-          <ul className="about-copy-footer-contact">
-            <li><Icon kind="map" /><span>{footer.address.line1}<br />{footer.address.line2}</span></li>
-            <li><div>{footer.phones.map((phone) => <div key={phone.value}><Icon kind="phone" /><span>{phone.label}: {phone.value}</span></div>)}</div></li>
-            <li><Icon kind="mail" /><a href={`mailto:${footer.email}`}>{footer.email}</a></li>
-          </ul>
-        </div>
-      </div>
-      <div className="about-copy-footer-bottom"><p>{footer.copyright}</p><a href={destination(copy.cta.path)}>{copy.cta.label} →</a></div>
-    </div>
-  </footer>;
 }
 
 export default function AboutUsCopy() {
