@@ -157,7 +157,7 @@
 }
 .sap-page {
  --sap-body-size:16px;
- --sap-heading-one:66px;
+ --sap-heading-one:54px;
  --sap-heading-two:42px;
  --sap-heading-three:21.5px;
 }
@@ -194,7 +194,7 @@
 .sap-page footer.about-copy-footer h3 { font-size:17px; line-height:1.5; }
 .sap-page footer .about-copy-footer-bottom { font-size:15px; line-height:1.6; }
 @media(max-width:1279px) {
- .sap-page { --sap-heading-one:55px; --sap-heading-two:38px; }
+ .sap-page { --sap-heading-one:50px; --sap-heading-two:38px; }
 }
 @media(min-width:1100px) and (max-width:1199px) {
  .sap-page .ething-header .about-copy-nav,
@@ -204,11 +204,11 @@
  .sap-page .ething-header .about-copy-mobile-toggle { display:inline-flex; }
 }
 @media(max-width:1023px) {
- .sap-page { --sap-heading-one:49px; --sap-heading-two:37px; --sap-heading-three:20.5px; }
+ .sap-page { --sap-heading-one:46px; --sap-heading-two:37px; --sap-heading-three:20.5px; }
  .sap-page #sap-main .sap-hero-description { font-size:18.5px; }
 }
 @media(max-width:767px) {
- .sap-page { --sap-body-size:16px; --sap-heading-one:47px; --sap-heading-two:33px; --sap-heading-three:20px; }
+ .sap-page { --sap-body-size:16px; --sap-heading-one:42px; --sap-heading-two:33px; --sap-heading-three:20px; }
  .sap-page #sap-main .sap-section-intro { font-size:16.5px; }
  .sap-page #sap-main .sap-hero-description { font-size:18px; }
  .sap-page #sap-main .sap-faq-columns h3 { font-size:18.5px; }
@@ -220,7 +220,7 @@
  .sap-page footer.about-copy-footer :is(p,a,li) { font-size:15px; }
 }
 @media(max-width:549px) {
- .sap-page { --sap-heading-one:41px; --sap-heading-two:30px; }
+ .sap-page { --sap-heading-one:34px; --sap-heading-two:30px; }
  .sap-page #sap-main .sap-card-heading { gap:12px; }
  .sap-page #sap-main .sap-hero-flow { display:flex; flex-direction:column; gap:8px; font-size:14px; padding:18px; }
  .sap-page #sap-main .sap-hero-flow i { animation:none; transform:rotate(90deg); }
@@ -228,7 +228,7 @@
  .sap-page #sap-main .sap-engagement-grid article { padding:25px; }
 }
 @media(max-width:359px) {
- .sap-page { --sap-heading-one:36px; --sap-heading-two:28px; --sap-heading-three:19px; }
+ .sap-page { --sap-heading-one:32px; --sap-heading-two:28px; --sap-heading-three:19px; }
  .sap-page #sap-main .sap-form-card .sap-button { font-size:15px; gap:8px; padding-inline:10px; }
 }
 .sap-page .sap-role-explorer { display:grid; grid-template-columns:310px minmax(0,1fr); gap:24px; height:540px; }

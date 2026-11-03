@@ -19,7 +19,7 @@
 .sf-reference-design .sf-hero-copy{text-align:left;position:relative;z-index:2;max-width:760px;margin:0}
 .sf-reference-design .sf-hero .sf-eyebrow{margin-bottom:20px;color:#9cd9f0;font-size:10px}
 .sf-reference-design .sf-hero .sf-eyebrow:before{background:#15b7ef}
-.sf-reference-design .sf-hero h1{font-size:clamp(51px,calc(4.4vw + 2px),66px);line-height:1.12;max-width:760px;margin:0;letter-spacing:normal;font-weight:700;color:#fff}
+.sf-reference-design .sf-hero h1{font-size:clamp(40px,4.1vw,56px);line-height:1.12;max-width:760px;margin:0;letter-spacing:normal;font-weight:700;color:#fff}
 .sf-reference-design .sf-hero h1 span{display:inline;color:#18b8f3}
 .sf-reference-design .sf-hero-description{max-width:660px;margin:25px 0 0;font-size:19px;line-height:1.8;color:#c0cbd5}
 .sf-reference-design .sf-hero-actions{justify-content:flex-start;align-items:center;gap:23px;margin:29px 0 26px}
@@ -247,14 +247,14 @@
 .sf-reference-design .sf-hero>.sf-container{width:min(1200px,calc(100% - 64px))}
 .sf-reference-design .sf-hero-grid{grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:24px;min-height:0}
 .sf-reference-design .sf-hero-copy{max-width:none}
-.sf-reference-design .sf-hero h1{font-size:70px;max-width:820px}
+.sf-reference-design .sf-hero h1{font-size:58px;max-width:820px}
 .sf-reference-design .sf-hero-description{max-width:710px;font-size:20px}
 .sf-reference-design .sf-cloud-scene{margin-right:0;margin-left:-15px}
 .sf-reference-design .sf-cloud-art{width:126%;height:126%;left:-13%;top:-13%}
 }
 @media(max-width:1100px){
 .sf-reference-design .sf-hero-grid{gap:14px;grid-template-columns:1.5fr 1fr;min-height:540px;padding-block:47px}
-.sf-reference-design .sf-hero h1{font-size:53px}
+.sf-reference-design .sf-hero h1{font-size:48px}
 .sf-reference-design .sf-hero-description{font-size:18px}
 .sf-reference-design .sf-cloud-scene{margin:0 0 0 -10px}
 .sf-reference-design .sf-orbit-label{font-size:9px;padding:9px}
@@ -274,7 +274,7 @@
 @media(max-width:900px){
 .sf-reference-design main>.sf-section{padding:44px 0}
 .sf-reference-design .sf-hero-grid{grid-template-columns:1.5fr 1fr;gap:10px;padding-block:32px;min-height:0}
-.sf-reference-design .sf-hero h1{font-size:45px;line-height:1.12}
+.sf-reference-design .sf-hero h1{font-size:44px;line-height:1.12}
 .sf-reference-design .sf-hero-description{font-size:17px;margin-top:21px;line-height:1.8}
 .sf-reference-design .sf-hero-actions{gap:15px;margin:24px 0}
 .sf-reference-design .sf-hero-actions .sf-button{font-size:11px;padding:13px 20px;min-height:50px;gap:17px}
@@ -315,7 +315,7 @@
 .sf-reference-design .sf-breadcrumb{font-size:9px}
 .sf-reference-design .sf-hero-grid{grid-template-columns:1fr;gap:8px;padding:35px 0 28px;min-height:0}
 .sf-reference-design .sf-hero .sf-eyebrow{font-size:8px;letter-spacing:normal;margin-bottom:20px}
-.sf-reference-design .sf-hero h1{font-size:clamp(41px,calc(8.8vw + 2px),56px);max-width:560px;line-height:1.12}
+.sf-reference-design .sf-hero h1{font-size:clamp(34px,8.6vw,38px);max-width:560px;line-height:1.12}
 .sf-reference-design .sf-hero-description{font-size:18px;margin-top:24px;line-height:1.85}
 .sf-reference-design .sf-hero-actions{flex-direction:row;align-items:center;justify-content:flex-start;gap:15px 22px;margin:26px 0 23px}
 .sf-reference-design .sf-hero-actions .sf-button{font-size:12px;padding:15px 24px;min-height:54px;gap:23px}
@@ -393,7 +393,7 @@
 .sf-reference-design .about-copy-scroll-top{display:none}
 }
 @media(max-width:380px){
-.sf-reference-design .sf-hero h1{font-size:39px}
+.sf-reference-design .sf-hero h1{font-size:32px}
 .sf-reference-design .sf-hero-description{font-size:17px}
 .sf-reference-design .sf-hero-assurances{font-size:8px;gap:8px 10px}
 .sf-reference-design .sf-cloud-scene{margin-top:25px}

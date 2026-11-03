@@ -371,7 +371,7 @@
 
 /* A responsive heading scale, independent of the semantic HTML heading levels. */
 .website-development-page{
-  --wd-h1-size:clamp(52px,5.7vw,72px);
+  --wd-h1-size:clamp(40px,4.2vw,56px);
   --wd-h2-size:clamp(36px,3.8vw,48px);
   --wd-service-heading-size:32px;
   --wd-card-heading-size:26px;
@@ -393,8 +393,8 @@
 @media(max-width:850px){
   .website-development-page{--wd-h2-size:36px;--wd-service-heading-size:28px;--wd-card-heading-size:24px;--wd-subheading-size:20px;--wd-visual-heading-size:22px}
 }
-@media(max-width:650px){.website-development-page{--wd-h1-size:52px}}
-@media(max-width:359px){.website-development-page{--wd-h1-size:50px}}
+@media(max-width:650px){.website-development-page{--wd-h1-size:38px}}
+@media(max-width:359px){.website-development-page{--wd-h1-size:36px}}
 
 /* One main title per section, with a navy and blue brand palette. */
 .website-development-page .wd-hero{background:radial-gradient(ellipse at 85% 60%,#e1ecfa 0,transparent 52%),#f3f7fc}

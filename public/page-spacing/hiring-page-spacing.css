@@ -45,3 +45,15 @@
   .paid-page.developers main > section.hero { padding-block:24px 44px!important; }
   .other-services-page main > section.hub-hero { padding-block:24px 44px; }
 }
+
+/* Longer hiring headlines should leave room for the introduction and CTA.
+   Exported campaign styles use !important for mobile H1 typography. */
+.paid-page main > section.hero h1 {
+  font-size:clamp(42px,4.2vw,56px)!important;
+  line-height:1.12!important;
+}
+.hiring-landing-spacing > #hero h1 { font-size:48px; line-height:1.14; }
+@media(max-width:800px) {
+  .paid-page main > section.hero h1 { font-size:clamp(32px,8.8vw,36px)!important; line-height:1.15!important; }
+  .hiring-landing-spacing > #hero h1 { font-size:34px; line-height:1.15; }
+}

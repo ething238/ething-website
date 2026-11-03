@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import { createHash } from 'node:crypto'
 import { createServer } from 'vite'
 
 const server = await createServer({ server: { middlewareMode: true, hmr: false }, appType: 'custom' })
@@ -10,6 +11,7 @@ try {
   await fs.copyFile('src/styles/footer-brand.css', 'public/footer-brand/footer-brand.css')
   await fs.mkdir('public/page-spacing', { recursive: true })
   await fs.copyFile('src/styles/hiring-page-spacing.css', 'public/page-spacing/hiring-page-spacing.css')
+  const spacingVersion = createHash('sha256').update(await fs.readFile('src/styles/hiring-page-spacing.css')).digest('hex').slice(0, 12)
   await fs.mkdir('public/related-services', { recursive: true })
   await fs.copyFile('src/styles/related-services.css', 'public/related-services/related-services.css')
   const { renderStaticHeader, renderStaticRelatedServices } = await server.ssrLoadModule('/scripts/static-header-entry.jsx')
@@ -27,8 +29,9 @@ try {
     if (!html.includes(styles)) html = html.replace('</head>', styles + '</head>')
     const footerStyles = '<link rel="stylesheet" href="/footer-brand/footer-brand.css"/>'
     if (!html.includes(footerStyles)) html = html.replace('</head>', footerStyles + '</head>')
-    const spacingStyles = '<link rel="stylesheet" href="/page-spacing/hiring-page-spacing.css"/>'
-    if (!html.includes(spacingStyles)) html = html.replace('</head>', spacingStyles + '</head>')
+    const spacingStyles = `<link rel="stylesheet" href="/page-spacing/hiring-page-spacing.css?v=${spacingVersion}"/>`
+    const spacingPattern = /<link\b[^>]*href="\/page-spacing\/hiring-page-spacing\.css(?:\?[^"]*)?"[^>]*>/g
+    html = spacingPattern.test(html) ? html.replace(spacingPattern, spacingStyles) : html.replace('</head>', spacingStyles + '</head>')
     const relatedStyles = '<link rel="stylesheet" href="/related-services/related-services.css"/>'
     if (!html.includes(relatedStyles)) html = html.replace('</head>', relatedStyles + '</head>')
     const relatedPattern = /<section\b(?=[^>]*(?:data-ething-related-services="true"|aria-labelledby="related-services-heading"))[^>]*>[\s\S]*?<\/section>/g
