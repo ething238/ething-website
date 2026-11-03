@@ -2,8 +2,6 @@
 
 const GTM_ID = import.meta.env.VITE_GTM_ID
 const GA4_ID = import.meta.env.VITE_GA4_MEASUREMENT_ID
-const ADS_ID = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_ID
-const ADS_LABEL = import.meta.env.VITE_GOOGLE_ADS_CONVERSION_LABEL
 const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID
 const CLARITY_ID = import.meta.env.VITE_CLARITY_PROJECT_ID
 
@@ -54,11 +52,8 @@ export function initTracking() {
     injectScript('ething-ga4', `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`)
     injectInlineScript(
       'ething-ga4-init',
-      `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}');${ADS_ID ? `gtag('config','${ADS_ID}');` : ''}`,
+      `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}');`,
     )
-  } else if (ADS_ID && typeof window.gtag === 'function') {
-    // gtag was bootstrapped externally (index.html) without the AW conversion ID — register it now
-    window.gtag('config', ADS_ID)
   }
 
   if (META_PIXEL_ID) {
@@ -91,11 +86,7 @@ export function trackEvent(name, params = {}) {
 export function trackLeadConversion(formName = 'lead_form') {
   trackEvent('generate_lead', { form_name: formName })
 
-  if (ADS_ID && ADS_LABEL && typeof window.gtag === 'function') {
-    window.gtag('event', 'conversion', {
-      send_to: `${ADS_ID}/${ADS_LABEL}`,
-    })
-  }
+  // GTM owns Ads conversion delivery from this confirmed generate_lead event.
 
   if (typeof window.fbq === 'function') {
     window.fbq('track', 'Lead')
