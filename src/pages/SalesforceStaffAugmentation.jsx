@@ -1,3 +1,4 @@
+import pageHeadings from '../data/pageHeadings.json'
 import { Helmet as Head } from 'react-helmet-async';
 import '../styles/about-us.css';
 import '../styles/footer-brand.css';
@@ -123,7 +124,7 @@ export default function SalesforceStaffAugmentation() {
         <div className="sf-container">
           <div className="sf-hero-grid">
             <div className="sf-hero-copy">
-              <h1 id="sf-title"><span>Salesforce</span> Staff Augmentation Services</h1>
+              <h1 id="sf-title"><span>Salesforce</span> {pageHeadings['/salesforce-staff-augmentation'].replace(/^Salesforce /, '')}</h1>
               <p className="sf-hero-description">eThing is a Salesforce staff augmentation company in Gurugram, India. Our Salesforce staff augmentation services add developers, administrators and architects to your team, while you retain control of the work.</p>
               <div className="sf-hero-actions"><a href="#salesforce-roles" className="sf-button">Explore the roles<Icon kind="arrow" size={18}/></a></div>
             </div>

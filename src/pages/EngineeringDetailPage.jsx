@@ -1,3 +1,4 @@
+import pageHeadings from '../data/pageHeadings.json'
 import { useEffect, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -142,7 +143,7 @@ function RichEngineeringServicePage({ page }) {
                 {page.heroKicker}
               </p>
               <h1 className="mt-5 font-[family:var(--font-display)] text-3xl font-bold leading-[1.15] tracking-tight text-ething-ink md:text-4xl lg:text-[2.5rem]">
-                {page.heroHeading}
+                {pageHeadings[page.path] ?? page.heroHeading}
               </h1>
               <p className="mt-6 text-base leading-relaxed text-zinc-600 md:text-lg">{page.heroLead}</p>
               <div className="mt-8 flex flex-wrap gap-3">

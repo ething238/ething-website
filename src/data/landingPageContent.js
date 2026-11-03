@@ -1,3 +1,4 @@
+import pageHeadings from './pageHeadings.json'
 /** Google Ads landing page - hire global talent from India */
 
 export const landingPageMeta = {
@@ -42,7 +43,7 @@ export const landingPageMeta = {
 export const landingPageContent = {
   hero: {
     badge: 'Trusted Partner for Global Engineering Teams',
-    headline: 'Hire Remote Software Developers from India',
+    headline: pageHeadings['/hire-developers-india'],
     subheadline:
       'We help small and mid-size companies worldwide hire pre-vetted software engineers, QA specialists, DevOps experts, and AI talent from India - integrated into your team, workflows, and timezone overlap, often within 48 hours.',
     primaryCta: 'Find Engineers',

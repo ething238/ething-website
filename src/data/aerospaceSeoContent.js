@@ -1,7 +1,8 @@
+import pageHeadings from './pageHeadings.json'
 const aerospaceSeoContent = {
   title: 'Aerospace Software Engineers | eThing',
   description: 'eThing provides engineers for aerospace teams. Find talent for embedded software, hardware integration, ground control and testing.',
-  heading: 'Aerospace Software Engineers',
+  heading: pageHeadings['/aerospace_industry'],
   intro: 'Build a stronger aerospace team with eThing. We connect aerospace and defence companies with engineers for embedded software, hardware integration, ground control applications and testing.',
   overview: {
     heading: 'The right people for your engineering team',

@@ -1,3 +1,4 @@
+import pageHeadings from '../data/pageHeadings.json'
 import { useCallback, useEffect, useState } from 'react'
 import { motion, useReducedMotion, AnimatePresence } from 'framer-motion'
 import {
@@ -183,7 +184,7 @@ export default function HireDevelopersLanding({ content = landingPageContent, me
               </div>
 
               <h1 className="text-balance font-[family:var(--font-display)] text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-[3.25rem]">
-                {c.hero.headline}
+                {pageHeadings[meta.path] ?? c.hero.headline}
               </h1>
               <p className="mt-5 max-w-xl text-base leading-relaxed text-zinc-300 sm:text-lg">
                 {c.hero.subheadline}

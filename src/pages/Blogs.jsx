@@ -1,3 +1,4 @@
+import pageHeadings from '../data/pageHeadings.json'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
@@ -92,7 +93,7 @@ export default function Blogs({ content }) {
   }, [feedUrl])
 
   return (
-    <PageShell title={p.title} kicker={p.kicker} compact>
+    <PageShell title={pageHeadings['/blogs']} kicker={p.kicker} compact>
       <p className="mt-4 max-w-2xl text-lg text-zinc-600 leading-relaxed">{p.intro}</p>
 
       {!feedUrl && (

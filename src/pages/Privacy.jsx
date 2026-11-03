@@ -1,3 +1,4 @@
+import pageHeadings from '../data/pageHeadings.json'
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -47,7 +48,7 @@ export default function Privacy({ content }) {
             {p.heroEyebrow}
           </p>
           <h1 className="mt-3 font-[family:var(--font-display)] text-3xl font-bold tracking-tight text-ething-ink text-balance md:text-4xl lg:text-[2.75rem] lg:leading-tight">
-            {p.title}
+            {pageHeadings['/privacy-policy']}
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-zinc-600 md:text-lg">
             {p.description}

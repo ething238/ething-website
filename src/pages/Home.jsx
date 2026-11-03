@@ -1,3 +1,4 @@
+import pageHeadings from '../data/pageHeadings.json'
 import { useState } from 'react'
 import { ArrowRight, ArrowUpRight, BrainCircuit, Building2, Car, Check, ChevronDown, Cloud, Code2, Cpu, HeartPulse, Layers3, Mail, Network, Plane, ShieldCheck, Smartphone, Sparkles, TrainFront, BookOpen } from 'lucide-react'
 import ContactForm from '../components/HomepageEnquiryForm.jsx'
@@ -41,8 +42,8 @@ export default function Home({ content }) {
     <section className="hero-section" id="top">
       <div className="container hero-grid">
         <div className="hero-copy">
-          <h1>IT Staff Augmentation Services</h1>
-          <p>eThing delivers IT staff augmentation services for teams worldwide, supporting software, AI and cloud projects. Hire programmers who integrate with existing teams and deliver the work your project needs.</p>
+          <h1>{pageHeadings['/']}</h1>
+          <p>Extend your team with AI developers, Python developers and Oracle EBS consultants from India. We also provide custom website, mobile application and software development services.</p>
           <div className="hero-actions"><a className="button button-blue" href="#reach-out" onClick={() => enquire('Team extension')}>Find your team <ArrowUpRight size={19} aria-hidden="true" /></a></div>
           <div className="hero-proof" aria-label="eThing delivery and hiring experience"><div><strong>20+</strong><span>Projects delivered</span></div><div><strong>48 hrs</strong><span>Average profile sharing time</span></div></div>
         </div>
@@ -62,7 +63,8 @@ export default function Home({ content }) {
             <div className="expertise-actions"><a className="text-link" href="#reach-out" onClick={() => enquire('Team extension', area.label)}>Talk about your needs <ArrowUpRight size={17} aria-hidden="true" /></a><a className="subtle-link" href={homepageHref(area.path)}>{area.link}<ArrowUpRight size={14} aria-hidden="true" /></a></div>
           </div> })}</div>
         </div>
-        <div className="hire-links"><span>Looking for a specific skill?</span><a href={homepageHref('/hire-react-developers')}>React <ArrowUpRight size={13} aria-hidden="true" /></a><a href={homepageHref('/hire-python-developers')}>Python <ArrowUpRight size={13} aria-hidden="true" /></a><a href={homepageHref('/hire-full-stack-developers')}>Full stack <ArrowUpRight size={13} aria-hidden="true" /></a><a href={homepageHref('/hire-devops-engineers')}>DevOps <ArrowUpRight size={13} aria-hidden="true" /></a></div>      </div>
+        <div className="hire-links"><span>Looking for a specific skill?</span><a href={homepageHref('/hire-react-developers')}>React <ArrowUpRight size={13} aria-hidden="true" /></a><a href={homepageHref('/hire-python-developers')}>Python <ArrowUpRight size={13} aria-hidden="true" /></a><a href={homepageHref('/hire-full-stack-developers')}>Full stack <ArrowUpRight size={13} aria-hidden="true" /></a><a href={homepageHref('/hire-devops-engineers')}>DevOps <ArrowUpRight size={13} aria-hidden="true" /></a></div>
+      </div>
     </section>
 
     <section className="section reviews-section" id="reviews">

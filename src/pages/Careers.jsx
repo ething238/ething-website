@@ -1,3 +1,4 @@
+import pageHeadings from '../data/pageHeadings.json'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -32,7 +33,7 @@ export default function Careers({ content }) {
                 {p.heroKicker}
               </p>
               <h1 className="mt-6 font-[family:var(--font-display)] text-4xl font-bold tracking-tight text-ething-ink md:text-5xl md:leading-[1.08]">
-                {p.heroTitle}
+                {pageHeadings['/careers']}
               </h1>
             </div>
 

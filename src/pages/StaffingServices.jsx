@@ -1,3 +1,4 @@
+import pageHeadings from '../data/pageHeadings.json'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -75,7 +76,7 @@ export default function StaffingServices({ content }) {
                 {p.heroKicker}
               </p>
               <h1 className="mt-5 font-[family:var(--font-display)] text-[1.65rem] font-bold leading-[1.2] tracking-tight text-ething-ink sm:text-3xl md:text-4xl lg:text-[2.35rem]">
-                {p.heroTitle}
+                {pageHeadings['/staffing_services']}
               </h1>
               <p className="mt-6 text-base leading-relaxed text-zinc-600 md:text-lg">{p.heroIntro}</p>
               <div className="mt-8 flex flex-wrap gap-3">

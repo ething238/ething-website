@@ -1,3 +1,4 @@
+import pageHeadings from './pageHeadings.json'
 import { pageTitles, pageDescriptions } from './pageTitles.js'
 import { landingPageContent, landingPageMeta } from './landingPageContent.js'
 
@@ -38,7 +39,7 @@ function createLandingPage({
       hero: {
         ...landingPageContent.hero,
         badge,
-        headline,
+        headline: pageHeadings[path] ?? headline,
         subheadline,
         primaryCta,
         trustBar: sharedTrustBar,

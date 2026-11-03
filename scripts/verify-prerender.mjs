@@ -4,6 +4,7 @@ import assert from 'node:assert/strict'
 import vm from 'node:vm'
 
 const sitemap = await fs.readFile('dist/sitemap.xml', 'utf8')
+const pageHeadings = JSON.parse(await fs.readFile('src/data/pageHeadings.json', 'utf8'))
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1])
 const titles = new Set()
 const descriptions = new Set()
@@ -14,6 +15,11 @@ for (const url of urls) {
   const directGaLoaders = (html.match(/<script\b[^>]*src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4"/g) || []).length
   const conditionalGaLoaders = (html.match(/googleTag\.src\s*=\s*['"]https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4['"]/g) || []).length
   assert.equal((html.match(/<h1\b/gi) || []).length, 1, `${route}: expected one H1`)
+  const heading = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]
+    .replace(/<br\s*\/?\s*>/gi, ' ').replace(/<[^>]*>/g, '')
+    .replaceAll('&amp;', '&').replaceAll('&#x27;', "'").replaceAll('&#39;', "'")
+    .replace(/\s+/g, ' ').trim()
+  assert.equal(heading, pageHeadings[route], `${route}: H1 must match the approved copy`)
   assert.match(html, /<a\b[^>]*href=/i, `${route}: missing crawlable links`)
   assert.match(html, /<meta\b[^>]*name="description"[^>]*content="[^"]+"/i, `${route}: missing description`)
   assert.equal((html.match(/<title\b/gi) || []).length, 1, `${route}: duplicate titles`)
@@ -36,7 +42,7 @@ for (const url of urls) {
   if (route === '/aerospace_industry') {
     assert.equal(title, 'Aerospace Software Engineers | eThing', `${route}: reviewed title changed`)
     assert.equal(description, 'eThing provides engineers for aerospace teams. Find talent for embedded software, hardware integration, ground control and testing.', `${route}: reviewed description changed`)
-    assert.match(html, /<h1[^>]*>Aerospace Software Engineers<\/h1>/, `${route}: missing rendered heading`)
+    assert.match(html, /<h1[^>]*>Hire Aerospace Software Engineers<\/h1>/, `${route}: missing rendered heading`)
     assert.equal((html.match(/class="aerospace-service-image"/g) || []).length, 5, `${route}: expected five service photos`)
     assert.equal((html.match(/class="aerospace-technology-card"/g) || []).length, 5, `${route}: expected five technology cards`)
     for (const id of ['aerospace-defense-software', 'embedded-systems-defense', 'fpga-drivers-bsp', 'ground-control-systems', 'aerospace-software-testing']) {

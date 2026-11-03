@@ -1,3 +1,4 @@
+import pageHeadings from '../data/pageHeadings.json'
 import { Helmet as Head } from 'react-helmet-async';
 import '../styles/about-us.css';
 import '../styles/healthcare.css';
@@ -15,7 +16,7 @@ const { title, description, overview } = seo;
 const brand = (text) => text.replace(/\bEthing(?: Solutions)?\b/gi, 'eThing');
 const page = {
   ...original.healthcare,
-  heading: 'Healthcare Software Development and IT Staffing',
+  heading: pageHeadings['/healthcare_industry'],
   capabilitiesTitle: 'Service capabilities',
   heroImage: delivery.hero,
   sections: original.healthcare.sections.map(section => {

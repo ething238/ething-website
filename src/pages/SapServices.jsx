@@ -1,3 +1,4 @@
+import pageHeadings from '../data/pageHeadings.json'
 // Approved SAP page, integrated without a second React or analytics bootstrap.
 import * as react from 'react';
 import * as jsx_runtime from 'react/jsx-runtime';
@@ -323,7 +324,7 @@ export default function SapServices() {
                                     children: [
                                         jsx_runtime.jsx("h1", {
                                             id: "sap-title",
-                                            children: "SAP Staff Augmentation Services"
+                                            children: pageHeadings['/sap-services']
                                         }),
                                         jsx_runtime.jsx("p", {
                                             className: "sap-hero-description",

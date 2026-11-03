@@ -4,6 +4,7 @@ import { build, createServer } from 'vite';
 import react from '@vitejs/plugin-react';
 
 const root = process.cwd();
+const pageHeadings = JSON.parse(await fs.readFile('src/data/pageHeadings.json', 'utf8'));
 const temporary = path.resolve(root, 'artifacts/ai-hiring-build');
 const published = path.resolve(root, 'public/ai-hiring-assets');
 if (!temporary.startsWith(path.join(root, 'artifacts') + path.sep) || !published.startsWith(path.join(root, 'public') + path.sep)) throw new Error('AI output directories must remain inside this checkout.');
@@ -39,7 +40,7 @@ try {
   const html = template.replace('</head>', `${head.join('\n')}\n<meta name="robots" content="index,follow"/>\n<link rel="icon" type="image/png" sizes="48x48" href="/ai-staff/optimized/favicon-48.png"/>\n${styles}\n<noscript><style>.ai-hero-copy,.ai-lead-card{animation:none!important}</style></noscript>\n</head>`)
     .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
     .replace('</body>', `<script type="module" src="/ai-hiring-assets/${path.basename(entry.file)}"></script>\n</body>`);
-  if ((html.match(/<h1\b/g) || []).length !== 1 || !html.includes('Hire AI Developers in India')) throw new Error('The complete AI page must be rendered into HTML.');
+  if ((html.match(/<h1\b/g) || []).length !== 1 || !html.includes(pageHeadings['/hire-ai-developers'].replaceAll('&', '&amp;'))) throw new Error('The complete AI page must be rendered into HTML.');
   await fs.mkdir('public/hire-ai-developers', { recursive: true });
   await fs.writeFile('public/hire-ai-developers/index.html', html.replace(/[\t ]+$/gm, ''));
   console.log(`Rendered lightweight AI Developers HTML with ${entry.file} and ${entry.css.join(', ')}.`);

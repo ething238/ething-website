@@ -1,8 +1,9 @@
+import pageHeadings from './pageHeadings.json'
 // Sources and owner-supplied founder details are recorded in the SEO notes; the original copy is retained separately.
 const aboutUsSeoContent = {
   title: 'About eThing | IT Staffing & Engineering in India',
   description: 'Meet eThing, an IT staffing and engineering partner in Gurugram, India. Explore our founder, client reviews and project experience.',
-  heroTitle: 'About eThing',
+  heroTitle: pageHeadings['/about_us'],
   heroParagraphs: [
     'eThing is an IT staff augmentation company based in Gurugram, India. We help businesses extend their engineering teams and support software delivery with people whose skills fit the work ahead.',
     'Our capabilities span software architecture, custom development, system integration, quality assurance and technology strategy. We bring software and AI engineering talent together with consulting and delivery support, helping clients connect their business priorities with practical technical expertise.',

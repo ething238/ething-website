@@ -92,6 +92,11 @@ Legacy redirect aliases: `/about` → `/about_us`, `/staffing-services` → `/st
 
 ## Editing Content
 
+Approved H1 copy for every public page is maintained in `src/data/pageHeadings.json`.
+Native React pages read that map, and `scripts/sync-page-headings.mjs` synchronizes
+the standalone exports and their browser hydration bundles during the build.
+Changed exported bundles receive new filenames to avoid cached headings returning.
+
 All website copy, navigation, service cards, testimonials, industry pages, and engineering pages are controlled from a single file:
 
 ```

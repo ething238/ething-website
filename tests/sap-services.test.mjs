@@ -12,7 +12,7 @@ const canonical = 'https://www.ethingsolutions.com/sap-services';
 test('SAP is rendered, indexable and linked second under Hire Talent', () => {
   assert.equal((html.match(/<h1\b/g) || []).length, 1);
   assert.equal((html.match(/<main\b/g) || []).length, 1);
-  assert.match(html, /<h1[^>]*>SAP Staff Augmentation Services<\/h1>/);
+  assert.match(html, /<h1[^>]*>SAP Staff Augmentation for Contract Consultant Hiring<\/h1>/);
   assert.match(html, new RegExp(`rel="canonical" href="${canonical}"`));
   assert.doesNotMatch(html, /noindex|sap-hero-artwork/);
   assert.equal((html.match(/id="sap-role-detail-\d+"/g) || []).length, 15);
