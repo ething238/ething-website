@@ -96,6 +96,8 @@ Approved H1 copy for every public page is maintained in `src/data/pageHeadings.j
 Native React pages read that map, and `scripts/sync-page-headings.mjs` synchronizes
 the standalone exports and their browser hydration bundles during the build.
 Changed exported bundles receive new filenames to avoid cached headings returning.
+Decorative labels above public-page H1s are omitted. The same synchronization
+removes them from standalone HTML and browser hydration bundles.
 
 All website copy, navigation, service cards, testimonials, industry pages, and engineering pages are controlled from a single file:
 

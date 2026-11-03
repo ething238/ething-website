@@ -2,7 +2,7 @@ import pageHeadings from '../data/pageHeadings.json'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Layers } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import PageShell from '../components/PageShell.jsx'
 import { pageTitles } from '../data/siteContent.js'
 
@@ -46,11 +46,7 @@ function RichIndustryPage({ page, content }) {
         <div className="absolute inset-0 bg-gradient-to-r from-ething-navy/92 via-ething-navy/82 to-ething-navy/65" />
         <div className="relative mx-auto flex max-w-6xl flex-col px-4 pb-11 pt-6 sm:px-6 sm:pb-14 sm:pt-9 lg:px-8 lg:pb-16">
           <div className="max-w-2xl">
-            <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80">
-              <Layers className="h-4 w-4 opacity-90" strokeWidth={1.75} aria-hidden />
-              {page.heroKicker ?? 'Industries'}
-            </p>
-            <h1 className="mt-4 font-[family:var(--font-display)] text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-[3.25rem] lg:leading-tight">
+            <h1 className="mt-0 font-[family:var(--font-display)] text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-[3.25rem] lg:leading-tight">
               {pageHeadings[page.path] ?? page.heading ?? page.title}
             </h1>
             <Link
@@ -177,7 +173,7 @@ export default function IndustryDetailPage({ content }) {
   }
 
   return (
-    <PageShell title={pageHeadings[page.path] ?? page.heading ?? page.title} kicker="Industries">
+    <PageShell title={pageHeadings[page.path] ?? page.heading ?? page.title}>
       <motion.p
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}

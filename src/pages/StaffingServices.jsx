@@ -71,11 +71,7 @@ export default function StaffingServices({ content }) {
             className="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-14"
           >
             <motion.div className="lg:col-span-6" variants={fadeUp}>
-              <p className="inline-flex items-center gap-2 rounded-full border border-violet-200/80 bg-violet-50/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-800">
-                <span className="h-1.5 w-1.5 rounded-full bg-violet-500" aria-hidden />
-                {p.heroKicker}
-              </p>
-              <h1 className="mt-5 font-[family:var(--font-display)] text-[1.65rem] font-bold leading-[1.2] tracking-tight text-ething-ink sm:text-3xl md:text-4xl lg:text-[2.35rem]">
+              <h1 className="mt-0 font-[family:var(--font-display)] text-[1.65rem] font-bold leading-[1.2] tracking-tight text-ething-ink sm:text-3xl md:text-4xl lg:text-[2.35rem]">
                 {pageHeadings['/staffing_services']}
               </h1>
               <p className="mt-6 text-base leading-relaxed text-zinc-600 md:text-lg">{p.heroIntro}</p>

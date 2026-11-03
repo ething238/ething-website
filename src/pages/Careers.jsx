@@ -28,11 +28,7 @@ export default function Careers({ content }) {
         <div className="relative mx-auto max-w-6xl px-4 pb-11 pt-6 sm:px-6 sm:pb-14 sm:pt-9 lg:px-8 lg:pb-16">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-start lg:gap-10">
             <div className="lg:col-span-5">
-              <p className="inline-flex items-center gap-2 rounded-full border border-violet-200/80 bg-violet-50/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-800">
-                <span className="h-1.5 w-1.5 rounded-full bg-violet-500" aria-hidden />
-                {p.heroKicker}
-              </p>
-              <h1 className="mt-6 font-[family:var(--font-display)] text-4xl font-bold tracking-tight text-ething-ink md:text-5xl md:leading-[1.08]">
+              <h1 className="mt-0 font-[family:var(--font-display)] text-4xl font-bold tracking-tight text-ething-ink md:text-5xl md:leading-[1.08]">
                 {pageHeadings['/careers']}
               </h1>
             </div>

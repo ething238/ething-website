@@ -20,6 +20,7 @@ for (const url of urls) {
     .replaceAll('&amp;', '&').replaceAll('&#x27;', "'").replaceAll('&#39;', "'")
     .replace(/\s+/g, ' ').trim()
   assert.equal(heading, pageHeadings[route], `${route}: H1 must match the approved copy`)
+  assert.doesNotMatch(html, /<(p|div)\b(?=[^>]*class="[^"]*(?:eyebrow|kicker|wordmark|text-xs|text-\[11px\])[^"]*")[^>]*>(?:(?!<\/\1>)[\s\S])*<\/\1>\s*<h1\b/i, `${route}: decorative label above H1 returned`)
   assert.match(html, /<a\b[^>]*href=/i, `${route}: missing crawlable links`)
   assert.match(html, /<meta\b[^>]*name="description"[^>]*content="[^"]+"/i, `${route}: missing description`)
   assert.equal((html.match(/<title\b/gi) || []).length, 1, `${route}: duplicate titles`)

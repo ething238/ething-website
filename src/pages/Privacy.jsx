@@ -44,10 +44,7 @@ export default function Privacy({ content }) {
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="mx-auto max-w-3xl px-4 pb-11 pt-6 text-center sm:px-6 sm:pb-14 sm:pt-9 lg:px-8 lg:pb-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-violet-600">
-            {p.heroEyebrow}
-          </p>
-          <h1 className="mt-3 font-[family:var(--font-display)] text-3xl font-bold tracking-tight text-ething-ink text-balance md:text-4xl lg:text-[2.75rem] lg:leading-tight">
+          <h1 className="mt-0 font-[family:var(--font-display)] text-3xl font-bold tracking-tight text-ething-ink text-balance md:text-4xl lg:text-[2.75rem] lg:leading-tight">
             {pageHeadings['/privacy-policy']}
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-zinc-600 md:text-lg">

@@ -16,7 +16,6 @@ import {
   Brain,
   Box,
   ShoppingCart,
-  Sparkles,
 } from 'lucide-react'
 import { landingPageContent, landingPageMeta } from '../data/landingPageContent.js'
 import { captureUtmParams } from '../lib/utmParams.js'
@@ -178,10 +177,6 @@ export default function HireDevelopersLanding({ content = landingPageContent, me
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: easeOut }}
             >
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] px-4 py-2 text-xs font-medium text-zinc-200 backdrop-blur-md">
-                <Sparkles className="h-3.5 w-3.5 text-teal-300" />
-                {c.hero.badge}
-              </div>
 
               <h1 className="text-balance font-[family:var(--font-display)] text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-[3.25rem]">
                 {pageHeadings[meta.path] ?? c.hero.headline}

@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { createHash } from 'node:crypto'
+import ts from 'typescript'
 
 // Independent exported pages are checked into public/. Keep their initial HTML
 // and Next.js hydration copy aligned with the headings used by native React pages.
@@ -17,6 +18,53 @@ async function readTree(directory) {
 await readTree(root)
 const files = new Map(original)
 const pending = new Set()
+// Remove only decorative labels immediately above the main heading. Update
+// exported React calls too, so hydration cannot bring those labels back.
+const badgeScripts = new Set()
+let removedBadges = 0
+for (const route of Object.keys(headings)) {
+  if (route === '/') continue
+  const file = path.join(root, route.slice(1), 'index.html')
+  const html = files.get(file)
+  if (!html) continue
+  const pattern = /<(p|div)\b(?=[^>]*class="[^"]*\b(?:eyebrow|erp-service-kicker|hub-hero-wordmark)\b[^"]*")[^>]*>[\s\S]*?<\/\1>\s*(?=<h1\b)/g
+  const next = html.replace(pattern, '')
+  if (next === html) continue
+  files.set(file, next)
+  removedBadges++
+  if (html.includes('id="__NEXT_DATA__"')) {
+    for (const match of html.matchAll(/<script\b[^>]*src="(\/[^\"]+)"/g)) {
+      badgeScripts.add(path.join(root, new URL(match[1], 'https://local.invalid').pathname))
+    }
+  }
+}
+let removedHydrationBadges = 0
+for (const file of badgeScripts) {
+  const text = files.get(file)
+  if (!text || !/className\s*:\s*["'][^"']*\b(?:eyebrow|hub-hero-wordmark)\b/.test(text)) continue
+  const source = ts.createSourceFile(file, text, ts.ScriptTarget.Latest, true, ts.ScriptKind.JS)
+  const edits = new Map()
+  function visit(node) {
+    if (ts.isCallExpression(node) && node.arguments[0] && ts.isStringLiteral(node.arguments[0]) && node.arguments[0].text === 'h1') {
+      let child = node
+      while (child.parent && !ts.isArrayLiteralExpression(child.parent) && !ts.isFunctionLike(child.parent)) child = child.parent
+      if (child.parent && ts.isArrayLiteralExpression(child.parent)) {
+        const siblings = child.parent.elements
+        const index = siblings.indexOf(child)
+        const previous = index > 0 ? siblings[index - 1] : null
+        if (previous && /className\s*:\s*["'][^"']*\b(?:eyebrow|hub-hero-wordmark)\b/.test(previous.getText(source))) {
+          edits.set(previous.getStart(source), previous.end)
+        }
+      }
+    }
+    ts.forEachChild(node, visit)
+  }
+  visit(source)
+  let next = text
+  for (const [start, end] of [...edits].sort(([a], [b]) => b - a)) next = next.slice(0, start) + 'null' + next.slice(end)
+  if (next !== text) { files.set(file, next); pending.add(file); removedHydrationBadges += edits.size }
+}
+if (badgeScripts.size && !removedHydrationBadges) throw new Error('Could not remove the exported hero labels from their hydration bundles')
 const escapeHtml = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
 const plain = text => text.replace(/<br\s*\/?\s*>/gi, ' ').replace(/<[^>]+>/g, '').replaceAll('&amp;', '&').replaceAll('&nbsp;', ' ').replaceAll('&#x27;', "'").replaceAll('&#39;', "'").replaceAll('&quot;', '"').replace(/\s+/g, ' ').trim()
 let updated = 0
@@ -99,4 +147,4 @@ for (const file of original.keys()) {
   if (!file.startsWith(root + path.sep) || !file.endsWith('.js')) throw new Error('Unexpected asset removal')
   await fs.unlink(file)
 }
-console.log(`Synchronized ${updated} standalone page headings and their hydration assets.`)
+console.log(`Synchronized ${updated} standalone headings; removed ${removedBadges} hero labels and ${removedHydrationBadges} hydration label calls.`)
