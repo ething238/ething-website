@@ -15,7 +15,6 @@ function Icon({ kind, size = 20 }) {
     youtube: <><rect x="1" y="4.5" width="22" height="15" rx="4.5" fill="currentColor" stroke="none"/><path d="m10 8.5 6 3.5-6 3.5Z" fill="white" stroke="none"/></>,
     phone: <path d="M8 3H4a1 1 0 0 0-1 1c0 9 8 17 17 17a1 1 0 0 0 1-1v-4l-5-2-2 3c-3-1-6-4-7-7l3-2-2-5Z"/>,
     pin: <><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></>,
-    up: <path d="m6 11 6-6 6 6M12 5v15"/>,
   };
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[kind]}</svg>;
 }
@@ -55,7 +54,7 @@ export default function SiteFooter() {
               </div>
             </div>
           </div>
-          <div className="fs-bottom"><p>© {new Date().getFullYear()} eThing. All rights reserved.</p><div><a href="/privacy-policy">Privacy policy</a><a href="#top" className="fs-back-top">Back to top <Icon kind="up" size={15}/></a></div></div>
+          <div className="fs-bottom"><p>© {new Date().getFullYear()} eThing. All rights reserved.</p></div>
         </div>
       </footer>;
 }

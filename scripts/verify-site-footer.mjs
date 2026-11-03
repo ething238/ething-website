@@ -15,9 +15,11 @@ for (const route of [...routes, '/visitor-dashboard', '/404']) {
   assert.doesNotMatch(footer, /Instagram|AI Staff Augmentation|Product Security|Explore all talent/i, `${route}: removed footer content returned`)
   assert.match(footer, /AI engineering, Python development and Oracle EBS services/)
   assert.match(footer, /width="70" height="70"/)
+  assert.doesNotMatch(footer, /Back to top|fs-back-top/, `${route}: removed bottom-row link returned`)
   assert.doesNotMatch(html, /<footer\b[^>]*class="(?:campaign-footer|hub-footer|hire-site-footer|about-copy-footer)/, `${route}: duplicate legacy footer`)
   const links = [...footer.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(match => match[1])
-  assert.equal(links.length, 36, `${route}: footer links are incomplete`)
+  assert.equal(links.length, 34, `${route}: footer links are incomplete`)
+  assert.equal(links.filter(href => href === '/privacy-policy').length, 1, `${route}: Privacy Policy must appear once`)
   if (!expectedLinks) expectedLinks = links
   assert.deepEqual(links, expectedLinks, `${route}: footer destinations differ`)
   for (const href of links) {

@@ -196,6 +196,8 @@ Results are viewable at `/visitor-dashboard`.
 
 ## Deployment
 
+Footer typography uses consistent 16px headings and 13px body text and links. The bottom row contains only the copyright notice; Privacy Policy remains available once under Company.
+
 The shared footer is implemented in `src/components/SiteFooter.jsx`, with navigation in `src/data/siteFooter.js` and scoped styles in `src/styles/site-footer.css`. Native pages and `LandingFooter` use that component. During a build, `scripts/sync-site-footers.mjs` renders it into the 11 independent HTML pages and copies its stylesheet, so future footer changes stay consistent across the entire site. `scripts/verify-site-footer.mjs` checks all 36 generated pages and every footer destination; add `--live` to also check the 28 internal destinations on the public website. The footer logo is 70px on desktop and 56px on mobile. Instagram remains omitted until the company creates its account.
 
 Build and upload `dist/` to Hostinger via FTP or the file manager. The build prerenders every sitemap route and verifies its H1, content links, unique title, description, canonical and scripts. Existing standalone landing pages are preserved. `public/.htaccess` serves each route’s HTML, redirects legacy aliases, and returns HTTP 404 for unknown routes. Upload the entire `dist/` directory, including `.htaccess`, `404.html`, assets and PHP APIs. Remove any older hosting-level catch-all SPA rewrite that overrides these rules.
