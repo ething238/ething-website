@@ -1,0 +1,465 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-11-03T15:20:49.213Z",
+  "containerVersion": {
+    "path": "accounts/6336865557/containers/242233288/versions/0",
+    "accountId": "6336865557",
+    "containerId": "242233288",
+    "containerVersionId": "0",
+    "container": {
+      "path": "accounts/6336865557/containers/242233288",
+      "accountId": "6336865557",
+      "containerId": "242233288",
+      "name": "www.ethingsolutions.com",
+      "publicId": "GTM-T9DHQSVJ",
+      "usageContext": [
+        "WEB"
+      ],
+      "fingerprint": "1769754918339",
+      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6336865557/containers/242233288/workspaces?apiLink=container",
+      "features": {
+        "supportUserPermissions": true,
+        "supportEnvironments": true,
+        "supportWorkspaces": true,
+        "supportGtagConfigs": false,
+        "supportBuiltInVariables": true,
+        "supportClients": false,
+        "supportFolders": true,
+        "supportTags": true,
+        "supportTemplates": true,
+        "supportTriggers": true,
+        "supportVariables": true,
+        "supportVersions": true,
+        "supportZones": true,
+        "supportTransformations": false
+      },
+      "tagIds": [
+        "GTM-T9DHQSVJ"
+      ]
+    },
+    "tag": [
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "tagId": "3",
+        "name": "Apollo",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement(\"script\");\no.src=\"https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=\"+n,o.async=!0,o.defer=!0,\no.onload=function(){window.trackingFunctions.onLoad({appId:\"6787b2445326a502cf402477\"})},\ndocument.head.appendChild(o)}initApollo();</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "true"
+          }
+        ],
+        "fingerprint": "1769755207531",
+        "firingTriggerId": [
+          "2147479573"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        },
+        "blockingTriggerId": [
+          "1004"
+        ]
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "tagId": "1001",
+        "name": "eThing - Google Ads base (existing account)",
+        "type": "googtag",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "tagId",
+            "value": "AW-18230390699"
+          }
+        ],
+        "firingTriggerId": [
+          "1004"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "tagId": "1002",
+        "name": "eThing - Conversion Linker",
+        "type": "gclidw",
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableCrossDomain",
+            "value": "true"
+          }
+        ],
+        "firingTriggerId": [
+          "1003"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "tagId": "1003",
+        "name": "eThing - Google Ads - Confirmed lead",
+        "type": "awct",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "conversionId",
+            "value": "18230390699"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionLabel",
+            "value": "IeipCJLh2b8cEKvf9vRD"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableConversionLinker",
+            "value": "true"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableEnhancedConversionsCheckbox",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableNewCustomerReporting",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableProductReporting",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableShippingData",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "rdp",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "1001"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "tagId": "1004",
+        "name": "eThing - Google Ads - Existing conversion event",
+        "type": "awct",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "conversionId",
+            "value": "18230390699"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "conversionLabel",
+            "value": "Lvr0CKzirNEcEKvf9vRD"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableConversionLinker",
+            "value": "true"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableEnhancedConversionsCheckbox",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableNewCustomerReporting",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableProductReporting",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableShippingData",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "rdp",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "1002"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "tagId": "1005",
+        "name": "eThing - Existing Clarity project",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>(function(w,d){if(w.__ethingClarityStarted||w.clarity)return;w.__ethingClarityStarted=true;w.clarity=function(){(w.clarity.q=w.clarity.q||[]).push(arguments);};var s=d.createElement('script');s.async=true;s.src='https://www.clarity.ms/tag/x7qri3eadq';d.head.appendChild(s);})(window,document);</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "1003"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "tagId": "1006",
+        "name": "eThing - Calendly event bridge",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>(function(w){if(w.__ethingCalendlyBridge)return;w.__ethingCalendlyBridge=true;var seen={};w.addEventListener('message',function(e){if(e.origin!=='https://calendly.com'&&e.origin!=='https://www.calendly.com')return;var data=e.data;if(!data||typeof data.event!=='string'||data.event.indexOf('calendly.')!==0)return;w.dataLayer=w.dataLayer||[];if(data.event==='calendly.event_scheduled'){var booking=data.payload&&data.payload.event&&data.payload.event.uri||'scheduled';if(seen[booking])return;seen[booking]=true;}w.dataLayer.push({event:data.event});if(data.event==='calendly.event_scheduled'){var details={booking_provider:'calendly',landing_page:w.location.pathname};w.dataLayer.push({event:'invitee_meeting_scheduled',booking_provider:details.booking_provider,landing_page:details.landing_page});if(typeof w.gtag==='function')w.gtag('event','invitee_meeting_scheduled',{booking_provider:details.booking_provider,landing_page:details.landing_page,send_to:'G-2W7W1TB2H4'});}});})(window);</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "1003"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      }
+    ],
+    "builtInVariable": [
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "type": "PAGE_URL",
+        "name": "Page URL"
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "type": "PAGE_HOSTNAME",
+        "name": "Page Hostname"
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "type": "PAGE_PATH",
+        "name": "Page Path"
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "type": "REFERRER",
+        "name": "Referrer"
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "type": "EVENT",
+        "name": "Event"
+      }
+    ],
+    "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6336865557/containers/242233288/versions/0?apiLink=version",
+    "trigger": [
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "triggerId": "1001",
+        "name": "eThing - Confirmed enquiry (generate_lead)",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "generate_lead"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{Page Hostname}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "^(www\\.)?ethingsolutions\\.com$"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "triggerId": "1002",
+        "name": "eThing - Existing conversion event",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "conversion"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{Page Hostname}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "^(www\\.)?ethingsolutions\\.com$"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "triggerId": "1003",
+        "name": "eThing - Production pageview",
+        "type": "PAGEVIEW",
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{Page Hostname}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "^(www\\.)?ethingsolutions\\.com$"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "6336865557",
+        "containerId": "242233288",
+        "triggerId": "1004",
+        "name": "eThing - Production initialization",
+        "type": "INIT",
+        "filter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{Page Hostname}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "^(www\\.)?ethingsolutions\\.com$"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

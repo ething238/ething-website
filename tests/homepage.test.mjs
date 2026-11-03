@@ -20,8 +20,8 @@ test('homepage is prerendered at the existing canonical URL', () => {
 test('existing GA4 and GTM are each bootstrapped once', () => {
   assert.equal((html.match(/googleTag\.src\s*=\s*'https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4'/g) || []).length, 1)
   assert.equal((html.match(/gtag\('config', 'G-2W7W1TB2H4'\)/g) || []).length, 1)
-  assert.equal((html.match(/'dataLayer', 'GTM-TX73DK5H'\)/g) || []).length, 1)
-  assert.equal((html.match(/src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-TX73DK5H"/g) || []).length, 1)
+  assert.equal((html.match(/'dataLayer', 'GTM-T9DHQSVJ'\)/g) || []).length, 1)
+  assert.equal((html.match(/src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-T9DHQSVJ"/g) || []).length, 1)
 })
 
 test('all Skills tabs reserve space but only one is accessible', () => {

@@ -3,7 +3,7 @@ import path from 'node:path'
 import vm from 'node:vm'
 import assert from 'node:assert/strict'
 
-const ga = 'G-2W7W1TB2H4', gtm = 'GTM-TX73DK5H'
+const ga = 'G-2W7W1TB2H4', gtm = 'GTM-T9DHQSVJ'
 const base = process.argv[2] || 'dist'
 const sitemap = await fs.readFile(path.join(base, 'sitemap.xml'), 'utf8')
 const routes = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => new URL(m[1]).pathname)

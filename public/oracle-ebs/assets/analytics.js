@@ -3,7 +3,7 @@
   if (window.oracleEbsAnalyticsReady) return;
   window.oracleEbsAnalyticsReady = true;
   const measurementId = 'G-2W7W1TB2H4';
-  const containerId = 'GTM-TX73DK5H';
+  const containerId = 'GTM-T9DHQSVJ';
   const events = new Set(['lead_form_view', 'lead_form_start', 'lead_form_submit', 'lead_form_success', 'generate_lead', 'lead_form_error']);
   const safePage = location.origin + location.pathname;
   let safeReferrer = '';

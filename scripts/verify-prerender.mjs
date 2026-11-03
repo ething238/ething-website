@@ -60,8 +60,8 @@ for (const url of urls) {
   if (route === '/healthcare_industry' || route === '/aerospace_industry') {
     assert.equal(directGaLoaders + conditionalGaLoaders, 1, `${route}: expected one GA4 loader`)
     assert.equal((html.match(/gtag\(\s*['"]config['"]\s*,\s*['"]G-2W7W1TB2H4['"]/g) || []).length, 1, `${route}: expected one GA4 configuration`)
-    assert.equal((html.match(/['"]dataLayer['"]\s*,\s*['"]GTM-TX73DK5H['"]\s*\)/g) || []).length, 1, `${route}: expected one GTM initialization`)
-    assert.equal((html.match(/<noscript\b[^>]*>(?:(?!<\/noscript>)[\s\S])*?<iframe\b[^>]*src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-TX73DK5H"/g) || []).length, 1, `${route}: expected one GTM noscript iframe`)
+    assert.equal((html.match(/['"]dataLayer['"]\s*,\s*['"]GTM-T9DHQSVJ['"]\s*\)/g) || []).length, 1, `${route}: expected one GTM initialization`)
+    assert.equal((html.match(/<noscript\b[^>]*>(?:(?!<\/noscript>)[\s\S])*?<iframe\b[^>]*src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-T9DHQSVJ"/g) || []).length, 1, `${route}: expected one GTM noscript iframe`)
   }
   if (route === '/healthcare_industry') {
     assert.equal(title, 'Healthcare Software Development &amp; IT Staffing | eThing', `${route}: reviewed title changed`)
@@ -80,8 +80,8 @@ for (const url of urls) {
 
     assert.equal(directGaLoaders + conditionalGaLoaders, 1, `${route}: expected one GA4 loader`)
     assert.equal((html.match(/gtag\(\s*['"]config['"]\s*,\s*['"]G-2W7W1TB2H4['"]/g) || []).length, 1, `${route}: expected one GA4 configuration`)
-    assert.equal((html.match(/['"]dataLayer['"]\s*,\s*['"]GTM-TX73DK5H['"]\s*\)/g) || []).length, 1, `${route}: expected one GTM initialization`)
-    assert.equal((html.match(/<noscript\b[^>]*>(?:(?!<\/noscript>)[\s\S])*?<iframe\b[^>]*src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-TX73DK5H"/g) || []).length, 1, `${route}: expected one GTM noscript iframe`)
+    assert.equal((html.match(/['"]dataLayer['"]\s*,\s*['"]GTM-T9DHQSVJ['"]\s*\)/g) || []).length, 1, `${route}: expected one GTM initialization`)
+    assert.equal((html.match(/<noscript\b[^>]*>(?:(?!<\/noscript>)[\s\S])*?<iframe\b[^>]*src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-T9DHQSVJ"/g) || []).length, 1, `${route}: expected one GTM noscript iframe`)
 
     const nodes = schemas.flatMap((schema) => schema['@graph'] || [schema])
     const works = nodes.filter((node) => node['@type'] === 'CreativeWork')
