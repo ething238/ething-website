@@ -12,9 +12,9 @@ export const talentLinks = [
     ['IT Staff Augmentation', '/staff-augmentation'],
 ];
 export const company = [
+  ['Home', '/'],
   ['About us', '/about_us'], ['Staffing services', '/staffing_services'],
   ['Blogs', '/blogs'], ['Careers', '/careers'],
-  ['Privacy Policy', '/privacy-policy'],
 ];
 export const engineering = [
   ['Software Development', '/software_development'],

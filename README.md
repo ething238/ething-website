@@ -201,7 +201,7 @@ Results are viewable at `/visitor-dashboard`.
 
 ## Deployment
 
-Footer typography uses consistent 16px headings and 13px body text and links. The bottom row contains only the copyright notice; Privacy Policy remains available once under Company.
+Footer typography uses consistent 16px headings and 13px body text and links. Company keeps five links with Home first. Privacy Policy appears once in the bottom row beside the copyright notice.
 
 The shared footer is implemented in `src/components/SiteFooter.jsx`, with navigation in `src/data/siteFooter.js` and scoped styles in `src/styles/site-footer.css`. Native pages and `LandingFooter` use that component. During a build, `scripts/sync-site-footers.mjs` renders it into the 11 independent HTML pages and copies its stylesheet, so future footer changes stay consistent across the entire site. `scripts/verify-site-footer.mjs` checks all 36 generated pages and every footer destination; add `--live` to also check the 28 internal destinations on the public website. The footer logo is 70px on desktop and 56px on mobile. Instagram remains omitted until the company creates its account.
 

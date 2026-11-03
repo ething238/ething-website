@@ -54,7 +54,7 @@ export default function SiteFooter() {
               </div>
             </div>
           </div>
-          <div className="fs-bottom"><p>© {new Date().getFullYear()} eThing. All rights reserved.</p></div>
+          <div className="fs-bottom"><p>© {new Date().getFullYear()} eThing. All rights reserved.</p><a href="/privacy-policy">Privacy Policy</a></div>
         </div>
       </footer>;
 }

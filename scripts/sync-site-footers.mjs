@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import { createHash } from 'node:crypto'
 import { createServer } from 'vite'
 
 // Render the same component into independent pages without adding a React runtime.
@@ -10,6 +11,7 @@ try {
   const footer = renderStaticFooter()
   await fs.mkdir(path.join(directory, 'site-footer'), { recursive: true })
   await fs.copyFile('src/styles/site-footer.css', path.join(directory, 'site-footer/site-footer.css'))
+  const cssVersion = createHash('sha256').update(await fs.readFile('src/styles/site-footer.css')).digest('hex').slice(0, 12)
   const entries = await fs.readdir(directory, { withFileTypes: true })
   let updated = 0
   for (const entry of entries.filter(item => item.isDirectory())) {
@@ -20,8 +22,9 @@ try {
     if (!siteFooter.test(html)) throw new Error(`${file}: missing site footer`)
     html = html.replace(siteFooter, footer)
       .replace(/<footer\b[^>]*class="(?:campaign-footer|hub-footer)"[^>]*>[\s\S]*?<\/footer>/g, '')
-    const stylesheet = '<link rel="stylesheet" href="/site-footer/site-footer.css"/>'
-    if (!html.includes(stylesheet)) html = html.replace('</head>', stylesheet + '</head>')
+    const stylesheet = `<link rel="stylesheet" href="/site-footer/site-footer.css?v=${cssVersion}"/>`
+    const stylePattern = /<link\b[^>]*href="\/site-footer\/site-footer\.css(?:\?[^"]*)?"[^>]*>/g
+    html = stylePattern.test(html) ? html.replace(stylePattern, stylesheet) : html.replace('</head>', stylesheet + '</head>')
     if ((html.match(/class="fs-footer"/g) || []).length !== 1) throw new Error(`${file}: expected one shared footer`)
     await fs.writeFile(file, html)
     updated++

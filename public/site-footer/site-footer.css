@@ -57,7 +57,7 @@
 .fs-footer .fs-secondary ul { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px 18px; }
 .fs-footer .fs-secondary li a { color: #626875; font-size: var(--fs-body-size); line-height: 1.6; }
 .fs-footer .fs-bottom p { font-size: inherit; line-height: inherit; color: inherit; }
-.fs-footer .fs-bottom { padding: 16px 0; border-top: 1px solid var(--fs-line); color: #626875; font-size: var(--fs-body-size); }
+.fs-footer .fs-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; padding: 16px 56px 16px 0; border-top: 1px solid var(--fs-line); color: #626875; font-size: var(--fs-body-size); }
 .fs-footer.fs-footer :is(a,button):focus-visible { outline: 2px solid #285e9a; outline-offset: 5px; }
 
 @media (min-width:1400px) { .fs-footer .fs-container { padding: 0 24px; } }

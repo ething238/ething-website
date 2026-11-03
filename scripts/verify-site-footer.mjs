@@ -18,8 +18,14 @@ for (const route of [...routes, '/visitor-dashboard', '/404']) {
   assert.doesNotMatch(footer, /Back to top|fs-back-top/, `${route}: removed bottom-row link returned`)
   assert.doesNotMatch(html, /<footer\b[^>]*class="(?:campaign-footer|hub-footer|hire-site-footer|about-copy-footer)/, `${route}: duplicate legacy footer`)
   const links = [...footer.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(match => match[1])
-  assert.equal(links.length, 34, `${route}: footer links are incomplete`)
+  assert.equal(links.length, 35, `${route}: footer links are incomplete`)
   assert.equal(links.filter(href => href === '/privacy-policy').length, 1, `${route}: Privacy Policy must appear once`)
+  const company = footer.match(/<nav\b[^>]*class="fs-company"[^>]*>[\s\S]*?<\/nav>/)?.[0]
+  assert.ok(company, `${route}: missing Company navigation`)
+  const companyLinks = [...company.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(match => match[1])
+  assert.deepEqual(companyLinks, ['/', '/about_us', '/staffing_services', '/blogs', '/careers'], `${route}: Company must keep five links with Home first`)
+  const bottom = footer.match(/<div\b[^>]*class="fs-bottom"[^>]*>[\s\S]*?<\/div>/)?.[0]
+  assert.match(bottom || '', /<a\b[^>]*href="\/privacy-policy"[^>]*>Privacy Policy<\/a>/, `${route}: Privacy Policy belongs in the bottom row`)
   if (!expectedLinks) expectedLinks = links
   assert.deepEqual(links, expectedLinks, `${route}: footer destinations differ`)
   for (const href of links) {
