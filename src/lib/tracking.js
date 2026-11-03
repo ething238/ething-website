@@ -30,6 +30,8 @@ function injectInlineScript(id, content) {
 export function initTracking() {
   if (initialized || typeof window === 'undefined') return
   initialized = true
+  if (!['ethingsolutions.com', 'www.ethingsolutions.com'].includes(window.location?.hostname)) return
+  if (/^\/visitor-dashboard\/?$/.test(window.location.pathname)) return
 
   const gtmAlreadyLoaded = document.querySelector('script[src*="googletagmanager.com/gtm.js"]')
   if (GTM_ID && !gtmAlreadyLoaded) {

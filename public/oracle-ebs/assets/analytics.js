@@ -8,7 +8,7 @@
   const safePage = location.origin + location.pathname;
   let safeReferrer = '';
   try { const referrer = new URL(document.referrer); safeReferrer = referrer.origin + referrer.pathname; } catch {}
-  const local = !['https:', 'http:'].includes(location.protocol) || ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
+  const local = !['https:', 'http:'].includes(location.protocol) || !['ethingsolutions.com', 'www.ethingsolutions.com'].includes(location.hostname);
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
   window.oracleEbsTrack = event => {

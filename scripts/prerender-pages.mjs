@@ -52,8 +52,11 @@ try {
       throw new Error(`Missing SEO metadata for ${pathname}`)
     }
     const pageTemplate = ['/ai_staff_augmentation', '/sap-services'].includes(pathname) ? template.replace(/<link\b[^>]*rel="(?:icon|apple-touch-icon)"[^>]*>/gi, '') : template
-    const html = pageTemplate.replace('</head>', `${head.join('\n')}\n</head>`)
+    let html = pageTemplate.replace('</head>', `${head.join('\n')}\n</head>`)
       .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
+    if (pathname === '/visitor-dashboard') {
+      html = html.replace(/<noscript\b[^>]*>\s*<iframe\b[^>]*src="https:\/\/www\.googletagmanager\.com\/ns\.html[^\"]*"[\s\S]*?<\/noscript>/gi, '')
+    }
     await fs.mkdir(path.dirname(output), { recursive: true })
     await fs.writeFile(output, html)
     console.log(`Prerendered: ${pathname}`)

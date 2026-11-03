@@ -1,7 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import assert from 'node:assert/strict'
-import vm from 'node:vm'
 
 const sitemap = await fs.readFile('dist/sitemap.xml', 'utf8')
 const pageHeadings = JSON.parse(await fs.readFile('src/data/pageHeadings.json', 'utf8'))
@@ -98,20 +97,10 @@ for (const url of urls) {
     assert.deepEqual(work.isPartOf, { '@id': page['@id'] }, `${route}: governance approach must link back to WebPage`)
   }
   if (route === '/mobile_application') {
-    assert.equal(directGaLoaders, 0, `${route}: GA is managed by GTM; no direct loader`)
-    assert.equal(conditionalGaLoaders, 1, `${route}: missing shared conditional GA bootstrap`)
+    assert.equal(directGaLoaders, 0, `${route}: GA loader must use the production-host guard`)
+    assert.equal(conditionalGaLoaders, 1, `${route}: missing shared GA bootstrap`)
     const bootstrap = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(match => match[1]).find(code => code.includes('function gtag()'))
     assert.ok(bootstrap, `${route}: missing gtag event queue`)
-    for (const pathname of ['/ai_staff_augmentation', '/ai_staff_augmentation/', '/mobile_application', '/mobile_application/', '/website-development', '/about_us', '/']) {
-      const inserted = []
-      const context = { location: { pathname }, document: { createElement: () => ({}), head: { appendChild: script => inserted.push(script) } } }
-      context.window = context
-      vm.runInNewContext(bootstrap, context)
-      const mobile = /^\/(?:mobile_application|ai_staff_augmentation)\/?$/.test(pathname)
-      assert.equal(inserted.length, mobile ? 0 : 1, `${pathname}: GA loader selection failed`)
-      assert.equal(context.dataLayer.filter(item => item[0] === 'config' && item[1] === 'G-2W7W1TB2H4').length, 1, `${pathname}: expected one explicit GA configuration`)
-      assert.equal(typeof context.gtag, 'function', `${pathname}: missing event queue`)
-    }
   }
   // Detect broken local links and image URLs, including SSR source asset leaks.
   for (const match of html.matchAll(/<(?:a|img)\b[^>]*(?:href|src)="([^"#]+)"/gi)) {

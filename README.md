@@ -155,6 +155,19 @@ VITE_SUPABASE_URL=
 SUPABASE_SECRET_KEY=
 ```
 
+Production tracking uses GA4 `G-2W7W1TB2H4` and GTM `GTM-TX73DK5H` on both
+`ethingsolutions.com` and `www.ethingsolutions.com`. GA4 loads independently of GTM;
+its enhanced measurement owns pageviews, including browser-history navigation.
+Do not add a second GA4 pageview or custom-event forwarding tag in GTM without
+first removing the equivalent direct implementation. The current GTM container
+owns the existing Google Ads tags.
+
+The build runs `scripts/verify-analytics.mjs` against all public routes. Local and
+preview hosts, and `/visitor-dashboard`, do not load production Google tracking.
+`generate_lead` is emitted after confirmed enquiry delivery; attempts and errors
+use separate events. Email and phone links emit `contact_click` with their type
+and page location, without the address, phone number or form-field values.
+
 > **Hostinger deploy note:** If env vars are missing from the build, the app falls back to reading `public/config.json` at runtime. Keep that file in sync for keys that change without redeployment.
 
 ## Development

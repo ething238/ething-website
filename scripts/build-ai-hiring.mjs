@@ -31,8 +31,6 @@ try {
   const head = [];
   markup = markup.replace(/<title\b[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*>|<link\b[^>]*rel="(?:canonical|preload|alternate)"[^>]*>|<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi, tag => { head.push(tag); return ''; });
   let template = await fs.readFile('index.html', 'utf8');
-  // Retain the retired AI page's duplicate Google-tag-loader avoidance here.
-  template = template.replace('mobile_application|ai_staff_augmentation', 'mobile_application|hire-ai-developers');
   template = template.replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '').replace(/<meta\b[^>]*name="(?:description|robots)"[^>]*>/gi, '').replace(/<link\b[^>]*rel="(?:icon|apple-touch-icon)"[^>]*>/gi, '');
   template = template.replace(/https:\/\/fonts\.googleapis\.com\/css2\?[^\"]+/g, 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap');
   template = template.replace(/<script\b[^>]*src="\/src\/main\.jsx"[^>]*><\/script>/, '');

@@ -4,6 +4,8 @@
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
+        if (!['ethingsolutions.com', 'www.ethingsolutions.com'].includes(w.location.hostname) || /^\/visitor-dashboard\/?$/.test(w.location.pathname) || w.ethingGtmStarted) return
+        w.ethingGtmStarted = true
         w[l] = w[l] || []
         w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
         var f = d.getElementsByTagName(s)[0],
@@ -21,16 +23,17 @@
       function gtag() {
         dataLayer.push(arguments)
       }
-      // The existing GTM Google tag runtime can load this measurement ID.
-      // Avoid a second loader on mobile and AI staffing, preserving GA configuration.
-      if (!/^\/(?:mobile_application|hire-ai-developers)\/?$/.test(window.location.pathname)) {
+      // GA4 owns pageviews and history changes. GTM owns the existing Ads tags.
+      // Load GA4 on every production route; previews only keep the local queue.
+      if (['ethingsolutions.com', 'www.ethingsolutions.com'].includes(window.location.hostname) && !/^\/visitor-dashboard\/?$/.test(window.location.pathname) && !window.ethingGa4Started) {
+        window.ethingGa4Started = true
         var googleTag = document.createElement('script')
         googleTag.async = true
         googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=G-2W7W1TB2H4'
         document.head.appendChild(googleTag)
+        gtag('js', new Date())
+        gtag('config', 'G-2W7W1TB2H4')
       }
-      gtag('js', new Date())
-      gtag('config', 'G-2W7W1TB2H4')
     </script>
     <meta charset="UTF-8" />
 
@@ -61,7 +64,7 @@
 <link rel="icon" type="image/png" sizes="48x48" href="/ai-staff/optimized/favicon-48.png"/>
 <link rel="stylesheet" href="/ai-hiring-assets/ai-hiring-CqMn6WWj.css"/>
 <noscript><style>.ai-hero-copy,.ai-lead-card{animation:none!important}</style></noscript>
-<link rel="stylesheet" href="/site-footer/site-footer.css?v=307c21718fe5"/></head>
+<link rel="stylesheet" href="/site-footer/site-footer.css?v=307c21718fe5"/><script defer src="/site-analytics-events.js?v=9846ca099453"></script></head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript

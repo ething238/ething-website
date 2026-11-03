@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import { trackEvent } from '../lib/tracking.js'
+import { web3formsAccessKey } from './website-development/web3formsConfig.js'
 
 const WEB3FORMS_URL = 'https://api.web3forms.com/submit'
 
@@ -15,12 +17,19 @@ export default function ContactForm({
   const { form, homeTitle, note } = contactSection
   const heading = titleOverride ?? homeTitle
   const [status, setStatus] = useState('idle') // idle | submitting | success | error | not_configured
+  const sending = useRef(false)
+  const started = useRef(false)
+  const track = (name, details = {}) => trackEvent(name, {
+    landing_page: window.location.pathname, form_name: 'contact_enquiry', ...details,
+  })
 
   async function onSubmit(e) {
     e.preventDefault()
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+    if (sending.current || status === 'success') return
+    const accessKey = web3formsAccessKey
     if (!accessKey) {
       setStatus('not_configured')
+      track('lead_form_error', { reason: 'configuration' })
       return
     }
 
@@ -47,7 +56,9 @@ export default function ContactForm({
         .filter(Boolean)
         .join('\n')
 
+    sending.current = true
     setStatus('submitting')
+    track('lead_form_submit')
 
     try {
       const res = await fetch(WEB3FORMS_URL, {
@@ -64,14 +75,20 @@ export default function ContactForm({
       })
 
       const data = await res.json().catch(() => ({}))
-      if (res.ok && data.success) {
+      if (res.ok && data.success === true) {
         setStatus('success')
+        track('lead_form_success')
+        track('generate_lead')
         formEl.reset()
       } else {
         setStatus('error')
+        track('lead_form_error', { reason: 'delivery' })
       }
     } catch {
       setStatus('error')
+      track('lead_form_error', { reason: 'network' })
+    } finally {
+      sending.current = false
     }
   }
 
@@ -102,6 +119,7 @@ export default function ContactForm({
       <p className="mb-8 text-center text-sm text-zinc-500">{note}</p>
       <motion.form
         onSubmit={onSubmit}
+        onFocus={() => { if (!started.current) { started.current = true; track('lead_form_start') } }}
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-40px' }}
