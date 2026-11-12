@@ -1,5 +1,6 @@
 /** Shared route metadata for browser rendering, prerendering and sitemap generation. */
 export const pageTitles = {
+  "/blogs/hire-python-developers": "How to Hire Python Developers for Backend Projects | eThing",
   "/": "IT Staff Augmentation & Software Developers | eThing",
   "/about_us": "About Ething Solutions | IT Staffing & Engineering",
   "/healthcare_industry": "Healthcare Software Development & IT Staffing | eThing",
@@ -37,6 +38,7 @@ export const pageTitles = {
 }
 
 export const pageDescriptions = {
+  "/blogs/hire-python-developers": "Define the role, evaluate Django, FastAPI or Flask experience, and use a practical scorecard to shortlist backend engineers.",
   "/": "IT staff augmentation services for teams worldwide. Hire software developers for Python, React and mobile projects, with flexible engineering support from eThing.",
   "/about_us": "Meet Ething Solutions, your IT staffing and engineering partner in Gurugram, India. Explore our team, approach and flexible technology hiring services.",
   "/healthcare_industry": "Explore healthcare software development with eThing: clinical workflows, EHR requirements, integration, testing and engineering team support.",

@@ -1,0 +1,225 @@
+<article>
+    <header class="article-hero"><div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/blogs">Blogs</a></nav>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>How to Hire Python Developers for Backend Projects</h1>
+          <p class="dek">Define the role, evaluate Django, FastAPI or Flask experience, and use a practical scorecard to shortlist backend engineers.</p>
+        </div>
+        <div class="hero-media"><img src="python-backend-cover.webp" width="1440" height="960" alt="Two software engineers review code at a workstation."></div>
+      </div>
+    </div></header>
+    <div class="wrap article-layout">
+      <aside class="rail"><nav aria-labelledby="contents-title"><h2 id="contents-title">In this guide</h2><ul class="toc-list"><li><a href="#requirements">Define the role</a></li><li><a href="#frameworks">Django, FastAPI and Flask</a></li><li><a href="#skills">Skills to assess</a></li><li><a href="#job-description">Job description template</a></li><li><a href="#assessment">Coding assessment and scorecard</a></li><li><a href="#interview">Interview questions</a></li><li><a href="#where-to-hire">Where to hire</a></li><li><a href="#hiring-models">Compare hiring models</a></li><li><a href="#cost">Hiring costs</a></li><li><a href="#timeline">Hiring timeline</a></li><li><a href="#onboarding">First-month onboarding</a></li><li><a href="#red-flags">Red flags</a></li><li><a href="#checklist">Hiring checklist</a></li><li><a href="#hire-with-ething">Hire through eThing</a></li><li><a href="#shortlist">Build your shortlist</a></li><li><a href="#faq">Frequently asked questions</a></li></ul></nav></aside>
+      <details class="mobile-toc"><summary>In this guide</summary><nav aria-label="Article contents"><ul class="toc-list"><li><a href="#requirements">Define the role</a></li><li><a href="#frameworks">Django, FastAPI and Flask</a></li><li><a href="#skills">Skills to assess</a></li><li><a href="#job-description">Job description template</a></li><li><a href="#assessment">Coding assessment and scorecard</a></li><li><a href="#interview">Interview questions</a></li><li><a href="#where-to-hire">Where to hire</a></li><li><a href="#hiring-models">Compare hiring models</a></li><li><a href="#cost">Hiring costs</a></li><li><a href="#timeline">Hiring timeline</a></li><li><a href="#onboarding">First-month onboarding</a></li><li><a href="#red-flags">Red flags</a></li><li><a href="#checklist">Hiring checklist</a></li><li><a href="#hire-with-ething">Hire through eThing</a></li><li><a href="#shortlist">Build your shortlist</a></li><li><a href="#faq">Frequently asked questions</a></li></ul></nav></details>
+      <div class="prose">
+<p class="hook">An order request times out. The customer clicks “Pay” again. Your backend receives two requests for the same purchase. Does your system create one order or two?</p>
+<div class="quick-answer"><strong>Quick answer</strong><p>To hire Python developers for backend projects, define the workflows they will own, shortlist candidates with relevant framework and database experience, and test how they handle realistic failures. Compare their API design, security, testing, and deployment decisions before agreeing on costs, responsibilities, and a start date.</p></div>
+<p>A working endpoint is only the beginning. Your backend also needs to protect customer information, preserve accurate records, recover from failed integrations, and remain maintainable as the product grows.</p>
+<p>The hiring process should test those responsibilities directly. Here is how to build a useful shortlist, evaluate candidates, and choose an engagement that fits your project.</p>
+<section><h2 id="requirements">Define Your Python Backend Requirements First</h2>
+<p>“Looking for an experienced Python developer” gives candidates very little information about the job.</p>
+<p>A better brief explains what the application does, where it struggles, and what the new developer must deliver.</p>
+<p>Before you start hiring, document:</p>
+<ul>
+<li><strong>Business workflows:</strong> Orders, subscriptions, approvals, reporting, or other processes the backend supports.</li>
+<li><strong>Existing stack:</strong> Framework, database, hosting environment, and third-party integrations.</li>
+<li><strong>Expected workload:</strong> Typical traffic, peak demand, data volume, and background jobs.</li>
+<li><strong>Failure risks:</strong> Duplicate requests, interrupted transactions, slow dependencies, or unauthorized access.</li>
+<li><strong>Ownership:</strong> Who designs the solution, reviews the code, deploys changes, and supports production.</li>
+</ul>
+<p>For example:</p>
+<blockquote>“We need a Python backend developer to add organization-level permissions and background report exports to an existing application. Reports must remain accessible only to the requesting organization, and interrupted exports must be recoverable.”</blockquote>
+<p>This brief identifies the work and its acceptance criteria. It gives you something concrete to evaluate during interviews.</p>
+<p>If you’re hiring for an existing application, include compatibility requirements. Ask how candidates would introduce changes while preserving the behavior your customers depend on.</p>
+</section>
+<section><h2 id="frameworks">Which Framework Fits Your Project?</h2>
+<p>Framework experience matters most when it matches the application the developer will maintain.</p>
+<h3>When to hire Django developers</h3>
+<p>Django provides an object-relational mapper, migrations, and an administrative interface. These components suit database-driven products with substantial business and administrative workflows. See the <a href="https://docs.djangoproject.com/en/5.2/intro/overview/">Django documentation</a>.</p>
+<p>Ask a Django candidate:</p>
+<blockquote>“We need to change a field used by existing customer records. How would you prepare and release that migration?”</blockquote>
+<p>Look for an explanation of data preservation, compatibility, testing, and deployment order.</p>
+<h3>When to hire FastAPI developers</h3>
+<p>For a FastAPI service, investigate how candidates handle concurrent requests, external integrations, and timeouts.</p>
+<p>Ask:</p>
+<blockquote>“An endpoint calls three external services. One becomes slow and another fails. What response should our customer receive?”</blockquote>
+<p>Listen for an answer that connects implementation choices to the product’s requirements. Candidates should explain where concurrency helps and how they’d handle CPU-intensive work. See <a href="https://fastapi.tiangolo.com/async/">FastAPI’s concurrency guidance</a>.</p>
+<h3>When to hire Flask developers</h3>
+<p>For a Flask application, assess how candidates organize configuration, extensions, application setup, and tests.</p>
+<p>Ask:</p>
+<blockquote>“How would you run this application with different configurations during development, testing, and production?”</blockquote>
+<p>Flask’s application factories let developers create separate application instances with their own configurations. Ask candidates how they use that pattern to make the code easier to test and maintain. See the <a href="https://flask.palletsprojects.com/en/stable/patterns/appfactories/">Flask application factory documentation</a>.</p>
+<h3>How does a Django developer differ from a Python developer?</h3>
+<p>Python is a programming language. Django is a web framework built with Python.</p>
+<p>A Python developer might specialize in backend applications, automation, data engineering, or AI. A Django developer should have relevant Django experience, but you still need to evaluate database design, testing, permissions, and production troubleshooting.</p>
+<p>For an existing Django application, screen for both Python fundamentals and framework-specific experience.</p>
+</section>
+<section><h2 id="skills">Skills to Look for in a Python Backend Developer</h2>
+<p>A strong candidate should explain how their technical decisions protect the workflow your business depends on.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Python backend developer skills"><table aria-label="Python backend developer skills"><thead><tr><th scope="col"><strong>Skill</strong></th><th scope="col"><strong>What to evaluate</strong></th></tr></thead><tbody><tr><th scope="row">Core Python</th><td>Readable modules, appropriate exception handling, dependency management, and clear reasoning</td></tr><tr><th scope="row">API development</th><td>Input validation, predictable errors, pagination, and compatibility with existing clients</td></tr><tr><th scope="row">Database engineering</th><td>Constraints, transactions, indexing, query investigation, and safe migrations</td></tr><tr><th scope="row">Access control</th><td>Permissions covering users, organizations, roles, and individual records</td></tr><tr><th scope="row">Background processing</th><td>Retry behavior, duplicate-job handling, progress reporting, and recovery</td></tr><tr><th scope="row">Testing</th><td>Business-rule tests, failure cases, and realistic integration checks</td></tr><tr><th scope="row">Production delivery</th><td>Release checks, useful logs, monitoring, and recovery procedures</td></tr></tbody></table></div>
+<p>Security deserves its own discussion.</p>
+<p>Ask what happens when a signed-in user changes an invoice ID in an API request. The developer should explain how the application checks permission to access that particular invoice.</p>
+<p>A signed-in user still needs permission to access the specific record. See <a href="https://api-security.owasp.org/editions/2023/en/0xa1-broken-object-level-authorization/">OWASP’s guidance on object-level authorization</a>.</p>
+<p>Match seniority to the decisions the role requires. A developer implementing reviewed features has different responsibilities from the sole engineer designing your backend architecture.</p>
+</section>
+<section><h2 id="job-description">Python Backend Developer Job Description Template</h2>
+<p>Use this template to turn your requirements into a focused hiring brief.</p>
+<div class="template">
+<p><strong>Role:</strong> Python Backend Developer — [seniority and engagement type]</p>
+<p><strong>About the project:<br></strong>We are building or maintaining [product description] using [framework], [database], and [hosting environment].</p>
+<p><strong>First deliverable:<br></strong>Implement [business workflow], including [permissions], [failure handling], and [acceptance criteria].</p>
+<p><strong>Responsibilities:</strong></p>
+<ul>
+<li>Build and maintain APIs and backend business logic.</li>
+<li>Implement database changes and investigate performance issues.</li>
+<li>Write tests covering important workflows and failure conditions.</li>
+<li>Participate in code reviews and document technical decisions.</li>
+<li>Support releases within the agreed ownership model.</li>
+</ul>
+<p><strong>Required experience:<br></strong>Python, [relevant framework], SQL and database design, API development, automated testing, and Git.</p>
+<p><strong>Additional experience:<br></strong>[Relevant queues, integrations, cloud services, or domain knowledge.]</p>
+<p><strong>Working arrangement:<br></strong>[Weekly availability], [time-zone overlap], [reporting line], and [review responsibilities].</p>
+<p><strong>Assessment process:<br></strong>A paid, time-boxed practical exercise followed by a technical walkthrough.</p>
+<p><strong>First-month success:<br></strong>Deliver [bounded outcome] through review and release checks, with documentation another engineer can use.</p>
+</div>
+<p>For a Python API developer, identify the API’s consumers and compatibility requirements. Keep unrelated libraries out of the must-have list.</p>
+</section>
+<section><h2 id="assessment">Python Developer Coding Assessment: A Practical Example</h2>
+<p>A useful assessment should reveal how the candidate handles a business operation under imperfect conditions.</p>
+<p>Consider an order-creation exercise:</p>
+<ol>
+<li>Give the candidate a starter service and sample data.</li>
+<li>Ask them to implement an endpoint that validates and stores an order.</li>
+<li>Require a request identifier so a retry does not create another order.</li>
+<li>Ask for tests covering successful creation, repeated requests, and invalid input.</li>
+<li>Discuss what should happen when the same identifier arrives with different order details.</li>
+</ol>
+<p>During the walkthrough, introduce a concurrency question:</p>
+<blockquote>“What happens if two identical requests arrive at almost the same time?”</blockquote>
+<p>This tests whether the candidate understands the gap between checking for an existing record and creating a new one.</p>
+<p>Keep the assessment paid and time-boxed. State your policy on AI coding tools in advance, then ask candidates to explain and modify their submission.</p>
+<h3>How to evaluate a Python developer consistently</h3>
+<p>Use the same scorecard across candidates.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Candidate assessment scorecard"><table aria-label="Candidate assessment scorecard"><thead><tr><th scope="col"><strong>Assessment area</strong></th><th scope="col"><strong>Suggested weight</strong></th></tr></thead><tbody><tr><th scope="row">Business correctness and data integrity</th><td>30%</td></tr><tr><th scope="row">API behavior and access control</th><td>25%</td></tr><tr><th scope="row">Tests and failure handling</th><td>20%</td></tr><tr><th scope="row">Maintainability</th><td>15%</td></tr><tr><th scope="row">Explanation of decisions</th><td>10%</td></tr></tbody></table></div>
+<p>Use these weights as a starting point. Adjust them to your project and set minimum scores for critical areas.</p>
+<p>A high total should not compensate for unresolved cross-customer data access or duplicate transactions.</p>
+</section>
+<section><h2 id="interview">Python Backend Interview Questions That Reveal Real Experience</h2>
+<p>Ask candidates what they would investigate first and how they would weigh the trade-offs.</p>
+<blockquote><strong>“An endpoint slows down as a customer’s account grows. What would you investigate?”</strong></blockquote>
+<p>Look for a measurement plan covering database queries, response size, external dependencies, and differences between affected accounts.</p>
+<blockquote><strong>“A report export fails halfway through. How does the customer recover?”</strong></blockquote>
+<p>Look for explicit job states, understandable feedback, and a retry process that avoids incomplete or duplicate results.</p>
+<blockquote><strong>“A database change affects an older application version still running during deployment. What do you do?”</strong></blockquote>
+<p>Look for awareness of rollout compatibility and a recovery strategy.</p>
+<blockquote><strong>“The frontend team needs an API response change. How would you coordinate it?”</strong></blockquote>
+<p>Look for an agreed contract, examples, and consideration of existing consumers.</p>
+<blockquote><strong>“Which part of this architecture would you simplify?”</strong></blockquote>
+<p>Look for an explanation tied to the workload and maintenance needs.</p>
+<p>Follow up with “What would you measure?” and “What would change your decision?” These questions help establish how candidates reach conclusions.</p>
+</section>
+<section><h2 id="where-to-hire">Where to Hire Python Developers for Backend Projects</h2>
+<p>Choose a sourcing channel according to the support your team needs.</p>
+<p><strong>Freelance marketplaces:</strong> Platforms such as <a href="https://www.upwork.com/hire/python-developers/">Upwork</a> let you compare profiles and project histories. Assess the candidate’s relevant work, availability, and communication directly.</p>
+<p><strong>Specialist staffing partners:</strong> A <a href="/staff-augmentation">staff augmentation partner</a> can shortlist engineers who match your stack and working arrangement. Interview the engineer proposed for your project.</p>
+<p><strong>Direct recruitment:</strong> Referrals, professional networks, and your careers page can support permanent hiring. Assign responsibility for screening, scheduling, and technical assessment.</p>
+<p><strong>A Python development company:</strong> Consider a delivery engagement when the project requires coordinated engineering, testing, and project management. Confirm exactly which responsibilities are included.</p>
+<p>Businesses looking to <a href="/hire-python-developers">hire Python developers in India through eThing</a> can share their framework, seniority, and delivery requirements to focus the matching process.</p>
+<p>When evaluating offshore Python developers, discuss working-hour overlap and support arrangements alongside technical skills.</p>
+</section>
+<section><h2 id="hiring-models">Compare Python Developer Hiring Models</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Python developer hiring models"><table aria-label="Python developer hiring models"><thead><tr><th scope="col"><strong>Hiring model</strong></th><th scope="col"><strong>Suitable situation</strong></th><th scope="col"><strong>Clarify before starting</strong></th></tr></thead><tbody><tr><th scope="row">Freelance developer</th><td>A bounded task with internal direction and review</td><td>Availability, acceptance criteria, and handover</td></tr><tr><th scope="row">Dedicated developer</th><td>An ongoing backlog with established technical leadership</td><td>Capacity, assignment, and continuity</td></tr><tr><th scope="row">In-house employee</th><td>A lasting need for ownership within the organization</td><td>Recruitment capacity, management, and role progression</td></tr><tr><th scope="row">Project delivery partner</th><td>A defined outcome requiring coordinated delivery</td><td>Architecture ownership, testing, change requests, and support</td></tr></tbody></table></div>
+<p>If you hire dedicated Python developers, define what “dedicated” includes. Confirm working hours, availability, and whether the engineer may work on other client assignments.</p>
+<p>If you hire remote Python developers, agree on written updates, code-review turnaround, escalation routes, and shared working hours.</p>
+</section>
+<section><h2 id="cost">Python Developer Hiring Cost: How to Compare Quotes</h2>
+<p><strong>Indicative estimates in USD. Source checked 12 November 2026.</strong></p>
+<p>Upwork lists <strong>$20–$40 per hour</strong> for Python developers, based on historical marketplace contracts. Use this range as a starting point for budgeting. Ask eThing for a quote based on your scope and the seniority you need. <a href="https://www.upwork.com/resources/upwork-hourly-rates/">Upwork’s published hourly rates</a>.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Estimated developer-time costs"><table aria-label="Estimated developer-time costs"><thead><tr><th scope="col">Planning basis</th><th scope="col">Estimated developer-time cost</th></tr></thead><tbody><tr><th scope="row">Published hourly benchmark</th><td>$20–$40 per hour</td></tr><tr><th scope="row">40 hours</th><td>$800–$1,600</td></tr><tr><th scope="row">80 hours</th><td>$1,600–$3,200</td></tr><tr><th scope="row">160 hours</th><td>$3,200–$6,400</td></tr><tr><th scope="row">eThing engagement</th><td>Request a scoped quote</td></tr></tbody></table></div>
+<p>The estimates multiply the hourly range by the stated hours. They cover developer time. Fees, taxes, infrastructure and delivery support are additional.</p>
+<p>Seniority, specialist responsibilities, availability, and engagement terms can produce different quotes.</p>
+<p>Ask every provider whether the price includes technical supervision, QA, deployment, production support, onboarding, and transition assistance. Compare the same responsibilities and capacity across proposals.</p>
+<p><strong>Need a quote for your backend project?</strong> Share your framework, database, first milestone, and ownership requirements with eThing to <a href="/hire-python-developers">discuss dedicated Python developer hiring</a>.</p>
+</section>
+<section><h2 id="timeline">How Long Does It Take to Hire a Python Developer?</h2>
+<p>Separate three milestones: receiving profiles, selecting a candidate, and starting work.</p>
+<p>Once eThing understands your requirements, it can share matched profiles within 48 hours. Allow additional time for interviews, agreements, and onboarding, and check when your chosen candidate can start. See the <a href="/hire-python-developers">eThing Python hiring FAQ</a>.</p>
+<p>Build your hiring plan around:</p>
+<ul>
+<li>Brief approval.</li>
+<li>Candidate sourcing.</li>
+<li>Technical assessment.</li>
+<li>Engagement agreement.</li>
+<li>Access setup and onboarding.</li>
+</ul>
+<p>Reduce avoidable delays by assigning one decision-maker, reserving interview slots, and preparing the assessment before sourcing begins.</p>
+<p>Confirm the actual engineer’s availability before setting a delivery date.</p>
+</section>
+<section><h2 id="onboarding">Onboard Your Python Backend Developer With a First-Month Plan</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="First-month onboarding plan"><table aria-label="First-month onboarding plan"><thead><tr><th scope="col"><strong>Period</strong></th><th scope="col"><strong>Suggested outcome</strong></th></tr></thead><tbody><tr><th scope="row">Week 1</th><td>Run the application and tests, trace a key workflow, and identify access or knowledge gaps</td></tr><tr><th scope="row">Week 2</th><td>Deliver a small reviewed change with relevant tests</td></tr><tr><th scope="row">Week 3</th><td>Own a bounded feature or defect through staging and release preparation</td></tr><tr><th scope="row">Week 4</th><td>Explain delivered behavior, monitoring, remaining risks, and next priorities</td></tr></tbody></table></div>
+<p>Adapt this plan to the application and release process.</p>
+<p>Define “done” before assigning the first feature. Your definition might include tested permissions, a reviewed migration, documented API behavior, useful failure logs, and an agreed recovery procedure.</p>
+<p>Evaluate completed outcomes and communication rather than commit counts or lines of code.</p>
+</section>
+<section><h2 id="red-flags">Red Flags When Hiring a Python Developer</h2>
+<p>Investigate candidates who:</p>
+<ul>
+<li>Recommend a rewrite before understanding the application.</li>
+<li>Discuss scalability without asking about traffic or workload.</li>
+<li>Cannot explain recovery from a failed operation.</li>
+<li>Attribute every slowdown to infrastructure.</li>
+<li>Discuss testing only through a coverage percentage.</li>
+<li>Cannot distinguish their contribution from their team’s work.</li>
+</ul>
+<p>These signals warrant follow-up questions. Give candidates an opportunity to explain assumptions, correct an approach, and show how they would resolve uncertainty.</p>
+</section>
+<section><h2 id="checklist">Python Developer Hiring Checklist</h2>
+<p>Before making an offer or signing an engagement, confirm that you have:</p>
+<ul>
+<li>Defined the backend workflow and first milestone.</li>
+<li>Documented the framework, database, integrations, and constraints.</li>
+<li>Interviewed the engineer who will do the work.</li>
+<li>Reviewed a relevant project and practical assessment.</li>
+<li>Tested reasoning about permissions, retries, and concurrent requests.</li>
+<li>Compared quotes against equivalent responsibilities.</li>
+<li>Agreed on working hours, reviews, releases, and support.</li>
+<li>Confirmed code access, ownership, continuity, and handover terms.</li>
+<li>Prepared the first-month onboarding plan.</li>
+</ul>
+</section>
+<section><h2 id="hire-with-ething">Hire Dedicated Python Developers Through eThing</h2>
+<p>With eThing, you share your requirements, receive screened profiles, interview shortlisted candidates, and start the engagement. eThing can match experience with Django, FastAPI, Flask, APIs, databases, and AWS or Azure. See <a href="/hire-python-developers">eThing’s Python hiring process</a>.</p>
+<p>Use that conversation to establish project fit. Request a walkthrough of relevant backend work, confirm technical review responsibilities, and agree on the first acceptance milestone. Discuss any replacement or trial terms before the engagement begins.</p>
+<p>For broader delivery requirements, explore eThing’s <a href="/hire-developers">software developer hiring services</a> or <a href="/software_development">custom software development services</a>.</p>
+</section>
+<section><h2 id="shortlist">Build Your Shortlist Around Backend Ownership</h2>
+<p>To hire Python developers for backend projects, connect every hiring decision to the work the engineer must own. Define the workflow, test meaningful failure cases, and compare complete delivery responsibilities.</p>
+<p>Start with your current stack and next business milestone. Then <a href="/hire-python-developers">share your backend requirements with eThing</a> to discuss suitable Python developers and engagement options.</p>
+<div class="hire-box"><h3>Need a Python developer for your backend?</h3><p>Share your stack, first milestone and the work the developer will own.</p><a class="button" href="/hire-python-developers">Explore Python developer hiring <span aria-hidden="true">→</span></a></div>
+</section>
+<section><h2 id="faq">Frequently Asked Questions</h2>
+<div class="faq">
+<details><summary><h3>How do I hire a Python developer?</h3></summary>
+<p>Define the workflow, existing stack, required ownership, and first milestone. Shortlist candidates with relevant delivery experience, then use a paid practical assessment and technical walkthrough. Compare evidence using one scorecard, verify availability and engagement terms, and agree on code review, release responsibilities, and onboarding before work begins.</p>
+</details>
+<details><summary><h3>Where can I hire Python developers?</h3></summary>
+<p>You can source Python developers through freelance marketplaces, specialist staffing partners, direct recruitment, and development companies. Choose according to the supervision and delivery support you need. For eThing, share your backend stack and role requirements, then interview the shortlisted engineers before deciding on the engagement.</p>
+</details>
+<details><summary><h3>How much does a Python developer cost per hour?</h3></summary>
+<p>Upwork lists $20–$40 per hour for Python developers. At 160 hours, that implies $3,200–$6,400 for developer time before separately charged costs. Ask eThing for pricing based on your scope, seniority and support needs. <a href="https://www.upwork.com/resources/upwork-hourly-rates/">Upwork’s published hourly rates</a>.</p>
+</details>
+<details><summary><h3>How long does it take to hire a Python developer?</h3></summary>
+<p>The timeline depends on sourcing, assessment, candidate availability, agreements, and onboarding. eThing can share matched profiles within 48 hours of understanding your requirements. Schedule interviews and confirm the candidate’s availability before setting a start date. See the <a href="/hire-python-developers">eThing Python hiring FAQ</a>.</p>
+</details>
+<details><summary><h3>Freelancer or agency for a Python backend?</h3></summary>
+<p>A freelancer can suit a defined task when your team can direct and review the work. An agency may suit ongoing staffing or coordinated delivery, depending on the engagement. Interview the engineer and confirm who reviews the work, how the provider handles continuity, and what support the agreement includes.</p>
+</details>
+<details><summary><h3>Can I hire a Python developer for an existing application?</h3></summary>
+<p>Yes. Share the current framework, database, dependency versions, release process, and known defects. Ask the candidate to explain a small improvement, the behavior it must preserve, and the tests needed before release. Assess their ability to work within existing constraints, including database compatibility and collaboration with current maintainers.</p>
+</details>
+</div>
+</section>
+      </div>
+    </div>
+  </article>

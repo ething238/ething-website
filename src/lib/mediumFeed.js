@@ -6,7 +6,7 @@ const DC_NS = 'http://purl.org/dc/elements/1.1/'
 const MIN_RSS2JSON_KEY_LEN = 28
 
 const CACHE_MS = 10 * 60 * 1000
-const CACHE_STORAGE_KEY = 'ething.medium.posts'
+const CACHE_STORAGE_KEY = 'ething.medium.posts.v3'
 
 /** Default RSS for Ething on Medium (`VITE_MEDIUM_FEED_URL` overrides when set). */
 const DEFAULT_MEDIUM_FEED_URL = 'https://medium.com/feed/@EthingSolutions'
@@ -89,14 +89,28 @@ function stripHtml(html) {
   }
   const doc = document.implementation.createHTMLDocument()
   const el = doc.createElement('div')
-  el.innerHTML = html
+  el.innerHTML = html.replace(/<\/(?:p|h[1-6]|li|blockquote|div|pre|figure|figcaption|ul|ol)>|<br\s*\/?>/gi, '$& ')
   return (el.textContent || el.innerText || '').replace(/\s+/g, ' ').trim()
 }
 
+function postImageUrl(value) {
+  if (!value) return null
+  try {
+    const url = new URL(value.replace(/&amp;/g, '&'))
+    if (url.protocol !== 'https:' && url.protocol !== 'http:') return null
+    if (url.pathname === '/_/stat') return null
+    return url.href
+  } catch {
+    return null
+  }
+}
+
 function firstImgFromHtml(html) {
-  if (!html) return null
-  const m = html.match(/<img[^>]+src=["']([^"']+)["']/i)
-  return m?.[1]?.replace(/&amp;/g, '&') ?? null
+  for (const match of (html || '').matchAll(/<img\b[^>]*?\ssrc\s*=\s*["']([^"']+)["']/gi)) {
+    const imageUrl = postImageUrl(match[1])
+    if (imageUrl) return imageUrl
+  }
+  return null
 }
 
 function getChildText(parent, localName) {
@@ -118,7 +132,7 @@ function normalizeRss2JsonItem(item, i) {
     title: item.title?.trim() || 'Untitled',
     link: item.link,
     excerpt: truncateExcerpt(desc),
-    imageUrl: item.thumbnail || firstImgFromHtml(desc) || null,
+    imageUrl: postImageUrl(item.thumbnail) || firstImgFromHtml(desc),
     publishedAt: item.pubDate || null,
     author: item.author || null,
   }
@@ -294,7 +308,6 @@ export async function fetchMediumPosts(feedUrl) {
     let posts = []
 
     if (shouldTryLocalRssProxy()) {
-      /** Dev: Medium + rss2json in parallel - whichever returns posts first avoids waiting twice. */
       const [localPosts, rssPlain] = await Promise.all([
         fetchPostsViaLocalRssProxy(url),
         fetchPostsViaRss2Json(url, { useApiKey: false }),

@@ -16,6 +16,7 @@ function absoluteUrl(base, pathOrAbsolute) {
  * @param {string} props.description
  * @param {string} props.pathname - router pathname, e.g. `/about_us`
  * @param {string} [props.ogImage] - absolute URL or path relative to site origin
+ * @param {{ title: string, author: string, publishedAt: string }} [props.article]
  * @param {boolean} [props.noindex]
  * @param {object} [props.organizationJsonLd]
  * @param {string} [props.siteName] - for `og:site_name`
@@ -25,6 +26,7 @@ export default function Seo({
   description,
   pathname,
   ogImage,
+  article,
   noindex,
   organizationJsonLd,
   siteName = 'eThing',
@@ -49,12 +51,24 @@ export default function Seo({
         isPartOf: { '@id': `${base}/#website` },
         ...(pathname !== '/' && { breadcrumb: { '@id': `${canonicalHref}#breadcrumb` } }),
       },
+      ...(article ? [{
+        '@type': 'BlogPosting',
+        '@id': `${canonicalHref}#article`,
+        headline: article.title,
+        description,
+        image: ogImageUrl,
+        datePublished: article.publishedAt.slice(0, 10),
+        author: { '@type': 'Organization', name: article.author, url: `${base}/` },
+        publisher: { '@id': `${base}/#organization` },
+        mainEntityOfPage: { '@id': `${canonicalHref}#webpage` },
+      }] : []),
       ...(pathname !== '/' ? [{
         '@type': 'BreadcrumbList',
         '@id': `${canonicalHref}#breadcrumb`,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `${base}/` },
-          { '@type': 'ListItem', position: 2, name: pageLabels[pathname] || title, item: canonicalHref },
+          ...(article ? [{ '@type': 'ListItem', position: 2, name: 'Blogs', item: `${base}/blogs` }] : []),
+          { '@type': 'ListItem', position: article ? 3 : 2, name: article?.title || pageLabels[pathname] || title, item: canonicalHref },
         ],
       }] : []),
     ],
@@ -122,7 +136,8 @@ export default function Seo({
         <meta name="robots" content="index, follow" />
       )}
 
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={article ? 'article' : 'website'} />
+      {article && <meta property="article:published_time" content={article.publishedAt.slice(0, 10)} />}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       {canonicalHref && <meta property="og:url" content={canonicalHref} />}

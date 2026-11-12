@@ -17,6 +17,7 @@ import EngineeringDetailPage from './pages/EngineeringDetailPage.jsx'
 import Careers from './pages/Careers.jsx'
 import Privacy from './pages/Privacy.jsx'
 import Blogs from './pages/Blogs.jsx'
+import PythonBlogArticle, { pythonBlogPath } from './pages/PythonBlogArticle.jsx'
 import Contact from './pages/Contact.jsx'
 import HireAiDevelopersRedirect from './pages/HireAiDevelopersRedirect.jsx'
 import HireDevelopersLanding from './pages/HireDevelopersLanding.jsx'
@@ -44,7 +45,7 @@ function ScrollToTopOnRoute() {
 function AppRoutes() {
   const { pathname } = useLocation()
   // These shorter content pages already sit inside Layout's full-height shell.
-  const compactPage = ['/blogs', '/engineering-services', '/contact'].includes(pathname.replace(/\/$/, ''))
+  const compactPage = ['/blogs', pythonBlogPath, '/engineering-services', '/contact'].includes(pathname.replace(/\/$/, ''))
   return (
     <div className={compactPage ? 'min-w-0' : 'min-h-screen'}>
       <Routes>
@@ -84,6 +85,7 @@ function AppRoutes() {
           />
         ))}
         <Route path="/blogs" element={<Blogs content={siteContent} />} />
+        <Route path={pythonBlogPath} element={<PythonBlogArticle />} />
         <Route path="/careers" element={<Careers content={siteContent} />} />
         <Route path="/privacy-policy" element={<Privacy content={siteContent} />} />
         <Route path="/contact" element={<Contact content={siteContent} />} />
