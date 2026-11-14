@@ -1,7 +1,9 @@
+import { web3formsAccessKey } from '../components/website-development/web3formsConfig.js'
+
 const WEB3FORMS_URL = 'https://api.web3forms.com/submit'
 
 function getAccessKey() {
-  return import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim() || ''
+  return import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim() || web3formsAccessKey?.trim() || ''
 }
 
 export function isWeb3FormsConfigured() {
@@ -28,7 +30,7 @@ export async function sendWeb3FormsEmail({ subject, name, email, message }) {
     })
 
     const data = await res.json().catch(() => ({}))
-    if (res.ok && data.success) {
+    if (res.ok && data?.success === true) {
       return { ok: true }
     }
 

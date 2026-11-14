@@ -18,7 +18,7 @@ test('Aerospace events reach GTM and GA4 exactly once without another tag bootst
     head: { appendChild: tag => injected.push(tag) },
     body: { prepend: tag => injected.push(tag) },
   }
-  vm.runInNewContext(source, { module, window, document, env: { VITE_GTM_ID: 'GTM-TX73DK5H', VITE_GA4_MEASUREMENT_ID: 'G-2W7W1TB2H4' } })
+  vm.runInNewContext(source, { module, window, document, env: { VITE_GTM_ID: 'GTM-T9DHQSVJ', VITE_GA4_MEASUREMENT_ID: 'G-2W7W1TB2H4' } })
   module.exports.initTracking()
   module.exports.initTracking()
   for (const name of ['lead_form_view', 'lead_form_start', 'lead_form_submit', 'lead_form_success', 'generate_lead']) {

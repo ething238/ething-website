@@ -136,9 +136,7 @@ VITE_CALENDLY_URL=https://calendly.com/ankgupta79/introduction-meeting
 VITE_GTM_ID=                    # Google Tag Manager container ID
 VITE_GA4_MEASUREMENT_ID=        # GA4 Measurement ID (G-XXXXXXXXXX)
 
-# Google Ads conversion tracking (/hire-developers-india lead form)
-VITE_GOOGLE_ADS_CONVERSION_ID=  # AW-XXXXXXXXX
-VITE_GOOGLE_ADS_CONVERSION_LABEL=
+# Google Ads conversion tracking is managed in GTM from confirmed generate_lead events.
 
 # Meta Pixel (optional)
 VITE_META_PIXEL_ID=
@@ -155,12 +153,16 @@ VITE_SUPABASE_URL=
 SUPABASE_SECRET_KEY=
 ```
 
-Production tracking uses GA4 `G-2W7W1TB2H4` and GTM `GTM-TX73DK5H` on both
+Production tracking uses GA4 `G-2W7W1TB2H4` and GTM `GTM-T9DHQSVJ` on both
 `ethingsolutions.com` and `www.ethingsolutions.com`. GA4 loads independently of GTM;
 its enhanced measurement owns pageviews, including browser-history navigation.
 Do not add a second GA4 pageview or custom-event forwarding tag in GTM without
 first removing the equivalent direct implementation. The current GTM container
 owns the existing Google Ads tags.
+
+The replacement container configuration is in `config/gtm/GTM-T9DHQSVJ.json`.
+Publish its reviewed workspace before deploying this branch's container-ID switch.
+See `docs/gtm-migration.md` for the cutover and verification steps.
 
 The build runs `scripts/verify-analytics.mjs` against all public routes. Local and
 preview hosts, and `/visitor-dashboard`, do not load production Google tracking.

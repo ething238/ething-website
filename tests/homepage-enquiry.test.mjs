@@ -3,13 +3,13 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import vm from 'node:vm'
 
-const deliverySource = readFileSync(new URL('../src/lib/web3forms.js', import.meta.url), 'utf8').replaceAll('import.meta.env', 'env').replaceAll('export ', '') + '\nmodule.exports = sendWeb3FormsEmail'
-const enquirySource = readFileSync(new URL('../src/lib/homepageEnquiry.js', import.meta.url), 'utf8').replace(/^import .*\n/gm, '').replace('export async function', 'async function') + '\nmodule.exports = submitHomepageEnquiry'
+const deliverySource = readFileSync(new URL('../src/lib/web3forms.js', import.meta.url), 'utf8').replace(/^import .*\r?\n/gm, '').replaceAll('import.meta.env', 'env').replaceAll('export ', '') + '\nmodule.exports = sendWeb3FormsEmail'
+const enquirySource = readFileSync(new URL('../src/lib/homepageEnquiry.js', import.meta.url), 'utf8').replace(/^import .*\r?\n/gm, '').replace('export async function', 'async function') + '\nmodule.exports = submitHomepageEnquiry'
 const lead = { name: 'Test Visitor', email: 'visitor@example.invalid', engagement: 'Dedicated team', specialty: 'AI & data', message: 'Test project requirements.' }
 
-function fixture({ configured = true, ok = true, accepted = true, networkError = false, malformed = false } = {}) {
+function fixture({ configured = true, fallback = '', ok = true, accepted = true, networkError = false, malformed = false } = {}) {
   const requests = [], events = [], delivery = { exports: {} }, enquiry = { exports: {} }
-  vm.runInNewContext(deliverySource, { module: delivery, env: { VITE_WEB3FORMS_ACCESS_KEY: configured ? 'test-key' : '' }, console: { error() {} }, fetch: async (url, options) => {
+  vm.runInNewContext(deliverySource, { module: delivery, web3formsAccessKey: fallback, env: { VITE_WEB3FORMS_ACCESS_KEY: configured ? 'test-key' : '' }, console: { error() {} }, fetch: async (url, options) => {
     requests.push({ url, body: JSON.parse(options.body) })
     if (networkError) throw new Error('private service details')
     return { ok, json: async () => { if (malformed) throw new Error('invalid response'); return { success: accepted } } }
@@ -39,11 +39,18 @@ test('the homepage sends all form fields to the existing contact service', async
 })
 
 test('missing configuration, rejected responses, malformed responses and network failures cannot report success', async () => {
-  for (const options of [{ configured: false }, { ok: false }, { accepted: false }, { malformed: true }, { networkError: true }]) {
+  for (const options of [{ configured: false }, { ok: false }, { accepted: false }, { accepted: 'false' }, { accepted: 'true' }, { accepted: null }, { malformed: true }, { networkError: true }]) {
     const f = fixture(options)
     assert.equal((await f.submit(lead)).ok, false)
     assert.deepEqual(f.events.map(event => event.name), ['lead_form_submit', 'lead_form_error'])
   }
+})
+
+test('the homepage reuses the existing public form configuration when no build override is provided', async () => {
+  const f = fixture({ configured: false, fallback: 'existing-public-form-key' })
+  assert.equal((await f.submit(lead)).ok, true)
+  assert.equal(f.requests[0].body.access_key, 'existing-public-form-key')
+  assert.equal(f.events.filter(event => event.name === 'generate_lead').length, 1)
 })
 
 test('the email subject removes line breaks', async () => {

@@ -25,8 +25,8 @@ test('website GA4 and GTM bootstrap matches the homepage without duplicate loade
   for (const page of [html, homepage]) {
     assert.equal((page.match(/googleTag\.src\s*=\s*'https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-2W7W1TB2H4'/g) || []).length, 1)
     assert.equal((page.match(/gtag\('config', 'G-2W7W1TB2H4'\)/g) || []).length, 1)
-    assert.equal((page.match(/'dataLayer', 'GTM-TX73DK5H'\)/g) || []).length, 1)
-    assert.equal((page.match(/src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-TX73DK5H"/g) || []).length, 1)
+    assert.equal((page.match(/'dataLayer', 'GTM-T9DHQSVJ'\)/g) || []).length, 1)
+    assert.equal((page.match(/src="https:\/\/www\.googletagmanager\.com\/ns\.html\?id=GTM-T9DHQSVJ"/g) || []).length, 1)
   }
 })
 
