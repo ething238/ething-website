@@ -270,8 +270,8 @@ export const sapFAQs = [
         answer: "Review profiles against the modules, releases and tasks in your brief. Your technical interview can explore configuration, code, integration or testing experience as relevant to the role. Confirm responsibilities, qualifications and references where appropriate before making your selection."
     },
     {
-        question: "Can I hire remote SAP consultants?",
-        answer: "Share your preferred location, time zone, working-hour overlap and collaboration needs. Remote, onsite or hybrid arrangements depend on the role and professional, and are agreed for the specific assignment before onboarding."
+        question: "Can I hire remote SAP developers or consultants?",
+        answer: "Yes. Share the SAP modules, development or integration work, and hours you need covered. We can arrange remote SAP staffing around your business hours, including UK hours, and agree the working setup before onboarding."
     },
     {
         question: "What affects the cost of hiring?",

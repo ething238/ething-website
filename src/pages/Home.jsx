@@ -82,7 +82,7 @@ export default function Home({ content }) {
         <img className="seo-diagram" src="/seo-visuals/homepage-hiring.webp" alt="" width="1600" height="533" loading="lazy" decoding="async" />
         <ol className="seo-hiring-steps">
           <li><h3>Scope the role</h3><p>Share what you’re building, the skills you need, your working hours and your target start date.</p></li>
-          <li><h3>Review profiles</h3><p>We screen candidates against your brief. We share suitable profiles in 48 hours on average after you confirm the role requirements.</p></li>
+          <li><h3>Review profiles</h3><p>We screen candidates against your brief. We share suitable profiles in 48 hours on average after you confirm the role requirements. The shortlist size depends on the role and the candidates available.</p></li>
           <li><h3>Interview candidates</h3><p>Meet the people on your shortlist and review their experience with your stack and the work you need done.</p></li>
           <li><h3>Onboard</h3><p>Once you select a candidate, we coordinate the agreed start date and onboarding with your team.</p></li>
         </ol>
@@ -151,7 +151,7 @@ export default function Home({ content }) {
       <div className="container contact-layout">
         <div className="contact-copy">
           <h2>Book a free consultation</h2>
-          <p>Share your IT staff augmentation needs, skills and start date. eThing matches developers to your project and sets out clear roles, costs and next steps.</p>
+          <p>Tell us which <a href="/staffing_services">IT staffing services</a> you need and when you want to start. eThing matches developers to your project and sets out clear roles, costs and next steps.</p>
           <ul className="contact-benefits">
             <li><Check size={20} aria-hidden="true" /><span>Developers matched to project requirements.</span></li>
             <li><Check size={20} aria-hidden="true" /><span>Clear roles, working hours and costs.</span></li>

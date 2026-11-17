@@ -1,10 +1,10 @@
 export const salesforceRoles = [
   { id: 'developer', label: 'Developer', icon: 'code', description: 'Build and maintain business logic, interfaces and integrations within your existing organisation.', skills: ['Apex & SOQL', 'Lightning Web Components', 'APIs & testing'], work: 'Custom features, bulk processing, integration fixes and existing-code maintenance.' },
-  { id: 'administrator', label: 'Administrator', icon: 'settings', description: 'Hire a Salesforce administrator to support users, configuration and day-to-day platform improvements.', skills: ['Flow automation', 'Access & permissions', 'Reports & dashboards'], work: 'User access, reporting, data quality, automation and operational support.' },
+  { id: 'administrator', label: 'Administrator', icon: 'settings', description: 'Our Salesforce administrator staffing covers user support, configuration and day-to-day platform improvements. Ask for a Salesforce-certified administrator if your role requires one.', skills: ['Flow automation', 'Access & permissions', 'Reports & dashboards'], work: 'User access, reporting, data quality, automation and operational support.' },
   { id: 'architect', label: 'Solution architect', icon: 'layers', description: 'Guide decisions across data models, integrations, security and maintainability.', skills: ['Solution design', 'Integration patterns', 'Technical governance'], work: 'Architecture options, design reviews, data models and implementation guidance.' },
   { id: 'consultant', label: 'Functional Salesforce Consultant', icon: 'workflow', description: 'Translate stakeholder needs into clear requirements and practical platform changes.', skills: ['Process mapping', 'User stories', 'UAT & adoption'], work: 'Requirements, acceptance criteria, configuration and business-user coordination.' },
   { id: 'qa', label: 'QA specialist', path: '/quality_testing', icon: 'shield', description: 'Test the workflows, integrations and releases that your people depend on.', skills: ['Regression testing', 'Integration testing', 'Release validation'], work: 'Test scenarios, defect reporting, regression checks and user acceptance support.' },
-  { id: 'integration', label: 'Cloud or integration specialist', path: '/cloud_services', icon: 'nodes', description: 'Discuss a specific product or connected-system requirement beyond a general role.', skills: ['Product experience', 'Data mapping', 'Connected workflows'], work: 'Cloud-specific configuration, interfaces and migration support. Sourcing fit is confirmed against your brief.' },
+  { id: 'integration', label: 'Cloud or integration specialist', path: '/cloud_services', icon: 'nodes', description: 'Discuss Salesforce integration specialists for a specific cloud, API, middleware or connected business system.', skills: ['Product experience', 'Data mapping', 'Connected workflows'], work: 'Cloud-specific configuration, interfaces and migration support. Sourcing fit is confirmed against your brief.' },
 ];
 
 export const salesforceSituations = [
@@ -83,7 +83,7 @@ export const salesforceFaqGroups = [
     ['What determines the actual start date?', 'Candidate availability, interviews, agreement completion, working hours and your access or onboarding checks determine the start date. Confirm it before work begins.'],
   ] },
   { title: 'Working together', items: [
-    ['Can I hire a remote developer?', 'Yes. Share your time zone, required working-hour overlap and collaboration tools. We use those requirements in matching and confirm the remote arrangement with the proposed professional before selection.'],
+    ['Can I hire a remote developer?', 'Yes. We can arrange remote working hours to match your business schedule, including UK hours. Share your time zone and collaboration tools so we can confirm the coverage with the proposed professional before selection.'],
     ['Who manages their daily work?', 'Your team owns backlog priorities, daily technical direction, system approvals and acceptance. eThing coordinates the staffing and engagement support agreed with you.'],
     ['How are confidentiality, IP and handover handled?', 'Agree these requirements before work starts, including confidentiality, ownership, access, repositories and handover documentation. The engagement plan defines responsibilities and support.'],
   ] },

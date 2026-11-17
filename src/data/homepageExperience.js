@@ -66,7 +66,7 @@ export const faqs = [
   },
   {
     "question": "Should I choose IT staff augmentation or project delivery?",
-    "answer": "Add developers to your team if you manage the work and need extra help. Choose a dedicated team for ongoing product development. Choose project delivery when you want help building something with agreed tasks and dates. eThing recommends the engagement model that fits the project requirements and the level of control you need."
+    "answer": "Add developers to your team if you manage the work and need extra capacity. Choose a dedicated software development team for ongoing product work. We can match an offshore software development team across development, testing and cloud engineering. Choose project delivery if you need help building something with agreed tasks and dates."
   },
   {
     "question": "Can I hire software and AI engineers together?",
@@ -90,7 +90,11 @@ export const faqs = [
   },
   {
     "question": "What working-hour overlap can I expect with offshore staff augmentation?",
-    "answer": "Tell us your time zone and which hours your engineers need to be available. We use those hours when matching candidates and confirm the working arrangement before the engagement starts."
+    "answer": "Our India-based teams can cover UK business hours and work to client schedules in other time zones, including shifts outside India’s usual working hours. Share the hours you need covered so we can agree the overlap and handover before work starts."
+  },
+  {
+    "question": "How does nearshore staffing compare with offshore IT staffing?",
+    "answer": "Nearshore staffing adds engineers from a nearby country, often with a similar time zone. Offshore IT staffing lets you hire from farther away. With eThing’s India-based team, you can still arrange coverage during the hours your team needs."
   },
   {
     "question": "How are confidentiality, IP and continuity handled?",
@@ -98,7 +102,7 @@ export const faqs = [
   },
   {
     question: 'How are developers screened before profiles are shared?',
-    answer: 'eThing screens developers for technical skills and professional suitability for the agreed role, including relevant experience and communication skills. You review shortlisted profiles and can interview developers before selection. We agree on any role-specific checks and interview stages before the search begins.',
+    answer: 'Our technical vetting process checks experience, technical skills and communication for the agreed role. You review shortlisted profiles and can interview developers before selection. We agree on role-specific checks and interview stages before the search begins.',
   },
   {
     question: 'What happens if a developer is not the right fit?',

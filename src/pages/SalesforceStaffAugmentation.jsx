@@ -151,7 +151,7 @@ export default function SalesforceStaffAugmentation() {
         <div>
         <div className="sf-developer-grid">
           <article data-sf-reveal><Icon kind="globe" size={25}/><h3><a href="/hire-developers-india">Developers from India</a></h3><p>Hire Salesforce developers from India with experience matched to your organisation, product requirements and review standards. Start with the responsibilities, seniority and overlap your team needs.</p></article>
-          <article data-sf-reveal><Icon kind="people" size={25}/><h3>Remote and Offshore Salesforce Developers</h3><p>When you hire offshore Salesforce developers, share your time zone, the hours you need people available and the tools your team uses. We confirm the working arrangement before you choose a candidate.</p></article>
+          <article data-sf-reveal><Icon kind="people" size={25}/><h3>Remote and Offshore Salesforce Developers</h3><p>When you hire offshore Salesforce developers, we can arrange coverage during your business hours, including UK hours. Share the hours you need and the tools your team uses so we can confirm the working arrangement before you choose a candidate.</p></article>
           <article data-sf-reveal><Icon kind="document" size={25}/><h3>Contract development</h3><p>Hire Salesforce developers on contract for an agreed scope, allocation and duration. Discuss the billing, notice and handover terms before choosing the engagement.</p></article>
         </div>
         <div className="sf-developer-cta"><CTA role="Developer" onChoose={setSelectedRole}>Discuss a developer requirement</CTA></div>
@@ -174,7 +174,7 @@ export default function SalesforceStaffAugmentation() {
       </div></section>
 
       <section className="sf-section" id="salesforce-access" aria-labelledby="sf-access-heading"><div className="sf-container">
-        <SectionHeading id="sf-access-heading" description="Before Salesforce developers join your team, we agree on confidentiality, code ownership and handover. Your team approves system access, sets the permissions each role needs and specifies which data developers can use in a sandbox. If the role requires a Salesforce certification, we agree which credentials to verify during screening.">System Access, Confidentiality and IP</SectionHeading>
+        <SectionHeading id="sf-access-heading" description="We can provide Salesforce-certified developers and administrators and verify the credentials your role requires. Our teams can work within your project’s security and compliance requirements. Before work starts, we agree on confidentiality, code ownership and handover. Your team approves system access, sets role permissions and specifies which data developers can use in a sandbox.">System Access, Confidentiality and IP</SectionHeading>
       </div></section>
 
       <section className="sf-section sf-assessment" aria-labelledby="sf-assessment-heading"><div className="sf-container">

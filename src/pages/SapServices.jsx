@@ -1,4 +1,5 @@
 import pageHeadings from '../data/pageHeadings.json'
+import { pageDescriptions, pageTitles } from '../data/pageTitles.js';
 // Approved SAP page, integrated without a second React or analytics bootstrap.
 import * as react from 'react';
 import * as jsx_runtime from 'react/jsx-runtime';
@@ -12,6 +13,9 @@ import SapEnquiryForm from '../components/sap-services/SapEnquiryForm.jsx';
 import { enhanceSapMotion } from '../components/sap-services/motion.js';
 import { sapSituations, sapServices, sapExpertise, sapRoles, sapEngagements, sapProcess, sapFAQs, sapRequirementTypes } from '../data/sapContent.js';
 
+const sapTitle = pageTitles["/sap-services"];
+const sapDescription = pageDescriptions["/sap-services"];
+
 const sapSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -19,8 +23,8 @@ const sapSchema = {
       "@type": "WebPage",
       "@id": "https://www.ethingsolutions.com/sap-services#webpage",
       "url": "https://www.ethingsolutions.com/sap-services",
-      "name": "SAP Staffing & Staff Augmentation Services | eThing",
-      "description": "SAP staffing services and SAP staff augmentation from eThing. Hire SAP consultants and developers for functional, technical and contract staffing needs."
+      "name": sapTitle,
+      "description": sapDescription
     },
     {
       "@type": "Service",
@@ -276,11 +280,11 @@ export default function SapServices() {
                     jsx_runtime.jsx('link', {rel:'icon',type:'image/png',href:'/sap-services/ething-icon-48.png'}),
                     jsx_runtime.jsx('script', {type:'application/ld+json',children:JSON.stringify(sapSchema)}),
                     jsx_runtime.jsx("title", {
-                        children: "SAP Staffing & Staff Augmentation Services | eThing"
+                        children: sapTitle
                     }),
                     jsx_runtime.jsx("meta", {
                         name: "description",
-                        content: "SAP staffing services and SAP staff augmentation from eThing. Hire SAP consultants and developers for functional, technical and contract staffing needs."
+                        content: sapDescription
                     }),
                     jsx_runtime.jsx("meta", {
                         name: "robots",
@@ -288,11 +292,11 @@ export default function SapServices() {
                     }, "robots"),
                     jsx_runtime.jsx("meta", {
                         property: "og:title",
-                        content: "SAP Staffing & Staff Augmentation Services | eThing"
+                        content: sapTitle
                     }),
                     jsx_runtime.jsx("meta", {
                         property: "og:description",
-                        content: "SAP staffing services and SAP staff augmentation from eThing. Hire SAP consultants and developers for functional, technical and contract staffing needs."
+                        content: sapDescription
                     }),
                     jsx_runtime.jsx("meta", {
                         property: "og:type",
@@ -328,7 +332,7 @@ export default function SapServices() {
                                         }),
                                         jsx_runtime.jsx("p", {
                                             className: "sap-hero-description",
-                                            children: "Build your team with SAP staffing services from eThing. Our SAP staff augmentation approach connects your requirements with functional and technical SAP consultants, developers and project specialists working under your direction."
+                                            children: "Build your team with SAP staff augmentation from eThing. Our SAP staffing services help you hire SAP consultants, developers and testing specialists for your modules and project. Add a specialist or a dedicated SAP team that works under your direction."
                                         }),
                                         null,
                                         jsx_runtime.jsxs("ul", {
