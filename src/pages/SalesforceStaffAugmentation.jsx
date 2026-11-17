@@ -1,4 +1,5 @@
 import pageHeadings from '../data/pageHeadings.json'
+import { pageDescriptions, pageTitles } from '../data/pageTitles.js';
 import { Helmet as Head } from 'react-helmet-async';
 import '../styles/about-us.css';
 import '../styles/footer-brand.css';
@@ -16,8 +17,8 @@ import {
 
 const route = '/salesforce-staff-augmentation';
 const canonical = 'https://www.ethingsolutions.com' + route;
-const title = 'Salesforce Staff Augmentation Services | eThing';
-const description = 'Salesforce staff augmentation services for your team. Explore developers, administrators, cloud expertise and flexible contracts with eThing.';
+const title = pageTitles[route];
+const description = pageDescriptions[route];
 const faqMidpoint = Math.ceil(salesforceFaqs.length / 2);
 const faqPages = [salesforceFaqs.slice(0, faqMidpoint), salesforceFaqs.slice(faqMidpoint)];
 
@@ -76,7 +77,7 @@ function RoleExplorer({ selectedRole }) {
   return <>
     <div className="sf-role-grid">{salesforceRoles.map((role, index) => <article className={'sf-role-card sf-motion-card' + (selectedRole === role.label ? ' sf-role-chosen' : '')} key={role.id} data-sf-reveal style={{ '--sf-delay': (index % 3) * 70 + 'ms' }}>
       <div className="sf-card-top"><span className="sf-icon-tile"><Icon kind={role.icon}/></span><span className="sf-label">0{index + 1}</span></div>
-      <h3>{role.label}</h3><p>{role.description}</p><ul className="sf-tags">{role.skills.map(skill => <li key={skill}>{skill}</li>)}</ul><p className="sf-role-work">{role.work}</p>
+      <h3>{role.path ? <a href={role.path}>{role.label}</a> : role.label}</h3><p>{role.description}</p><ul className="sf-tags">{role.skills.map(skill => <li key={skill}>{skill}</li>)}</ul><p className="sf-role-work">{role.work}</p>
     </article>)}</div>
   </>;
 }
@@ -125,7 +126,7 @@ export default function SalesforceStaffAugmentation() {
           <div className="sf-hero-grid">
             <div className="sf-hero-copy">
               <h1 id="sf-title"><span>Salesforce</span> {pageHeadings['/salesforce-staff-augmentation'].replace(/^Salesforce /, '')}</h1>
-              <p className="sf-hero-description">eThing is a Salesforce staff augmentation company in Gurugram, India. Our Salesforce staff augmentation services add developers, administrators and architects to your team, while you retain control of the work.</p>
+              <p className="sf-hero-description">If you need to hire Salesforce developers, administrators, or architects, eThing delivers vetted talent through dedicated staff augmentation while you retain full technical direction.</p>
               <div className="sf-hero-actions"><a href="#salesforce-roles" className="sf-button">Explore the roles<Icon kind="arrow" size={18}/></a></div>
             </div>
             <div className="sf-hero-enquiry" id="salesforce-enquiry"><SalesforceEnquiryForm selectedRole={selectedRole} onRoleChange={setSelectedRole}/></div>
@@ -139,7 +140,7 @@ export default function SalesforceStaffAugmentation() {
 
 
       <section className="sf-section sf-situations" aria-labelledby="sf-situations-heading"><div className="sf-container">
-        <SectionHeading id="sf-situations-heading" description="Start with the gap in your team and the work that needs to move forward.">When your roadmap needs more capacity</SectionHeading>
+        <SectionHeading id="sf-situations-heading" description="Start by identifying the gaps in your team and the critical work that needs to move forward.">Scaling Your Team: When to Augment Salesforce Capacity</SectionHeading>
         <div className="sf-situation-grid">{salesforceSituations.map(([icon,heading,body],index) => <article className="sf-motion-card" key={heading} data-sf-reveal style={{ '--sf-delay': (index % 4) * 70 + 'ms' }}><div className="sf-card-heading"><Icon kind={icon} size={28}/><h3>{heading}</h3></div><p>{body}</p></article>)}</div>
       </div></section>
 
@@ -149,8 +150,8 @@ export default function SalesforceStaffAugmentation() {
         <figure className="sf-development-photo" data-sf-reveal><img src="/salesforce/engineering-team-v4.webp" alt="Illustrative image of two engineers collaborating on a CRM application" width="1200" height="800" loading="lazy"/><figcaption>EXPERTISE. EMBEDDED IN YOUR TEAM.</figcaption></figure>
         <div>
         <div className="sf-developer-grid">
-          <article data-sf-reveal><Icon kind="globe" size={25}/><h3>Developers from India</h3><p>Hire Salesforce developers from India with experience matched to your organisation, product requirements and review standards. Start with the responsibilities, seniority and overlap your team needs.</p></article>
-          <article data-sf-reveal><Icon kind="people" size={25}/><h3>Remote and offshore working</h3><p>Hire a remote Salesforce developer for an agreed working arrangement. For offshore Salesforce developers, confirm collaboration tools, time-zone overlap and ownership before onboarding.</p></article>
+          <article data-sf-reveal><Icon kind="globe" size={25}/><h3><a href="/hire-developers-india">Developers from India</a></h3><p>Hire Salesforce developers from India with experience matched to your organisation, product requirements and review standards. Start with the responsibilities, seniority and overlap your team needs.</p></article>
+          <article data-sf-reveal><Icon kind="people" size={25}/><h3>Remote and Offshore Salesforce Developers</h3><p>Hire a remote Salesforce developer for an agreed working arrangement. For offshore Salesforce developers, confirm collaboration tools, time-zone overlap and ownership before onboarding.</p></article>
           <article data-sf-reveal><Icon kind="document" size={25}/><h3>Contract development</h3><p>Hire Salesforce developers on contract for an agreed scope, allocation and duration. Discuss the billing, notice and handover terms before choosing the engagement.</p></article>
         </div>
         <div className="sf-developer-cta"><CTA role="Developer" onChoose={setSelectedRole}>Discuss a developer requirement</CTA></div>
@@ -158,7 +159,7 @@ export default function SalesforceStaffAugmentation() {
       </div></section>
 
       <section className="sf-section sf-roles" id="salesforce-roles" aria-labelledby="sf-roles-heading"><div className="sf-container">
-        <SectionHeading id="sf-roles-heading" description="Hire Salesforce professionals for the work your team needs to deliver. Explore each role, then discuss the product experience and allocation required.">Salesforce Professionals You Can Hire</SectionHeading>
+        <SectionHeading id="sf-roles-heading" description="Hire Salesforce professionals for the work your team needs to deliver. Explore each role, then discuss the product experience and allocation required.">Salesforce Roles and Consultants You Can Hire</SectionHeading>
         <RoleExplorer selectedRole={selectedRole}/>
       </div></section>
 
@@ -178,7 +179,7 @@ export default function SalesforceStaffAugmentation() {
       </div></section>
 
       <section className="sf-section sf-engagements" id="salesforce-engagements" aria-labelledby="sf-engagements-heading"><div className="sf-container">
-        <SectionHeading id="sf-engagements-heading" description="Salesforce contract staffing gives your team an agreed allocation and working period. Our Salesforce staffing services support selection, onboarding and engagement coordination. As your Salesforce staffing agency, eThing coordinates the people and working arrangement while your team manages priorities and delivery. Confirm availability, responsibilities and terms before starting.">Flexible Engagement Models</SectionHeading>
+        <SectionHeading id="sf-engagements-heading" description="Salesforce contract staffing gives your team an agreed allocation and working period. Our Salesforce staffing services support selection, onboarding and engagement coordination. As your Salesforce staffing agency, eThing coordinates the people and working arrangement while your team manages priorities and delivery. Confirm availability, responsibilities and terms before starting.">Flexible Engagement Models for Salesforce Staff Augmentation</SectionHeading>
         <div className="sf-model-grid">{salesforceModels.map((model,index) => <article className="sf-motion-card" key={model.number} data-sf-reveal style={{ '--sf-delay': index * 70 + 'ms' }}><div className="sf-model-top"><span className="sf-model-number">{model.number}</span><EngagementGraphic number={model.number}/></div><h3>{model.title}</h3><p>{model.fit}</p><ul className="sf-checklist">{model.points.map(item => <li key={item}><Icon kind="check" size={17}/>{item}</li>)}</ul></article>)}</div>
         <div className="sf-quote-panel" data-sf-reveal><div><h3>What affects your quote?</h3><p>We scope the requirement, check sourcing fit and discuss a proposal before the engagement begins.</p></div><div><ul className="sf-tags">{['Seniority','Specialisation','Hours & overlap','Working location','Duration'].map(item => <li key={item}>{item}</li>)}</ul><p>The proposal sets out the role, allocation, working arrangement, rate, billing, included support and any applicable charges.</p></div></div>
       </div></section>
@@ -203,7 +204,7 @@ export default function SalesforceStaffAugmentation() {
 
       <section className="sf-section sf-enquiry" id="salesforce-next-steps" aria-labelledby="sf-enquiry-heading"><div className="sf-container sf-enquiry-grid"><div data-sf-reveal><h2 id="sf-enquiry-heading">Tell us which Salesforce skills you need</h2><p>Use the form above to share the role and a short description of the work. Here is how we take the conversation forward.</p><ol className="sf-next-steps">{[['Clarify the requirement','Understand the skills, scope, hours and preferred start.'],['Check sourcing feasibility','Discuss the experience and availability the role needs.'],['Discuss profiles and terms','Agree the next step, shortlist approach and proposed arrangement.']].map(([heading,body],index) => <li key={heading}><span>0{index + 1}</span><div><strong>{heading}</strong><p>{body}</p></div></li>)}</ol><div className="sf-next-step-cta"><CTA>Share your requirement</CTA></div></div><div className="sf-next-step-visual"><TeamIllustration/></div></div></section>
 
-      <section className="about-copy-related" id="salesforce-related" aria-labelledby="sf-related-heading"><div className="about-copy-container" data-sf-reveal><h2 id="sf-related-heading" className="about-copy-related-title">Explore related services</h2><p className="about-copy-related-copy">Find the engineering service or hiring option that fits your requirements.</p><ul className="about-copy-related-links"><li><a href="/website-development">Website development</a></li><li><a href="/mobile_application">Mobile app development</a></li><li><a href="/hire-ai-developers">Hire AI developers</a></li></ul></div></section>
+      <section className="about-copy-related" id="salesforce-related" aria-labelledby="sf-related-heading"><div className="about-copy-container" data-sf-reveal><h2 id="sf-related-heading" className="about-copy-related-title">Explore related services</h2><p className="about-copy-related-copy">Find the engineering service or hiring option that fits your requirements.</p><ul className="about-copy-related-links"><li><a href="/website-development">Website development</a></li><li><a href="/mobile_application">Mobile app development</a></li><li><a href="/hire-ai-developers">Hire AI developers</a></li><li><a href="/contact">Discuss a developer requirement</a></li></ul></div></section>
     </main>
     <CopyFooter activePath={route} optimizeMedia websiteStyle/>
     <CopyBackToTop/>

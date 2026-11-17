@@ -8,9 +8,9 @@ const html = await fs.readFile('dist/index.html', 'utf8')
 
 test('homepage is prerendered at the existing canonical URL', () => {
   assert.equal((html.match(/<h1\b/g) || []).length, 1)
-  assert.match(html, /<h1[^>]*>IT Staff Augmentation Services with Dedicated Talent from India<\/h1>/)
+  assert.match(html, /<h1[^>]*>IT Staff Augmentation Company: Dedicated Engineers &amp; Developers from India<\/h1>/)
   assert.match(html, /rel="canonical"[^>]*href="https:\/\/www\.ethingsolutions\.com\/"/)
-  for (const heading of ['Skills for your team', 'Client reviews', 'Hire software developers', 'AI for your business', 'Industries we support', 'Frequently asked questions', 'Contact us']) assert.ok(html.includes(heading), heading)
+  for (const heading of ['Specialized IT Staff Augmentation Services Across Core Disciplines', 'Client reviews', 'Hire Dedicated Software Developers for Web, Mobile, and Cloud', 'AI &amp; Machine Learning Staff Augmentation', 'Industries we support', 'Frequently Asked Questions About IT Staff Augmentation', 'Contact us']) assert.ok(html.includes(heading), heading)
   assert.match(html, /<header\b/)
   assert.match(html, /<footer\b/)
   assert.doesNotMatch(html, /<meta[^>]*name="robots"[^>]*content="noindex/)

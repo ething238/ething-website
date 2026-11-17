@@ -13,7 +13,7 @@ test('Salesforce is pre-rendered, indexable and linked under Hire Talent without
   assert.equal((html.match(/<h1\b/g) || []).length, 1);
   assert.equal((html.match(/<main\b/g) || []).length, 1);
   assert.equal((html.match(/<form\b/g) || []).length, 1);
-  assert.match(html, /<title[^>]*>Salesforce Staff Augmentation Services \| eThing<\/title>/);
+  assert.match(html, /<title[^>]*>Hire Salesforce Developers \| Salesforce Staff Augmentation \| eThing<\/title>/);
   assert.ok(html.includes(`rel="canonical" href="${canonical}"`));
   assert.doesNotMatch(html, /noindex|Extend My Salesforce Team|Discuss This Role|Illustrative talent network/);
   const hire = JSON.parse(fs.readFileSync('src/data/aboutUsCopy.json', 'utf8')).navigation.find(item => item.id === 'hire-talent');

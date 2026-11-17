@@ -10,6 +10,13 @@ import { hiringRoles, homepageReviews, deliveryProof } from '../data/homepageHir
 const areaIcons = { code: Code2, brain: BrainCircuit, cloud: Cloud, mobile: Smartphone, shield: ShieldCheck, cpu: Cpu }
 const industryIcons = { heart: HeartPulse, bank: Building2, car: Car, plane: Plane, train: TrainFront, book: BookOpen }
 
+function FaqAnswer({ answer, answerLink }) {
+  if (!answerLink) return <p>{answer}</p>
+  const start = answer.indexOf(answerLink.text)
+  if (start < 0) return <p>{answer}</p>
+  return <p>{answer.slice(0, start)}<a href={answerLink.path}>{answerLink.text}</a>{answer.slice(start + answerLink.text.length)}</p>
+}
+
 function TeamVisual() {
   return <div className="hero-visual" role="img" aria-label="eThing software developers, AI and data engineers, and cloud specialists joining your existing team">
     <div className="visual-top"><span className="visual-dot" /><span>Extend your team with eThing</span><Network size={20} aria-hidden="true" /></div>
@@ -53,11 +60,11 @@ export default function Home({ content }) {
 
     <section className="section section-expertise" id="expertise">
       <div className="container">
-        <div className="section-heading centered-heading"><h2>Skills for your team</h2><p>eThing provides IT augmentation services across software engineering, AI/ML, data, cloud, mobile, testing and embedded systems.</p><p className="shortlist-note">Suitable candidate profiles are shared in <strong>48 hours on average</strong> after requirements are confirmed.</p></div>
+        <div className="section-heading centered-heading"><h2>Specialized IT Staff Augmentation Services Across Core Disciplines</h2><p>eThing delivers offshore staff augmentation services across software engineering, machine learning, cloud platforms, mobile apps, and QA.</p><p className="shortlist-note">Suitable candidate profiles are shared in <strong>48 hours on average</strong> after requirements are confirmed.</p></div>
         <div className="expertise-layout">
           <div className="expertise-tabs" role="tablist" aria-label="Engineering specialties" aria-orientation="vertical">{expertiseAreas.map((item, i) => { const Icon = areaIcons[item.icon]; return <button key={item.id} id={'area-tab-' + item.id} role="tab" type="button" tabIndex={areaIndex === i ? 0 : -1} aria-selected={areaIndex === i} aria-controls={'area-panel-' + item.id} onKeyDown={e => keyTabs(e, i, expertiseAreas, setAreaIndex)} onClick={() => setAreaIndex(i)}><Icon size={21} aria-hidden="true" /><span>{item.label}</span><ArrowRight size={18} aria-hidden="true" /></button> })}</div>
           <div className="expertise-panels">{expertiseAreas.map((area, i) => { const AreaIcon = areaIcons[area.icon]; const active = areaIndex === i; return <div key={area.id} className="expertise-panel" id={'area-panel-' + area.id} role="tabpanel" aria-labelledby={'area-tab-' + area.id} aria-hidden={!active} inert={!active} tabIndex={active ? 0 : -1}>
-            <div className="expertise-panel-top"><span className="area-icon"><AreaIcon size={33} strokeWidth={1.4} aria-hidden="true" /></span><h3>{area.title}</h3><span className="panel-number">{area.number} / 06</span></div><p>{area.description}</p>
+            <div className="expertise-panel-top"><span className="area-icon"><AreaIcon size={33} strokeWidth={1.4} aria-hidden="true" /></span><h3>{area.title}</h3><span className="panel-number">{area.number} / 06</span></div><p>{area.descriptionLink && <a href={area.descriptionLink[0]}>{area.descriptionLink[1]}</a>}{area.description}</p>
             <div className="technology-tags">{area.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
             <div className="expertise-columns"><div><h4>Available roles</h4><ul>{area.roles.map(role => <li key={role}><Check size={15} aria-hidden="true" />{role}</li>)}</ul></div><div><h4>What they can do</h4><ul>{area.focus.map(focus => <li key={focus}><span aria-hidden="true">↗</span>{focus}</li>)}</ul></div></div>
             <div className="expertise-actions"><a className="text-link" href="#reach-out" onClick={() => enquire('Team extension', area.label)}>Talk about your needs <ArrowUpRight size={17} aria-hidden="true" /></a><a className="subtle-link" href={homepageHref(area.path)}>{area.link}<ArrowUpRight size={14} aria-hidden="true" /></a></div>
@@ -70,7 +77,7 @@ export default function Home({ content }) {
     <section className="section reviews-section" id="reviews">
       <div className="container">
         <div className="section-heading centered-heading"><h2>Client reviews</h2></div>
-        <div className="review-grid">{homepageReviews.map(review => <article className="source-review" key={review.platform}><div className="source-review-top"><h3><img src={review.logo} alt="" width="32" height="32" loading="lazy" />{review.platform}</h3><div className="source-review-rating"><strong>{review.rating}<span> / 5</span></strong><p>{review.count} {review.count === 1 ? 'review' : 'reviews'}</p></div></div><blockquote>“{review.quote}”</blockquote><p className="source-review-author">{review.author}</p><p className="source-review-context">{review.context}</p><a className="text-link" href={review.url} target="_blank" rel="noopener noreferrer">Read the {review.platform} review<ArrowUpRight size={17} aria-hidden="true" /></a></article>)}</div>
+        <div className="review-grid">{homepageReviews.map(review => <article className="source-review" key={review.platform}><div className="source-review-top"><h3><img src={review.logo} alt="" width="32" height="32" loading="lazy" />{review.heading}</h3><div className="source-review-rating"><strong>{review.rating}<span> / 5</span></strong><p>{review.count} {review.count === 1 ? 'review' : 'reviews'}</p></div></div><blockquote>“{review.quote}”</blockquote><p className="source-review-author">{review.author}</p><p className="source-review-context">{review.context}</p><a className="text-link" href={review.url} target="_blank" rel="noopener noreferrer">Read the {review.platform} review<ArrowUpRight size={17} aria-hidden="true" /></a></article>)}</div>
         <article className="delivery-proof"><div className="delivery-proof-heading"><Building2 size={27} aria-hidden="true" /><div><h3>{deliveryProof.title}</h3><p>{deliveryProof.sector} · {deliveryProof.period} · Client-reported project</p></div></div><p>{deliveryProof.summary}</p><a className="text-link" href={deliveryProof.url} target="_blank" rel="noopener noreferrer">Read the project details on Clutch <ArrowUpRight size={17} aria-hidden="true" /></a></article>
         <p className="review-checked">Ratings and excerpts checked <time dateTime="2026-10-13">13 October 2026</time>. Review counts and ratings may change.</p>
       </div>
@@ -78,17 +85,17 @@ export default function Home({ content }) {
 
     <section className="section hiring-section" id="hire-developers">
       <div className="container">
-        <div className="section-heading centered-heading"><h2>Hire software developers</h2><p>Hire dedicated software developers who fit your project, skills and working hours, wherever your team works.</p></div>
-        <div className="hiring-grid">{hiringRoles.map(role => <article className="hiring-card" key={role.id}><h3>{role.title}</h3><p>{role.description}</p><a className="text-link" href={homepageHref(role.path)}>{role.cta}<ArrowUpRight size={17} aria-hidden="true" /></a></article>)}</div>
-        <p className="hiring-note">Share your project requirements and start date. eThing defines the roles, matches developers to your requirements and coordinates onboarding across locations and time zones.</p>
+        <div className="section-heading centered-heading"><h2>Hire Dedicated Software Developers for Web, Mobile, and Cloud</h2><p>Hire dedicated software developers who fit your project, skills and working hours, wherever your team works.</p></div>
+        <div className="hiring-grid">{hiringRoles.map(role => <article className="hiring-card" key={role.id}><h3>{role.title}</h3><p>{role.anchor && <a href={role.path}>{role.anchor}</a>}{role.description}</p><a className="text-link" href={homepageHref(role.path)}>{role.cta}<ArrowUpRight size={17} aria-hidden="true" /></a></article>)}</div>
+        <p className="hiring-note">Send us your project scope, required tech stack, and target kickoff date. We match qualified engineers to your specific criteria and coordinate remote onboarding across your working hours.</p>
       </div>
     </section>
 
     <section className="section ai-section" id="ai">
       <div className="container ai-layout">
         <div className="ai-copy">
-          <h2>AI for your business</h2>
-          <p>eThing brings AI and data engineers into your team to build practical AI tools, prepare your data and connect new features to your existing software.</p>
+          <h2>AI &amp; Machine Learning Staff Augmentation</h2>
+          <p>eThing brings <a href="/hire-ai-developers">AI and data engineers</a> into your team to build practical AI tools, prepare your data and connect new features to your existing software.</p>
           <ul className="section-benefits">
             <li><Check size={19} aria-hidden="true" /><div><strong>Start with a clear goal</strong><p>Choose the task AI should improve for your team.</p></div></li>
             <li><Check size={19} aria-hidden="true" /><div><strong>Connect your data and tools</strong><p>Build around your existing apps and data sources.</p></div></li>
@@ -118,9 +125,9 @@ export default function Home({ content }) {
 
     <section className="section faq-section" id="faq">
       <div className="container faq-layout">
-        <div className="section-heading centered-heading faq-intro"><h2>Frequently asked questions</h2><p>Learn how we find developers, plan the work and help your team get started.</p></div>
+        <div className="section-heading centered-heading faq-intro"><h2>Frequently Asked Questions About IT Staff Augmentation</h2><p>Learn how we find developers, plan the work and help your team get started.</p></div>
         <div className="faq-columns">
-          {[faqs.slice(0, faqMidpoint), faqs.slice(faqMidpoint)].map((column, columnIndex) => <div className="faq-list" key={columnIndex}>{column.map((item, i) => <details key={item.question}><summary><span className="faq-number">{String(columnIndex * faqMidpoint + i + 1).padStart(2, '0')}</span><span>{item.question}</span><ChevronDown size={19} aria-hidden="true" /></summary><p>{item.answer}</p></details>)}</div>)}
+          {[faqs.slice(0, faqMidpoint), faqs.slice(faqMidpoint)].map((column, columnIndex) => <div className="faq-list" key={columnIndex}>{column.map((item, i) => <details key={item.question}><summary><span className="faq-number">{String(columnIndex * faqMidpoint + i + 1).padStart(2, '0')}</span><span>{item.question}</span><ChevronDown size={19} aria-hidden="true" /></summary><FaqAnswer {...item}/></details>)}</div>)}
         </div>
       </div>
     </section>

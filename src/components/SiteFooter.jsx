@@ -30,20 +30,20 @@ export default function SiteFooter() {
             </div>
             <div className="fs-navigation">
               <nav className="fs-company" aria-labelledby="fs-company-title">
-                <h3 id="fs-company-title">Company</h3>
+                <p className="footer-heading" id="fs-company-title">Company</p>
                 <ul>{company.map(([label,path]) => <li key={path}><a href={path}>{label}</a></li>)}</ul>
               </nav>
               <nav className="fs-talent" aria-labelledby="fs-talent-title">
-                <h3 id="fs-talent-title">Hire Talent</h3>
+                <p className="footer-heading" id="fs-talent-title">Hire Talent</p>
                 <ul>{talentLinks.map(([label,path]) => <li key={path}><a href={path}>{label}</a></li>)}</ul>
               </nav>
               <div className="fs-secondary">
-                <nav className="fs-industries" aria-labelledby="fs-industries-title"><h3 id="fs-industries-title">Industries we support</h3><ul>{industries.map(link => <li key={link.path}><a href={link.path}>{link.label}</a></li>)}</ul></nav>
-                <nav className="fs-engineering" aria-labelledby="fs-engineering-title"><h3 id="fs-engineering-title">Engineering services</h3><ul>{engineering.map(([label,path]) => <li key={path}><a href={path}>{label}</a></li>)}</ul></nav>
+                <nav className="fs-industries" aria-labelledby="fs-industries-title"><p className="footer-heading" id="fs-industries-title">Industries we support</p><ul>{industries.map(link => <li key={link.path}><a href={link.path}>{link.label}</a></li>)}</ul></nav>
+                <nav className="fs-engineering" aria-labelledby="fs-engineering-title"><p className="footer-heading" id="fs-engineering-title">Engineering services</p><ul>{engineering.map(([label,path]) => <li key={path}><a href={path}>{label}</a></li>)}</ul></nav>
               </div>
             </div>
             <div className="fs-contact">
-              <h3>Let’s talk</h3>
+              <p className="footer-heading">Let’s talk</p>
               <a href="mailto:support@ething.in" className="fs-email">support@ething.in <Icon kind="arrow" size={16}/></a>
               <div className="fs-contact-line"><Icon kind="phone" size={16}/><div><a href="tel:+917011956780"><small>India</small> +91 70119 56780</a><a href="tel:+19295574560"><small>USA</small> +1 929 557 4560</a></div></div>
               <div className="fs-contact-line"><Icon kind="pin" size={17}/><p>Building Number 145,<br/>Sector 44 Road, Gurugram,<br/>Haryana, India · 122003</p></div>

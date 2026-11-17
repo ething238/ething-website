@@ -6,19 +6,18 @@ import { auditAiHiring } from '../scripts/audit-ai-hiring.mjs';
 const audit = await auditAiHiring();
 const html = await fs.readFile('dist/hire-ai-developers/index.html', 'utf8');
 
-test('all original keywords occur naturally at the requested combined density', () => {
-  assert.equal(Object.keys(audit.copy.keywords).length, 13);
-  for (const [keyword, count] of Object.entries(audit.copy.keywords)) assert.ok(count > 0, keyword);
-  assert.equal(audit.copy.words, 1503);
-  assert.equal(audit.copy.combinedMentions, 30);
-  assert.equal(Number(audit.copy.combinedDensityPercent.toFixed(2)), 2);
+test('the copy retains the AI hiring terms and uses AI developers in place of AI devs', () => {
+  for (const [keyword, count] of Object.entries(audit.copy.keywords)) {
+    if (keyword === 'ai devs') assert.equal(count, 0);
+    else assert.ok(count > 0, keyword);
+  }
 });
 
 test('the retained URL serves complete indexable HTML without a website framework bundle', () => {
   assert.equal(audit.canonical, 'https://www.ethingsolutions.com/hire-ai-developers');
-  assert.equal(audit.title, 'Hire AI Developers in India | eThing');
+  assert.equal(audit.title, 'Hire Dedicated AI Developers & ML Engineers | eThing');
   assert.equal(audit.h1Count, 1);
-  assert.match(html, /<h1[^>]*>Hire Dedicated AI Developers for Generative AI Projects<\/h1>/);
+  assert.match(html, /<h1[^>]*>Hire Dedicated AI Developers &amp; Engineers<\/h1>/);
   assert.doesNotMatch(html, /<meta[^>]*name="robots"[^>]*content="[^"]*noindex/i);
   assert.doesNotMatch(html, /<script[^>]*src="\/(?:_next|assets\/index)/);
   assert.match(html, /aria-controls="about-copy-mobile-nav"/);

@@ -2,7 +2,7 @@ export const aiKeywords = ['ai development companies', 'artificial intelligence 
 
 export const aiExpertise = [
   { icon: 'spark', title: 'Generative AI & LLMs', body: 'Hire AI developers to build assistants, grounded search and useful AI workflows, with experience in retrieval, model evaluation and application integration.', tags: ['RAG', 'LangChain', 'LLM evaluation', 'Vector databases'] },
-  { icon: 'nodes', title: 'Machine learning', body: 'An ML developer turns structured data into forecasting, ranking and recommendation systems, with reproducible experiments and evaluation against your goals.', tags: ['Python', 'PyTorch', 'TensorFlow', 'scikit-learn'] },
+  { icon: 'nodes', title: 'Machine learning', body: 'When you hire machine learning engineers from our network, they turn structured data into production forecasting, ranking, and recommendation systems, backed by reproducible experiments and objective evaluation metrics.', tags: ['Python', 'PyTorch', 'TensorFlow', 'scikit-learn'] },
   { icon: 'message', title: 'Natural language processing', body: 'Make documents and conversations useful. Add specialists for semantic search, classification, entity extraction and domain-specific text processing.', tags: ['Transformers', 'Embeddings', 'spaCy', 'Text analytics'] },
   { icon: 'eye', title: 'Computer vision', body: 'Hire AI engineers for image and video understanding, from visual inspection to object detection, with testing for real operating conditions.', tags: ['OpenCV', 'Object detection', 'Segmentation', 'Edge inference'] },
   { icon: 'database', title: 'Data engineering & analytics', body: 'Give AI product development a reliable foundation with ingestion, transformation, data quality checks and pipelines connecting experiments to production.', tags: ['SQL', 'Spark', 'Airflow', 'Data quality'] },
@@ -11,8 +11,8 @@ export const aiExpertise = [
 
 export const aiApplications = [
   { icon: 'message', sector: 'Enterprise & education', title: 'Knowledge assistants', body: 'AI developers help teams search company documents and find answers with source references, permissions and a route to human support.', skills: 'RAG · NLP · Application integration' },
-  { icon: 'database', sector: 'Banking & financial services', title: 'Intelligent operations', body: 'Support document processing, analyst workflows and risk signals, with audit trails and human review built into the requirements.', skills: 'Document AI · Data pipelines · Evaluation' },
-  { icon: 'eye', sector: 'Healthcare & life sciences', title: 'Research & imaging workflows', body: 'Discuss engineering support for machine learning in drug discovery, research data and imaging, under your scientific team’s direction and validation.', skills: 'Computer vision · ML · Research data' },
+  { icon: 'database', sector: 'Banking & financial services', path: '/banking_finance_industry', title: 'Intelligent operations', body: 'Support document processing, analyst workflows and risk signals, with audit trails and human review built into the requirements.', skills: 'Document AI · Data pipelines · Evaluation' },
+  { icon: 'eye', sector: 'Healthcare & life sciences', path: '/healthcare_industry', title: 'Research & imaging workflows', body: 'Discuss engineering support for machine learning in drug discovery, research data and imaging, under your scientific team’s direction and validation.', skills: 'Computer vision · ML · Research data' },
   { icon: 'nodes', sector: 'Retail & manufacturing', title: 'Predictive product features', body: 'Add AI developers for recommendations, semantic product search, demand forecasting and visual inspection in the systems your teams already use.', skills: 'Recommendations · Forecasting · Vision' },
 ];
 
