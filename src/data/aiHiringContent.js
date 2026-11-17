@@ -24,10 +24,10 @@ export const aiReasons = [
 ];
 
 export const aiProcess = [
-  ['Define the work', 'To hire AI developers, share your use case, stack, data context, seniority and collaboration hours. We align on the expertise your team needs.'],
-  ['Meet your shortlist', 'Review relevant profiles and interview the engineers. Assess technical thinking and communication against your actual role.'],
-  ['Agree the engagement', 'Confirm the engineer or team, duration, pricing, confidentiality, IP ownership and onboarding responsibilities.'],
-  ['Build together', 'Our AI developers join your sprint rhythm and code reviews, with eThing available for staffing support as your roadmap evolves.'],
+  ['Define the use case', 'To hire AI developers, tell us what you want to build and what you need the feature to do. We align on the expertise your team needs.'],
+  ['Set technical requirements', 'Share your stack, data context, deployment needs, seniority and collaboration hours so we can match profiles to the role.'],
+  ['Interview AI engineers', 'Review relevant profiles and interview the engineers. Assess technical thinking and communication against your actual role.'],
+  ['Plan onboarding', 'Confirm the team, duration, pricing, confidentiality, IP ownership and onboarding responsibilities. Plan how the engineers will join your sprints and code reviews.'],
 ];
 
 export const aiEngagements = [
@@ -46,7 +46,7 @@ export const aiFaqs = [
   ['How quickly can I receive AI developer profiles?', 'Our shortlist target for AI developers is within 48 hours after we understand your requirements. Timing depends on the specialist role, candidate availability and your interview process; the engineer’s start date is agreed separately.'],
   ['Can I interview AI engineers before hiring?', 'Yes. Review profiles and interview AI developers on your shortlist to assess technical decisions, communication and fit with your team before choosing an engagement.'],
   ['Can you add GenAI and LLM features to our existing product?', 'Yes. Share your architecture, data sources, evaluation needs and deployment environment. We can match an ML developer or a GenAI specialist to your application and integration work.'],
-  ['How do engineers work with our internal team?', 'Through staff augmentation, engineers work in your repositories, code reviews and sprint process. You retain daily technical direction and delivery priorities, while eThing supports the engagement.'],
+  ['How do engineers work with our internal team?', 'With AI staff augmentation, you can hire AI engineers who join your repositories, code reviews and sprints. Your team sets the technical direction. Before work starts, we agree on working hours, permitted tools, data access and ownership.'],
   ['Can I hire one specialist, a team or for a short-term project?', 'You can hire AI developers individually, as a dedicated team or through contract staffing for an agreed project period. The proposal sets out skills, duration, collaboration hours and candidate availability.'],
   ['Can we scale the team, and what happens if the fit is not right?', 'Discuss changes in team size as your roadmap evolves. Replacement support, notice periods and any associated terms are agreed in your engagement, so expectations are clear before work starts.'],
   ['How much does an AI engineering engagement cost?', 'Pricing depends on seniority, specialist skills, team size, collaboration hours and duration. Share your requirements for a tailored staffing solution. Scope and commercial terms are agreed before onboarding.'],

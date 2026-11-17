@@ -89,6 +89,10 @@ export const faqs = [
     "answer": "Yes. We offer onsite, remote and hybrid options. Tell us where your team works and which hours developers need to be available. We will use that information when suggesting suitable people."
   },
   {
+    "question": "What working-hour overlap can I expect with offshore staff augmentation?",
+    "answer": "Tell us your time zone and which hours your engineers need to be available. We use those hours when matching candidates and confirm the working arrangement before the engagement starts."
+  },
+  {
     "question": "How are confidentiality, IP and continuity handled?",
     "answer": "Tell us your rules for private information, ownership of the code and access to your systems. We agree these details before work starts. We also discuss how work will be handed over and what happens if a developer needs to be replaced."
   },

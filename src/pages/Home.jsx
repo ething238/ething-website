@@ -50,7 +50,7 @@ export default function Home({ content }) {
       <div className="container hero-grid">
         <div className="hero-copy">
           <h1>{pageHeadings['/']}</h1>
-          <p>Extend your team with AI developers, Python developers and Oracle EBS consultants from India. We also provide custom website, mobile application and software development services.</p>
+          <p className="seo-hiring-intro">eThing is an IT staff augmentation company that helps you hire dedicated developers from India. Add <a href="/hire-ai-developers">AI developers</a>, <a href="/hire-python-developers">Python developers</a> or <a href="/oracle-ebs">Oracle EBS consultants</a> to your team. We also build custom websites, mobile apps and software.</p>
           <div className="hero-actions"><a className="button button-blue" href="#reach-out" onClick={() => enquire('Team extension')}>Find your team <ArrowUpRight size={19} aria-hidden="true" /></a></div>
           <div className="hero-proof" aria-label="eThing delivery and hiring experience"><div><strong>20+</strong><span>Projects delivered</span></div><div><strong>48 hrs</strong><span>Average profile sharing time</span></div></div>
         </div>
@@ -71,6 +71,21 @@ export default function Home({ content }) {
           </div> })}</div>
         </div>
         <div className="hire-links"><span>Looking for a specific skill?</span><a href={homepageHref('/hire-react-developers')}>React <ArrowUpRight size={13} aria-hidden="true" /></a><a href={homepageHref('/hire-python-developers')}>Python <ArrowUpRight size={13} aria-hidden="true" /></a><a href={homepageHref('/hire-full-stack-developers')}>Full stack <ArrowUpRight size={13} aria-hidden="true" /></a><a href={homepageHref('/hire-devops-engineers')}>DevOps <ArrowUpRight size={13} aria-hidden="true" /></a></div>
+      </div>
+    </section>
+
+    <section className="section" id="staff-augmentation-process" aria-labelledby="staff-augmentation-process-heading">
+      <div className="container">
+        <div className="section-heading centered-heading">
+          <h2 id="staff-augmentation-process-heading">How Our IT Staff Augmentation Process Works</h2>
+        </div>
+        <img className="seo-diagram" src="/seo-visuals/homepage-hiring.webp" alt="" width="1600" height="533" loading="lazy" decoding="async" />
+        <ol className="seo-hiring-steps">
+          <li><h3>Scope the role</h3><p>Share what you’re building, the skills you need, your working hours and your target start date.</p></li>
+          <li><h3>Review profiles</h3><p>We screen candidates against your brief. We share suitable profiles in 48 hours on average after you confirm the role requirements.</p></li>
+          <li><h3>Interview candidates</h3><p>Meet the people on your shortlist and review their experience with your stack and the work you need done.</p></li>
+          <li><h3>Onboard</h3><p>Once you select a candidate, we coordinate the agreed start date and onboarding with your team.</p></li>
+        </ol>
       </div>
     </section>
 

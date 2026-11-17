@@ -151,7 +151,7 @@ export default function SalesforceStaffAugmentation() {
         <div>
         <div className="sf-developer-grid">
           <article data-sf-reveal><Icon kind="globe" size={25}/><h3><a href="/hire-developers-india">Developers from India</a></h3><p>Hire Salesforce developers from India with experience matched to your organisation, product requirements and review standards. Start with the responsibilities, seniority and overlap your team needs.</p></article>
-          <article data-sf-reveal><Icon kind="people" size={25}/><h3>Remote and Offshore Salesforce Developers</h3><p>Hire a remote Salesforce developer for an agreed working arrangement. For offshore Salesforce developers, confirm collaboration tools, time-zone overlap and ownership before onboarding.</p></article>
+          <article data-sf-reveal><Icon kind="people" size={25}/><h3>Remote and Offshore Salesforce Developers</h3><p>When you hire offshore Salesforce developers, share your time zone, the hours you need people available and the tools your team uses. We confirm the working arrangement before you choose a candidate.</p></article>
           <article data-sf-reveal><Icon kind="document" size={25}/><h3>Contract development</h3><p>Hire Salesforce developers on contract for an agreed scope, allocation and duration. Discuss the billing, notice and handover terms before choosing the engagement.</p></article>
         </div>
         <div className="sf-developer-cta"><CTA role="Developer" onChoose={setSelectedRole}>Discuss a developer requirement</CTA></div>
@@ -159,7 +159,7 @@ export default function SalesforceStaffAugmentation() {
       </div></section>
 
       <section className="sf-section sf-roles" id="salesforce-roles" aria-labelledby="sf-roles-heading"><div className="sf-container">
-        <SectionHeading id="sf-roles-heading" description="Hire Salesforce professionals for the work your team needs to deliver. Explore each role, then discuss the product experience and allocation required.">Salesforce Roles and Consultants You Can Hire</SectionHeading>
+        <SectionHeading id="sf-roles-heading" description="If you need to hire Salesforce consultants, tell us which Salesforce products you use, which workflows need attention and what the consultant will own.">Salesforce Roles and Consultants You Can Hire</SectionHeading>
         <RoleExplorer selectedRole={selectedRole}/>
       </div></section>
 
@@ -173,8 +173,13 @@ export default function SalesforceStaffAugmentation() {
         <div className="sf-technical-grid">{salesforceTechnicalSkills.map((skill,index) => <article className="sf-motion-card" key={skill.title} data-sf-reveal style={{ '--sf-delay': (index % 3) * 70 + 'ms' }}><div className="sf-card-heading"><Icon kind={skill.icon} size={28}/><h3>{skill.title}</h3></div><p>{skill.description}</p></article>)}</div>
       </div></section>
 
+      <section className="sf-section" id="salesforce-access" aria-labelledby="sf-access-heading"><div className="sf-container">
+        <SectionHeading id="sf-access-heading" description="Before Salesforce developers join your team, we agree on confidentiality, code ownership and handover. Your team approves system access, sets the permissions each role needs and specifies which data developers can use in a sandbox. If the role requires a Salesforce certification, we agree which credentials to verify during screening.">System Access, Confidentiality and IP</SectionHeading>
+      </div></section>
+
       <section className="sf-section sf-assessment" aria-labelledby="sf-assessment-heading"><div className="sf-container">
         <SectionHeading id="sf-assessment-heading" description="eThing screens for the agreed role, relevant experience and communication. We agree the role-specific checks and your interview stages before sourcing.">How we evaluate Salesforce talent</SectionHeading>
+        <img className="seo-diagram" src="/seo-visuals/salesforce-screening.webp" alt="" width="1600" height="533" loading="lazy" decoding="async" />
         <div className="sf-assessment-grid"><ol className="sf-assessment-steps">{salesforceAssessment.map(([heading,body],index) => <li key={heading} data-sf-reveal><span>0{index + 1}</span><div><h3>{heading}</h3><p>{body}</p></div></li>)}</ol><aside className="sf-assessment-focus" data-sf-reveal><h3>Specific to the work.</h3><p>Agree checks that match the role and your backlog.</p><dl>{salesforceAssessmentFocus.map(([role,focus]) => <div key={role}><dt>{role}</dt><dd>{focus}</dd></div>)}</dl><div className="sf-assessment-output"><Icon kind="document"/><p><strong>The useful output</strong>Role fit, evidence reviewed and follow-up points for your interview.</p></div></aside></div>
       </div></section>
 

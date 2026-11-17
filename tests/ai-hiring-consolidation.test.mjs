@@ -7,7 +7,8 @@ import { aiFaqs } from '../src/data/aiHiringContent.js';
 const html = await fs.readFile('dist/hire-ai-developers/index.html', 'utf8');
 
 test('consolidated page renders all agreed content and one set of FAQs', () => {
-  for (const heading of ['Skills our AI engineers bring', 'What your AI team can build', 'Help support teams find the right answers.', 'Engineers who work as part of your team.', 'Flexible Engagement Models for Hiring AI Developers']) assert.ok(html.includes(heading), heading);
+  for (const heading of ['Skills our AI engineers bring', 'AI Tools and Production Deployment', 'What your AI team can build', 'Example of an AI Support Assistant', 'Engineers who work as part of your team.', 'Flexible Engagement Models for Hiring AI Developers']) assert.ok(html.includes(heading), heading);
+  assert.match(html, /src="\/seo-visuals\/ai-hiring\.webp"/);
   assert.equal((html.match(/class="ai-expertise-card"/g) || []).length, 6);
   assert.equal((html.match(/class="ai-sector"/g) || []).length, 4);
   assert.equal((html.match(/Discuss this option/g) || []).length, 3);

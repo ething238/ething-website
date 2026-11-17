@@ -1,0 +1,53 @@
+.seo-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.5rem auto 0;
+  border-radius: 12px;
+}
+
+.seo-hiring-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.seo-hiring-steps li {
+  padding: 1rem;
+  border: 1px solid #dbe6ef;
+  border-radius: 12px;
+}
+
+.seo-hiring-steps h3 {
+  margin: 0 0 .5rem;
+  font-weight: 600;
+}
+
+.seo-hiring-steps p,
+.seo-section-copy {
+  max-width: 72ch;
+  line-height: 1.65;
+}
+
+.seo-content-links a,
+.seo-hiring-intro a,
+.seo-section-copy a {
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+
+.seo-content-links,
+.seo-section-copy + .seo-section-copy {
+  margin-top: 1rem;
+}
+
+@media (max-width: 640px) {
+  .seo-hiring-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 400px) {
+  .seo-hiring-steps { grid-template-columns: 1fr; }
+}
