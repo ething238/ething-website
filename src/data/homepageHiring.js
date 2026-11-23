@@ -25,7 +25,7 @@ export const deliveryProof = {
 
 export const homepageReviews = [
   {
-    platform: 'Clutch', alt: 'Clutch 5.0 rating review badge', heading: 'Client Feedback on Clutch', logo: '/images/clutch-review-logo.png', rating: '5.0', count: 1,
+    platform: 'Clutch', alt: 'Clutch 5.0 rating review badge', heading: 'Client Feedback on Clutch', logo: '/images/clutch-review-logo.png', rating: '5.0',
     quote: 'I was impressed with their delivery, attention to detail, and commitment to success.',
     author: 'Lead Talent Partner, FinTech Company', context: 'Anonymous client · 25 September 2026',
     url: 'https://clutch.co/profile/ething-solutions#review-490643',

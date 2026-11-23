@@ -9,6 +9,17 @@ import { hiringRoles, homepageReviews, deliveryProof } from '../data/homepageHir
 
 const areaIcons = { code: Code2, brain: BrainCircuit, cloud: Cloud, mobile: Smartphone, shield: ShieldCheck, cpu: Cpu }
 const industryIcons = { heart: HeartPulse, bank: Building2, car: Car, plane: Plane, train: TrainFront, book: BookOpen }
+const clutchReview = homepageReviews.find(review => review.platform === 'Clutch')
+
+function ReviewHeader({ review }) {
+  return <div className="source-review-top">
+    <h3><img src={review.logo} alt={review.alt} width="32" height="32" loading="lazy" />{review.heading}</h3>
+    <div className="source-review-rating">
+      <strong>{review.rating}<span> / 5</span></strong>
+      {review.count > 1 && <p>{review.count} reviews</p>}
+    </div>
+  </div>
+}
 
 function FaqAnswer({ answer, answerLink }) {
   if (!answerLink) return <p>{answer}</p>
@@ -87,8 +98,8 @@ export default function Home({ content }) {
     <section className="section reviews-section" id="reviews">
       <div className="container">
         <div className="section-heading centered-heading"><h2>Client reviews</h2></div>
-        <div className="review-grid">{homepageReviews.map(review => <article className="source-review" key={review.platform}><div className="source-review-top"><h3><img src={review.logo} alt={review.alt} width="32" height="32" loading="lazy" />{review.heading}</h3><div className="source-review-rating"><strong>{review.rating}<span> / 5</span></strong><p>{review.count} {review.count === 1 ? 'review' : 'reviews'}</p></div></div><blockquote>“{review.quote}”</blockquote><p className="source-review-author">{review.author}</p><p className="source-review-context">{review.context}</p><a className="text-link" href={review.url} target="_blank" rel="noopener noreferrer">Read the {review.platform} review<ArrowUpRight size={17} aria-hidden="true" /></a></article>)}</div>
-        <article className="delivery-proof"><div className="delivery-proof-heading"><Building2 size={27} aria-hidden="true" /><div><h3>{deliveryProof.title}</h3><p>{deliveryProof.sector} · {deliveryProof.period} · Client-reported project</p></div></div><p>{deliveryProof.summary}</p><a className="text-link" href={deliveryProof.url} target="_blank" rel="noopener noreferrer">Read the project details on Clutch <ArrowUpRight size={17} aria-hidden="true" /></a></article>
+        <div className="review-grid">{homepageReviews.map(review => <article className="source-review" key={review.platform}><ReviewHeader review={review} /><blockquote>“{review.quote}”</blockquote><p className="source-review-author">{review.author}</p><p className="source-review-context">{review.context}</p><a className="text-link" href={review.url} target="_blank" rel="noopener noreferrer">Read the {review.platform} review<ArrowUpRight size={17} aria-hidden="true" /></a></article>)}</div>
+        <article className="source-review delivery-proof"><ReviewHeader review={clutchReview} /><div className="delivery-proof-heading"><div><h4>{deliveryProof.title}</h4><p>{deliveryProof.sector} · {deliveryProof.period} · Client-reported project</p></div></div><p>{deliveryProof.summary}</p><a className="text-link" href={deliveryProof.url} target="_blank" rel="noopener noreferrer">Read the project details on Clutch <ArrowUpRight size={17} aria-hidden="true" /></a></article>
               </div>
     </section>
 
