@@ -24,7 +24,7 @@ export default function SiteFooter() {
         <div className="fs-container">
           <div className="fs-main">
             <div className="fs-brand">
-              <a href="/" className="fs-logo" aria-label="eThing home"><img src="/brand/ething-logo-new-font.png" alt="eThing" width="70" height="70" loading="lazy" decoding="async"/></a>
+              <a href="/" className="fs-logo" aria-label="eThing home"><img src="/brand/ething-logo-new-font.png" alt="eThing - IT Staff Augmentation and Software Engineering Services" width="70" height="70" loading="lazy" decoding="async"/></a>
               <p className="fs-brand-description">eThing provides IT staff augmentation and software development for websites, mobile apps and desktop applications. We help businesses extend their teams and deliver technology projects.</p>
               <p className="fs-brand-description">Our core expertise includes AI engineering, Python development and Oracle EBS services, with flexible support from individual specialists to dedicated delivery teams.</p>
             </div>

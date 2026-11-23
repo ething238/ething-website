@@ -25,13 +25,13 @@ export const deliveryProof = {
 
 export const homepageReviews = [
   {
-    platform: 'Clutch', heading: 'Client Feedback on Clutch', logo: '/images/clutch-review-logo.png', rating: '5.0', count: 1,
+    platform: 'Clutch', alt: 'Clutch 5.0 rating review badge', heading: 'Client Feedback on Clutch', logo: '/images/clutch-review-logo.png', rating: '5.0', count: 1,
     quote: 'I was impressed with their delivery, attention to detail, and commitment to success.',
     author: 'Lead Talent Partner, FinTech Company', context: 'Anonymous client · 25 September 2026',
     url: 'https://clutch.co/profile/ething-solutions#review-490643',
   },
   {
-    platform: 'Google', heading: 'Verified Google Reviews', logo: '/images/google-review-logo.png', rating: '4.8', count: 26,
+    platform: 'Google', alt: 'Google 4.8 star review badge', heading: 'Verified Google Reviews', logo: '/images/google-review-logo.png', rating: '4.8', count: 26,
     quote: 'Took staff augmentation support from ething and I’m really happy with the services they provide.',
     author: 'Karandeep Singh', context: 'IT staff augmentation · 5-star review',
     url: 'https://www.google.com/maps/place/eThing/@28.4497659,77.0753012,17z/data=!3m1!4b1!4m6!3m5!1s0x390cef3f1fabf119:0x7fe1320e1c4e8b09!8m2!3d28.4497659!4d77.0753012!16s%2Fg%2F11v0zpjtst',

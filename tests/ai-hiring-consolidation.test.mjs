@@ -7,7 +7,7 @@ import { aiFaqs } from '../src/data/aiHiringContent.js';
 const html = await fs.readFile('dist/hire-ai-developers/index.html', 'utf8');
 
 test('consolidated page renders all agreed content and one set of FAQs', () => {
-  for (const heading of ['Skills our AI engineers bring', 'AI Tools and Production Deployment', 'What your AI team can build', 'Example of an AI Support Assistant', 'Engineers who work as part of your team.', 'Flexible Engagement Models for Hiring AI Developers']) assert.ok(html.includes(heading), heading);
+  for (const heading of ['Skills our AI engineers bring', 'AI Tech Stack &amp; Production Tooling', 'What your AI team can build', 'Case Study: Enterprise Knowledge Assistant Built with RAG', 'Engineers who work as part of your team.', 'Flexible Engagement Models for Hiring AI Developers']) assert.ok(html.includes(heading), heading);
   assert.match(html, /src="\/seo-visuals\/ai-hiring\.webp"/);
   assert.equal((html.match(/class="ai-expertise-card"/g) || []).length, 6);
   assert.equal((html.match(/class="ai-sector"/g) || []).length, 4);
@@ -15,7 +15,7 @@ test('consolidated page renders all agreed content and one set of FAQs', () => {
   assert.equal((html.match(/class="ai-profile-label"/g) || []).length, 3);
   assert.equal((html.match(/<details><summary>/g) || []).length, aiFaqs.length);
   assert.equal(new Set(aiFaqs.map(([question]) => question)).size, aiFaqs.length);
-  assert.ok(html.includes('class="ai-example-label">Example</span>'));
+  assert.ok(html.includes('class="ai-example-label">Case study</span>'));
   assert.doesNotMatch(html, /ai-illustrative-note|ai-example-caption|ai-profile-note|<figcaption|class="eyebrow"/);
   for (const section of html.matchAll(/<section\b[^>]*>([\s\S]*?)<\/section>/g)) assert.equal((section[1].match(/<h[12]\b/g) || []).length, 1, 'Each section needs one top-level heading');
   assert.doesNotMatch(html, /Representative engagement metrics|>AI Staff Augmentation</);

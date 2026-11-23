@@ -171,7 +171,7 @@ function SectionHead({ title, children, light = false }) {
     });
 }
 /* SAP_ROLE_EXPLORER_START */
-const sapRoleCategories = [{"id": "functional", "title": "Functional Consulting"}, {"id": "development", "title": "Development & Integration"}, {"id": "platform", "title": "Platform & Data"}, {"id": "support", "title": "Testing & Project Support"}];
+const sapRoleCategories = [{"id": "functional", "title": "Functional SAP Consulting"}, {"id": "development", "title": "Development & Integration Specialists"}, {"id": "platform", "title": "Platform & Data"}, {"id": "support", "title": "Testing & Project Support"}];
 /* The role panel shares the page's React state and original role data. */
 function SapRoleExplorer() {
     const h = react.createElement;
@@ -212,7 +212,7 @@ function SapRoleExplorer() {
                             type:'button',className:'sap-role-group-toggle',
                             'aria-expanded':expanded,'aria-controls':`sap-role-group-${category.id}`,
                             onClick:() => setSelected(categoryMembers[0].index)
-                        },h('span',null,category.title),h('span',{className:'sap-role-group-count','aria-hidden':'true'},categoryMembers.length),h('span',{className:'sap-role-group-arrow','aria-hidden':'true'},'⌄'))),
+                        },h('span',null,category.title),h('span',{className:'sap-role-group-count','aria-hidden':'true','data-count':categoryMembers.length}),h('span',{className:'sap-role-group-arrow','aria-hidden':'true'},h('svg',{width:14,height:14,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:2},h('path',{d:'m6 9 6 6 6-6'}))))),
                         h('div', {className:'sap-role-group-list',id:`sap-role-group-${category.id}`,hidden:!expanded},
                             categoryMembers.map(({item,index}) => h('button', {
                     key:item.title, type:'button', className:'sap-role-choice',
@@ -389,7 +389,7 @@ null,
                             className: "sap-container",
                             children: [
                                 jsx_runtime.jsx(SectionHead, {
-                                    title: "Support For Your SAP Team",
+                                    title: "SAP Staffing Support for Enterprise Delivery Teams",
                                     children: "Start with the work ahead. Shape the requirement around your business, your system landscape and the people already involved."
                                 }),
                                 jsx_runtime.jsx("div", {
@@ -431,7 +431,7 @@ null,
                             children: [
                                 jsx_runtime.jsx(SectionHead, {
                                     title: "SAP Staffing Services",
-                                    children: "Our SAP staffing services help you add a contract professional, a dedicated team or specialist capacity for development, integration and testing, with scope agreed around your requirement."
+                                    children: "Through our tailored SAP staff augmentation models, we provide contract professionals, dedicated functional teams, and technical specialists across development, integration, and QA—matched precisely to your project scope and landscape requirements."
                                 }),
                                 jsx_runtime.jsx("div", {
                                     className: "sap-services-grid",
@@ -493,7 +493,7 @@ null,
                                                 src: "/sap-services/sap-diagram-827c7405cf4b.svg",
                                                 width: "600",
                                                 height: "620",
-                                                alt: "Finance, supply chain, people and operations linked to a central enterprise platform, with integration and access layers.",
+                                                alt: "SAP staff augmentation functional architecture showing FICO, supply chain, and BTP integration layers.",
                                                 loading: "lazy"
                                             })
                                         ]
@@ -540,9 +540,10 @@ null,
                             className: "sap-container",
                             children: [
                                 jsx_runtime.jsx(SectionHead, {
-                                    title: "SAP Professionals You Can Hire",
+                                    title: "Hire SAP Consultants & Technical Specialists",
                                     children: "Hire SAP consultants and technical specialists for clearly defined roles. Review relevant profiles, module experience and working arrangements before choosing the people who join your team."
                                 }),
+                                jsx_runtime.jsx("img", { className: "seo-diagram", src: "/seo-visuals/sap-modules-matrix.webp", alt: "Matrix of SAP consultants and developers available for contract hire.", width: 1600, height: 800, loading: "lazy", decoding: "async" }),
                                 jsx_runtime.jsx(SapRoleExplorer, {}),
                                 null
                             ]
@@ -614,7 +615,7 @@ null,
                                                 width: "560",
                                                 height: "330",
                                                 loading: "lazy",
-                                                alt: "A specialist and the client team aligned through shared priorities, feedback and delivery responsibilities."
+                                                alt: "SAP staffing engagement model showing client team integration with dedicated SAP consultants."
                                             })
                                         ]
                                     })
@@ -674,6 +675,7 @@ null,
                         })
                     }),
                     null,
+                    react.createElement("section", {className:"sap-section",id:"sap-supported-environments"}, react.createElement("div",{className:"sap-container"},react.createElement("h2",null,"Supported SAP Environments & Releases"),react.createElement("ul",{className:"seo-section-copy"},react.createElement("li",{key:"SAP S/4HANA Cloud (Public & Private Editions)"},"SAP S/4HANA Cloud (Public & Private Editions)"),react.createElement("li",{key:"SAP S/4HANA On-Premise (1909 through 2023)"},"SAP S/4HANA On-Premise (1909 through 2023)"),react.createElement("li",{key:"SAP ECC 6.0 (EHP 7/8)"},"SAP ECC 6.0 (EHP 7/8)"),react.createElement("li",{key:"SAP Business Technology Platform (BTP)"},"SAP Business Technology Platform (BTP)"),react.createElement("li",{key:"greenfield implementations"},"greenfield implementations"),react.createElement("li",{key:"brownfield system conversions"},"brownfield system conversions"),react.createElement("li",{key:"hybrid cloud integration"},"hybrid cloud integration")))),
                     jsx_runtime.jsx("section", {
                         className: "sap-section sap-faq-section",
                         id: "sap-faq",
@@ -728,7 +730,7 @@ null,
                         children: jsx_runtime.jsxs("div", {
                             className: "sap-container sap-final-grid",
                             children: [
-                                jsx_runtime.jsxs("div", {className: "sap-final-copy", "data-sap-reveal": true, children: [jsx_runtime.jsx("h2", {children: "Discuss Your SAP Staffing Needs"}),jsx_runtime.jsx("p", {children: "Tell us the SAP role, modules and project phase, plus your expected duration, start date and preferred working arrangements. We’ll review your brief and discuss suitable staffing options."}),jsx_runtime.jsx("p", {children: "Whether you need one specialist or a team, we’ll coordinate relevant profiles and interviews. Agree the scope, commercial terms, reporting lines and access requirements before onboarding so everyone starts with clear responsibilities."})]}),
+                                jsx_runtime.jsxs("div", {className: "sap-final-copy", "data-sap-reveal": true, children: [jsx_runtime.jsx("h2", {children: "Discuss Your SAP Staffing Needs"}),jsx_runtime.jsx("p", {children: "Tell us the SAP role, modules and project phase, plus your expected duration, start date and preferred working arrangements. We’ll review your brief and discuss suitable staffing options."}),react.createElement(react.Fragment,null,jsx_runtime.jsx("p", {children: "Whether you require short-term project rescue or ongoing SAP staff augmentation, our technical specialists integrate into your existing delivery governance."}),react.createElement("ul",{className:"seo-content-links"},react.createElement("li",{key:"/staff-augmentation"},react.createElement("a",{href:"/staff-augmentation"},"IT staff augmentation")),react.createElement("li",{key:"/oracle-ebs"},react.createElement("a",{href:"/oracle-ebs"},"Oracle EBS services")),react.createElement("li",{key:"/quality_testing"},react.createElement("a",{href:"/quality_testing"},"Software testing & QA")),react.createElement("li",{key:"/cloud_services"},react.createElement("a",{href:"/cloud_services"},"Cloud engineering services"))))]}),
                                 jsx_runtime.jsxs("div", {
                                     className: "sap-brief-card",
                                     "data-sap-reveal": true,

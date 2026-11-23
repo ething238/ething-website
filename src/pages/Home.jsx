@@ -50,7 +50,7 @@ export default function Home({ content }) {
       <div className="container hero-grid">
         <div className="hero-copy">
           <h1>{pageHeadings['/']}</h1>
-          <p className="seo-hiring-intro">eThing is an IT staff augmentation company that helps you hire dedicated developers from India. Add <a href="/hire-ai-developers">AI developers</a>, <a href="/hire-python-developers">Python developers</a> or <a href="/oracle-ebs">Oracle EBS consultants</a> to your team. We also build custom websites, mobile apps and software.</p>
+          <p className="seo-hiring-intro">As a specialized IT staff augmentation company, eThing supplies vetted <a href="/hire-ai-developers">AI engineers</a>, <a href="/hire-python-developers">Python developers</a>, and enterprise specialists from India. Integrate experienced talent directly into your sprints with 4-hour daily time zone overlap and profile turnarounds within 48 hours.</p>
           <div className="hero-actions"><a className="button button-blue" href="#reach-out" onClick={() => enquire('Team extension')}>Find your team <ArrowUpRight size={19} aria-hidden="true" /></a></div>
           <div className="hero-proof" aria-label="eThing delivery and hiring experience"><div><strong>20+</strong><span>Projects delivered</span></div><div><strong>48 hrs</strong><span>Average profile sharing time</span></div></div>
         </div>
@@ -60,7 +60,7 @@ export default function Home({ content }) {
 
     <section className="section section-expertise" id="expertise">
       <div className="container">
-        <div className="section-heading centered-heading"><h2>Specialized IT Staff Augmentation Services Across Core Disciplines</h2><p>eThing delivers offshore staff augmentation services across software engineering, machine learning, cloud platforms, mobile apps, and QA.</p><p className="shortlist-note">Suitable candidate profiles are shared in <strong>48 hours on average</strong> after requirements are confirmed.</p></div>
+        <div className="section-heading centered-heading"><h2>Specialized IT Staff Augmentation Services Across Core Disciplines</h2><p>eThing delivers offshore staff augmentation services across software engineering, machine learning, cloud platforms, mobile apps, and QA. We match qualified profiles within 48 hours of requirement confirmation, ready for your technical interview.</p></div>
         <div className="expertise-layout">
           <div className="expertise-tabs" role="tablist" aria-label="Engineering specialties" aria-orientation="vertical">{expertiseAreas.map((item, i) => { const Icon = areaIcons[item.icon]; return <button key={item.id} id={'area-tab-' + item.id} role="tab" type="button" tabIndex={areaIndex === i ? 0 : -1} aria-selected={areaIndex === i} aria-controls={'area-panel-' + item.id} onKeyDown={e => keyTabs(e, i, expertiseAreas, setAreaIndex)} onClick={() => setAreaIndex(i)}><Icon size={21} aria-hidden="true" /><span>{item.label}</span><ArrowRight size={18} aria-hidden="true" /></button> })}</div>
           <div className="expertise-panels">{expertiseAreas.map((area, i) => { const AreaIcon = areaIcons[area.icon]; const active = areaIndex === i; return <div key={area.id} className="expertise-panel" id={'area-panel-' + area.id} role="tabpanel" aria-labelledby={'area-tab-' + area.id} aria-hidden={!active} inert={!active} tabIndex={active ? 0 : -1}>
@@ -77,32 +77,26 @@ export default function Home({ content }) {
     <section className="section" id="staff-augmentation-process" aria-labelledby="staff-augmentation-process-heading">
       <div className="container">
         <div className="section-heading centered-heading">
-          <h2 id="staff-augmentation-process-heading">How Our IT Staff Augmentation Process Works</h2>
+          <h2 id="staff-augmentation-process-heading">How Our Staff Augmentation Process Works</h2>
         </div>
-        <img className="seo-diagram" src="/seo-visuals/homepage-hiring.webp" alt="" width="1600" height="533" loading="lazy" decoding="async" />
-        <ol className="seo-hiring-steps">
-          <li><h3>Scope the role</h3><p>Share what you’re building, the skills you need, your working hours and your target start date.</p></li>
-          <li><h3>Review profiles</h3><p>We screen candidates against your brief. We share suitable profiles in 48 hours on average after you confirm the role requirements. The shortlist size depends on the role and the candidates available.</p></li>
-          <li><h3>Interview candidates</h3><p>Meet the people on your shortlist and review their experience with your stack and the work you need done.</p></li>
-          <li><h3>Onboard</h3><p>Once you select a candidate, we coordinate the agreed start date and onboarding with your team.</p></li>
-        </ol>
+        <img className="seo-diagram" src="/seo-visuals/homepage-hiring.webp" alt="eThing IT staff augmentation vetting and deployment workflow" width="1600" height="533" loading="lazy" decoding="async" />
+        <p className="seo-section-copy">Navigating the competitive tech talent landscape is seamless with our structured IT staff augmentation services. We prioritize speed, alignment, and domain expertise through a proven four-step framework designed to scale your engineering capabilities without the traditional hiring overhead.</p>
       </div>
     </section>
 
     <section className="section reviews-section" id="reviews">
       <div className="container">
         <div className="section-heading centered-heading"><h2>Client reviews</h2></div>
-        <div className="review-grid">{homepageReviews.map(review => <article className="source-review" key={review.platform}><div className="source-review-top"><h3><img src={review.logo} alt="" width="32" height="32" loading="lazy" />{review.heading}</h3><div className="source-review-rating"><strong>{review.rating}<span> / 5</span></strong><p>{review.count} {review.count === 1 ? 'review' : 'reviews'}</p></div></div><blockquote>“{review.quote}”</blockquote><p className="source-review-author">{review.author}</p><p className="source-review-context">{review.context}</p><a className="text-link" href={review.url} target="_blank" rel="noopener noreferrer">Read the {review.platform} review<ArrowUpRight size={17} aria-hidden="true" /></a></article>)}</div>
+        <div className="review-grid">{homepageReviews.map(review => <article className="source-review" key={review.platform}><div className="source-review-top"><h3><img src={review.logo} alt={review.alt} width="32" height="32" loading="lazy" />{review.heading}</h3><div className="source-review-rating"><strong>{review.rating}<span> / 5</span></strong><p>{review.count} {review.count === 1 ? 'review' : 'reviews'}</p></div></div><blockquote>“{review.quote}”</blockquote><p className="source-review-author">{review.author}</p><p className="source-review-context">{review.context}</p><a className="text-link" href={review.url} target="_blank" rel="noopener noreferrer">Read the {review.platform} review<ArrowUpRight size={17} aria-hidden="true" /></a></article>)}</div>
         <article className="delivery-proof"><div className="delivery-proof-heading"><Building2 size={27} aria-hidden="true" /><div><h3>{deliveryProof.title}</h3><p>{deliveryProof.sector} · {deliveryProof.period} · Client-reported project</p></div></div><p>{deliveryProof.summary}</p><a className="text-link" href={deliveryProof.url} target="_blank" rel="noopener noreferrer">Read the project details on Clutch <ArrowUpRight size={17} aria-hidden="true" /></a></article>
-        <p className="review-checked">Ratings and excerpts checked <time dateTime="2026-10-13">13 October 2026</time>. Review counts and ratings may change.</p>
-      </div>
+              </div>
     </section>
 
     <section className="section hiring-section" id="hire-developers">
       <div className="container">
         <div className="section-heading centered-heading"><h2>Hire Dedicated Software Developers for Web, Mobile, and Cloud</h2><p>Hire dedicated software developers who fit your project, skills and working hours, wherever your team works.</p></div>
         <div className="hiring-grid">{hiringRoles.map(role => <article className="hiring-card" key={role.id}><h3>{role.title}</h3><p>{role.anchor && <a href={role.path}>{role.anchor}</a>}{role.description}</p><a className="text-link" href={homepageHref(role.path)}>{role.cta}<ArrowUpRight size={17} aria-hidden="true" /></a></article>)}</div>
-        <p className="hiring-note">Send us your project scope, required tech stack, and target kickoff date. We match qualified engineers to your specific criteria and coordinate remote onboarding across your working hours.</p>
+        <p className="hiring-note">Share your project scope, target tech stack, and preferred kickoff date. eThing defines the key roles, matches qualified developers to your exact criteria, and seamlessly coordinates remote onboarding across global locations and time zones. This tailored approach ensures rapid integration, keeping your software development timeline fully on track.</p>
       </div>
     </section>
 

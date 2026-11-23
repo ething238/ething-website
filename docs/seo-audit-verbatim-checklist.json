@@ -1,0 +1,1863 @@
+{
+  "rows": [
+    {
+      "route": "/",
+      "item": "Opening — Content to Replace",
+      "text": "As a specialized IT staff augmentation company, eThing supplies vetted AI engineers, Python developers, and enterprise specialists from India. Integrate experienced talent directly into your sprints with 4-hour daily time zone overlap and profile turnarounds within 48 hours.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Skills introduction — Content to Replace",
+      "text": "eThing delivers offshore staff augmentation services across software engineering, machine learning, cloud platforms, mobile apps, and QA. We match qualified profiles within 48 hours of requirement confirmation, ready for your technical interview.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Hiring process H2",
+      "text": "How Our Staff Augmentation Process Works",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Hiring process — Generated Content paragraph 1",
+      "text": "Navigating the competitive tech talent landscape is seamless with our structured IT staff augmentation services. We prioritize speed, alignment, and domain expertise through a proven four-step framework designed to scale your engineering capabilities without the traditional hiring overhead.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Developer hiring closing paragraph — Improved Content",
+      "text": "Share your project scope, target tech stack, and preferred kickoff date. eThing defines the key roles, matches qualified developers to your exact criteria, and seamlessly coordinates remote onboarding across global locations and time zones. This tailored approach ensures rapid integration, keeping your software development timeline fully on track.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Remove ratings-check date note",
+      "text": "",
+      "status": "applied",
+      "reason": "Removed the exact note listed in Content to Remove."
+    },
+    {
+      "route": "/",
+      "item": "Hiring process — Generated Content paragraph 2",
+      "text": "Our collaboration begins with requirement discovery, where we pinpoint your specific technical stack, team culture, and time zone synchronization needs. Within just 48 hours, our rigorous technical vetting process yields two to three pre-screened candidate profiles matched for deep technical aptitude. Next, your internal team conducts direct technical interviews and coding assessments, ensuring you retain full autonomy to hire dedicated developers who meet your exact architectural standards.",
+      "status": "held — user instruction",
+      "reason": "User said there is no fixed shortlist size. No rewritten substitute."
+    },
+    {
+      "route": "/",
+      "item": "Hiring process — Generated Content paragraph 3",
+      "text": "Once you select your ideal candidates, we initiate a zero-risk onboarding phase. We handle the operational heavy lifting—integrating communication channels, securing comprehensive NDAs, and guaranteeing full IP protection. Backed by a dedicated two-week trial period, this streamlined approach ensures your new engineers deliver real-world value with zero friction from day one.",
+      "status": "held — user instruction",
+      "reason": "Two-week trial paused. No rewritten substitute."
+    },
+    {
+      "route": "/",
+      "item": "Clutch alt — Action Items",
+      "text": "Clutch 5.0 rating review badge",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Google alt — Action Items",
+      "text": "Google 4.8 star review badge",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Tools H2",
+      "text": "AI Tech Stack & Production Tooling",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Tools paragraph 1",
+      "text": "Building production-grade AI applications requires a specialized ecosystem of tools and frameworks. At the foundational layer, PyTorch and Hugging Face drive core model development, while LangChain and LlamaIndex orchestrate complex application logic and agent workflows. To power retrieval-augmented generation (RAG), scalable vector databases such as Pinecone and Milvus handle high-dimensional embeddings, enabling rapid, context-rich semantic retrieval over massive enterprise datasets.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Tools paragraph 2",
+      "text": "Deploying these architectures reliably demands resilient infrastructure and relentless performance tuning. Engineering teams leverage Kubernetes and Ray for distributed compute, paired with serving engines like vLLM and Triton Inference Server to significantly slash inference latency through techniques like continuous batching and PagedAttention. Concurrently, libraries like DeepSpeed facilitate advanced model optimization, quantizing weights to shrink memory footprints and maximize hardware utilization.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Tools paragraph 3",
+      "text": "Beyond raw compute, developers actively manage token costs and system security. By implementing semantic caching, model distillation, and strict guardrails within orchestration pipelines, organizations safeguard sensitive enterprise data while keeping operational expenses sustainable at enterprise scale.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Case study H2",
+      "text": "Case Study: Enterprise Knowledge Assistant Built with RAG",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Demo introduction",
+      "text": "See how our AI developers could connect company guides to the questions people ask at work.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Skills H3",
+      "text": "Generative AI, Computer Vision & Machine Learning Expertise",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Collaboration — Improved Content",
+      "text": "Through our AI staff augmentation model, elite engineers integrate directly into your repositories, CI/CD pipelines, and sprint ceremonies with immediate time-zone alignment. Your leadership retains absolute architectural control and frictionless IP ownership, while eThing manages rigorous talent vetting, international payroll, and continuous performance support to drive accelerated delivery.",
+      "status": "applied",
+      "reason": "Existing payroll FAQ retains engagement-specific terms."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Collaboration alt",
+      "text": "eThing AI developers and machine learning engineers collaborating on software architecture",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "AIONOS alt",
+      "text": "AIONOS client logo - AI solutions delivered by eThing",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Opening — Content to Replace",
+      "text": "eThing provides tailored Salesforce staff augmentation to help engineering and business leaders hire Salesforce developers, technical architects, and certified administrators. Based in Gurugram, India, our team integrates directly into your repos, sprints, and communication channels while you retain complete project oversight.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Remote paragraph — Content to Replace",
+      "text": "When you hire offshore Salesforce developers through eThing, we align working hours to provide clear daily overlap with your home market. We define communication cadences, security protocols, and Git workflows before sprint zero begins.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Remote H3",
+      "text": "Remote and Offshore Salesforce Developers",
+      "status": "applied",
+      "reason": "Heading Optimization chosen. Content to Replace also says Remote and Offshore Engagements."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Security H2",
+      "text": "Data Security, IP Protection, and Compliance",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Security paragraph 1",
+      "text": "When scaling your engineering capacity through salesforce staff augmentation, maintaining rigorous governance around your proprietary assets and sensitive customer data is paramount. Industry-leading talent partners address these concerns by enforcing enterprise-grade security protocols from day one. Remote and offshore salesforce developers operate within strictly governed boundaries, accessing client sandboxes exclusively through zero-trust network access (ZTNA), secure VPNs, and enterprise Single Sign-On (SSO) backed by Multi-Factor Authentication (MFA). This perimeter defense ensures granular role-based access controls and comprehensive audit logging throughout the development lifecycle.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Security paragraph 2",
+      "text": "Legal protections are equally vital to safeguarding your competitive advantage. Trustworthy engagement models mandate robust Non-Disclosure Agreements (NDAs) and ironclad Intellectual Property (IP) assignment agreements before work begins. These contracts ensure that all custom code, configuration logic, integrations, and architectural frameworks remain exclusively your company’s property.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Security paragraph 3",
+      "text": "Finally, compliance hinges on uncompromising data hygiene. External development teams must adhere to clean sandbox data sanitation guidelines, utilizing synthetic test records or automated data masking tools. This prevents live Personally Identifiable Information (PII) or sensitive production datasets from ever leaking into non-production environments, aligning with global standards like GDPR, HIPAA, and SOC 2. By combining modern identity governance, automated data scrubbing, and strict legal frameworks, organizations can scale with external talent without compromising platform security or compliance posture.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Contract FAQ — Action Items",
+      "text": "Yes. Discuss the role, allocation and intended duration with our team to match contract developers to your sprint milestones.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Search title",
+      "text": "IT Staff Augmentation Company | Dedicated Developers | eThing",
+      "status": "applied",
+      "reason": "Explicit Action Items title, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/",
+      "item": "Search description",
+      "text": "Scale your engineering team with eThing, an IT staff augmentation company providing vetted developers in Python, React, AI, and cloud systems from India.",
+      "status": "applied",
+      "reason": "Explicit Action Items description, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Search title",
+      "text": "Hire Dedicated AI Developers & ML Engineers | eThing",
+      "status": "applied",
+      "reason": "Explicit Action Items title, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Search description",
+      "text": "Hire dedicated AI developers and machine learning engineers. Get pre-vetted talent for Generative AI, RAG, NLP, and MLOps with 48-hour shortlists from eThing.",
+      "status": "applied",
+      "reason": "Explicit Action Items description, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Search title",
+      "text": "Hire Python Developers in India | Vetted Dedicated Engineers",
+      "status": "applied",
+      "reason": "Explicit Action Items title, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Search description",
+      "text": "Hire pre-vetted Python developers from India. Scale your team with dedicated engineers skilled in Django, FastAPI, data pipelines, and AI systems. Get matched in 48 hours.",
+      "status": "applied",
+      "reason": "Explicit Action Items description, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Search title",
+      "text": "Oracle Staffing Services | Hire Oracle EBS Consultants | eThing",
+      "status": "applied",
+      "reason": "Explicit Action Items title, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Search description",
+      "text": "Specialized Oracle staffing services from eThing. Hire vetted Oracle EBS functional, technical, and Apps DBA consultants for implementations, rollouts, and support.",
+      "status": "applied",
+      "reason": "Explicit Action Items description, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Search title",
+      "text": "Hire Salesforce Developers | Salesforce Staff Augmentation | eThing",
+      "status": "applied",
+      "reason": "Explicit Action Items title, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Search description",
+      "text": "Hire Salesforce developers and certified consultants through eThing. Our flexible Salesforce staff augmentation delivers experienced engineers on your terms.",
+      "status": "applied",
+      "reason": "Explicit Action Items description, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Search title",
+      "text": "SAP Staff Augmentation & Staffing Services | eThing",
+      "status": "applied",
+      "reason": "Explicit Action Items title, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Search description",
+      "text": "Scale your enterprise team with SAP staff augmentation from eThing. Hire vetted SAP consultants and remote developers across S/4HANA, BTP, and core modules.",
+      "status": "applied",
+      "reason": "Explicit Action Items description, or first Meta Tags choice when not specified."
+    },
+    {
+      "route": "/",
+      "item": "FAQPage and ProfessionalService",
+      "text": "",
+      "status": "applied",
+      "reason": "All 16 currently visible FAQs included. ProfessionalService uses the existing Gurugram address and user-confirmed worldwide coverage. Google controls search-result presentation."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Architecture H2",
+      "text": "Supported Oracle EBS Releases & Technical Architecture",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Architecture paragraph 1",
+      "text": "Navigating enterprise system lifecycles requires proven proficiency across diverse software generations. Our talent network demonstrates verified competency across legacy 11i migration paths, R12.1 baselines, and modern environments running on Oracle EBS release 12.2. We support the entire technology stack, ensuring deep mastery of core development tools including Oracle Forms, Reports, Workflow Builder, and the Oracle Application Framework (OAF). Backed by extensive knowledge of the WebLogic application tier and Oracle Database versions up to 19c, our specialists ensure optimal performance across every architectural layer.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Architecture paragraph 2",
+      "text": "Crucially, maintaining modern E-Business Suite instances demands advanced administrative capabilities. Our rigorous technical vetting specifically validates candidates through scenario-based evaluations of Online Patching (ADOP) and dual-filesystem maintenance. We verify hands-on expertise in managing cutover cycles, minimizing operational downtime, and resolving synchronization challenges between run and patch editions. By confirming real-world experience with complex patch phases and database tier alignment, we deliver experts equipped to safeguard system integrity and ensure high-availability enterprise continuity.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Remove redundant form microcopy",
+      "text": "",
+      "status": "applied",
+      "reason": "Removed the specified visible phrases and orphan required marker. Required fields, submit behavior, and accessible labels remain."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Opening — Content to Replace",
+      "text": "Add dependable delivery capacity to your team. When you hire Python developers through Ething, you receive engineers assessed specifically on your stack—whether that means high-concurrency FastAPI microservices, legacy Django modernization, or distributed data processing.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Django/FastAPI FAQ — Content to Replace",
+      "text": "Yes. We maintain an active roster of developers experienced in Django REST Framework, FastAPI async patterns, ORM optimization, and containerized deployment across AWS and GCP.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Screening H2",
+      "text": "Technical Screening: How We Vet Python Engineers",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Screening paragraph 1",
+      "text": "Finding top-tier engineering talent requires an uncompromising evaluation framework. When global companies partner with us to hire offshore python developers, they rely on our rigorous python developer screening process to surface elite technical talent. Our comprehensive evaluation is structured into four demanding stages:",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Screening paragraph 2",
+      "text": "First, we assess fundamental language mechanics, verifying deep knowledge of advanced data structures, internal memory management, and asynchronous programming with async/await. Next, candidates undergo a framework deep-dive to prove hands-on mastery within modern enterprise ecosystems such as Django, FastAPI, and SQLAlchemy.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Screening paragraph 3",
+      "text": "The third stage rigorously tests system design and distributed architecture. Candidates must demonstrate practical experience architecting resilient microservices, optimizing complex database queries for high throughput, and implementing efficient caching and background task queues using Redis and Celery. Finally, candidates complete a live problem-solving session that evaluates algorithmic thinking, real-time debugging, and articulate cross-functional communication.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Screening paragraph 4",
+      "text": "By maintaining these strict vetting standards, we eliminate the guesswork from remote hiring, ensuring every engineer we place is enterprise-ready, collaborative, and equipped to drive immediate value for your development roadmap.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Engagement H2",
+      "text": "Flexible Python Staff Augmentation Models",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Engagement first paragraph",
+      "text": "Every development roadmap has unique demands, which is why our Python staff augmentation services offer adaptable engagement structures. Whether you require dedicated full-time engineers to scale long-term capacity, a hybrid squad extension to plug specialized skill gaps, or milestone-based project staffing for targeted deliverables, we align directly with your operational goals. These dedicated delivery teams integrate seamlessly into your technical ecosystem, adopting your existing architecture, coding standards, and sprint cycles from day one.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Engagement trial paragraph",
+      "text": "To ensure complete confidence, every engagement begins with a risk-free, two-week trial period to evaluate technical execution and cultural fit firsthand. Collaboration remains frictionless through direct Slack integration, transparent Jira tracking, and proactive time-zone management that guarantees significant working-hour overlap. This strategic alignment fosters real-time communication, rapid feedback loops, and uninterrupted engineering momentum.",
+      "status": "held — user instruction",
+      "reason": "Two-week trial is paused. Entire paragraph held without rewritten copy."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Proof introduction — Improved Content",
+      "text": "Skip the endless resume sift. With a focused brief, we rigorously evaluate candidates against your specific repository requirements, architectural patterns, and testing standards. Instead of wading through unqualified profiles, you spend your time reviewing a curated shortlist of three elite engineers perfectly matched to your engineering environment.",
+      "status": "held — user instruction",
+      "reason": "Conflicts with user-confirmed variable shortlist size. Original site paragraph retained."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Case H3",
+      "text": "Case Study Challenge: Legacy API Bottlenecks",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Case note",
+      "text": "Anonymized case snapshot from a high-growth fintech partner.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Image asset rename and duplicate entries",
+      "text": "",
+      "status": "applied",
+      "reason": "New /clients/posthog.svg alias used. One copy of each logo on Python slider. Existing posthug.svg retained for old links."
+    },
+    {
+      "route": "/sap-services",
+      "item": "H1",
+      "text": "SAP Staff Augmentation & Contract Consulting Services",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Support H2",
+      "text": "SAP Staffing Support for Enterprise Delivery Teams",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Role directory H2",
+      "text": "Hire SAP Consultants & Technical Specialists",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Functional category H3",
+      "text": "Functional SAP Consulting",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Development category H3",
+      "text": "Development & Integration Specialists",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Services introduction — Content to Replace",
+      "text": "Through our tailored SAP staff augmentation models, we provide contract professionals, dedicated functional teams, and technical specialists across development, integration, and QA—matched precisely to your project scope and landscape requirements.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "HCM description — Content to Replace",
+      "text": "Engage certified SuccessFactors or legacy HCM consultants for core HR workflows, payroll configurations, and employee experience integration.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Closing paragraph",
+      "text": "Whether you require short-term project rescue or ongoing SAP staff augmentation, our technical specialists integrate into your existing delivery governance.",
+      "status": "applied",
+      "reason": "Placed in SAP closing section."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Process first heading",
+      "text": "Step 1: Initial Brief.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Process description — Improved Content",
+      "text": "Tell us which SAP consultant or developer you need, detailing your current system landscape and the work ahead. Sharing a well-defined project scope and specific deliverables from the outset allows us to efficiently match your business with the perfect technical talent for your implementation.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment H2",
+      "text": "Supported SAP Environments & Releases",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "SAP S/4HANA Cloud (Public & Private Editions)",
+      "status": "applied",
+      "reason": "The report provides an outline rather than generated prose. Listed its literal version names and project types as bullets."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "SAP S/4HANA On-Premise (1909 through 2023)",
+      "status": "applied",
+      "reason": "The report provides an outline rather than generated prose. Listed its literal version names and project types as bullets."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "SAP ECC 6.0 (EHP 7/8)",
+      "status": "applied",
+      "reason": "The report provides an outline rather than generated prose. Listed its literal version names and project types as bullets."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "SAP Business Technology Platform (BTP)",
+      "status": "applied",
+      "reason": "The report provides an outline rather than generated prose. Listed its literal version names and project types as bullets."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "greenfield implementations",
+      "status": "applied",
+      "reason": "The report provides an outline rather than generated prose. Listed its literal version names and project types as bullets."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "brownfield system conversions",
+      "status": "applied",
+      "reason": "The report provides an outline rather than generated prose. Listed its literal version names and project types as bullets."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "hybrid cloud integration",
+      "status": "applied",
+      "reason": "The report provides an outline rather than generated prose. Listed its literal version names and project types as bullets."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Contact email replacement",
+      "text": "support@ethingsolutions.com",
+      "status": "overridden by user",
+      "reason": "User confirmed keep support@ething.in."
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "IT Staff Augmentation Company: Dedicated Engineers & Developers from India",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Specialized IT Staff Augmentation Services Across Core Disciplines",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Hire Dedicated Software Developers for Web, Mobile, and Cloud",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "AI & Machine Learning Staff Augmentation",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Frequently Asked Questions About IT Staff Augmentation",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Client Feedback on Clutch",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Verified Google Reviews",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Why choose eThing as your IT staff augmentation services provider?",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Hire Dedicated AI Developers & Engineers",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Flexible Engagement Models for Hiring AI Developers",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Dedicated AI Teams vs. Individual Staff Augmentation",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Tell Us What You Want to Build — We'll Match the AI Talent",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Hire Dedicated Python Developers for Django, FastAPI & Data Engineering",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Request Matched Python Developer Profiles for Your Stack",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Python Developers for Hire: Backend APIs, Automation, and Data Engineering",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Python Staff Augmentation Built for Scalable Engineering Teams",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Sample Profiles: Offshore and Dedicated Python Engineers",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Backend Architecture: Django, FastAPI & Flask",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Data Engineering, ETL & Workflow Automation",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle Staffing Services: Hire Technical & Functional Oracle EBS Consultants",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle EBS Staffing Services Tailored to Your Architecture",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle EBS Consultants & Specialists Available for Hire",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle EBS Support Services & Delivery Workstreams",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle EBS Technical Consultant Roles",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle EBS Functional Consultant Roles: Finance & Accounting",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Heading / FAQ checked against report",
+      "text": "Salesforce Staff Augmentation: Hire Dedicated Salesforce Developers",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Heading / FAQ checked against report",
+      "text": "Scaling Your Team: When to Augment Salesforce Capacity",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Heading / FAQ checked against report",
+      "text": "Salesforce Roles and Consultants You Can Hire",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Heading / FAQ checked against report",
+      "text": "Flexible Engagement Models for Salesforce Staff Augmentation",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Heading / FAQ checked against report",
+      "text": "Functional Salesforce Consultant",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "CTA alternate from Content to Replace",
+      "text": "Tell us what you want to build. We’ll help you find the right AI engineering talent.",
+      "status": "alternative — not selected",
+      "reason": "Selected the explicit Heading Optimization version for the same H2."
+    },
+    {
+      "route": "/",
+      "item": "Title alternate from Meta Tags",
+      "text": "IT Staff Augmentation Company | Hire Dedicated Developers | eThing",
+      "status": "alternative — not selected",
+      "reason": "Selected explicit Action Items title."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Hero alternate from Keyword Placement Map",
+      "text": "Scale your engineering output with dedicated talent. When you hire Python developers through Ething, you get pre-vetted specialists matched to your backend architecture, data pipelines, and production milestones.",
+      "status": "alternative — not selected",
+      "reason": "Selected Content to Replace paragraph for same hero."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Image alt from report",
+      "text": "4-step process to hire dedicated AI developers at eThing",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Image alt from report",
+      "text": "Python technology stack and framework competency matrix",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Image alt from report",
+      "text": "Enterprise IT team analyzing Oracle EBS ERP implementation roadmap",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Image alt from report",
+      "text": "Oracle technical consultant reviewing PL/SQL code for ERP integration",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Image alt from report",
+      "text": "Oracle EBS R12.2 to Oracle Fusion Cloud ERP transition architecture",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Image alt from report",
+      "text": "Salesforce staff augmentation developers reviewing Apex code on a CRM deployment",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Image alt from report",
+      "text": "Dedicated Salesforce consultants and developers supporting multi-cloud architecture",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Image alt from report",
+      "text": "Five-stage screening process to hire Salesforce developers at eThing",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Image alt from report",
+      "text": "SAP staff augmentation functional architecture showing FICO, supply chain, and BTP integration layers.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/sap-services",
+      "item": "Image alt from report",
+      "text": "SAP staffing engagement model showing client team integration with dedicated SAP consultants.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Image alt from report",
+      "text": "eThing IT staff augmentation vetting and deployment workflow",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Contextual link",
+      "text": "IT staff augmentation services",
+      "status": "applied",
+      "href": "/staff-augmentation",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/",
+      "item": "Contextual link",
+      "text": "Hire software developers from India",
+      "status": "applied",
+      "href": "/hire-developers-india",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/",
+      "item": "Contextual link",
+      "text": "AI and data engineers",
+      "status": "applied",
+      "href": "/hire-ai-developers",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/",
+      "item": "Contextual link",
+      "text": "Work with a Python developer",
+      "status": "applied",
+      "href": "/hire-python-developers",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/",
+      "item": "Contextual link",
+      "text": "Hire a React developer",
+      "status": "applied",
+      "href": "/hire-react-developers",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Contextual link",
+      "text": "Python developers",
+      "status": "applied",
+      "href": "/hire-python-developers",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Contextual link",
+      "text": "IT staff augmentation",
+      "status": "applied",
+      "href": "/staff-augmentation",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Contextual link",
+      "text": "DevOps engineers",
+      "status": "applied",
+      "href": "/hire-devops-engineers",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Contextual link",
+      "text": "Banking & financial services",
+      "status": "applied",
+      "href": "/banking_finance_industry",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Contextual link",
+      "text": "Healthcare & life sciences",
+      "status": "applied",
+      "href": "/healthcare_industry",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Contextual link",
+      "text": "IT staff augmentation",
+      "status": "applied",
+      "href": "/staff-augmentation",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Contextual link",
+      "text": "hire AI developers",
+      "status": "applied",
+      "href": "/hire-ai-developers",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Contextual link",
+      "text": "hire developers in India",
+      "status": "applied",
+      "href": "/hire-developers-india",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Contextual link",
+      "text": "guide to hiring Python developers",
+      "status": "applied",
+      "href": "/blogs/hire-python-developers",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Contextual link",
+      "text": "IT staff augmentation",
+      "status": "applied",
+      "href": "/staff-augmentation",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Contextual link",
+      "text": "staffing services",
+      "status": "applied",
+      "href": "/staffing_services",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Contextual link",
+      "text": "regression testing",
+      "status": "applied",
+      "href": "/quality_testing",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Contextual link",
+      "text": "SAP Services",
+      "status": "applied",
+      "href": "/sap-services",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Contextual link",
+      "text": "developers from India",
+      "status": "applied",
+      "href": "/hire-developers-india",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Contextual link",
+      "text": "Cloud or integration specialist",
+      "status": "applied",
+      "href": "/cloud_services",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Contextual link",
+      "text": "QA specialist",
+      "status": "applied",
+      "href": "/quality_testing",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Contextual link",
+      "text": "Discuss a developer requirement",
+      "status": "applied",
+      "href": "/contact",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Contextual link",
+      "text": "IT staff augmentation",
+      "status": "applied",
+      "href": "/staff-augmentation",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Contextual link",
+      "text": "Oracle EBS services",
+      "status": "applied",
+      "href": "/oracle-ebs",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Contextual link",
+      "text": "Software testing & QA",
+      "status": "applied",
+      "href": "/quality_testing",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Contextual link",
+      "text": "Cloud engineering services",
+      "status": "applied",
+      "href": "/cloud_services",
+      "reason": "Exact anchor text and destination verified, including capitalization."
+    },
+    {
+      "route": "/",
+      "item": "Brand logo alt",
+      "text": "eThing - IT Staff Augmentation and Software Engineering Services",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Capabilities paragraph — Improved Content",
+      "text": "Whether your technical roadmap demands high-performance Django, Flask, or FastAPI architectures, complex data pipelines, or advanced AI application integration, our specialized engineers hit the ground running. We match your exact framework requirements with vetted talent ready to deploy clean, scalable, production-grade code directly into your tech stack from day one.",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Overview — Content to Replace",
+      "text": "Through our Oracle staffing services and ERP technical delivery approach, we align candidate competency, screening stages, engagement parameters, and compliance onboarding directly with your internal team structure.",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Support — Content to Replace",
+      "text": "Staff a defined upgrade, rollout, or sustaining engineering team. Our Oracle EBS support services provide dedicated functional and technical specialists who handle regression testing, automated data reconciliation, triage, and rapid business acceptance.",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "HCM — Improved Content",
+      "text": "When hiring an Oracle HCM functional consultant, clearly specify whether your scope involves on-premise Oracle EBS HRMS or modern Cloud applications. Because employee data workflows, payroll schemas, and security models differ substantially between legacy EBS and Oracle Fusion Cloud HCM, precision is essential. We source verified specialists with targeted architectural expertise tailored to your specific deployment.",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Situations introduction — Improved Content",
+      "text": "Start by identifying the gaps in your team and the critical work that needs to move forward. If you face a growing backlog, add targeted development or administrative capacity to clear the hurdle while your internal team continues to focus on setting priorities and driving core roadmap initiatives.",
+      "status": "applied",
+      "reason": "Complete exact paragraph in the first situation card."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "ML description — Content to Replace",
+      "text": "When you hire machine learning engineers from our network, they turn structured data into production forecasting, ranking, and recommendation systems, backed by reproducible experiments and objective evaluation metrics.",
+      "status": "already exact",
+      "reason": ""
+    },
+    {
+      "route": "/",
+      "item": "Footer H3 cleanup",
+      "text": "Company / Hire Talent / Industries we support / Engineering services / Let’s talk",
+      "status": "already exact",
+      "reason": "Shared footer uses styled paragraph labels."
+    },
+    {
+      "route": "/",
+      "item": "Keyword-placement guidance without supplied replacement text",
+      "text": "AI-suggested and related keyword recommendations",
+      "status": "retained from prior authorized keyword work",
+      "reason": "Existing confirmed keyword additions kept. No new prose drafted during verbatim correction."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Footer H3 cleanup",
+      "text": "Company / Hire Talent / Industries we support / Engineering services / Let’s talk",
+      "status": "already exact",
+      "reason": "Shared footer uses styled paragraph labels."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Keyword-placement guidance without supplied replacement text",
+      "text": "AI-suggested and related keyword recommendations",
+      "status": "retained from prior authorized keyword work",
+      "reason": "Existing confirmed keyword additions kept. No new prose drafted during verbatim correction."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Footer H3 cleanup",
+      "text": "Company / Hire Talent / Industries we support / Engineering services / Let’s talk",
+      "status": "already exact",
+      "reason": "Shared footer uses styled paragraph labels."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Keyword-placement guidance without supplied replacement text",
+      "text": "AI-suggested and related keyword recommendations",
+      "status": "retained from prior authorized keyword work",
+      "reason": "Existing confirmed keyword additions kept. No new prose drafted during verbatim correction."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Footer H3 cleanup",
+      "text": "Company / Hire Talent / Industries we support / Engineering services / Let’s talk",
+      "status": "already exact",
+      "reason": "Shared footer uses styled paragraph labels."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Keyword-placement guidance without supplied replacement text",
+      "text": "AI-suggested and related keyword recommendations",
+      "status": "retained from prior authorized keyword work",
+      "reason": "Existing confirmed keyword additions kept. No new prose drafted during verbatim correction."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Footer H3 cleanup",
+      "text": "Company / Hire Talent / Industries we support / Engineering services / Let’s talk",
+      "status": "already exact",
+      "reason": "Shared footer uses styled paragraph labels."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Keyword-placement guidance without supplied replacement text",
+      "text": "AI-suggested and related keyword recommendations",
+      "status": "retained from prior authorized keyword work",
+      "reason": "Existing confirmed keyword additions kept. No new prose drafted during verbatim correction."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Footer H3 cleanup",
+      "text": "Company / Hire Talent / Industries we support / Engineering services / Let’s talk",
+      "status": "already exact",
+      "reason": "Shared footer uses styled paragraph labels."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Keyword-placement guidance without supplied replacement text",
+      "text": "AI-suggested and related keyword recommendations",
+      "status": "retained from prior authorized keyword work",
+      "reason": "Existing confirmed keyword additions kept. No new prose drafted during verbatim correction."
+    },
+    {
+      "route": "/",
+      "item": "Generated visual: homepage-hiring",
+      "text": "",
+      "status": "applied",
+      "reason": "Four exact process labels from the report."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Generated visual: python-capabilities",
+      "text": "",
+      "status": "applied",
+      "reason": "Frameworks, Libraries and Deployment with the exact technologies listed in the audit."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Generated visual: sap-modules-matrix",
+      "text": "",
+      "status": "applied",
+      "reason": "Functional modules and technical skills from the audit image brief."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Generated visual: oracle-roadmap-hero",
+      "text": "",
+      "status": "applied",
+      "reason": "New ERP roadmap team photo matching the exact audit alt text."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Generated visual: oracle-plsql-review",
+      "text": "",
+      "status": "applied",
+      "reason": "New consultant reviewing PL/SQL code photo matching the exact audit alt text."
+    },
+    {
+      "route": "/sap-services",
+      "item": "New matrix alt",
+      "text": "Matrix of SAP consultants and developers available for contract hire.",
+      "status": "applied",
+      "reason": ""
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Repeated decorative image elements",
+      "text": "",
+      "status": "applied",
+      "reason": "Removed the two duplicate decorative image elements; one reusable CSS background preserves the section design."
+    }
+  ],
+  "expected": [
+    {
+      "route": "/",
+      "item": "Opening — Content to Replace",
+      "text": "As a specialized IT staff augmentation company, eThing supplies vetted AI engineers, Python developers, and enterprise specialists from India. Integrate experienced talent directly into your sprints with 4-hour daily time zone overlap and profile turnarounds within 48 hours."
+    },
+    {
+      "route": "/",
+      "item": "Skills introduction — Content to Replace",
+      "text": "eThing delivers offshore staff augmentation services across software engineering, machine learning, cloud platforms, mobile apps, and QA. We match qualified profiles within 48 hours of requirement confirmation, ready for your technical interview."
+    },
+    {
+      "route": "/",
+      "item": "Hiring process H2",
+      "text": "How Our Staff Augmentation Process Works"
+    },
+    {
+      "route": "/",
+      "item": "Hiring process — Generated Content paragraph 1",
+      "text": "Navigating the competitive tech talent landscape is seamless with our structured IT staff augmentation services. We prioritize speed, alignment, and domain expertise through a proven four-step framework designed to scale your engineering capabilities without the traditional hiring overhead."
+    },
+    {
+      "route": "/",
+      "item": "Developer hiring closing paragraph — Improved Content",
+      "text": "Share your project scope, target tech stack, and preferred kickoff date. eThing defines the key roles, matches qualified developers to your exact criteria, and seamlessly coordinates remote onboarding across global locations and time zones. This tailored approach ensures rapid integration, keeping your software development timeline fully on track."
+    },
+    {
+      "route": "/",
+      "item": "Clutch alt — Action Items",
+      "text": "Clutch 5.0 rating review badge"
+    },
+    {
+      "route": "/",
+      "item": "Google alt — Action Items",
+      "text": "Google 4.8 star review badge"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Tools H2",
+      "text": "AI Tech Stack & Production Tooling"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Tools paragraph 1",
+      "text": "Building production-grade AI applications requires a specialized ecosystem of tools and frameworks. At the foundational layer, PyTorch and Hugging Face drive core model development, while LangChain and LlamaIndex orchestrate complex application logic and agent workflows. To power retrieval-augmented generation (RAG), scalable vector databases such as Pinecone and Milvus handle high-dimensional embeddings, enabling rapid, context-rich semantic retrieval over massive enterprise datasets."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Tools paragraph 2",
+      "text": "Deploying these architectures reliably demands resilient infrastructure and relentless performance tuning. Engineering teams leverage Kubernetes and Ray for distributed compute, paired with serving engines like vLLM and Triton Inference Server to significantly slash inference latency through techniques like continuous batching and PagedAttention. Concurrently, libraries like DeepSpeed facilitate advanced model optimization, quantizing weights to shrink memory footprints and maximize hardware utilization."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Tools paragraph 3",
+      "text": "Beyond raw compute, developers actively manage token costs and system security. By implementing semantic caching, model distillation, and strict guardrails within orchestration pipelines, organizations safeguard sensitive enterprise data while keeping operational expenses sustainable at enterprise scale."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Case study H2",
+      "text": "Case Study: Enterprise Knowledge Assistant Built with RAG"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Demo introduction",
+      "text": "See how our AI developers could connect company guides to the questions people ask at work."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Skills H3",
+      "text": "Generative AI, Computer Vision & Machine Learning Expertise"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Collaboration — Improved Content",
+      "text": "Through our AI staff augmentation model, elite engineers integrate directly into your repositories, CI/CD pipelines, and sprint ceremonies with immediate time-zone alignment. Your leadership retains absolute architectural control and frictionless IP ownership, while eThing manages rigorous talent vetting, international payroll, and continuous performance support to drive accelerated delivery."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Collaboration alt",
+      "text": "eThing AI developers and machine learning engineers collaborating on software architecture"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "AIONOS alt",
+      "text": "AIONOS client logo - AI solutions delivered by eThing"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Opening — Content to Replace",
+      "text": "eThing provides tailored Salesforce staff augmentation to help engineering and business leaders hire Salesforce developers, technical architects, and certified administrators. Based in Gurugram, India, our team integrates directly into your repos, sprints, and communication channels while you retain complete project oversight."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Remote paragraph — Content to Replace",
+      "text": "When you hire offshore Salesforce developers through eThing, we align working hours to provide clear daily overlap with your home market. We define communication cadences, security protocols, and Git workflows before sprint zero begins."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Remote H3",
+      "text": "Remote and Offshore Salesforce Developers"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Security H2",
+      "text": "Data Security, IP Protection, and Compliance"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Security paragraph 1",
+      "text": "When scaling your engineering capacity through salesforce staff augmentation, maintaining rigorous governance around your proprietary assets and sensitive customer data is paramount. Industry-leading talent partners address these concerns by enforcing enterprise-grade security protocols from day one. Remote and offshore salesforce developers operate within strictly governed boundaries, accessing client sandboxes exclusively through zero-trust network access (ZTNA), secure VPNs, and enterprise Single Sign-On (SSO) backed by Multi-Factor Authentication (MFA). This perimeter defense ensures granular role-based access controls and comprehensive audit logging throughout the development lifecycle."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Security paragraph 2",
+      "text": "Legal protections are equally vital to safeguarding your competitive advantage. Trustworthy engagement models mandate robust Non-Disclosure Agreements (NDAs) and ironclad Intellectual Property (IP) assignment agreements before work begins. These contracts ensure that all custom code, configuration logic, integrations, and architectural frameworks remain exclusively your company’s property."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Security paragraph 3",
+      "text": "Finally, compliance hinges on uncompromising data hygiene. External development teams must adhere to clean sandbox data sanitation guidelines, utilizing synthetic test records or automated data masking tools. This prevents live Personally Identifiable Information (PII) or sensitive production datasets from ever leaking into non-production environments, aligning with global standards like GDPR, HIPAA, and SOC 2. By combining modern identity governance, automated data scrubbing, and strict legal frameworks, organizations can scale with external talent without compromising platform security or compliance posture."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Contract FAQ — Action Items",
+      "text": "Yes. Discuss the role, allocation and intended duration with our team to match contract developers to your sprint milestones."
+    },
+    {
+      "route": "/",
+      "item": "Search title",
+      "text": "IT Staff Augmentation Company | Dedicated Developers | eThing"
+    },
+    {
+      "route": "/",
+      "item": "Search description",
+      "text": "Scale your engineering team with eThing, an IT staff augmentation company providing vetted developers in Python, React, AI, and cloud systems from India."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Search title",
+      "text": "Hire Dedicated AI Developers & ML Engineers | eThing"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Search description",
+      "text": "Hire dedicated AI developers and machine learning engineers. Get pre-vetted talent for Generative AI, RAG, NLP, and MLOps with 48-hour shortlists from eThing."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Search title",
+      "text": "Hire Python Developers in India | Vetted Dedicated Engineers"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Search description",
+      "text": "Hire pre-vetted Python developers from India. Scale your team with dedicated engineers skilled in Django, FastAPI, data pipelines, and AI systems. Get matched in 48 hours."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Search title",
+      "text": "Oracle Staffing Services | Hire Oracle EBS Consultants | eThing"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Search description",
+      "text": "Specialized Oracle staffing services from eThing. Hire vetted Oracle EBS functional, technical, and Apps DBA consultants for implementations, rollouts, and support."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Search title",
+      "text": "Hire Salesforce Developers | Salesforce Staff Augmentation | eThing"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Search description",
+      "text": "Hire Salesforce developers and certified consultants through eThing. Our flexible Salesforce staff augmentation delivers experienced engineers on your terms."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Search title",
+      "text": "SAP Staff Augmentation & Staffing Services | eThing"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Search description",
+      "text": "Scale your enterprise team with SAP staff augmentation from eThing. Hire vetted SAP consultants and remote developers across S/4HANA, BTP, and core modules."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Architecture H2",
+      "text": "Supported Oracle EBS Releases & Technical Architecture"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Architecture paragraph 1",
+      "text": "Navigating enterprise system lifecycles requires proven proficiency across diverse software generations. Our talent network demonstrates verified competency across legacy 11i migration paths, R12.1 baselines, and modern environments running on Oracle EBS release 12.2. We support the entire technology stack, ensuring deep mastery of core development tools including Oracle Forms, Reports, Workflow Builder, and the Oracle Application Framework (OAF). Backed by extensive knowledge of the WebLogic application tier and Oracle Database versions up to 19c, our specialists ensure optimal performance across every architectural layer."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Architecture paragraph 2",
+      "text": "Crucially, maintaining modern E-Business Suite instances demands advanced administrative capabilities. Our rigorous technical vetting specifically validates candidates through scenario-based evaluations of Online Patching (ADOP) and dual-filesystem maintenance. We verify hands-on expertise in managing cutover cycles, minimizing operational downtime, and resolving synchronization challenges between run and patch editions. By confirming real-world experience with complex patch phases and database tier alignment, we deliver experts equipped to safeguard system integrity and ensure high-availability enterprise continuity."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Opening — Content to Replace",
+      "text": "Add dependable delivery capacity to your team. When you hire Python developers through Ething, you receive engineers assessed specifically on your stack—whether that means high-concurrency FastAPI microservices, legacy Django modernization, or distributed data processing."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Django/FastAPI FAQ — Content to Replace",
+      "text": "Yes. We maintain an active roster of developers experienced in Django REST Framework, FastAPI async patterns, ORM optimization, and containerized deployment across AWS and GCP."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Screening H2",
+      "text": "Technical Screening: How We Vet Python Engineers"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Screening paragraph 1",
+      "text": "Finding top-tier engineering talent requires an uncompromising evaluation framework. When global companies partner with us to hire offshore python developers, they rely on our rigorous python developer screening process to surface elite technical talent. Our comprehensive evaluation is structured into four demanding stages:"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Screening paragraph 2",
+      "text": "First, we assess fundamental language mechanics, verifying deep knowledge of advanced data structures, internal memory management, and asynchronous programming with async/await. Next, candidates undergo a framework deep-dive to prove hands-on mastery within modern enterprise ecosystems such as Django, FastAPI, and SQLAlchemy."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Screening paragraph 3",
+      "text": "The third stage rigorously tests system design and distributed architecture. Candidates must demonstrate practical experience architecting resilient microservices, optimizing complex database queries for high throughput, and implementing efficient caching and background task queues using Redis and Celery. Finally, candidates complete a live problem-solving session that evaluates algorithmic thinking, real-time debugging, and articulate cross-functional communication."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Screening paragraph 4",
+      "text": "By maintaining these strict vetting standards, we eliminate the guesswork from remote hiring, ensuring every engineer we place is enterprise-ready, collaborative, and equipped to drive immediate value for your development roadmap."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Engagement H2",
+      "text": "Flexible Python Staff Augmentation Models"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Engagement first paragraph",
+      "text": "Every development roadmap has unique demands, which is why our Python staff augmentation services offer adaptable engagement structures. Whether you require dedicated full-time engineers to scale long-term capacity, a hybrid squad extension to plug specialized skill gaps, or milestone-based project staffing for targeted deliverables, we align directly with your operational goals. These dedicated delivery teams integrate seamlessly into your technical ecosystem, adopting your existing architecture, coding standards, and sprint cycles from day one."
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Case H3",
+      "text": "Case Study Challenge: Legacy API Bottlenecks"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Case note",
+      "text": "Anonymized case snapshot from a high-growth fintech partner."
+    },
+    {
+      "route": "/sap-services",
+      "item": "H1",
+      "text": "SAP Staff Augmentation & Contract Consulting Services"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Support H2",
+      "text": "SAP Staffing Support for Enterprise Delivery Teams"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Role directory H2",
+      "text": "Hire SAP Consultants & Technical Specialists"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Functional category H3",
+      "text": "Functional SAP Consulting"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Development category H3",
+      "text": "Development & Integration Specialists"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Services introduction — Content to Replace",
+      "text": "Through our tailored SAP staff augmentation models, we provide contract professionals, dedicated functional teams, and technical specialists across development, integration, and QA—matched precisely to your project scope and landscape requirements."
+    },
+    {
+      "route": "/sap-services",
+      "item": "HCM description — Content to Replace",
+      "text": "Engage certified SuccessFactors or legacy HCM consultants for core HR workflows, payroll configurations, and employee experience integration."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Closing paragraph",
+      "text": "Whether you require short-term project rescue or ongoing SAP staff augmentation, our technical specialists integrate into your existing delivery governance."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Process first heading",
+      "text": "Step 1: Initial Brief."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Process description — Improved Content",
+      "text": "Tell us which SAP consultant or developer you need, detailing your current system landscape and the work ahead. Sharing a well-defined project scope and specific deliverables from the outset allows us to efficiently match your business with the perfect technical talent for your implementation."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment H2",
+      "text": "Supported SAP Environments & Releases"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "SAP S/4HANA Cloud (Public & Private Editions)"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "SAP S/4HANA On-Premise (1909 through 2023)"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "SAP ECC 6.0 (EHP 7/8)"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "SAP Business Technology Platform (BTP)"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "greenfield implementations"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "brownfield system conversions"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Supported environment — literal report outline",
+      "text": "hybrid cloud integration"
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "IT Staff Augmentation Company: Dedicated Engineers & Developers from India"
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Specialized IT Staff Augmentation Services Across Core Disciplines"
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Hire Dedicated Software Developers for Web, Mobile, and Cloud"
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "AI & Machine Learning Staff Augmentation"
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Frequently Asked Questions About IT Staff Augmentation"
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Client Feedback on Clutch"
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Verified Google Reviews"
+    },
+    {
+      "route": "/",
+      "item": "Heading / FAQ checked against report",
+      "text": "Why choose eThing as your IT staff augmentation services provider?"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Hire Dedicated AI Developers & Engineers"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Flexible Engagement Models for Hiring AI Developers"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Dedicated AI Teams vs. Individual Staff Augmentation"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Tell Us What You Want to Build — We'll Match the AI Talent"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Hire Dedicated Python Developers for Django, FastAPI & Data Engineering"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Request Matched Python Developer Profiles for Your Stack"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Python Developers for Hire: Backend APIs, Automation, and Data Engineering"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Python Staff Augmentation Built for Scalable Engineering Teams"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Sample Profiles: Offshore and Dedicated Python Engineers"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Backend Architecture: Django, FastAPI & Flask"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Heading / FAQ checked against report",
+      "text": "Data Engineering, ETL & Workflow Automation"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle Staffing Services: Hire Technical & Functional Oracle EBS Consultants"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle EBS Staffing Services Tailored to Your Architecture"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle EBS Consultants & Specialists Available for Hire"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle EBS Support Services & Delivery Workstreams"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle EBS Technical Consultant Roles"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Heading / FAQ checked against report",
+      "text": "Oracle EBS Functional Consultant Roles: Finance & Accounting"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Heading / FAQ checked against report",
+      "text": "Salesforce Staff Augmentation: Hire Dedicated Salesforce Developers"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Heading / FAQ checked against report",
+      "text": "Scaling Your Team: When to Augment Salesforce Capacity"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Heading / FAQ checked against report",
+      "text": "Salesforce Roles and Consultants You Can Hire"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Heading / FAQ checked against report",
+      "text": "Flexible Engagement Models for Salesforce Staff Augmentation"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Heading / FAQ checked against report",
+      "text": "Functional Salesforce Consultant"
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "Image alt from report",
+      "text": "4-step process to hire dedicated AI developers at eThing"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Image alt from report",
+      "text": "Python technology stack and framework competency matrix"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Image alt from report",
+      "text": "Enterprise IT team analyzing Oracle EBS ERP implementation roadmap"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Image alt from report",
+      "text": "Oracle technical consultant reviewing PL/SQL code for ERP integration"
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Image alt from report",
+      "text": "Oracle EBS R12.2 to Oracle Fusion Cloud ERP transition architecture"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Image alt from report",
+      "text": "Salesforce staff augmentation developers reviewing Apex code on a CRM deployment"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Image alt from report",
+      "text": "Dedicated Salesforce consultants and developers supporting multi-cloud architecture"
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Image alt from report",
+      "text": "Five-stage screening process to hire Salesforce developers at eThing"
+    },
+    {
+      "route": "/sap-services",
+      "item": "Image alt from report",
+      "text": "SAP staff augmentation functional architecture showing FICO, supply chain, and BTP integration layers."
+    },
+    {
+      "route": "/sap-services",
+      "item": "Image alt from report",
+      "text": "SAP staffing engagement model showing client team integration with dedicated SAP consultants."
+    },
+    {
+      "route": "/",
+      "item": "Image alt from report",
+      "text": "eThing IT staff augmentation vetting and deployment workflow"
+    },
+    {
+      "route": "/",
+      "item": "Brand logo alt",
+      "text": "eThing - IT Staff Augmentation and Software Engineering Services"
+    },
+    {
+      "route": "/hire-python-developers",
+      "item": "Capabilities paragraph — Improved Content",
+      "text": "Whether your technical roadmap demands high-performance Django, Flask, or FastAPI architectures, complex data pipelines, or advanced AI application integration, our specialized engineers hit the ground running. We match your exact framework requirements with vetted talent ready to deploy clean, scalable, production-grade code directly into your tech stack from day one."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Overview — Content to Replace",
+      "text": "Through our Oracle staffing services and ERP technical delivery approach, we align candidate competency, screening stages, engagement parameters, and compliance onboarding directly with your internal team structure."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "Support — Content to Replace",
+      "text": "Staff a defined upgrade, rollout, or sustaining engineering team. Our Oracle EBS support services provide dedicated functional and technical specialists who handle regression testing, automated data reconciliation, triage, and rapid business acceptance."
+    },
+    {
+      "route": "/oracle-ebs",
+      "item": "HCM — Improved Content",
+      "text": "When hiring an Oracle HCM functional consultant, clearly specify whether your scope involves on-premise Oracle EBS HRMS or modern Cloud applications. Because employee data workflows, payroll schemas, and security models differ substantially between legacy EBS and Oracle Fusion Cloud HCM, precision is essential. We source verified specialists with targeted architectural expertise tailored to your specific deployment."
+    },
+    {
+      "route": "/salesforce-staff-augmentation",
+      "item": "Situations introduction — Improved Content",
+      "text": "Start by identifying the gaps in your team and the critical work that needs to move forward. If you face a growing backlog, add targeted development or administrative capacity to clear the hurdle while your internal team continues to focus on setting priorities and driving core roadmap initiatives."
+    },
+    {
+      "route": "/hire-ai-developers",
+      "item": "ML description — Content to Replace",
+      "text": "When you hire machine learning engineers from our network, they turn structured data into production forecasting, ranking, and recommendation systems, backed by reproducible experiments and objective evaluation metrics."
+    },
+    {
+      "route": "/sap-services",
+      "item": "New matrix alt",
+      "text": "Matrix of SAP consultants and developers available for contract hire."
+    }
+  ],
+  "source_report": "https://onpage.kinfotechdeck.com/report/b04c3b195f64146115a9e3552a65e51fbc4a7bb723f001d6",
+  "verification": {
+    "exact_text_checks": 118,
+    "exact_internal_links": 26,
+    "build": "passed",
+    "sitemap_pages_verified": 35,
+    "test_suite": {
+      "passed": 62,
+      "pre_existing_failures": 6
+    },
+    "browser_preview": "In-app browser could not reach the local preview. Verification used built HTML, schema checks and source checks."
+  },
+  "instructions": {
+    "publishing": "GitHub only. User explicitly excluded Hostinger publishing.",
+    "wording": "Use exact audit copy, never a simplified replacement.",
+    "conflict_selection": "Content to Replace for body copy; Improved Content for paragraph improvements; Heading Optimization for headings; explicit Action Items for metadata, otherwise first listed option. No ellipsis-filled example substituted for a complete supplied paragraph.",
+    "owner_exceptions": [
+      "Keep support@ething.in.",
+      "No fixed shortlist size.",
+      "Two-week trial remains paused.",
+      "AI and Python case examples confirmed as real client projects."
+    ]
+  }
+}

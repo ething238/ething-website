@@ -12,11 +12,11 @@ const canonical = 'https://www.ethingsolutions.com/sap-services';
 test('SAP is rendered, indexable and linked second under Hire Talent', () => {
   assert.equal((html.match(/<h1\b/g) || []).length, 1);
   assert.equal((html.match(/<main\b/g) || []).length, 1);
-  assert.match(html, /<h1[^>]*>SAP Staff Augmentation for Contract Consultant Hiring<\/h1>/);
+  assert.match(html, /<h1[^>]*>SAP Staff Augmentation &amp; Contract Consulting Services<\/h1>/);
   assert.match(html, new RegExp(`rel="canonical" href="${canonical}"`));
   assert.doesNotMatch(html, /noindex|sap-hero-artwork/);
   assert.equal((html.match(/id="sap-role-detail-\d+"/g) || []).length, 15);
-  for (const name of ['SAP Staffing Services', 'SAP Expertise', 'SAP Professionals You Can Hire', 'How We Work', 'Why eThing', 'Frequently Asked Questions', 'Discuss Your SAP Staffing Needs', 'Explore Other Services']) assert.ok(html.includes(name), name);
+  for (const name of ['SAP Staffing Services', 'SAP Expertise', 'Hire SAP Consultants &amp; Technical Specialists', 'How We Work', 'Why eThing', 'Frequently Asked Questions', 'Discuss Your SAP Staffing Needs', 'Explore Other Services']) assert.ok(html.includes(name), name);
   const navigation = JSON.parse(fs.readFileSync('src/data/aboutUsCopy.json', 'utf8')).navigation;
   const hire = navigation.find(item => item.id === 'hire-talent');
   assert.deepEqual(hire.children.slice(0, 2).map(item => item.path), ['/other-services/', '/sap-services']);

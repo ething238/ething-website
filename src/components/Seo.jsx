@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async'
+import { faqs as homepageFaqs } from '../data/homepageExperience.js'
 import { pageLabels } from '../data/relatedPages.js'
 import { getSiteBaseUrl } from '../lib/siteBaseUrl.js'
 
@@ -51,6 +52,7 @@ export default function Seo({
         isPartOf: { '@id': `${base}/#website` },
         ...(pathname !== '/' && { breadcrumb: { '@id': `${canonicalHref}#breadcrumb` } }),
       },
+      ...(pathname === '/' ? [{ '@type': 'FAQPage', mainEntity: homepageFaqs.map(({ question, answer }) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) }] : []),
       ...(article ? [{
         '@type': 'BlogPosting',
         '@id': `${canonicalHref}#article`,
@@ -80,7 +82,8 @@ export default function Seo({
           '@context': 'https://schema.org',
           '@graph': [
             {
-              '@type': 'Organization',
+              '@type': pathname === '/' ? ['Organization', 'ProfessionalService'] : 'Organization',
+              ...(pathname === '/' ? { areaServed: 'Worldwide' } : {}),
               '@id': `${base}/#organization`,
               name: organizationJsonLd.brand?.name?.replace(/\s+/g, ' ').trim() || 'Ething',
               url: `${base}/`,

@@ -85,7 +85,7 @@ export const sapExpertise = [
     {
         code: '04',
         title: 'People & HR',
-        text: 'Discuss SuccessFactors or HCM experience for your HR processes and system context.'
+        text: 'Engage certified SuccessFactors or legacy HCM consultants for core HR workflows, payroll configurations, and employee experience integration.'
     },
     {
         code: '05',
@@ -218,9 +218,9 @@ export const sapEngagements = [
 ];
 export const sapProcess = [
     {
-        title: 'Share your requirement',
-        text: "Tell us which SAP consultant or developer you need, your system landscape and the work ahead.",
-        output: 'A clear initial brief'
+        title: 'Step 1: Initial Brief.',
+        text: "Tell us which SAP consultant or developer you need, detailing your current system landscape and the work ahead. Sharing a well-defined project scope and specific deliverables from the outset allows us to efficiently match your business with the perfect technical talent for your implementation.",
+        output: ''
     },
     {
         title: 'Align on the details',

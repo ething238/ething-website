@@ -479,3 +479,4 @@
 
 @media(max-width:767px){.sap-page .sap-hero{--sap-cover-image:url("/sap-services/sap-staffing-768-e44566d8a567.webp");}}
 @media(max-width:480px){.sap-page .sap-hero{--sap-cover-image:url("/sap-services/sap-staffing-480-ac19bc8d9e04.webp");}}
+.sap-page .sap-role-group-count::after { content: attr(data-count); }

@@ -8,7 +8,7 @@ export const salesforceRoles = [
 ];
 
 export const salesforceSituations = [
-  ['workflow', 'A growing backlog', 'If you face a growing backlog, add targeted development or administrative capacity to clear the hurdle while your internal team continues to focus on setting priorities and driving core roadmap initiatives.'],
+  ['workflow', 'A growing backlog', 'Start by identifying the gaps in your team and the critical work that needs to move forward. If you face a growing backlog, add targeted development or administrative capacity to clear the hurdle while your internal team continues to focus on setting priorities and driving core roadmap initiatives.'],
   ['nodes', 'A specialist skill gap', 'Match the role to a particular cloud, integration or technical challenge.'],
   ['chart', 'A release or migration ahead', 'Discuss extra capacity for a defined milestone and working period.'],
   ['people', 'A vacancy or planned absence', 'Support continuity while you address the longer-term team requirement.'],
@@ -90,7 +90,7 @@ export const salesforceFaqGroups = [
   { title: 'Commercial terms', items: [
     ['How much do Salesforce staff augmentation services cost?', 'Seniority, specialist skills, allocation, working location, overlap and duration affect the quote. Minimum commitment, billing, notice and any conversion fees are confirmed in the proposed terms before you decide.'],
     ['What happens if the professional is not the right fit?', 'Raise the concern through the agreed support contact. Replacement eligibility, applicable period, fees and handover arrangements are explained in the engagement terms before work starts.'],
-    ['Can I hire developers on contract?', 'Yes. Discuss the role, allocation and intended duration with us. The proposed terms set out billing, minimum commitment, notice, capacity changes and any handover or replacement conditions before work starts.'],
+    ['Can I hire developers on contract?', 'Yes. Discuss the role, allocation and intended duration with our team to match contract developers to your sprint milestones.'],
   ] },
 ];
 

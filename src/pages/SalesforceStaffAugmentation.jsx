@@ -58,7 +58,7 @@ function SectionHeading({ id, children, description: copy }) {
 function TeamIllustration() {
   return <figure className="sf-cloud-scene">
     <div className="sf-cloud-glow" aria-hidden="true"/>
-    <img className="sf-cloud-art" src="/salesforce/cloud-talent-v4.webp" width="1200" height="900" alt="Illustration of a blue Salesforce cloud connected to three technology specialists" loading="lazy"/>
+    <img className="sf-cloud-art" src="/salesforce/cloud-talent-v4.webp" width="1200" height="900" alt="Dedicated Salesforce consultants and developers supporting multi-cloud architecture" loading="lazy"/>
     <div className="sf-orbit-label sf-orbit-label-one" aria-hidden="true"><span className="sf-orbit-dot"/>Developer<Icon kind="code" size={15}/></div>
     <div className="sf-orbit-label sf-orbit-label-two" aria-hidden="true"><span className="sf-orbit-dot"/>Administrator<Icon kind="settings" size={15}/></div>
     <div className="sf-orbit-label sf-orbit-label-three" aria-hidden="true"><span className="sf-orbit-dot"/>Architect<Icon kind="layers" size={15}/></div>
@@ -104,6 +104,7 @@ export default function SalesforceStaffAugmentation() {
     return () => { resizeObserver?.disconnect(); observer?.disconnect(); };
   }, []);
   const schema = { '@context': 'https://schema.org', '@graph': [
+    { '@type': 'FAQPage', mainEntity: salesforceFaqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
     { '@type': 'Service', '@id': canonical + '#service', name: 'Salesforce Staff Augmentation Services', description, url: canonical, provider: { '@type': 'Organization', name: 'eThing', url: 'https://www.ethingsolutions.com' } },
     { '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.ethingsolutions.com' },
@@ -126,7 +127,7 @@ export default function SalesforceStaffAugmentation() {
           <div className="sf-hero-grid">
             <div className="sf-hero-copy">
               <h1 id="sf-title"><span>Salesforce</span> {pageHeadings['/salesforce-staff-augmentation'].replace(/^Salesforce /, '')}</h1>
-              <p className="sf-hero-description">If you need to hire Salesforce developers, administrators, or architects, eThing delivers vetted talent through dedicated staff augmentation while you retain full technical direction.</p>
+              <p className="sf-hero-description">eThing provides tailored Salesforce staff augmentation to help engineering and business leaders hire Salesforce developers, technical architects, and certified administrators. Based in Gurugram, India, our team integrates directly into your repos, sprints, and communication channels while you retain complete project oversight.</p>
               <div className="sf-hero-actions"><a href="#salesforce-roles" className="sf-button">Explore the roles<Icon kind="arrow" size={18}/></a></div>
             </div>
             <div className="sf-hero-enquiry" id="salesforce-enquiry"><SalesforceEnquiryForm selectedRole={selectedRole} onRoleChange={setSelectedRole}/></div>
@@ -140,18 +141,18 @@ export default function SalesforceStaffAugmentation() {
 
 
       <section className="sf-section sf-situations" aria-labelledby="sf-situations-heading"><div className="sf-container">
-        <SectionHeading id="sf-situations-heading" description="Start by identifying the gaps in your team and the critical work that needs to move forward.">Scaling Your Team: When to Augment Salesforce Capacity</SectionHeading>
+        <SectionHeading id="sf-situations-heading">Scaling Your Team: When to Augment Salesforce Capacity</SectionHeading>
         <div className="sf-situation-grid">{salesforceSituations.map(([icon,heading,body],index) => <article className="sf-motion-card" key={heading} data-sf-reveal style={{ '--sf-delay': (index % 4) * 70 + 'ms' }}><div className="sf-card-heading"><Icon kind={icon} size={28}/><h3>{heading}</h3></div><p>{body}</p></article>)}</div>
       </div></section>
 
       <section className="sf-section sf-developers" id="salesforce-developers" aria-labelledby="sf-developers-heading"><div className="sf-container">
         <SectionHeading id="sf-developers-heading" description="Hire dedicated Salesforce developers for ongoing delivery, or hire a Salesforce programmer to support a defined application, integration or release requirement. Our Salesforce staffing services cover role matching, selection coordination and onboarding support for an agreed engagement.">Hire Salesforce Developers</SectionHeading>
         <div className="sf-development-stage">
-        <figure className="sf-development-photo" data-sf-reveal><img src="/salesforce/engineering-team-v4.webp" alt="Illustrative image of two engineers collaborating on a CRM application" width="1200" height="800" loading="lazy"/><figcaption>EXPERTISE. EMBEDDED IN YOUR TEAM.</figcaption></figure>
+        <figure className="sf-development-photo" data-sf-reveal><img src="/salesforce/engineering-team-v4.webp" alt="Salesforce staff augmentation developers reviewing Apex code on a CRM deployment" width="1200" height="800" loading="lazy"/><figcaption>EXPERTISE. EMBEDDED IN YOUR TEAM.</figcaption></figure>
         <div>
         <div className="sf-developer-grid">
-          <article data-sf-reveal><Icon kind="globe" size={25}/><h3><a href="/hire-developers-india">Developers from India</a></h3><p>Hire Salesforce developers from India with experience matched to your organisation, product requirements and review standards. Start with the responsibilities, seniority and overlap your team needs.</p></article>
-          <article data-sf-reveal><Icon kind="people" size={25}/><h3>Remote and Offshore Salesforce Developers</h3><p>When you hire offshore Salesforce developers, we can arrange coverage during your business hours, including UK hours. Share the hours you need and the tools your team uses so we can confirm the working arrangement before you choose a candidate.</p></article>
+          <article data-sf-reveal><Icon kind="globe" size={25}/><h3><a href="/hire-developers-india">developers from India</a></h3><p>Hire Salesforce developers from India with experience matched to your organisation, product requirements and review standards. Start with the responsibilities, seniority and overlap your team needs.</p></article>
+          <article data-sf-reveal><Icon kind="people" size={25}/><h3>Remote and Offshore Salesforce Developers</h3><p>When you hire offshore Salesforce developers through eThing, we align working hours to provide clear daily overlap with your home market. We define communication cadences, security protocols, and Git workflows before sprint zero begins.</p></article>
           <article data-sf-reveal><Icon kind="document" size={25}/><h3>Contract development</h3><p>Hire Salesforce developers on contract for an agreed scope, allocation and duration. Discuss the billing, notice and handover terms before choosing the engagement.</p></article>
         </div>
         <div className="sf-developer-cta"><CTA role="Developer" onChoose={setSelectedRole}>Discuss a developer requirement</CTA></div>
@@ -173,13 +174,11 @@ export default function SalesforceStaffAugmentation() {
         <div className="sf-technical-grid">{salesforceTechnicalSkills.map((skill,index) => <article className="sf-motion-card" key={skill.title} data-sf-reveal style={{ '--sf-delay': (index % 3) * 70 + 'ms' }}><div className="sf-card-heading"><Icon kind={skill.icon} size={28}/><h3>{skill.title}</h3></div><p>{skill.description}</p></article>)}</div>
       </div></section>
 
-      <section className="sf-section" id="salesforce-access" aria-labelledby="sf-access-heading"><div className="sf-container">
-        <SectionHeading id="sf-access-heading" description="We can provide Salesforce-certified developers and administrators and verify the credentials your role requires. Our teams can work within your project’s security and compliance requirements. Before work starts, we agree on confidentiality, code ownership and handover. Your team approves system access, sets role permissions and specifies which data developers can use in a sandbox.">System Access, Confidentiality and IP</SectionHeading>
-      </div></section>
+      <section className="sf-section" id="salesforce-access" aria-labelledby="sf-access-heading"><div className="sf-container"><SectionHeading id="sf-access-heading">Data Security, IP Protection, and Compliance</SectionHeading><p className="seo-section-copy">When scaling your engineering capacity through salesforce staff augmentation, maintaining rigorous governance around your proprietary assets and sensitive customer data is paramount. Industry-leading talent partners address these concerns by enforcing enterprise-grade security protocols from day one. Remote and offshore salesforce developers operate within strictly governed boundaries, accessing client sandboxes exclusively through zero-trust network access (ZTNA), secure VPNs, and enterprise Single Sign-On (SSO) backed by Multi-Factor Authentication (MFA). This perimeter defense ensures granular role-based access controls and comprehensive audit logging throughout the development lifecycle.</p><p className="seo-section-copy">Legal protections are equally vital to safeguarding your competitive advantage. Trustworthy engagement models mandate robust Non-Disclosure Agreements (NDAs) and ironclad Intellectual Property (IP) assignment agreements before work begins. These contracts ensure that all custom code, configuration logic, integrations, and architectural frameworks remain exclusively your company’s property.</p><p className="seo-section-copy">Finally, compliance hinges on uncompromising data hygiene. External development teams must adhere to clean sandbox data sanitation guidelines, utilizing synthetic test records or automated data masking tools. This prevents live Personally Identifiable Information (PII) or sensitive production datasets from ever leaking into non-production environments, aligning with global standards like GDPR, HIPAA, and SOC 2. By combining modern identity governance, automated data scrubbing, and strict legal frameworks, organizations can scale with external talent without compromising platform security or compliance posture.</p></div></section>
 
       <section className="sf-section sf-assessment" aria-labelledby="sf-assessment-heading"><div className="sf-container">
         <SectionHeading id="sf-assessment-heading" description="eThing screens for the agreed role, relevant experience and communication. We agree the role-specific checks and your interview stages before sourcing.">How we evaluate Salesforce talent</SectionHeading>
-        <img className="seo-diagram" src="/seo-visuals/salesforce-screening.webp" alt="" width="1600" height="533" loading="lazy" decoding="async" />
+        <img className="seo-diagram" src="/seo-visuals/salesforce-screening.webp" alt="Five-stage screening process to hire Salesforce developers at eThing" width="1600" height="533" loading="lazy" decoding="async" />
         <div className="sf-assessment-grid"><ol className="sf-assessment-steps">{salesforceAssessment.map(([heading,body],index) => <li key={heading} data-sf-reveal><span>0{index + 1}</span><div><h3>{heading}</h3><p>{body}</p></div></li>)}</ol><aside className="sf-assessment-focus" data-sf-reveal><h3>Specific to the work.</h3><p>Agree checks that match the role and your backlog.</p><dl>{salesforceAssessmentFocus.map(([role,focus]) => <div key={role}><dt>{role}</dt><dd>{focus}</dd></div>)}</dl><div className="sf-assessment-output"><Icon kind="document"/><p><strong>The useful output</strong>Role fit, evidence reviewed and follow-up points for your interview.</p></div></aside></div>
       </div></section>
 
