@@ -18,7 +18,7 @@ for (const route of [...routes, '/visitor-dashboard', '/404']) {
   assert.doesNotMatch(footer, /Back to top|fs-back-top/, `${route}: removed bottom-row link returned`)
   assert.doesNotMatch(html, /<footer\b[^>]*class="(?:campaign-footer|hub-footer|hire-site-footer|about-copy-footer)/, `${route}: duplicate legacy footer`)
   const links = [...footer.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(match => match[1])
-  assert.equal(links.length, 35, `${route}: footer links are incomplete`)
+  assert.equal(links.length, 36, `${route}: footer links are incomplete`)
   assert.equal(links.filter(href => href === '/privacy-policy').length, 1, `${route}: Privacy Policy must appear once`)
   const company = footer.match(/<nav\b[^>]*class="fs-company"[^>]*>[\s\S]*?<\/nav>/)?.[0]
   assert.ok(company, `${route}: missing Company navigation`)

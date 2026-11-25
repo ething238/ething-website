@@ -13,6 +13,7 @@ import SalesforceStaffAugmentation from './pages/SalesforceStaffAugmentation.jsx
 import EngineeringServices from './pages/EngineeringServices.jsx'
 import WebsiteDevelopment from './pages/WebsiteDevelopment.jsx'
 import MobileApplication from './pages/MobileApplication.jsx'
+import Bookkeeping from './pages/Bookkeeping.jsx'
 import EngineeringDetailPage from './pages/EngineeringDetailPage.jsx'
 import Careers from './pages/Careers.jsx'
 import Privacy from './pages/Privacy.jsx'
@@ -77,6 +78,7 @@ function AppRoutes() {
         />
         <Route path="/website-development" element={<WebsiteDevelopment />} />
         <Route path="/mobile_application" element={<MobileApplication />} />
+        <Route path="/bookkeeping" element={<Bookkeeping />} />
         {siteContent.pages.engineeringPages.filter((page) => page.path !== '/mobile_application').map((page) => (
           <Route
             key={page.path}

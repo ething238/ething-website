@@ -12,7 +12,10 @@ export default function EngineeringServices({ content }) {
     intro: 'Business websites, online stores, redesigns and Web3 websites, with SEO, analytics and ongoing support.',
   }
   const pages = content.pages.engineeringPages.flatMap(page =>
-    page.path === '/software_development' ? [page, websiteDevelopment] : [page])
+    page.path === '/software_development' ? [page, websiteDevelopment] : [page]).concat({
+      path: '/bookkeeping', title: 'Bookkeeping',
+      intro: 'Transaction recording, reconciliation, catch-up support and clear monthly reports for your business.',
+    })
   useEffect(() => {
     document.title = pageTitles['/engineering-services']
   }, [])

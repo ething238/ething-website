@@ -23,6 +23,7 @@ export const engineering = [
   ['Firmware Engineering', '/firmware_engg'],
   ['Cloud Services', '/cloud_services'],
   ['Testing', '/quality_testing'],
+  ['Bookkeeping', '/bookkeeping'],
 ];
 
 export const industries = [

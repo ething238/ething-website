@@ -82,6 +82,7 @@ export const siteContent = {
         { label: 'Cloud Services', path: '/cloud_services' },
         { label: 'Testing', path: '/quality_testing' },
         { label: 'Product Security', path: '/product_security' },
+        { label: 'Bookkeeping', path: '/bookkeeping' },
       ],
     },
     { id: 'blogs', label: 'Blogs', path: '/blogs' },

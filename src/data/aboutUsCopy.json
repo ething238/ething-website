@@ -187,6 +187,10 @@
         {
           "label": "Product Security",
           "path": "/product_security"
+        },
+        {
+          "label": "Bookkeeping",
+          "path": "/bookkeeping"
         }
       ]
     },
