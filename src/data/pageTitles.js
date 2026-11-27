@@ -1,5 +1,6 @@
 /** Shared route metadata for browser rendering, prerendering and sitemap generation. */
 export const pageTitles = {
+  "/blogs/hire-ai-developers-india": "How to Hire AI Developers from India: Cost, Skills & Process",
   "/blogs/hire-python-developers": "How to Hire Python Developers for Backend Projects | eThing",
   "/": "IT Staff Augmentation Company | Dedicated Developers | eThing",
   "/about_us": "About Ething Solutions | IT Staffing & Engineering",
@@ -39,6 +40,7 @@ export const pageTitles = {
 }
 
 export const pageDescriptions = {
+  "/blogs/hire-ai-developers-india": "Learn how to hire AI developers from India. Explore developer roles, essential skills, hiring models, and a step-by-step hiring process.",
   "/blogs/hire-python-developers": "Define the role, evaluate Django, FastAPI or Flask experience, and use a practical scorecard to shortlist backend engineers.",
   "/": "Scale your engineering team with eThing, an IT staff augmentation company providing vetted developers in Python, React, AI, and cloud systems from India.",
   "/about_us": "Meet Ething Solutions, your IT staffing and engineering partner in Gurugram, India. Explore our team, approach and flexible technology hiring services.",

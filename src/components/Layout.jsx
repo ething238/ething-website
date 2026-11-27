@@ -7,7 +7,7 @@ import KeywordPageContent from './KeywordPageContent.jsx'
 import RelatedServices from './RelatedServices.jsx'
 import { pageTitles, pageDescriptions } from '../data/siteContent.js'
 import { technologyLandingPagePaths } from '../data/technologyLandingPages.js'
-import { pythonBlogPost } from '../pages/PythonBlogArticle.jsx'
+import { blogPosts } from '../data/blogPosts.js'
 
 const knownPaths = new Set(Object.keys(pageTitles))
 
@@ -19,7 +19,7 @@ export default function Layout({ content, children }) {
   const isLandingPage = landingPagePaths.has(pathname)
   const isFullBleed = location.pathname === '/' || isLandingPage
   const isKnownRoute = knownPaths.has(pathname) || isLandingPage
-  const article = pathname === pythonBlogPost.link ? pythonBlogPost : undefined
+  const article = blogPosts.find((post) => post.link === pathname)
   const title = pathname === '/visitor-dashboard' ? 'Visitor Dashboard - Ething' : isKnownRoute ? pageTitles[pathname] : 'Page not found - Ething'
   const description = isKnownRoute
     ? pageDescriptions[pathname]

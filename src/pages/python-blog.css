@@ -47,6 +47,8 @@ img { display: block; max-width: 100%; }
 .prose ul, .prose ol { padding-left: 23px; margin: 0 0 17px; }
 .prose li + li { margin-top: 4px; }
 .prose .hook { color: var(--ink); font-size: 18px; line-height: 1.58; }
+.ai-hiring-article .prose ul { list-style: disc; }
+.prose .article-image { width: 100%; height: auto; margin: 0 0 18px; border-radius: 12px; }
 .quick-answer { margin: 18px 0; padding: 18px 20px; border-left: 3px solid #8150d5; border-radius: 0 11px 11px 0; background: var(--tint); }
 .quick-answer strong { display: block; margin-bottom: 5px; color: #51219f; font-size: 13px; }
 .quick-answer p { margin: 0; }
@@ -61,6 +63,7 @@ img { display: block; max-width: 100%; }
 .prose tbody tr:nth-child(even) { background: #faf9fd; }
 .hire-box { margin-top: 24px; padding: 22px; border: 1px solid #ded3f5; border-radius: 14px; background: var(--tint); }
 .hire-box h3 { margin: 0 0 7px; }
+.ai-hiring-article .hire-box p { margin-bottom: 0; }
 .faq { border-top: 1px solid var(--line); }
 .faq details { border-bottom: 1px solid var(--line); }
 .faq h3 { margin: 0; font-size: inherit; }

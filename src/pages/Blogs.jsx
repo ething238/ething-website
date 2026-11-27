@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import PageShell from '../components/PageShell.jsx'
-import { pythonBlogPost } from './PythonBlogArticle.jsx'
+import { blogPosts } from '../data/blogPosts.js'
 import fallbackImage from './python-blog-logo.webp'
 import bigDataCover from '../assets/blog-covers/big-data-machine-learning-v2.webp'
 import devOpsCover from '../assets/blog-covers/devops-ci-cd-practices-v2.webp'
@@ -157,7 +157,7 @@ export default function Blogs({ content }) {
     <PageShell title={pageHeadings['/blogs']} compact>
       <p className="mt-4 max-w-2xl text-lg text-zinc-600 leading-relaxed">{p.intro}</p>
       <ul className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <li><BlogPostCard post={pythonBlogPost} /></li>
+        {blogPosts.map((post) => <li key={post.link}><BlogPostCard post={post} /></li>)}
         {loading && <LoadingCards />}
         {posts.map((post, index) => (
           <motion.li
@@ -188,7 +188,7 @@ export default function Blogs({ content }) {
           className="mt-8 rounded-2xl border border-rose-200 bg-rose-50/80 px-4 py-4 text-sm text-rose-950 sm:px-5"
         >
           <p className="font-semibold">More posts are temporarily unavailable</p>
-          <p className="mt-1 opacity-95">You can still read the hiring guide above.</p>
+          <p className="mt-1 opacity-95">You can still read the hiring guides above.</p>
         </div>
       )}
 
