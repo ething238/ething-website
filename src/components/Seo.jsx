@@ -17,7 +17,7 @@ function absoluteUrl(base, pathOrAbsolute) {
  * @param {string} props.description
  * @param {string} props.pathname - router pathname, e.g. `/about_us`
  * @param {string} [props.ogImage] - absolute URL or path relative to site origin
- * @param {{ title: string, author: string, publishedAt: string }} [props.article]
+ * @param {{ title: string, author: string, publishedAt?: string }} [props.article]
  * @param {boolean} [props.noindex]
  * @param {object} [props.organizationJsonLd]
  * @param {string} [props.siteName] - for `og:site_name`
@@ -59,7 +59,7 @@ export default function Seo({
         headline: article.title,
         description,
         image: ogImageUrl,
-        datePublished: article.publishedAt.slice(0, 10),
+        datePublished: article.publishedAt?.slice(0, 10),
         author: { '@type': 'Organization', name: article.author, url: `${base}/` },
         publisher: { '@id': `${base}/#organization` },
         mainEntityOfPage: { '@id': `${canonicalHref}#webpage` },
@@ -140,7 +140,7 @@ export default function Seo({
       )}
 
       <meta property="og:type" content={article ? 'article' : 'website'} />
-      {article && <meta property="article:published_time" content={article.publishedAt.slice(0, 10)} />}
+      {article?.publishedAt && <meta property="article:published_time" content={article.publishedAt.slice(0, 10)} />}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       {canonicalHref && <meta property="og:url" content={canonicalHref} />}

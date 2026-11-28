@@ -1,5 +1,7 @@
 /** Shared route metadata for browser rendering, prerendering and sitemap generation. */
 export const pageTitles = {
+  "/blogs/salesforce-staff-augmentation": "Salesforce Staff Augmentation: Hire Offshore Developers from India",
+  "/blogs/oracle-ebs-staffing": "Oracle EBS Staffing: Hire Offshore Consultants from India",
   "/blogs/hire-ai-developers-india": "How to Hire AI Developers from India: Cost, Skills & Process",
   "/blogs/hire-python-developers": "How to Hire Python Developers for Backend Projects | eThing",
   "/": "IT Staff Augmentation Company | Dedicated Developers | eThing",
@@ -40,6 +42,8 @@ export const pageTitles = {
 }
 
 export const pageDescriptions = {
+  "/blogs/salesforce-staff-augmentation": "Learn how Salesforce staff augmentation works, which roles to hire, and how to hire offshore Salesforce developers from India for your CRM projects.",
+  "/blogs/oracle-ebs-staffing": "Explore Oracle staffing services in India. Hire Oracle EBS functional and technical consultants for implementation, upgrades, customization, and ongoing support.",
   "/blogs/hire-ai-developers-india": "Learn how to hire AI developers from India. Explore developer roles, essential skills, hiring models, and a step-by-step hiring process.",
   "/blogs/hire-python-developers": "Define the role, evaluate Django, FastAPI or Flask experience, and use a practical scorecard to shortlist backend engineers.",
   "/": "Scale your engineering team with eThing, an IT staff augmentation company providing vetted developers in Python, React, AI, and cloud systems from India.",

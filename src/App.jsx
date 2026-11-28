@@ -20,6 +20,9 @@ import Privacy from './pages/Privacy.jsx'
 import Blogs from './pages/Blogs.jsx'
 import PythonBlogArticle from './pages/PythonBlogArticle.jsx'
 import AiHiringBlogArticle from './pages/AiHiringBlogArticle.jsx'
+import BlogArticle from './components/BlogArticle.jsx'
+import salesforceArticle from './pages/salesforce-staff-augmentation-blog-article.html?raw'
+import oracleArticle from './pages/oracle-ebs-staffing-blog-article.html?raw'
 import { aiHiringBlogPath, pythonBlogPath } from './data/blogPosts.js'
 import Contact from './pages/Contact.jsx'
 import HireAiDevelopersRedirect from './pages/HireAiDevelopersRedirect.jsx'
@@ -29,6 +32,11 @@ import NotFound from './pages/NotFound.jsx'
 import VisitTracker from './components/VisitTracker.jsx'
 import { siteContent } from './data/siteContent.js'
 import { technologyLandingPages } from './data/technologyLandingPages.js'
+
+const staffingArticles = [
+  { path: "/blogs/salesforce-staff-augmentation", markup: { __html: salesforceArticle } },
+  { path: "/blogs/oracle-ebs-staffing", markup: { __html: oracleArticle } },
+]
 
 function ScrollToTopOnRoute() {
   const { pathname, hash } = useLocation()
@@ -48,7 +56,7 @@ function ScrollToTopOnRoute() {
 function AppRoutes() {
   const { pathname } = useLocation()
   // These shorter content pages already sit inside Layout's full-height shell.
-  const compactPage = ['/blogs', pythonBlogPath, aiHiringBlogPath, '/engineering-services', '/contact'].includes(pathname.replace(/\/$/, ''))
+  const compactPage = ['/blogs', pythonBlogPath, aiHiringBlogPath, ...staffingArticles.map(({ path }) => path), '/engineering-services', '/contact'].includes(pathname.replace(/\/$/, ''))
   return (
     <div className={compactPage ? 'min-w-0' : 'min-h-screen'}>
       <Routes>
@@ -91,6 +99,9 @@ function AppRoutes() {
         <Route path="/blogs" element={<Blogs content={siteContent} />} />
         <Route path={pythonBlogPath} element={<PythonBlogArticle />} />
         <Route path={aiHiringBlogPath} element={<AiHiringBlogArticle />} />
+        {staffingArticles.map(({ path, markup }) => (
+          <Route key={path} path={path} element={<BlogArticle markup={markup} />} />
+        ))}
         <Route path="/careers" element={<Careers content={siteContent} />} />
         <Route path="/privacy-policy" element={<Privacy content={siteContent} />} />
         <Route path="/contact" element={<Contact content={siteContent} />} />
