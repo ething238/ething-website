@@ -24,6 +24,7 @@ const staffingPosts = [
     "title": "Salesforce Staff Augmentation: Hire Offshore Developers from India",
     "excerpt": "Learn how Salesforce staff augmentation works, which roles to hire, and how to hire offshore Salesforce developers from India for your CRM projects.",
     "author": "Ething Solutions Pvt. Ltd.",
+    "publishedAt": "2026-11-28T12:00:00+05:30",
     "imageUrl": "/salesforce/engineering-team-v4.webp",
     "link": "/blogs/salesforce-staff-augmentation"
   },
@@ -31,6 +32,7 @@ const staffingPosts = [
     "title": "Oracle EBS Staffing: Hire Offshore Consultants from India",
     "excerpt": "Explore Oracle staffing services in India. Hire Oracle EBS functional and technical consultants for implementation, upgrades, customization, and ongoing support.",
     "author": "Ething Solutions Pvt. Ltd.",
+    "publishedAt": "2026-11-28T12:00:00+05:30",
     "imageUrl": "/blog/oracle-ebs-1.jpg",
     "link": "/blogs/oracle-ebs-staffing"
   }
